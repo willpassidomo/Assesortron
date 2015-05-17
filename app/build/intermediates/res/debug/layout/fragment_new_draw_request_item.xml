@@ -1,0 +1,135 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="2.5dp"
+    android:background="#ffe0e0e0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Change Order"
+            android:id="@+id/textView"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="subcontractor"
+            android:id="@+id/textView2"
+            android:layout_marginBottom="2.5dp" />
+
+        <ViewSwitcher
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switcher_change_order_subcontractor"
+            android:background="@drawable/border">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_change_order_subcontractor"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/change_order_subcontractor" />
+        </ViewSwitcher>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/existing_subcontractors"
+            android:spinnerMode="dialog"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="amount"
+            android:id="@+id/textView3"
+            android:layout_marginBottom="2.5dp" />
+
+        <ViewSwitcher
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switcher_change_order_amount"
+            android:background="@drawable/border"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/edit_change_order_amount"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/change_order_amount" />
+        </ViewSwitcher>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Executed?"
+            android:id="@+id/check_box_executed"
+            android:checked="false"
+            android:background="@drawable/border" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="description"
+            android:id="@+id/textView4" />
+
+        <ViewSwitcher
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switcher_change_order_description"
+            android:background="@drawable/border"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/edit_change_order_description"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/change_order_description" />
+        </ViewSwitcher>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:id="@+id/change_order_action_button"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/src/main/res/layout/fragment_new_draw_request_item.xml -->

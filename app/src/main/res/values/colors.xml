@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="project_dashboard_view_text_color">#FF000000</color>
+    <color name="project_dashboard_text_view_background">#ffffff</color>
+    <color name="dashboard_label_text">#FF000000</color>
+    <color name="screen_red_background">#ffffff</color>
+</resources>

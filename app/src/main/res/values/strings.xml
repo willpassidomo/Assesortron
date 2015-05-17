@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assessortron4</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_project_home_screen">ProjectHomeScreen</string>
+    <string name="title_activity_site_walkthrough">SiteWalkthrough</string>
+    <string name="title_activity_make_draw">MakeDraw</string>
+    <string name="title_activity_project_dashboard">ProjectDashboard</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_make_change_order">MakeChangeOrder</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_string_list_edit">StringListEdit</string>
+    <string name="title_activity_send_site_walk">SendSiteWalk</string>
+    <string name="title_activity_send_project">SendProject</string>
+    <string name="title_activity_make_draw_request">MakeDrawRequest</string>
+    <string name="title_activity_site_visit">SiteVisit</string>
+
+</resources>

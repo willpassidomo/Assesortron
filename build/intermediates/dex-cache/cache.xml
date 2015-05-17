@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/classes-cb7352c90153c41f04c41ffe98a0a192aaf12115.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/src/main/res/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ccf7c678b751b3715beac195987a8d0c22446d47">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT-423d484b6d6892dd3155d3375682f8fe6d1a9f92.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.17.0-rc/f01974c9ec3e5570d8c75ecf7fce004e06757e03/google-api-client-1.17.0-rc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f01974c9ec3e5570d8c75ecf7fce004e06757e03">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/google-api-client-1.17.0-rc-5041a5cbdc91393997b257a78fcaac9b55d23d63.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.17.0-rc/76bcfba455c5a053d532bbac2cf30a2b2c341cf3/google-oauth-client-1.17.0-rc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="76bcfba455c5a053d532bbac2cf30a2b2c341cf3">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.17.0-rc-130ed199d185ccc4faa733fac488338a41ae701a.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/classes-0ebdb26cd892a345bb68c4cbeb7d5903328ced94.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/android-sdks/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-5ff4eea906545eb9b644da60578c59e258fd433f.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9-a73716cae4e50c87cee05eadb7ecbde2041ba86d.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/classes-8fe96e9c286c7a0486e1f2ac3152d5ff381acc47.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ecc1010c09831b502a4ed1a13d34f9bd5ae6e4e9.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.19.0/e3f11020c2c812112803d252d1392872d3f619c8/google-http-client-android-1.19.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3f11020c2c812112803d252d1392872d3f619c8">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.19.0-92d1f8cffaa7c2201fecb54e3a75a74e258b1d14.jar" />
+    </item>
+    <item
+        jar="/Users/willpassidomo/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.19.0/cdca49ad0977c040f603478aa2e16b2775c8fec6/google-http-client-1.19.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cdca49ad0977c040f603478aa2e16b2775c8fec6">
+        <dex dex="/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/build/intermediates/pre-dexed/debug/google-http-client-1.19.0-df30d8d8615936ba3ecc9539525b7ad721e22648.jar" />
+    </item>
+
+</items>
