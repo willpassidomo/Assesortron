@@ -14,4 +14,4 @@
         class="test.dynamicListView.DynamicListView"
         android:id="@+id/string_list_list" />
 </RelativeLayout>
-<!-- From: file:/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/src/main/res/layout/activity_string_list_edit.xml -->
+<!-- From: file:/home/otf/Documents/code/AssesorTron/app/src/main/res/layout/activity_string_list_edit.xml -->

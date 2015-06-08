@@ -39,7 +39,6 @@ public class MakeDraw extends Activity implements MakeDrawRequest.MakeDrawReques
         siteWalkId = getIntent().getStringExtra(Constants.SITE_VISIT_ID);
 
         drawRequest = Storage.getDrawRequestBySiteWalkId(this, siteWalkId);
-        Log.i("drawRequestId- ", drawRequest.getId() + "\ndrawRequestItemCount- " + drawRequest.getItemList().size());
         if (drawRequest == null) {
             drawRequest = new DrawRequest();
             Toast.makeText(this, "new Draw Request Started",Toast.LENGTH_LONG);

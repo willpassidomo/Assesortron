@@ -22,4 +22,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/walkthrough_picture"
         android:focusableInTouchMode="false" />
-</LinearLayout><!-- From: file:/Users/willpassidomo/AndroidStudioProjects/AssesorTron3/app/src/main/res/layout/list_walkthrough_pictures.xml -->
+</LinearLayout><!-- From: file:/home/otf/Documents/code/AssesorTron/app/src/main/res/layout/list_walkthrough_pictures.xml -->

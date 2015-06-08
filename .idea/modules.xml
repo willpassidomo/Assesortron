@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AssesorTron3.iml" filepath="$PROJECT_DIR$/AssesorTron3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AssesorTron.iml" filepath="$PROJECT_DIR$/AssesorTron.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.iml" filepath="$PROJECT_DIR$/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.iml" filepath="$PROJECT_DIR$/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.iml" />
     </modules>
   </component>
 </project>
-
