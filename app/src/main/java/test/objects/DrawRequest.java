@@ -93,14 +93,25 @@ public class DrawRequest {
         }
     }
 
-    public String getCurrentRequest() {return currentRequest.toString();}
+    public String getCurrentRequest() {
+        if (currentRequest != null) {
+            return currentRequest.toString();
+        } else {
+            return "";
+        }
+
+    }
 
     public void setCurrentRequest(String currentRequest) {
         this.currentRequest = new BigDecimal(currentRequest);
     }
 
     public String getCurrentRecmomendation() {
-        return currentRecommendation.toString();
+        if (currentRecommendation != null) {
+            return currentRecommendation.toString();
+        } else {
+            return "";
+        }
     }
 
     public void setCurrentRecommendation(String currentRecommendation) {
