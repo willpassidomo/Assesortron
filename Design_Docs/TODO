@@ -1,0 +1,10 @@
+6/10/15
+Major
+	- fix Project dashboad so that it is tabs of different groups of FieldValues (not required)
+		- add to settings, screen for managing FieldVlaues and groups
+		- add to database, table for FieldValues, FieldValue groups
+		-- THIS WOKS, BUTTTT, there should be a set of stock sitewalk questions FOR EACH PROJECT....so every time you go to the same project, you answer the same questions, but it varys project to project
+
+	- update project walkthrough (not required)
+
+	- add G702 screen (REQUIRED)

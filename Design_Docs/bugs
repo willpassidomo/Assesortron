@@ -1,0 +1,11 @@
+there seems to be a problem with the data base.
+	progresses are not getting noted on the site visit home screen (all say 0)...should be 1, see below
+
+	new progress (SiteWalkthrough) has project name, but not floors..works the first time, but once you save one, it doesnt save (see above) and the floors dont show up
+
+	OK, SO, ALL OF THE PROGREESEs are being stored under the first project!!!! for some reason, when you do "new site visit" it has the right project id, 
+
+i think, the population of the "site visits in progree" is what is screwed up
+- yep, they all have the same project id and site visit id, but there is the right number of them 
+
+	there are duplicate projects appearing on the HomeScreen screen

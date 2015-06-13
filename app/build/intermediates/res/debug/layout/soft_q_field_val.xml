@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ViewSwitcher
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/soft_q_switch_remove" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="field"
+                android:id="@+id/soft_q_field"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/soft_q_value"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/soft_q_no_remove_f"
+            android:background="#47545454">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/soft_q_remove_f"
+                android:background="@android:drawable/ic_delete"
+                android:clickable="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+    </ViewSwitcher>
+
+</LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/soft_q_field_val.xml -->
