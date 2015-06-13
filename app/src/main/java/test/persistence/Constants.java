@@ -1,5 +1,13 @@
 package test.persistence;
 
+import android.content.Context;
+import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import test.objects.FieldValue;
+
 /**
  * Created by willpassidomo on 3/21/15.
  */
@@ -13,6 +21,10 @@ public class Constants {
     public static final String NEW_OR_EDIT = "new_or_edit";
     public static final String NEW = "new";
     public static final String EDIT = "edit";
+
+    public static final int FIELD_VALUE_PROJECT = 1;
+    public static final int FIELD_VALUE_SITE_VISIT = 2;
+    public static final int FIELD_VALUE_USER = 3;
 
     public static final String INTEGER_TYPE = " INTEGER";
     public static final String TEXT_TYPE = " TEXT";
@@ -28,5 +40,23 @@ public class Constants {
         createTable += columnNames[columnNames.length -1];
         createTable += ")";
         return createTable;
+    }
+
+    public static void checkSiteWalkMinQuestions(Context context) {
+        List<FieldValue> fvs = new ArrayList<>();
+        fvs.add(new FieldValue("Temperature", false, false));
+        fvs.add(new FieldValue("Weather", false, false));
+        fvs.add(new FieldValue("Date", true, false));
+        fvs.add(new FieldValue("Time", false, false));
+        fvs.add(new FieldValue("Humidity", false, false));
+
+        List<FieldValue> fvsIn = Storage.getSiteWalkQuestions(context);
+        for (FieldValue fv: fvs) {
+            if(!fvsIn.contains(fv)) {
+                Log.i("fv does not contain- ", fv.getField());
+                fvsIn.add(fv);
+            }
+        }
+        Storage.storeSiteVisitQuestions(context, fvsIn);
     }
 }

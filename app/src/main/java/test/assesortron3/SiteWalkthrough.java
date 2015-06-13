@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,7 +33,7 @@ import test.persistence.Storage;
 public class SiteWalkthrough extends FragmentActivity implements SiteWalkthroughNote.OnNoteFragListener, SiteWalkthrougInfo.OnInfoFragListener, SiteWalkthroughPictures.OnPictureFragListener{
     ActionBar actionBar;
     FragmentTransaction ft;
-    Button action;
+    Button action, siteVisitDash;
 
     Project project;
     SiteVisit siteVisit;
@@ -51,6 +52,7 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
         setContentView(R.layout.activity_walkthrough);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
+
         actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
@@ -67,7 +69,11 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
         Intent intent = getIntent();
         String id = intent.getStringExtra(Constants.SITE_VISIT_ID);
         siteVisit = Storage.getSiteWalkById(this, id);
-        project = Storage.getProjectById(this, intent.getStringExtra(Constants.PROJECT_ID));
+        project = Storage.getProjectById(this, siteVisit.getProjectId());
+
+        Log.i("progress sitevisit", "id- " + siteVisit.getId());
+        Log.i("progress project","id- " + project.getId());
+        Log.i("progress type", intent.getStringExtra(Constants.NEW_OR_EDIT));
 
         String type = intent.getStringExtra(Constants.NEW_OR_EDIT);
 
@@ -159,7 +165,16 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
 
     private void setVariables() {
         action = (Button) findViewById(R.id.walk_through_action_button);
-
+        siteVisitDash = (Button)findViewById(R.id.walk_through_go_site_visit_dash);
+        siteVisitDash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, NewSiteVisit.class);
+                intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
+                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+                startActivity(intent);
+            }
+        });
     }
 
     private void newWalkThrough() {
@@ -201,7 +216,7 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
                 Storage.storeWalkThrough(context, siteVisit.getId(), walkThrough);
 
                 Intent intent = new Intent(context, ProjectHomeScreen.class);
-                intent.putExtra("id",project.getId());
+                intent.putExtra(Constants.PROJECT_ID,project.getId());
                 startActivity(intent);
             }
         });

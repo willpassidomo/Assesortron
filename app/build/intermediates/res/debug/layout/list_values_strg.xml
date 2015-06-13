@@ -11,4 +11,4 @@
         android:text="Medium Text"
         android:id="@+id/list_string_string"
         android:layout_margin="5dp" />
-</LinearLayout><!-- From: file:/home/otf/Documents/code/AssesorTron/app/src/main/res/layout/list_values_strg.xml -->
+</LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/list_values_strg.xml -->

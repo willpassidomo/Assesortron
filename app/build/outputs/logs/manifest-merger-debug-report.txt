@@ -145,6 +145,12 @@ ADDED from AndroidManifest.xml:72:9
 		ADDED from AndroidManifest.xml:73:13
 	android:launchMode
 		ADDED from AndroidManifest.xml:75:13
+activity#test.assesortron3.NewSiteVisit
+ADDED from AndroidManifest.xml:78:9
+	android:label
+		ADDED from AndroidManifest.xml:80:13
+	android:name
+		ADDED from AndroidManifest.xml:79:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

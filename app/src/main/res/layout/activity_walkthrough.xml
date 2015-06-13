@@ -15,7 +15,7 @@
         android:layout_height="fill_parent">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
@@ -23,7 +23,8 @@
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/linearLayout2">
+                android:id="@+id/linearLayout2"
+                android:layout_weight="1">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,7 +39,20 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="&quot;'"
                     android:id="@+id/walk_through_project_name" />
+
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/walk_through_go_site_visit_dash"
+                    android:background="@android:drawable/ic_menu_sort_by_size" />
+            </RelativeLayout>
 
         </LinearLayout>
 

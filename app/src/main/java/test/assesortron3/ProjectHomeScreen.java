@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,8 +35,10 @@ public class ProjectHomeScreen extends Activity {
         context = this;
 
         Intent intent = getIntent();
-        String projectId = intent.getStringExtra("id");
+        String projectId = intent.getStringExtra(Constants.PROJECT_ID);
         project = Storage.getProjectById(this, projectId);
+
+        Log.i("project ID", project.getId());
 
         setVariables();
         setValues();
@@ -84,6 +87,7 @@ public class ProjectHomeScreen extends Activity {
     private void setValues() {
         projectName.setText(project.getName());
         List<SiteVisit> siteWalksInProgreses = Storage.getActiveSiteWalks(this, project.getId());
+        Log.i("get sitewalks for", "project id- " + project.getId());
         SiteWalkListAdapter swla = new SiteWalkListAdapter(this, siteWalksInProgreses);
         siteWalkInProgress.setAdapter(swla);
     }
@@ -111,7 +115,7 @@ public class ProjectHomeScreen extends Activity {
        goNewSiteVisit.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(context, VisitSite.class);
+               Intent intent = new Intent(context, NewSiteVisit.class);
                intent.putExtra(Constants.PROJECT_ID, project.getId());
                intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
                startActivity(intent);

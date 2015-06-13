@@ -3,6 +3,7 @@ package test.assesortron3;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -75,6 +76,9 @@ public class HomeScreen extends Activity {
         List<Project> projects = Storage.getActiveProjects(this);
         projectListAdapter pla = new projectListAdapter(this, projects);
         projectList.setAdapter(pla);
+        for(Project project:projects) {
+            Log.i("Project found", project.getName() + " " + project.getId());
+        }
     }
 
 }

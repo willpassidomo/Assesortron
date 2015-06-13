@@ -57,7 +57,7 @@
         <activity
             android:name=".StringListEdit"
             android:label="@string/title_activity_string_list_edit"
-            android:parentActivityName=".ProjectHomeScreen">
+            android:parentActivityName=".ProjectHomeScreen" >
         </activity>
         <activity
             android:name=".SendProject"
@@ -67,13 +67,18 @@
         <activity
             android:name=".MakeDraw"
             android:label="@string/title_activity_make_draw"
-            android:parentActivityName=".VisitSite">
+            android:parentActivityName=".VisitSite" >
         </activity>
         <activity
             android:name=".VisitSite"
             android:label="@string/title_activity_site_visit"
             android:launchMode="singleTop"
-            android:parentActivityName=".ProjectHomeScreen">
+            android:parentActivityName=".ProjectHomeScreen" >
+        </activity>
+        <activity
+            android:name=".NewSiteVisit"
+            android:label="@string/title_activity_new_site_visit"
+            >
         </activity>
     </application>
 

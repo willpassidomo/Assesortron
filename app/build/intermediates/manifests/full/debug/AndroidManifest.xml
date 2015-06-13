@@ -81,6 +81,10 @@
             android:launchMode="singleTop"
             android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
         </activity>
+        <activity
+            android:name="test.assesortron3.NewSiteVisit"
+            android:label="@string/title_activity_new_site_visit" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

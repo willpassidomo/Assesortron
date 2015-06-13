@@ -58,7 +58,7 @@ public class SiteWalkListAdapter implements ListAdapter {
         if (siteVisits != null && siteVisits.size() > 0) {
             return siteVisits.size();
         } else {
-            return 0;
+            return 1;
         }
     }
 
@@ -113,6 +113,7 @@ public class SiteWalkListAdapter implements ListAdapter {
                 intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
                 intent.putExtra(Constants.PROJECT_ID, sw.getProjectId());
                 Log.i("project id", sw.getProjectId());
+                Log.i("site visit id", sw.getId());
                 context.startActivity(intent);
             }
         });

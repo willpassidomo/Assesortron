@@ -18,4 +18,4 @@
         android:layout_height="wrap_content"
         android:id="@+id/walk_through_picture_list"
         android:choiceMode="none" />
-</LinearLayout><!-- From: file:/home/otf/Documents/code/AssesorTron/app/src/main/res/layout/fragment_walkthrough_pictures.xml -->
+</LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/fragment_walkthrough_pictures.xml -->

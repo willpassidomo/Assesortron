@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import test.objects.SiteVisit;
 import test.persistence.Constants;
@@ -19,7 +22,8 @@ public class VisitSite extends Activity {
     private Context context;
     private String projectId;
     private SiteVisit siteVisit;
-    private Button goWalkThrough, goDrawRequest;
+    private Button goWalkThrough, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk,back;
+    private ViewSwitcher vs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,8 @@ public class VisitSite extends Activity {
             newSiteVisit();
         } else if (type.equals(Constants.EDIT)) {
             continueSiteVisit(getIntent().getStringExtra(Constants.SITE_VISIT_ID));
+            Log.i("Continuing site visit", "id- " + siteVisit.getId());
+            Log.i("for project","id- "+projectId);
         } else {
             newSiteVisit();
             Toast.makeText(this, "*unrecognizeable type* \nnew site visit started", Toast.LENGTH_LONG);
@@ -68,6 +74,14 @@ public class VisitSite extends Activity {
     }
 
     private void setVariables() {
+        vs = (ViewSwitcher)findViewById(R.id.site_visit_view_switcher);
+
+        continueSiteWalk = (Button)findViewById(R.id.site_visit_continue);
+        sync = (Button)findViewById(R.id.site_visit_sync);
+        email = (Button)findViewById(R.id.site_visit_email);
+        finishSiteWalk = (Button)findViewById(R.id.site_visit_finish);
+        back = (Button)findViewById(R.id.site_visit_back_but);
+
         goDrawRequest = (Button) findViewById(R.id.site_visit_draw_request);
         goWalkThrough = (Button) findViewById(R.id.site_visit_progress);
 
@@ -80,6 +94,44 @@ public class VisitSite extends Activity {
     }
 
     private void setListeners() {
+        View.OnClickListener showNext = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                vs.showNext();
+            }
+        };
+
+        continueSiteWalk.setOnClickListener(showNext);
+        back.setOnClickListener(showNext);
+
+        sync.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"This feature is not yet implemented", Toast.LENGTH_LONG);
+            }
+        });
+
+        finishSiteWalk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                siteVisit.setActive(false);
+                Storage.storeSiteVisit(context, siteVisit.getProjectId(), siteVisit);
+                NavUtils.navigateUpFromSameTask((Activity)context);
+                //TODO
+                //need to provide sync service here!
+            }
+        });
+
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SendProject.class);
+                intent.putExtra(Constants.PROJECT_ID, projectId);
+                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+                startActivity(intent);
+            }
+        });
+
         goDrawRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +145,7 @@ public class VisitSite extends Activity {
         goWalkThrough.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("Going to new progress","");
                 Intent intent = new Intent(context, SiteWalkthrough.class);
                 intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
                 intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
@@ -106,6 +159,7 @@ public class VisitSite extends Activity {
     private void newSiteVisit() {
         siteVisit = new SiteVisit(projectId);
         Storage.storeSiteVisit(this, projectId, siteVisit);
+        Log.i("new sitevisit proj id-", "id- "+ siteVisit.getProjectId());
     }
 
     private void continueSiteVisit(String siteWalkId) {

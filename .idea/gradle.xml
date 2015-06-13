@@ -11,7 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar" />
+            <option value="$PROJECT_DIR$/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar" />
           </set>
         </option>
       </GradleProjectSettings>

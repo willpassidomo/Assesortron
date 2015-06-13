@@ -15,6 +15,7 @@ import java.util.List;
 import test.assesortron3.ProjectHomeScreen;
 import test.assesortron3.R;
 import test.objects.Project;
+import test.persistence.Constants;
 
 
 /**
@@ -88,7 +89,7 @@ public class projectListAdapter implements ListAdapter {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ProjectHomeScreen.class);
-                intent.putExtra("id", project.getId());
+                intent.putExtra(Constants.PROJECT_ID, project.getId());
                 context.startActivity(intent);
             }
         });

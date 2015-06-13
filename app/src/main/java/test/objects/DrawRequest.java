@@ -102,8 +102,11 @@ public class DrawRequest {
 
     }
 
+
     public void setCurrentRequest(String currentRequest) {
-        this.currentRequest = new BigDecimal(currentRequest);
+        if (currentRequest != null && !currentRequest.equals("")) {
+            this.currentRequest = new BigDecimal(currentRequest);
+        }
     }
 
     public String getCurrentRecmomendation() {
@@ -115,7 +118,9 @@ public class DrawRequest {
     }
 
     public void setCurrentRecommendation(String currentRecommendation) {
-        this.currentRecommendation = new BigDecimal(currentRecommendation);
+        if (currentRecommendation != null && !currentRecommendation.equals("")) {
+            this.currentRecommendation = new BigDecimal(currentRecommendation);
+        }
     }
 
     public String getConditions() {

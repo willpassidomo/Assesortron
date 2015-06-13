@@ -32,6 +32,7 @@ import test.objects.DrawRequestItem;
 import test.objects.Project;
 import test.objects.SiteVisit;
 import test.objects.WalkThrough;
+import test.persistence.Constants;
 import test.persistence.Storage;
 
 
@@ -50,7 +51,15 @@ public class SendProject extends Activity {
         setContentView(R.layout.activity_send_project);
 
         Intent intent = getIntent();
-        String projectId = intent.getStringExtra("id");
+        String projectId = intent.getStringExtra(Constants.PROJECT_ID);
+        String siteVisitId = intent.getStringExtra(Constants.SITE_VISIT_ID);
+        if (siteVisitId != null || siteVisitId != "") {
+            //TODO
+            //TODO
+            //TODO
+            //this class needs to be converted to the whole project -> site visit -> info model...
+
+        }
         //String email = intent.getStringExtra("email");
         project = Storage.getProjectById(this, projectId);
 

@@ -1,4 +1,4 @@
 include ':app'
 include ':app', ':assesortronTaskerAPI-v1-1.19.1-SNAPSHOT'
-project(':assesortronTaskerAPI-v1-1.19.1-SNAPSHOT').projectDir = new File('libs/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar')
+project(':assesortronTaskerAPI-v1-1.19.1-SNAPSHOT').projectDir = new File('assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar')
 

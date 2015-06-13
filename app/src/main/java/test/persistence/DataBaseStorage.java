@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import test.objects.FieldValue;
 import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
 import test.objects.Project;
@@ -24,7 +25,7 @@ import test.objects.WalkThrough;
  * Created by willpassidomo on 1/24/15.
  */
 public class DataBaseStorage extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "assesortronDB9.db";
+    private static String DATABASE_NAME = "assesortronDB10.db";
     private static int DATABASE_VERSION = 9;
 
     public DataBaseStorage(Context context) {
@@ -49,6 +50,8 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(Storage.TradesTable.CREATE_TRADES_STRING_TABLE);
         sqLiteDatabase.execSQL(Storage.ProgressesTable.CREATE_PROGRESSES_STRING_TABLE);
         sqLiteDatabase.execSQL(Project.ProjectTradesBridge.CREATE_PROJECT_TRADES_TABLE);
+        sqLiteDatabase.execSQL(FieldValue.FieldValueTable.CREATE_FIELD_VALUE_TABLE);
+        sqLiteDatabase.execSQL(FieldValue.StockFieldValueTable.CREATE_STOCK_FIELD_VALUE_TABLE);
     }
 
     @Override
@@ -166,6 +169,28 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
         db.insertWithOnConflict(SiteVisit.SiteWalkEntry.TABLE_NAME, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
         db.insertWithOnConflict(Project.ProjectSiteWalkBridge.TABLE_NAME, null, contentValues1, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
+    public void insertStockFieldValues(int type, List<FieldValue> fvs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        for (FieldValue fv: fvs) {
+            ContentValues contentValues = getContentValues(type, fv);
+            db.insertWithOnConflict(FieldValue.StockFieldValueTable.TABLE_NAME,
+                    null,
+                    contentValues,
+                    SQLiteDatabase.CONFLICT_REPLACE);
+        }
+    }
+
+    public void insertFieldValues(List<FieldValue> fvs) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        for (FieldValue fv: fvs) {
+            ContentValues contentValues = getContentValues(fv);
+            db.insertWithOnConflict(FieldValue.FieldValueTable.TABLE_NAME,
+                    null,
+                    contentValues,
+                    SQLiteDatabase.CONFLICT_REPLACE);
+        }
     }
 
     public List<String> getProjectTrades(String projectId) {
@@ -667,7 +692,10 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     null
             );
             cursor.moveToFirst();
-            return getCursorProject(cursor);
+            if(!cursor.isAfterLast()) {
+                return getCursorProject(cursor);
+            }
+            return null;
         }
         finally {
             if (cursor != null && !cursor.isClosed()) {
@@ -789,16 +817,19 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                 cursor = db.query(
                         SiteVisit.SiteWalkEntry.TABLE_NAME,
                         columns,
-                        SiteVisit.SiteWalkEntry.COLUMN_IS_ACTIVE + " = ?",
-                        new String[]{"1"},
+                        SiteVisit.SiteWalkEntry.COLUMN_IS_ACTIVE + " = ?" + " AND " +
+                                SiteVisit.SiteWalkEntry.COLUMN_ID+ " = ?",
+                        new String[]{"1",siteWalkId},
                         null,
                         null,
                         null
                 );
                 cursor.moveToFirst();
-                SiteVisit siteVisit = getCursorSiteWalk(cursor);
-                if (siteVisit != null) {
-                    siteVisits.add(siteVisit);
+                if (!cursor.isAfterLast()) {
+                    SiteVisit siteVisit = getCursorSiteWalk(cursor);
+                    if (siteVisit != null) {
+                        siteVisits.add(siteVisit);
+                    }
                 }
             }
             return siteVisits;
@@ -833,6 +864,137 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             } else {
                 return null;
             }
+        }
+        finally {
+            db.close();
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public List<FieldValue> getStockFieldValues(int type) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+            String[] columns = {
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID,
+                    FieldValue.FieldValueTable.COL_FIELD,
+                    FieldValue.FieldValueTable.COL_IN,
+                    FieldValue.FieldValueTable.COL_REQUIRED
+            };
+            cursor = db.query(
+                    FieldValue.StockFieldValueTable.TABLE_NAME,
+                    columns,
+                    FieldValue.StockFieldValueTable.COL_FIELD_VALUE_OWNER_TYPE + " = ? ",
+                    new String[]{type + ""},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            ArrayList<FieldValue> fvs = new ArrayList<>();
+            while (!cursor.isAfterLast()) {
+                fvs.add(getCursorStockFieldValue(cursor));
+                cursor.moveToNext();
+            }
+            return  fvs;
+        }
+        finally {
+            db.close();
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public List<FieldValue> getFieldValuesByOwner(String ownerId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+            String[] columns = {
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID,
+                    FieldValue.FieldValueTable.COL_OWNER_ID,
+                    FieldValue.FieldValueTable.COL_FIELD,
+                    FieldValue.FieldValueTable.COL_VALUE,
+                    FieldValue.FieldValueTable.COL_IN,
+                    FieldValue.FieldValueTable.COL_REQUIRED
+            };
+            cursor = db.query(
+                    FieldValue.FieldValueTable.TABLE_NAME,
+                    columns,
+                    FieldValue.FieldValueTable.COL_OWNER_ID + " = ? ",
+                    new String[]{ownerId},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            ArrayList<FieldValue> fvs = new ArrayList<>();
+            while (!cursor.isAfterLast()) {
+                fvs.add(getCursorFieldValue(cursor));
+                cursor.moveToNext();
+            }
+            return  fvs;
+        }
+        finally {
+            db.close();
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public FieldValue getFieldValue(String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        FieldValue fv = null;
+        Cursor cursor = null;
+        try {
+            String[] columns = {
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID,
+                    FieldValue.FieldValueTable.COL_OWNER_ID,
+                    FieldValue.FieldValueTable.COL_FIELD,
+                    FieldValue.FieldValueTable.COL_VALUE,
+                    FieldValue.FieldValueTable.COL_IN,
+                    FieldValue.FieldValueTable.COL_REQUIRED
+            };
+            cursor = db.query(
+                    FieldValue.FieldValueTable.TABLE_NAME,
+                    columns,
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ? ",
+                    new String[]{id},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if (cursor != null && !cursor.isAfterLast()) {
+                fv = getCursorFieldValue(cursor);
+                return fv;
+            }
+            if (fv == null) {
+                String[] sColumns = {
+                        FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID,
+                        FieldValue.FieldValueTable.COL_FIELD,
+                        FieldValue.FieldValueTable.COL_IN,
+                        FieldValue.FieldValueTable.COL_REQUIRED
+                };
+                cursor = db.query(
+                        FieldValue.StockFieldValueTable.TABLE_NAME,
+                        sColumns,
+                        FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ? ",
+                        new String[]{id},
+                        null,
+                        null,
+                        null
+                );
+                cursor.moveToFirst();
+                if (cursor != null && !cursor.isAfterLast()) {
+                    fv = getCursorStockFieldValue(cursor);
+                    return fv;
+                }
+            }
+            return null;
         }
         finally {
             db.close();
@@ -1066,6 +1228,27 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
     }
 
+    public void deleteFieldValue(String fieldValueId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int a = 0,b = 0;
+        try {
+            a = db.delete(
+                    FieldValue.FieldValueTable.TABLE_NAME,
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ?",
+                    new String[]{fieldValueId}
+            );
+            b = db.delete(
+                    FieldValue.StockFieldValueTable.TABLE_NAME,
+                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ?",
+                    new String[]{fieldValueId}
+            );
+        }
+        finally {
+            Log.i("deleted:",a + "rows from FV, " + b + "rows from StockFV");
+            db.close();
+        }
+    }
+
 
     public ContentValues getContentValues(DrawRequest dr) {
         ContentValues contentValues = new ContentValues();
@@ -1206,6 +1389,43 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         return contentValues;
     }
 
+    /* for STOCK fieldValue objects, meaning they are not owned by an owner, rather a type
+
+     */
+    public ContentValues getContentValues(int type, FieldValue fv) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID, fv.getId());
+        contentValues.put(FieldValue.StockFieldValueTable.COL_FIELD_VALUE_OWNER_TYPE, type);
+        contentValues.put(FieldValue.FieldValueTable.COL_FIELD, fv.getField());
+        int in;
+        if (fv.getIn()) {in = 1;} else {in = 0;}
+        contentValues.put(FieldValue.FieldValueTable.COL_IN, in);
+        if (fv.getRequired()) {in = 1;} else {in = 0;}
+        contentValues.put(FieldValue.FieldValueTable.COL_REQUIRED, in);
+        return contentValues;
+    }
+
+    /*
+        for OWNED Field Value pairs, this means the value part may be filled out.
+     */
+
+    public ContentValues getContentValues(FieldValue fv) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID, fv.getId());
+        if (fv.getOwnerId().equals("")) {
+                Log.i("THERE IS NO OWNER ID", "FieldValue- " + fv.getField());
+            }
+        contentValues.put(FieldValue.FieldValueTable.COL_OWNER_ID, fv.getOwnerId());
+        contentValues.put(FieldValue.FieldValueTable.COL_FIELD, fv.getField());
+        contentValues.put(FieldValue.FieldValueTable.COL_VALUE, fv.getValue());
+        int in;
+        if (fv.getIn()) {in = 1;} else {in = 0;}
+        contentValues.put(FieldValue.FieldValueTable.COL_IN, in);
+        if (fv.getRequired()) {in = 1;} else {in = 0;}
+        contentValues.put(FieldValue.FieldValueTable.COL_REQUIRED, in);
+        return contentValues;
+    }
+
     public Project getCursorProject(Cursor cursor) {
             Project project = Project.initializeDBProject();
             if (cursor.getString(0) != null) {
@@ -1314,5 +1534,23 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             sw.setProjectId(cursor.getString(4));
         }
         return sw;
+    }
+
+    private FieldValue getCursorFieldValue(Cursor cursor) {
+        FieldValue fv = new FieldValue(cursor.getString(0));
+        fv.setOwnerId(cursor.getString(1));
+        fv.setField(cursor.getString(2));
+        fv.setValue(cursor.getString(3));
+        fv.setIn(cursor.getInt(4));
+        fv.setRequired(cursor.getInt(5));
+        return fv;
+    }
+
+    private FieldValue getCursorStockFieldValue(Cursor cursor) {
+        FieldValue fv = new FieldValue(cursor.getString(0));
+        fv.setField(cursor.getString(1));
+        fv.setIn(cursor.getInt(2));
+        fv.setRequired(cursor.getInt(3));
+        return fv;
     }
 }

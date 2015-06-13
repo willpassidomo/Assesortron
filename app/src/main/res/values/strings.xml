@@ -17,5 +17,6 @@
     <string name="title_activity_send_project">SendProject</string>
     <string name="title_activity_make_draw_request">MakeDrawRequest</string>
     <string name="title_activity_site_visit">SiteVisit</string>
+    <string name="title_activity_new_site_visit">NewSiteVisit</string>
 
 </resources>

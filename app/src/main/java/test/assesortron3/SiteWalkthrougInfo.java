@@ -174,7 +174,8 @@ public class SiteWalkthrougInfo extends Fragment implements test.assesortron3.Ta
             walkThrough = (WalkThrough) object[0];
         }
         if (object[1] instanceof Project) {
-                project = (Project) object[1];
+            project = (Project) object[1];
+            Log.i("walkthrough project", "floors =" + project.getNumAGFloors() +", "+project.getNumBasementFloors());
          }
         if (getView() != null) {
             setVariables();

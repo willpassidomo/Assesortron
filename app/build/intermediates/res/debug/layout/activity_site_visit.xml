@@ -7,32 +7,90 @@
     tools:context="test.assesortron3.VisitSite"
     android:padding="0dp">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ViewSwitcher
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:id="@+id/site_visit_view_switcher" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="CONTINUE"
+                android:id="@+id/site_visit_continue"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="#9c0d7000" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Sync"
+                    android:id="@+id/site_visit_sync"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Email"
+                    android:id="@+id/site_visit_email"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Finish SiteWalk"
+                android:id="@+id/site_visit_finish"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"></LinearLayout>
+            android:layout_height="fill_parent">
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Progress"
-            android:id="@+id/site_visit_progress"
-            android:layout_weight="4"
-            android:layout_margin="10dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3">
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Draw Request"
-            android:id="@+id/site_visit_draw_request"
-            android:layout_weight="4"
-            android:layout_margin="10dp" />
-    </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/site_visit_back_but"
+                    android:background="@android:drawable/ic_menu_revert" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Progress"
+                android:id="@+id/site_visit_progress"
+                android:layout_weight="4"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Draw Request"
+                android:id="@+id/site_visit_draw_request"
+                android:layout_weight="4"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+    </ViewSwitcher>
 </RelativeLayout>
-<!-- From: file:/home/otf/Documents/code/AssesorTron/app/src/main/res/layout/activity_site_visit.xml -->
+<!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/activity_site_visit.xml -->

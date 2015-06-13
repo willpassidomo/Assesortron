@@ -2,7 +2,9 @@ package test.persistence;
 
 import android.content.Context;
 import android.provider.BaseColumns;
+import android.util.Log;
 
+import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,12 +14,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import test.adapters.SoftQuestionListAdapter;
 import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
 import test.objects.Project;
 import test.objects.SiteVisit;
 import test.objects.User;
 import test.objects.WalkThrough;
+import test.objects.FieldValue;
 
 /**
  * Created by willpassidomo on 1/14/15.
@@ -37,10 +41,40 @@ public class Storage {
         }
     }
 
+    public static void storeProjectQuestions(Context context, String projectId, List<FieldValue> fvs) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static void storeSiteVisit(Context context, String projectId, SiteVisit siteVisit) {
         try {
             setDataBaseStorage(context);
             dataBaseStorage.insertSiteWalk(projectId, siteVisit);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void storeSiteVisitQuestions(Context context, List<FieldValue> fvs) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void storeFieldValues(Context context, List<FieldValue> fvs) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.insertFieldValues(fvs);
         }
         finally {
             dataBaseStorage.close();
@@ -148,6 +182,16 @@ public class Storage {
         }
     }
 
+    public static void deleteFieldValue(Context context, String fieldValueId) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.deleteFieldValue(fieldValueId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static Project getProjectById(Context context, String id) {
         try {
             setDataBaseStorage(context);
@@ -194,6 +238,7 @@ public class Storage {
         try {
             setDataBaseStorage(context);
             List<String> siteWalkIds = dataBaseStorage.getSiteWalkIds(projectId);
+            Log.i("total site walks found", "#" + siteWalkIds.size());
             return dataBaseStorage.getActiveSiteWalks(siteWalkIds);
         }
         finally {
@@ -305,6 +350,80 @@ public class Storage {
         try {
             setDataBaseStorage(context);
             return dataBaseStorage.getProjectTrades(projectId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<FieldValue> getProjectQuestions(Context context) {
+        try {
+            setDataBaseStorage(context);
+            return dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<FieldValue> getProjectQuestions(Context context, String id) {
+        try {
+            setDataBaseStorage(context);
+            List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
+            if (fvs == null || fvs.size() == 0) {
+                fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
+                for(FieldValue fv: fvs) {
+                    fv.setOwnerId(id);
+                }
+            }
+            return fvs;
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<FieldValue> getSiteWalkQuestions(Context context) {
+        try {
+            setDataBaseStorage(context);
+            return dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<FieldValue> getSiteWalkQuestions(Context context, String id) {
+        try {
+            setDataBaseStorage(context);
+            List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
+            if (fvs == null || fvs.size() == 0) {
+                fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
+                for (FieldValue fv: fvs) {
+                    fv.setOwnerId(id);
+                }
+            }
+            return fvs;
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<FieldValue> getQuestionsByOwnerId(Context context, String ownerId) {
+        try {
+            setDataBaseStorage(context);
+            return dataBaseStorage.getFieldValuesByOwner(ownerId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static FieldValue getQuestionById(Context context, String id) {
+        try {
+            setDataBaseStorage(context);
+            return dataBaseStorage.getFieldValue(id);
         }
         finally {
             dataBaseStorage.close();
@@ -431,7 +550,5 @@ public class Storage {
                         TradesTable._ID + " INTEGER PRIMARY KEY, " +
                         COLUMN_TRADE_STRING + TEXT_TYPE + ")";
     }
-
-
 
 }

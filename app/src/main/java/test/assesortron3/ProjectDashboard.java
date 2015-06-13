@@ -349,7 +349,7 @@ public class ProjectDashboard extends Activity {
 
                     Intent intent = new Intent(context, ProjectHomeScreen.class);
 
-                    intent.putExtra("id", project.getId());
+                    intent.putExtra(Constants.PROJECT_ID, project.getId());
                     startActivity(intent);
 
             }
