@@ -108,7 +108,7 @@ public class SoftQuestionListAdapter implements ListAdapter {
         boolean controlBlock = (position >= in.size());
         boolean matches = true;
 
-        if (view != null && !controlBlock) {
+        if (view != null && !controlBlock && !changed ) {
         /*gets the "field" value of the view passed in */
             field = (TextView) view.findViewById(R.id.soft_q_field);
             value = (TextView) view.findViewById(R.id.soft_q_value);
@@ -153,8 +153,11 @@ public class SoftQuestionListAdapter implements ListAdapter {
             }
         });
         ArrayAdapter<FieldValue> sa = new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, out);
-        if (!sa.getItem(0).equals(fvLead)) {
-            sa.insert(fvLead, 0);
+        if (out.size() >= 1) {
+            if (!sa.getItem(0).equals(fvLead)) {
+                sa.insert(fvLead, 0);
+            }
+
         }
         newQuestion.setAdapter(sa);
         newQuestion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

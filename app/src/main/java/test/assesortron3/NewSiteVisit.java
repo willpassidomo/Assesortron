@@ -1,11 +1,14 @@
 package test.assesortron3;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +25,8 @@ import test.persistence.Storage;
 
 public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.DataListener {
 
+    Context context;
+    Button submit;
     SiteVisit siteWalk;
     ListView listView;
     List<FieldValue> questions;
@@ -33,6 +38,7 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.activity_new_site_visit);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -48,9 +54,11 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
         Constants.checkSiteWalkMinQuestions(this);
         questions = Storage.getSiteWalkQuestions(this, siteWalk.getId());
         for (FieldValue fv: questions) {
-            if (fv.getIn()) {
-                Log.i("FV from database", fv.getField() + " - "+fv.getValue());
+            if (fv.getOwnerId() == null || fv.getOwnerId().equals("")) {
+                fv.setOwnerId(siteWalk.getId());
             }
+            Log.i("FV ownerId", fv.getField() + " - "+fv.getOwnerId());
+
         }
 
         timer = new ScheduledThreadPoolExecutor(1);
@@ -108,6 +116,17 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
         listView = (ListView)findViewById(R.id.new_site_visit_fv_list);
         sqla = new SoftQuestionListAdapter(this, questions, this);
         listView.setAdapter(sqla);
+        submit = (Button)findViewById(R.id.new_site_submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Storage.storeSiteVisitQuestions(context, questions);
+                Intent intent = new Intent(context, VisitSite.class);
+                intent.putExtra(Constants.SITE_VISIT_ID, siteWalk.getId());
+                intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
+                startActivity(intent);
+            }
+        });
     }
 
     public void setSave() {

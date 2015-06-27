@@ -34,20 +34,16 @@ public class VisitSite extends Activity {
         projectId = getIntent().getStringExtra(Constants.PROJECT_ID);
 
         String type = getIntent().getStringExtra(Constants.NEW_OR_EDIT);
-
-        if(type.equals(Constants.NEW)) {
-            newSiteVisit();
-        } else if (type.equals(Constants.EDIT)) {
-            continueSiteVisit(getIntent().getStringExtra(Constants.SITE_VISIT_ID));
-            Log.i("Continuing site visit", "id- " + siteVisit.getId());
-            Log.i("for project","id- "+projectId);
-        } else {
-            newSiteVisit();
-            Toast.makeText(this, "*unrecognizeable type* \nnew site visit started", Toast.LENGTH_LONG);
-        }
+        siteVisit = Storage.getSiteWalkById(this, getIntent().getStringExtra(Constants.SITE_VISIT_ID));
 
         setVariables();
         setListeners();
+
+        if(type.equals(Constants.NEW)) {
+            vs.showNext();
+        }
+
+
 
     }
 
@@ -155,14 +151,4 @@ public class VisitSite extends Activity {
         });
     }
 
-
-    private void newSiteVisit() {
-        siteVisit = new SiteVisit(projectId);
-        Storage.storeSiteVisit(this, projectId, siteVisit);
-        Log.i("new sitevisit proj id-", "id- "+ siteVisit.getProjectId());
-    }
-
-    private void continueSiteVisit(String siteWalkId) {
-        siteVisit = Storage.getSiteWalkById(this, siteWalkId);
-    }
 }

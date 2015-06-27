@@ -215,8 +215,10 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
 
                 Storage.storeWalkThrough(context, siteVisit.getId(), walkThrough);
 
-                Intent intent = new Intent(context, ProjectHomeScreen.class);
-                intent.putExtra(Constants.PROJECT_ID,project.getId());
+                Intent intent = new Intent(context, SiteWalkthrough.class);
+                intent.putExtra(Constants.SITE_VISIT_ID,siteVisit.getId());
+                intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
+                intent.putExtra(Constants.PROJECT_ID, siteVisit.getProjectId());
                 startActivity(intent);
             }
         });
