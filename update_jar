@@ -1,0 +1,8 @@
+cd ~/code/AssesortronServer
+mvn clean install
+mvn appengine:endpoints_get_client_lib
+cd target/endpoints-client-libs/assesortronTaskerAPI
+mvn install
+cd ~/code/AssesorTron
+mv /home/otf/code/AssesortronServer/target/endpoints-client-libs/assesortronTaskerAPI/target/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT.jar /home/otf/code/AssesorTron/app/src/main/java
+

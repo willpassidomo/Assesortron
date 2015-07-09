@@ -4,6 +4,7 @@ import android.provider.BaseColumns;
 
 import java.util.UUID;
 
+import assesortron.assesortronTaskerAPI.model.FieldValueDTO;
 import test.persistence.Constants;
 
 /**
@@ -98,6 +99,17 @@ public class FieldValue implements Comparable {
 
     public void setRequired(boolean required) {
         this.required = required;
+    }
+
+    public FieldValueDTO getDTO() {
+        FieldValueDTO dto = new FieldValueDTO();
+        dto.setField(field);
+        dto.setValue(value);
+        dto.setOwnerId(ownerId);
+        dto.setIn(in);
+        dto.setRequired(required);
+        dto.setId(id);
+        return dto;
     }
 
     @Override

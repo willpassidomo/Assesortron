@@ -14,12 +14,13 @@ import test.objects.DrawRequestItem;
 
 
 public class DrawRequestItemList extends Fragment {
-
+    MakeDrawRequest.MakeDrawRequestInterface parentListener;
     List<DrawRequestItem> drawRequestItems;
 
-    public static DrawRequestItemList newInstance(List<DrawRequestItem> drawRequestItems) {
+    public static DrawRequestItemList newInstance(MakeDrawRequest.MakeDrawRequestInterface parentListener, List<DrawRequestItem> drawRequestItems) {
         DrawRequestItemList fragment = new DrawRequestItemList();
         fragment.setDrawRequestItems(drawRequestItems);
+        fragment.setParentListener(parentListener);
         return fragment;
     }
 
@@ -29,6 +30,10 @@ public class DrawRequestItemList extends Fragment {
 
     public void setDrawRequestItems(List<DrawRequestItem> drawRequestItems) {
         this.drawRequestItems = drawRequestItems;
+    }
+
+    public void setParentListener(MakeDrawRequest.MakeDrawRequestInterface parentListener) {
+        this.parentListener = parentListener;
     }
 
     @Override
@@ -54,7 +59,7 @@ public class DrawRequestItemList extends Fragment {
 
     private void setList() {
         ListView listView = (ListView) getView().findViewById(R.id.draw_request_item_list);
-        DrawRequestItemListAdapter drila = new DrawRequestItemListAdapter(getActivity(), drawRequestItems);
+        DrawRequestItemListAdapter drila = new DrawRequestItemListAdapter(getActivity(), parentListener, drawRequestItems);
         listView.setAdapter(drila);
     }
 

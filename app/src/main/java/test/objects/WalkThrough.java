@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import assesortron.assesortronTaskerAPI.model.WalkThroughDTO;
 import test.persistence.Constants;
 
 /**
@@ -17,8 +18,8 @@ public class WalkThrough {
    private String id;
    private Date date;
     private String floor;
-    private String Trade;
-    private String Progress;
+    private String trade;
+    private String progress;
     private String notes;
     private List<Uri> pictures = new ArrayList<Uri>();
 
@@ -70,19 +71,19 @@ public class WalkThrough {
     }
 
     public String getTrade() {
-        return Trade;
+        return trade;
     }
 
     public void setTrade(String trade) {
-        Trade = trade;
+        this.trade = trade;
     }
 
     public String getProgress() {
-        return Progress;
+        return progress;
     }
 
     public void setProgress(String progress) {
-        Progress = progress;
+        this.progress = progress;
     }
 
     public void addSitePicture(Uri pictureUri) {
@@ -116,6 +117,16 @@ public class WalkThrough {
     public void addSitePicture(String stringUri) {
         Uri uri = (Uri.parse(stringUri));
         addSitePicture(uri);
+    }
+
+    public WalkThroughDTO getDTO() {
+        WalkThroughDTO dto = new WalkThroughDTO();
+        dto.setId(id);
+        dto.setDateString(date.toString());
+        dto.setFloor(floor);
+        dto.setNote(notes);
+        dto.setProgress(progress);
+        return dto;
     }
 
     public static abstract class WalkThroughEntry implements BaseColumns {

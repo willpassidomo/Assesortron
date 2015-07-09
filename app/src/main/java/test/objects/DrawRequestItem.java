@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 import java.util.Date;
 import java.util.UUID;
 
+import assesortron.assesortronTaskerAPI.model.DrawRequestItemDTO;
 import test.persistence.Constants;
 
 /**
@@ -125,6 +126,17 @@ public class DrawRequestItem implements Comparable<DrawRequestItem>{
             default:
                 return "unknown";
         }
+    }
+
+    public DrawRequestItemDTO getDTO() {
+        DrawRequestItemDTO dto = new DrawRequestItemDTO();
+        dto.setAmount(amount);
+        dto.setDateSubmittedLong(dateSubmitted.getTime());
+        dto.setDescription(description);
+        dto.setExecuted(executed);
+        dto.setId(id);
+        dto.setSubContractor(subContractor);
+        return dto;
     }
 
     @Override

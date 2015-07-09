@@ -52,7 +52,6 @@ public class MakeDrawRequest extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Log.i("fired MakeDrawRequest","onCreateView");
         return inflater.inflate(R.layout.fragment_make_draw_request, container, false);
     }
 
@@ -130,7 +129,6 @@ public class MakeDrawRequest extends Fragment {
     }
 
     private void setFields() {
-        Log.i("change order count id", "on act create: " +changeOrderCount.getId()+"");
         changeOrderCount.setText(drawRequest.getItemList(DrawRequestItem.CHANGE_ORDER).size()+"");
         changeOrderTotal.setText(getTotal(drawRequest.getItemList(DrawRequestItem.CHANGE_ORDER)));
         storedMaterialsCount.setText(drawRequest.getItemList(DrawRequestItem.STORED_MATERIALS).size()+"");
@@ -163,11 +161,10 @@ public class MakeDrawRequest extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DrawRequest dr = new DrawRequest();
-                dr.setCurrentRequest(currentRequest.getText().toString());
-                dr.setCurrentRecommendation(currentRecommendation.getText().toString());
-                dr.setConditions(conditions.getText().toString());
-                parentActivtiy.submitDrawRequest(dr);
+                drawRequest.setCurrentRequest(currentRequest.getText().toString());
+                drawRequest.setCurrentRecommendation(currentRecommendation.getText().toString());
+                drawRequest.setConditions(conditions.getText().toString());
+                parentActivtiy.submitDrawRequest(drawRequest);
             }
         });
     }
@@ -218,9 +215,10 @@ public class MakeDrawRequest extends Fragment {
         return df.format(total);
     }
 
-    interface MakeDrawRequestInterface {
+    public interface MakeDrawRequestInterface {
         public void displayList(String type);
         public void displayNewTypeEntry(String type);
+        public void editEntry(String drawRequestItemId);
         public void submitDrawRequestItem(DrawRequestItem drawRequestItem);
         public void submitDrawRequest(DrawRequest drawRequest);
         public Activity getActivity();

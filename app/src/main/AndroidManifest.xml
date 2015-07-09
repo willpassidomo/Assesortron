@@ -77,9 +77,13 @@
         </activity>
         <activity
             android:name=".NewSiteVisit"
-            android:label="@string/title_activity_new_site_visit"
-            >
+            android:label="@string/title_activity_new_site_visit" >
         </activity>
+
+        <service
+            android:name="test.Network.FullSyncService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

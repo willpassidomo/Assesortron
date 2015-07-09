@@ -1,11 +1,11 @@
 package test.adapters;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+        import android.support.v4.app.Fragment;
+        import android.support.v4.app.FragmentManager;
+        import android.support.v4.app.FragmentPagerAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
 /**
  * Created by willpassidomo on 2/4/15.

@@ -25,8 +25,8 @@ import test.objects.WalkThrough;
  * Created by willpassidomo on 1/24/15.
  */
 public class DataBaseStorage extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "assesortronDB10.db";
-    private static int DATABASE_VERSION = 9;
+    private static String DATABASE_NAME = "assesortronDB11.db";
+    private static int DATABASE_VERSION = 10;
 
     public DataBaseStorage(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -135,6 +135,8 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         ContentValues contentValues1 = getContentValues(drawRequestId, drawRequestItem);
         db.insertWithOnConflict(DrawRequestItem.DrawRequestItemEntry.TABLE_NAME, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
         db.insertWithOnConflict(DrawRequest.DrawRequestItemBridge.TABLE_NAME, null, contentValues1, SQLiteDatabase.CONFLICT_REPLACE);
+//
+//        Log.i("DrawReqItem in DB", "\nrow Item Table- " + rowIdItemTable + "\nrow Bridge table" + rowIdBridgeTable);
     }
 
     public boolean insertProject(Project project) {
@@ -725,7 +727,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     null
             );
             cursor.moveToFirst();
-            return getCursorSiteWalk(cursor);
+            SiteVisit siteVisit = getCursorSiteWalk(cursor);
+            siteVisit.setFieldValues(getFieldValuesByOwner(siteVisit.getId()));
+            return siteVisit;
         } finally {
             db.close();
             if (cursor != null && !cursor.isClosed()) {
@@ -765,41 +769,49 @@ public class DataBaseStorage extends SQLiteOpenHelper {
     }
 
     public List<SiteVisit> getSiteWalks(List<String> siteWalkIds) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = null;
-        try {
-            String[] columns = {
-                    SiteVisit.SiteWalkEntry.COLUMN_ID,
-                    SiteVisit.SiteWalkEntry.COLUMN_TIME_STARTED,
-                    SiteVisit.SiteWalkEntry.COLUMN_LAST_ENTRY,
-                    SiteVisit.SiteWalkEntry.COLUMN_IS_ACTIVE
-            };
-            List<SiteVisit> siteVisits = new ArrayList<>();
-            for (String siteWalkId : siteWalkIds) {
-                cursor = db.query(
-                        SiteVisit.SiteWalkEntry.TABLE_NAME,
-                        columns,
-                        SiteVisit.SiteWalkEntry.COLUMN_ID + " = ? ",
-                        new String[]{siteWalkId},
-                        null,
-                        null,
-                        null
-                );
-                cursor.moveToFirst();
-                SiteVisit siteVisit = getCursorSiteWalk(cursor);
-                if (siteVisit != null) {
-                    siteVisits.add(siteVisit);
-                }
-            }
-            return siteVisits;
+        List<SiteVisit> siteVisits = new ArrayList<>();
+        for (String id: siteWalkIds) {
+            siteVisits.add(getSiteWalk(id));
         }
-        finally {
-            db.close();
-            if (cursor != null && !cursor.isClosed()) {
-                cursor.close();
-            }
-        }
+        return siteVisits;
     }
+
+//    public List<SiteVisit> getSiteWalks(List<String> siteWalkIds) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor cursor = null;
+//        try {
+//            String[] columns = {
+//                    SiteVisit.SiteWalkEntry.COLUMN_ID,
+//                    SiteVisit.SiteWalkEntry.COLUMN_TIME_STARTED,
+//                    SiteVisit.SiteWalkEntry.COLUMN_LAST_ENTRY,
+//                    SiteVisit.SiteWalkEntry.COLUMN_IS_ACTIVE
+//            };
+//            List<SiteVisit> siteVisits = new ArrayList<>();
+//            for (String siteWalkId : siteWalkIds) {
+//                cursor = db.query(
+//                        SiteVisit.SiteWalkEntry.TABLE_NAME,
+//                        columns,
+//                        SiteVisit.SiteWalkEntry.COLUMN_ID + " = ? ",
+//                        new String[]{siteWalkId},
+//                        null,
+//                        null,
+//                        null
+//                );
+//                cursor.moveToFirst();
+//                SiteVisit siteVisit = getCursorSiteWalk(cursor);
+//                if (siteVisit != null) {
+//                    siteVisits.add(siteVisit);
+//                }
+//            }
+//            return siteVisits;
+//        }
+//        finally {
+//            db.close();
+//            if (cursor != null && !cursor.isClosed()) {
+//                cursor.close();
+//            }
+//        }
+//    }
 
     public List<SiteVisit> getActiveSiteWalks(List<String> siteWalkIds) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -1412,7 +1424,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
     public ContentValues getContentValues(FieldValue fv) {
         ContentValues contentValues = new ContentValues();
         contentValues.put(FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID, fv.getId());
-        if (fv.getOwnerId().equals("")) {
+        if (fv.getOwnerId() == null) {
                 Log.i("THERE IS NO OWNER ID", "FieldValue- " + fv.getField());
             }
         contentValues.put(FieldValue.FieldValueTable.COL_OWNER_ID, fv.getOwnerId());

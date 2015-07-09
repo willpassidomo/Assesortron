@@ -13,8 +13,10 @@ import android.widget.ViewSwitcher;
 
 import java.util.List;
 
+import test.assesortron3.MakeDrawRequest;
 import test.assesortron3.MakeDrawRequestField;
 import test.assesortron3.R;
+import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
 import test.persistence.Constants;
 import test.persistence.Storage;
@@ -24,11 +26,13 @@ import test.persistence.Storage;
  */
 public class DrawRequestItemListAdapter implements ListAdapter {
     private Context context;
+    private MakeDrawRequest.MakeDrawRequestInterface parentListener;
     private List<DrawRequestItem> drawRequestItems;
 
 
-    public DrawRequestItemListAdapter(Context context, List<DrawRequestItem> drawRequestItems) {
+    public DrawRequestItemListAdapter(Context context, MakeDrawRequest.MakeDrawRequestInterface parentListener, List<DrawRequestItem> drawRequestItems) {
         this.context = context;
+        this.parentListener = parentListener;
         this.drawRequestItems = drawRequestItems;
     }
 
@@ -90,14 +94,17 @@ public class DrawRequestItemListAdapter implements ListAdapter {
         Button deleteButton = (Button) view.findViewById(R.id.list_draw_request_delete_button);
         Button editButton = (Button) view.findViewById(R.id.list_draw_request_edit_button);
 
+
         final ViewSwitcher vs = (ViewSwitcher) view.findViewById(R.id.list_draw_request_switcher);
 
         if (drawRequestItems.isEmpty()) {
             subcontractor.setText("no items");
             amount.setText("0");
         } else {
-            subcontractor.setText(drawRequestItems.get(position).getSubContractor());
-            amount.setText(drawRequestItems.get(position).getAmount() + "");
+            final DrawRequestItem dr = drawRequestItems.get(position);
+
+            subcontractor.setText(dr.getSubContractor());
+            amount.setText(dr.getAmount() + "");
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -109,20 +116,15 @@ public class DrawRequestItemListAdapter implements ListAdapter {
             deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    DrawRequestItem co = drawRequestItems.get(position);
-                    Storage.deleteDrawRequestItem(context, co.getId());
+                    drawRequestItems.remove(dr);
+                    Storage.deleteDrawRequestItem(context, dr.getId());
                 }
             });
 
             editButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    DrawRequestItem co = drawRequestItems.get(position);
-
-                    Intent intent = new Intent(context, MakeDrawRequestField.class);
-                    intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
-                    intent.putExtra(Constants.DRAW_REQUEST_ITEM_ID, co.getId());
-                    context.startActivity(intent);
+                    parentListener.editEntry(dr.getId());
                 }
             });
         }

@@ -1,13 +1,19 @@
 package test.objects;
 
+import android.content.Context;
 import android.provider.BaseColumns;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
+
+import assesortron.assesortronTaskerAPI.model.FieldValueDTO;
+import assesortron.assesortronTaskerAPI.model.SiteWalkDTO;
 
 import assesortron.assesortronTaskerAPI.model.WalkThroughDTO;
 import test.persistence.Constants;
+import test.persistence.Storage;
 
 /**
  * Created by willpassidomo on 3/4/15.
@@ -19,7 +25,8 @@ public class SiteVisit {
     private Date lastEntry;
     private boolean active = true;
 
-    private ArrayList<WalkThroughDTO> walkThroughs = new ArrayList<>();
+    private List<FieldValue> fieldValues;
+    private List<WalkThrough> walkThroughs = new ArrayList<>();
     private DrawRequest drawRequest;
 
     public static SiteVisit getDBSiteWalk() {
@@ -55,7 +62,7 @@ public class SiteVisit {
     /**
      * @return the walkThroughs
      */
-    public ArrayList<WalkThroughDTO> getWalkThroughs() {
+    public List<WalkThrough> getWalkThroughs() {
         return walkThroughs;
     }
 
@@ -75,7 +82,7 @@ public class SiteVisit {
     }
 
 
-    public void setWalkThroughs(ArrayList<WalkThroughDTO> walkThroughs) {
+    public void setWalkThroughs(ArrayList<WalkThrough> walkThroughs) {
         this.walkThroughs = walkThroughs;
     }
 
@@ -113,6 +120,34 @@ public class SiteVisit {
 
     public void setProjectId(String projectId) {
         this.projectId = projectId;
+    }
+
+    public SiteWalkDTO getDTO(Context context) {
+        SiteWalkDTO dto = new SiteWalkDTO();
+        dto.setDrawRequest(Storage.getDrawRequestBySiteWalkId(context, getId()).getDTO());
+        dto.setLastEntryLong(lastEntry != null ? lastEntry.getTime() : 0);
+        dto.setProjectIDString(projectId);
+        dto.setTimeStatedLong(timeStarted != null ? timeStarted.getTime() : 0);
+        walkThroughs = Storage.getWalkThroughBySiteWalkId(context, getId());
+        List<WalkThroughDTO> wtDtos = new ArrayList<>();
+        for (WalkThrough wt: walkThroughs) {
+            wtDtos.add(wt.getDTO());
+        }
+        dto.setWalkThroughs(wtDtos);
+        List<FieldValueDTO> fvDto = new ArrayList<>();
+        for (FieldValue fv: getFieldValues()) {
+            fvDto.add(fv.getDTO());
+        }
+        dto.setFieldValues(fvDto);
+        return dto;
+    }
+
+    public List<FieldValue> getFieldValues() {
+        return fieldValues;
+    }
+
+    public void setFieldValues(List<FieldValue> fieldValues) {
+        this.fieldValues = fieldValues;
     }
 
     public static abstract class SiteWalkEntry implements BaseColumns {

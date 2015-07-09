@@ -1,36 +1,39 @@
 package test.assesortron3;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-import test.adapters.SoftQuestionListAdapter;
 import test.objects.FieldValue;
 import test.objects.SiteVisit;
 import test.persistence.Constants;
 import test.persistence.Storage;
 
 
-public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.DataListener {
+public class NewSiteVisit extends Activity implements SoftQuestionsFragment.DataListener {
 
     Context context;
     Button submit;
     SiteVisit siteWalk;
-    ListView listView;
+    LinearLayout questionView;
     List<FieldValue> questions;
-    SoftQuestionListAdapter sqla;
     boolean save;
     ScheduledThreadPoolExecutor timer;
 
@@ -57,22 +60,9 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
             if (fv.getOwnerId() == null || fv.getOwnerId().equals("")) {
                 fv.setOwnerId(siteWalk.getId());
             }
-            Log.i("FV ownerId", fv.getField() + " - "+fv.getOwnerId());
+            Log.i("FV ownerId", fv.getField() + " - " + fv.getOwnerId());
 
         }
-
-        timer = new ScheduledThreadPoolExecutor(1);
-        timer.scheduleAtFixedRate(
-                new Runnable() {
-                    @Override
-                    public void run() {
-                        setSave();
-                    }
-                },
-                0,
-                5,
-                TimeUnit.SECONDS);
-
         setvariable();
     }
 
@@ -113,9 +103,11 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
     }
 
     private void setvariable() {
-        listView = (ListView)findViewById(R.id.new_site_visit_fv_list);
-        sqla = new SoftQuestionListAdapter(this, questions, this);
-        listView.setAdapter(sqla);
+        questionView = (LinearLayout)findViewById(R.id.new_site_visit_fv_list);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.add(R.id.new_site_visit_fv_list, SoftQuestionsFragment.newInstance(this, questions));
+        ft.commit();
+
         submit = (Button)findViewById(R.id.new_site_submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +120,7 @@ public class NewSiteVisit extends Activity implements SoftQuestionListAdapter.Da
             }
         });
     }
+
 
     public void setSave() {
         save = true;

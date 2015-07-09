@@ -1,8 +1,11 @@
 package test.assesortron3;
 
 import android.app.Activity;
+import android.app.IntentService;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.util.Log;
@@ -13,16 +16,18 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import test.Network.FullSyncService;
 import test.objects.SiteVisit;
 import test.persistence.Constants;
 import test.persistence.Storage;
 
 
 public class VisitSite extends Activity {
+    SyncBroadcastReciever receiver;
     private Context context;
     private String projectId;
     private SiteVisit siteVisit;
-    private Button goWalkThrough, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk,back;
+    private Button goWalkThrough, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk, back;
     private ViewSwitcher vs;
 
     @Override
@@ -38,12 +43,11 @@ public class VisitSite extends Activity {
 
         setVariables();
         setListeners();
+        setRecievers();
 
-        if(type.equals(Constants.NEW)) {
+        if (type.equals(Constants.NEW)) {
             vs.showNext();
         }
-
-
 
     }
 
@@ -69,14 +73,27 @@ public class VisitSite extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setVariables() {
-        vs = (ViewSwitcher)findViewById(R.id.site_visit_view_switcher);
+    @Override
+    public void onResume() {
+        super.onResume();
+        setRecievers();
+    }
 
-        continueSiteWalk = (Button)findViewById(R.id.site_visit_continue);
-        sync = (Button)findViewById(R.id.site_visit_sync);
-        email = (Button)findViewById(R.id.site_visit_email);
-        finishSiteWalk = (Button)findViewById(R.id.site_visit_finish);
-        back = (Button)findViewById(R.id.site_visit_back_but);
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.i("ProjectHomeScreen", "reciever unregistered");
+        unregisterReceiver(receiver);
+    }
+
+    private void setVariables() {
+        vs = (ViewSwitcher) findViewById(R.id.site_visit_view_switcher);
+
+        continueSiteWalk = (Button) findViewById(R.id.site_visit_continue);
+        sync = (Button) findViewById(R.id.site_visit_sync);
+        email = (Button) findViewById(R.id.site_visit_email);
+        finishSiteWalk = (Button) findViewById(R.id.site_visit_finish);
+        back = (Button) findViewById(R.id.site_visit_back_but);
 
         goDrawRequest = (Button) findViewById(R.id.site_visit_draw_request);
         goWalkThrough = (Button) findViewById(R.id.site_visit_progress);
@@ -103,7 +120,11 @@ public class VisitSite extends Activity {
         sync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"This feature is not yet implemented", Toast.LENGTH_LONG);
+                Toast.makeText(context, "syncing site visit", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, FullSyncService.class);
+                intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
+                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+                startService(intent);
             }
         });
 
@@ -112,7 +133,7 @@ public class VisitSite extends Activity {
             public void onClick(View view) {
                 siteVisit.setActive(false);
                 Storage.storeSiteVisit(context, siteVisit.getProjectId(), siteVisit);
-                NavUtils.navigateUpFromSameTask((Activity)context);
+                NavUtils.navigateUpFromSameTask((Activity) context);
                 //TODO
                 //need to provide sync service here!
             }
@@ -121,10 +142,11 @@ public class VisitSite extends Activity {
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, SendProject.class);
-                intent.putExtra(Constants.PROJECT_ID, projectId);
+                Toast.makeText(context, "syncing site visit, not emailing", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, FullSyncService.class);
+                intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
                 intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
-                startActivity(intent);
+                startService(intent);
             }
         });
 
@@ -141,7 +163,7 @@ public class VisitSite extends Activity {
         goWalkThrough.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("Going to new progress","");
+                Log.i("Going to new progress", "");
                 Intent intent = new Intent(context, SiteWalkthrough.class);
                 intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
                 intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
@@ -151,4 +173,29 @@ public class VisitSite extends Activity {
         });
     }
 
+    private void setRecievers() {
+        IntentFilter filter = new IntentFilter(Constants.BROADCAST_SYNC_SERVICE_RESPONSE);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        if (receiver == null) {
+            receiver = new SyncBroadcastReciever();
+        }
+        registerReceiver(receiver, filter);
+        Log.i("ProjectHomeScreen", "reciever Registered");
+
+    }
+
+    class SyncBroadcastReciever extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context c, Intent intent) {
+            Log.i("Broadcast recieved", "");
+            String message = intent.getStringExtra(FullSyncService.OUT_BOUND_MESSAGE);
+            if (message != null) {
+                Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(context, "blank broadcast recieved", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    }
 }

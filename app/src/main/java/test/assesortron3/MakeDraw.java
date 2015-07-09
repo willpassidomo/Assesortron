@@ -41,6 +41,7 @@ public class MakeDraw extends Activity implements MakeDrawRequest.MakeDrawReques
         drawRequest = Storage.getDrawRequestBySiteWalkId(this, siteWalkId);
         if (drawRequest == null) {
             drawRequest = new DrawRequest();
+            Storage.storeDrawRequest(this, siteWalkId, drawRequest);
             Toast.makeText(this, "new Draw Request Started",Toast.LENGTH_LONG);
         }
 
@@ -104,6 +105,7 @@ public class MakeDraw extends Activity implements MakeDrawRequest.MakeDrawReques
     @Override
     public void submitDrawRequestItem(DrawRequestItem drawRequestItem) {
         drawRequest.addDrawRequestItem(drawRequestItem);
+        Log.i("Storing DrawReqItem", "id- " + drawRequestItem.getId() + " \nsubcontractor- " + drawRequestItem.getSubContractor() + "\namount- " + drawRequestItem.getAmount());
         Storage.storeDrawRequestItem(this, drawRequest.getId(), drawRequestItem);
         fragmentManager.popBackStack();
     }
@@ -122,8 +124,18 @@ public class MakeDraw extends Activity implements MakeDrawRequest.MakeDrawReques
     }
 
     @Override
+    public void editEntry(String id) {
+        DrawRequestItem dri = drawRequest.getItem(id);
+        if (dri != null) {
+            displayFragment(MakeDrawRequestField.newInstance(this, dri));
+        } else {
+            Toast.makeText(this, "Draw Request Item not found, ERROR", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
     public void displayList(String type) {
-        addFragment(DrawRequestItemList.newInstance(drawRequest.getItemList(type)));
+        displayFragment(DrawRequestItemList.newInstance(this, drawRequest.getItemList(type)));
     }
 
     @Override
@@ -136,12 +148,6 @@ public class MakeDraw extends Activity implements MakeDrawRequest.MakeDrawReques
         return drawRequest;
     }
 
-    private void addFragment(Fragment fragment) {
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.make_draw_fragment, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
 
     private void displayFragment(Fragment fragment) {
         fragmentTransaction = fragmentManager.beginTransaction();

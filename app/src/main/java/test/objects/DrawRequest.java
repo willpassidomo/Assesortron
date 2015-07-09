@@ -1,6 +1,7 @@
 package test.objects;
 
 import android.provider.BaseColumns;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,6 +10,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+
+import assesortron.assesortronTaskerAPI.model.DrawRequestDTO;
+import assesortron.assesortronTaskerAPI.model.DrawRequestItemDTO;
 
 import test.persistence.Constants;
 
@@ -53,6 +57,17 @@ public class DrawRequest {
 
     public void setDate(String date) {
         this.date = new Date(date);
+    }
+
+    public DrawRequestItem getItem(String id) {
+        for (List<DrawRequestItem> driList: drawRequestItemLists.values()) {
+            for (DrawRequestItem dri: driList) {
+                if (dri.getId().equals(id)) {
+                    return dri;
+                }
+            }
+        }
+        return null;
     }
 
     public List<DrawRequestItem> getItemList(String type) {
@@ -139,6 +154,20 @@ public class DrawRequest {
         this.drawRequestItemLists = drawRequestItemLists;
     }
 
+    public DrawRequestDTO getDTO() {
+        DrawRequestDTO dto = new DrawRequestDTO();
+        dto.setConditions(conditions);
+        dto.setCurrentRecommendationString(currentRecommendation.toString());
+        dto.setCurrentRequestString(currentRequest.toString());
+        dto.setDateString(date.toString());
+        List<DrawRequestItemDTO> driDto = new ArrayList<>();
+        for (DrawRequestItem dr: getItemList()) {
+            driDto.add(dr.getDTO());
+        }
+        dto.setDrawRequestItems(driDto);
+        return dto;
+    }
+
 
     public static abstract class DrawRequestEntry implements BaseColumns {
 
@@ -163,7 +192,7 @@ public class DrawRequest {
 
         public static final String COLUMN_DRAW_REQUEST_ITEM_ID = "drawRequestItemId";
         public static final String TABLE_NAME = "drawRequestItemBridge";
-        public static final String CREATE_DRAW_REQUEST_ITEM_BRIDGE_TABLE = Constants.createTableString(
+        public static final String CREATE_DRAW_REQUEST_ITEM_BRIDGE_TABLE = Constants.createBridgeTableString(
                 TABLE_NAME,
                 DrawRequestEntry.COLUMN_DRAW_REQUEST_ID + Constants.TEXT_TYPE,
                 COLUMN_DRAW_REQUEST_ITEM_ID + Constants.TEXT_TYPE

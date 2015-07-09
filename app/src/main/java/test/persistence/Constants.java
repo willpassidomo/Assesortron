@@ -22,6 +22,12 @@ public class Constants {
     public static final String NEW = "new";
     public static final String EDIT = "edit";
 
+    public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
+
+    public static final String ID_TYPE = "type";
+    public static final String TYPE_SITEVISIT = "type_site_visit";
+    public static final String TYPE_PROJECT = "type_project";
+
     public static final int FIELD_VALUE_PROJECT = 1;
     public static final int FIELD_VALUE_SITE_VISIT = 2;
     public static final int FIELD_VALUE_USER = 3;
@@ -39,6 +45,11 @@ public class Constants {
         }
         createTable += columnNames[columnNames.length -1];
         createTable += ")";
+        return createTable;
+    }
+
+    public static String createBridgeTableString(String tableName, String idOne, String idTwo) {
+        String createTable = "CREATE TABLE " + tableName + " (" + idOne + COMMA_SEP + idTwo + " PRIMARY KEY) ";
         return createTable;
     }
 

@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import assesortron.assesortronTaskerAPI.model.ProjectDTO;
 import test.persistence.Constants;
 
 /**
@@ -321,6 +322,7 @@ public class Project {
             this.retainageRel = Double.parseDouble(retainageRel);
         }
     }
+
 
     public static abstract class ProjectEntry implements BaseColumns {
         public static final String TABLE_NAME = "projects";

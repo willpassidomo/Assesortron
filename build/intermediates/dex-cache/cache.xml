@@ -9,13 +9,6 @@
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-9a9193d7c9514cc81042e26d6771b9413f72e308.jar" />
     </item>
     <item
-        jar="/home/otf/code/AssesorTron/app/src/main/res/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ccf7c678b751b3715beac195987a8d0c22446d47">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/assesortronTaskerAPI-v1-1.19.1-SNAPSHOT-4e75028275a1dba057591ac31330f5bd0d32d0dd.jar" />
-    </item>
-    <item
         jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -63,6 +56,13 @@
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-bdf840576086198ae58ac1aad97f49a4e6add902.jar" />
+    </item>
+    <item
+        jar="/home/otf/code/AssesorTron/app/src/main/java/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8b859dd02068a3960d97066ba0fe80b2fe0a93ac">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT-3e460a1707cdd3c8251959af4f7ff6b0c86d316a.jar" />
     </item>
     <item
         jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.17.0-rc/76bcfba455c5a053d532bbac2cf30a2b2c341cf3/google-oauth-client-1.17.0-rc.jar"

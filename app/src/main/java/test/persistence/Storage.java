@@ -4,7 +4,6 @@ import android.content.Context;
 import android.provider.BaseColumns;
 import android.util.Log;
 
-import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,7 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import test.adapters.SoftQuestionListAdapter;
 import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
 import test.objects.Project;
