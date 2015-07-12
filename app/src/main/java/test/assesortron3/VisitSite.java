@@ -1,18 +1,22 @@
 package test.assesortron3;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.IntentService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
@@ -29,6 +33,7 @@ public class VisitSite extends Activity {
     private SiteVisit siteVisit;
     private Button goWalkThrough, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk, back;
     private ViewSwitcher vs;
+    private Toast startingProgressToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +125,8 @@ public class VisitSite extends Activity {
         sync.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "syncing site visit", Toast.LENGTH_LONG).show();
+                startingProgressToast = Toast.makeText(context, "syncing site visit", Toast.LENGTH_LONG);
+                startingProgressToast.show();
                 Intent intent = new Intent(context, FullSyncService.class);
                 intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
                 intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
@@ -142,11 +148,37 @@ public class VisitSite extends Activity {
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "syncing site visit, not emailing", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(context, FullSyncService.class);
-                intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
-                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
-                startService(intent);
+                String m_Text;
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Enter Email address");
+
+// Set up the input
+                final EditText input = new EditText(context);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+                input.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+                builder.setView(input);
+
+// Set up the buttons
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startingProgressToast = Toast.makeText(context, "Emailing site visit to "+ input.getText().toString(), Toast.LENGTH_LONG);
+                        startingProgressToast.show();
+                        Intent intent = new Intent(context, FullSyncService.class);
+                        intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
+                        intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+                        intent.putExtra(Constants.EMAIL_ADDRESS, input.getText().toString());
+                        startService(intent);
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                builder.show();
             }
         });
 
@@ -193,6 +225,7 @@ public class VisitSite extends Activity {
             if (message != null) {
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             } else {
+                startingProgressToast.cancel();
                 Toast.makeText(context, "blank broadcast recieved", Toast.LENGTH_SHORT).show();
             }
         }

@@ -131,6 +131,8 @@ public class DrawRequestItem implements Comparable<DrawRequestItem>{
     public DrawRequestItemDTO getDTO() {
         DrawRequestItemDTO dto = new DrawRequestItemDTO();
         dto.setAmount(amount);
+        dto.setType(type);
+        dto.setTypeName(getTitle());
         dto.setDateSubmittedLong(dateSubmitted.getTime());
         dto.setDescription(description);
         dto.setExecuted(executed);

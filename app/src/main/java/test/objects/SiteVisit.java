@@ -124,6 +124,7 @@ public class SiteVisit {
 
     public SiteWalkDTO getDTO(Context context) {
         SiteWalkDTO dto = new SiteWalkDTO();
+        dto.setProjectName(Storage.getProjectById(context, projectId).getName());
         dto.setDrawRequest(Storage.getDrawRequestBySiteWalkId(context, getId()).getDTO());
         dto.setLastEntryLong(lastEntry != null ? lastEntry.getTime() : 0);
         dto.setProjectIDString(projectId);

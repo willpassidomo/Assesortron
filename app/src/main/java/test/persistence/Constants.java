@@ -21,6 +21,7 @@ public class Constants {
     public static final String NEW_OR_EDIT = "new_or_edit";
     public static final String NEW = "new";
     public static final String EDIT = "edit";
+    public static final String EMAIL_ADDRESS = "email_address";
 
     public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
 

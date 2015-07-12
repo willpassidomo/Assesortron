@@ -1,21 +1,25 @@
 package test.assesortron3;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 
 import java.util.List;
+import java.util.zip.Inflater;
 
-import test.assesortron3.dummy.DummyContent;
+import test.adapters.SiteWalkListAdapter;
 import test.objects.SiteVisit;
 import test.persistence.Storage;
 
@@ -63,8 +67,13 @@ public class SiteVisitFragment extends Fragment implements AbsListView.OnItemCli
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         siteVisits = Storage.getSiteWalks(getActivity(), projectId);
-        mAdapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, siteVisits);
+        mAdapter = new SiteWalkListAdapter(getActivity(), siteVisits) {
+            @Override
+            public View.OnClickListener itemClickListener(final SiteVisit sv) {
+                Log.i("Cick", "");
+                return null;
+            }
+        };
     }
 
     @Override

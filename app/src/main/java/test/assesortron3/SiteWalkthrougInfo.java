@@ -106,6 +106,9 @@ public class SiteWalkthrougInfo extends Fragment implements test.assesortron3.Ta
         for (int i = 1; i < project.getNumAGFloors(); i++) {
             floorList.add(i + "");
         }
+        if (project.getNumAGFloors() == 0) {
+            floorList.add("1");
+        }
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item, floorList);
         floor.setAdapter(arrayAdapter);

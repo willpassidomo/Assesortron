@@ -122,6 +122,7 @@ public class WalkThrough {
     public WalkThroughDTO getDTO() {
         WalkThroughDTO dto = new WalkThroughDTO();
         dto.setId(id);
+        dto.setTrade(trade);
         dto.setDateString(date.toString());
         dto.setFloor(floor);
         dto.setNote(notes);

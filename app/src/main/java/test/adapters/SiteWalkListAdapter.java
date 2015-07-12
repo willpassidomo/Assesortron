@@ -103,21 +103,26 @@ public class SiteWalkListAdapter implements ListAdapter {
         String progresses = Storage.getWalkThroughEntryCount(context, sw.getId())+"";
         Log.i("progresses", progresses);
         progressesCount.setText(progresses);
-        drawRequestItemCount.setText(Storage.getDrawRequestItemCount(context, sw.getId())+"");
+        drawRequestItemCount.setText(Storage.getDrawRequestItemCount(context, sw.getId()) + "");
 
-        view.setOnClickListener(new View.OnClickListener() {
+        view.setOnClickListener(itemClickListener(sw));
+        return view;
+    }
+
+    public View.OnClickListener itemClickListener(final SiteVisit sv) {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, VisitSite.class);
-                intent.putExtra(Constants.SITE_VISIT_ID, sw.getId());
+                intent.putExtra(Constants.SITE_VISIT_ID, sv.getId());
                 intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
-                intent.putExtra(Constants.PROJECT_ID, sw.getProjectId());
-                Log.i("project id", sw.getProjectId());
-                Log.i("site visit id", sw.getId());
+                intent.putExtra(Constants.PROJECT_ID, sv.getProjectId());
+                Log.i("project id", sv.getProjectId());
+                Log.i("site visit id", sv.getId());
                 context.startActivity(intent);
             }
-        });
-        return view;
+        };
+        return listener;
     }
 
     @Override

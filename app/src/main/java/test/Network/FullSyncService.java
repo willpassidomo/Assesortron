@@ -22,7 +22,7 @@ import test.persistence.Storage;
  */
 public class FullSyncService extends IntentService {
     public static final String OUT_BOUND_MESSAGE = "outbound_message";
-    public static final String ERROR_MESSAGE = "ERROR: sync was unsuccessful";
+    public static final String ERROR_MESSAGE = "ERROR: no response recieved";
 
     Context context;
 
@@ -34,15 +34,57 @@ public class FullSyncService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         context = this;
-        switch (intent.getStringExtra(Constants.ID_TYPE)) {
-            case Constants.TYPE_PROJECT:
-                syncProject(intent.getStringExtra(Constants.PROJECT_ID));
-                break;
-            case Constants.TYPE_SITEVISIT:
-                syncSiteVisit(intent.getStringExtra(Constants.SITE_VISIT_ID));
-                break;
-            default:
-                syncAll();
+        if (intent.getStringExtra(Constants.EMAIL_ADDRESS) != null) {
+            switch (intent.getStringExtra(Constants.ID_TYPE)) {
+                case Constants.TYPE_PROJECT:
+                    emailProject(intent.getStringExtra(Constants.PROJECT_ID), intent.getStringExtra(Constants.EMAIL_ADDRESS));
+                    break;
+                case Constants.TYPE_SITEVISIT:
+                    emailSiteVisit(intent.getStringExtra(Constants.SITE_VISIT_ID), intent.getStringExtra(Constants.EMAIL_ADDRESS));
+                    break;
+                default:
+                    break;
+            }
+
+            } else {
+            switch (intent.getStringExtra(Constants.ID_TYPE)) {
+                case Constants.TYPE_PROJECT:
+                    syncProject(intent.getStringExtra(Constants.PROJECT_ID));
+                    break;
+                case Constants.TYPE_SITEVISIT:
+                    syncSiteVisit(intent.getStringExtra(Constants.SITE_VISIT_ID));
+                    break;
+                default:
+                    syncAll();
+            }
+        }
+    }
+
+    private void emailProject(String stringExtra, String stringExtra1) {
+        new Exception("not yet implememnted, sorry bro");
+    }
+
+    private void emailSiteVisit(String siteVisitId, final String emailAddress) {
+        final SiteVisit siteVisit = Storage.getSiteWalkById(this, siteVisitId);
+        StringWrapper string = null;
+        try {
+            string = AppConstants
+                    .getAssServiceHandle()
+                    .taskerAPI()
+                    .sendSiteWalkExcel(emailAddress, siteVisit.getDTO(this))
+                    .execute();
+            Log.i("FullSyncService","Network connection successful");
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            Intent broadcastIntent = new Intent();
+            broadcastIntent.setAction(Constants.BROADCAST_SYNC_SERVICE_RESPONSE)
+                    .addCategory(Intent.CATEGORY_DEFAULT)
+                    .putExtra(OUT_BOUND_MESSAGE, string != null ? string.getString() : ERROR_MESSAGE);
+            sendBroadcast(broadcastIntent);
+            Log.i("broadcast sent","");
         }
     }
 

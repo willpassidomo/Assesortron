@@ -112,7 +112,7 @@ public class ProjectHomeScreen extends Activity implements SiteVisitFragment.OnF
            @Override
            public void onClick(View v) {
                FragmentTransaction ft = getFragmentManager().beginTransaction();
-               ft.add(SiteVisitFragment.newInstance(project.getId()),"");
+               ft.add(R.id.project_home_container, SiteVisitFragment.newInstance(project.getId()));
                ft.addToBackStack(null);
                ft.commit();
            }
