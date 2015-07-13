@@ -2,10 +2,8 @@ package test.assesortron3;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -26,7 +24,7 @@ import test.persistence.Constants;
 import test.persistence.Storage;
 
 
-public class ProjectHomeScreen extends Activity implements SiteVisitFragment.OnFragmentInteractionListener {
+public class ProjectHomeScreen extends Activity implements SiteVisitHistoryFragment.OnFragmentInteractionListener {
     Context context;
     Project project;
     Button goProjectDash, goProjectHistory, goNewSiteVisit, action;
@@ -101,7 +99,7 @@ public class ProjectHomeScreen extends Activity implements SiteVisitFragment.OnF
        goProjectDash.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(context, ProjectDashboard.class);
+               Intent intent = new Intent(context, ProjectDashboardTwo.class);
                intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
                intent.putExtra(Constants.PROJECT_ID, project.getId());
                startActivity(intent);
@@ -112,7 +110,7 @@ public class ProjectHomeScreen extends Activity implements SiteVisitFragment.OnF
            @Override
            public void onClick(View v) {
                FragmentTransaction ft = getFragmentManager().beginTransaction();
-               ft.add(R.id.project_home_container, SiteVisitFragment.newInstance(project.getId()));
+               ft.add(R.id.project_home_container, SiteVisitHistoryFragment.newInstance(project.getId()));
                ft.addToBackStack(null);
                ft.commit();
            }

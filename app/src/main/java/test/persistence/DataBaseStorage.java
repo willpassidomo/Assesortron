@@ -25,8 +25,8 @@ import test.objects.WalkThrough;
  * Created by willpassidomo on 1/24/15.
  */
 public class DataBaseStorage extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "assesortronDB11.db";
-    private static int DATABASE_VERSION = 10;
+    private static String DATABASE_NAME = "assesortronDB12.db";
+    private static int DATABASE_VERSION = 11;
 
     public DataBaseStorage(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -62,26 +62,37 @@ public class DataBaseStorage extends SQLiteOpenHelper {
     public boolean insertProgresses(List<String> progresses) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues contentValues = new ContentValues();
-        for (String string: progresses) {
-            contentValues.put(Storage.ProgressesTable.COLUMN_PROGRESS_STRING, string);
+        try {
+            ContentValues contentValues;
+            for (String string : progresses) {
+                contentValues = new ContentValues();
+                contentValues.put(Storage.ProgressesTable.COLUMN_PROGRESS_STRING, string);
+                contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ID, "1");
+                db.insertWithOnConflict(Storage.ProgressesTable.TABLE_NAME_PROGRESSES, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+            }
+            return true;
         }
-
-        db.insertWithOnConflict(Storage.ProgressesTable.TABLE_NAME_PROGRESSES, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
-        return true;
+        finally {
+            db.close();
+        }
     }
 
     public boolean insertProjectTrades(List<String> trades, String projectId) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues contentValues;
-        for (String string: trades) {
-            contentValues = new ContentValues();
-            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ID, projectId);
-            contentValues.put(Project.ProjectTradesBridge.COLUMN_PROJECT_TRADES_STRING, string);
-            db.insertWithOnConflict(Project.ProjectTradesBridge.TABLE_NAME_PROJECT_TRADES, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
-        }
+        try {
+            ContentValues contentValues;
+            for (String string : trades) {
+                contentValues = new ContentValues();
+                contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ID, projectId);
+                contentValues.put(Project.ProjectTradesBridge.COLUMN_PROJECT_TRADES_STRING, string);
+                db.insertWithOnConflict(Project.ProjectTradesBridge.TABLE_NAME_PROJECT_TRADES, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
+            }
             return true;
+        }
+        finally {
+            db.close();
+        }
     }
 
     public boolean insertTrades(List<String> trades) {
@@ -91,6 +102,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         for (String string: trades) {
             contentValues = new ContentValues();
             contentValues.put(Storage.TradesTable.COLUMN_TRADE_STRING, string);
+            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ID, "1");
             db.insertWithOnConflict(Storage.TradesTable.TABLE_NAME_TRADES, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
         }
         return true;
@@ -230,8 +242,8 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             cursor = db.query(
                     Storage.TradesTable.TABLE_NAME_TRADES,
                     new String[]{Storage.TradesTable.COLUMN_TRADE_STRING},
-                    null,
-                    null,
+                    Project.ProjectEntry.COLUMN_PROJECT_ID + " = ? ",
+                    new String[]{"1"},
                     null,
                     null,
                     null
@@ -304,8 +316,8 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             cursor = db.query(
                 Storage.ProgressesTable.TABLE_NAME_PROGRESSES,
                 new String[]{Storage.ProgressesTable.COLUMN_PROGRESS_STRING},
-                null,
-                null,
+                    Project.ProjectEntry.COLUMN_PROJECT_ID + " = ? ",
+                    new String[]{"1"},
                 null,
                 null,
                 null
@@ -1189,13 +1201,46 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         );
     }
 
+    public void deleteTrade(String trade) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    Storage.TradesTable.TABLE_NAME_TRADES,
+                    Storage.TradesTable.COLUMN_TRADE_STRING + " = ?",
+                    new String[]{trade}
+            );
+        }
+        finally {
+            db.close();
+        }
+    }
+
     public void deleteProgresses() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(
+        try {
+            db.delete(
                 Storage.ProgressesTable.TABLE_NAME_PROGRESSES,
                 null,
                 null
         );
+        }
+        finally {
+            db.close();
+        }
+        }
+
+    public void deleteProgress(String progress) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    Storage.ProgressesTable.TABLE_NAME_PROGRESSES,
+                    Storage.ProgressesTable.COLUMN_PROGRESS_STRING + " = ?",
+                    new String[]{progress}
+            );
+        }
+        finally {
+            db.close();
+        }
     }
 
     public void deleteDrawRequest(DrawRequest drawRequest) {
@@ -1211,7 +1256,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
             db.delete(
                     DrawRequest.DrawRequestItemBridge.TABLE_NAME,
-                    DrawRequest.DrawRequestEntry.COLUMN_DRAW_REQUEST_ID + "= ?",
+                    DrawRequest.DrawRequestEntry.COLUMN_DRAW_REQUEST_ID + " = ?",
                     new String[]{drawRequest.getId()}
             );
         }

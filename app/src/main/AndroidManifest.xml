@@ -59,11 +59,6 @@
             android:parentActivityName=".ProjectHomeScreen" >
         </activity>
         <activity
-            android:name=".SendProject"
-            android:label="@string/title_activity_send_project"
-            android:parentActivityName=".ProjectHomeScreen" >
-        </activity>
-        <activity
             android:name=".MakeDraw"
             android:label="@string/title_activity_make_draw"
             android:parentActivityName=".VisitSite" >
@@ -76,13 +71,20 @@
         </activity>
         <activity
             android:name=".NewSiteVisit"
-            android:label="@string/title_activity_new_site_visit" >
+            android:label="@string/title_activity_new_site_visit"
+            android:parentActivityName=".ProjectHomeScreen">
         </activity>
 
         <service
             android:name="test.Network.FullSyncService"
             android:exported="false" >
         </service>
+
+        <activity
+            android:name=".ProjectDashboardTwo"
+            android:label="@string/title_activity_project_dashboard_two"
+            android:parentActivityName=".ProjectHomeScreen">
+        </activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import test.objects.FieldValue;
@@ -13,11 +14,9 @@ import test.objects.FieldValue;
  */
 public class Constants {
     public static final String PROJECT_ID = "project_id";
-    public static final String DRAW_REQUEST_ID = "draw_id";
     public static final String SITE_VISIT_ID = "site_visit_id";
     public static final String WALK_THROUGH_ID = "walk_through_id";
-    public static final String DRAW_REQUEST_ITEM_ID = "draw_request_item_id";
-    public static final String DRAW_REQUEST_ITEM_FIELD = "field";
+    public static final String STRING_LIST_TYPE = "string_list_type";
     public static final String NEW_OR_EDIT = "new_or_edit";
     public static final String NEW = "new";
     public static final String EDIT = "edit";
@@ -70,5 +69,26 @@ public class Constants {
             }
         }
         Storage.storeSiteVisitQuestions(context, fvsIn);
+    }
+
+    public static List<String> getInitialProgresses() {
+        List progressList = new LinkedList();
+        progressList.add("yet to commence");
+        progressList.add("commenced");
+        progressList.add("25%");
+        progressList.add("In Progress");
+        progressList.add("75%");
+        progressList.add("Substantially Complete");
+        return progressList;
+    }
+
+    public static List<String> getInitalTrades() {
+        List tradeList = new LinkedList<String>();
+        tradeList.add("Demo");
+        tradeList.add("Framing");
+        tradeList.add("Plumbing- rough");
+        tradeList.add("Plumbing- finish");
+        tradeList.add("Electical");
+        return tradeList;
     }
 }

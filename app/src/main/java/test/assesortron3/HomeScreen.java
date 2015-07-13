@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import test.adapters.projectListAdapter;
@@ -59,6 +60,16 @@ public class HomeScreen extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.overflow_set_progresses) {
+            Intent intent = new Intent(this, StringListEdit.class);
+            intent.putExtra(Constants.STRING_LIST_TYPE, StringListEdit.PROGRESSES);
+            startActivity(intent);
+        }
+        if (id == R.id.overflow_set_trades) {
+            Intent intent = new Intent(this, StringListEdit.class);
+            intent.putExtra(Constants.STRING_LIST_TYPE, StringListEdit.TRADES);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -79,6 +90,14 @@ public class HomeScreen extends Activity {
         for(Project project:projects) {
             Log.i("Project found", project.getName() + " " + project.getId());
         }
+        if (projects.size() < 1) {
+            storeOpeningProgressesAndTrades();
+        }
+    }
+
+    private void storeOpeningProgressesAndTrades() {
+        Storage.storeTrades(this, Constants.getInitalTrades());
+        Storage.storeProgresses(this, Constants.getInitialProgresses());
     }
 
 }

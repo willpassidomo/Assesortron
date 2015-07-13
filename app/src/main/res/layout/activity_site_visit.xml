@@ -66,7 +66,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="3">
+                android:layout_weight="1">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -78,18 +78,44 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Progress"
-                android:id="@+id/site_visit_progress"
-                android:layout_weight="4"
+                android:text="Sitewalk Dashboard"
+                android:id="@+id/site_visit_dashboard"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="New Observation"
+                    android:id="@+id/site_visit_progress"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/site_visit_progress_history"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:text="finished observations" />
+            </LinearLayout>
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Draw Request"
                 android:id="@+id/site_visit_draw_request"
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:layout_margin="10dp" />
         </LinearLayout>
+
     </ViewSwitcher>
 </RelativeLayout>

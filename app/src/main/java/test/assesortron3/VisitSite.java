@@ -31,7 +31,7 @@ public class VisitSite extends Activity {
     private Context context;
     private String projectId;
     private SiteVisit siteVisit;
-    private Button goWalkThrough, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk, back;
+    private Button goWalkThrough, goSiteWalkDash, goSiteWalkWalkThroughHist, goDrawRequest, continueSiteWalk, sync, email, finishSiteWalk, back;
     private ViewSwitcher vs;
     private Toast startingProgressToast;
 
@@ -102,6 +102,8 @@ public class VisitSite extends Activity {
 
         goDrawRequest = (Button) findViewById(R.id.site_visit_draw_request);
         goWalkThrough = (Button) findViewById(R.id.site_visit_progress);
+        goSiteWalkDash = (Button) findViewById(R.id.site_visit_dashboard);
+        goSiteWalkWalkThroughHist = (Button) findViewById(R.id.site_visit_progress_history);
 
         goDrawRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,7 +164,7 @@ public class VisitSite extends Activity {
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startingProgressToast = Toast.makeText(context, "Emailing site visit to "+ input.getText().toString(), Toast.LENGTH_LONG);
+                        startingProgressToast = Toast.makeText(context, "Emailing site visit to " + input.getText().toString(), Toast.LENGTH_LONG);
                         startingProgressToast.show();
                         Intent intent = new Intent(context, FullSyncService.class);
                         intent.putExtra(Constants.ID_TYPE, Constants.TYPE_SITEVISIT);
@@ -201,6 +203,23 @@ public class VisitSite extends Activity {
                 intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
                 intent.putExtra(Constants.PROJECT_ID, projectId);
                 startActivity(intent);
+            }
+        });
+
+        goSiteWalkDash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, NewSiteVisit.class);
+                intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
+                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+                startActivity(intent);
+            }
+        });
+
+        goSiteWalkWalkThroughHist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"Not yet Implemented", Toast.LENGTH_SHORT).show();
             }
         });
     }

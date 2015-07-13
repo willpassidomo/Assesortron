@@ -1,10 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="inventoryProjectt.HomeScreen" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
+    <item android:id="@+id/overflow_set_trades"
+        android:title="Set Trades"
+        android:orderInCategory="101"
         android:showAsAction="never" />
-
+    <item android:id="@+id/overflow_set_progresses"
+        android:title="Set Progress Levels"
+        android:orderInCategory="102"
+        android:showAsAction="never"/>
 </menu>
 <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/menu/home_screen.xml -->

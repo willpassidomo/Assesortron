@@ -85,14 +85,6 @@ public class NewSiteVisit extends Activity implements SoftQuestionsFragment.Data
             return true;
         }
 
-        if(id == android.R.id.home) {
-            Storage.storeSiteVisitQuestions(this, questions);
-            Intent intent = new Intent(this, SiteWalkthrough.class);
-            intent.putExtra(Constants.SITE_VISIT_ID, siteWalk.getId());
-            intent.putExtra(Constants.NEW_OR_EDIT, Constants.NEW);
-            startActivity(intent);
-        }
-
             return super.onOptionsItemSelected(item);
     }
 

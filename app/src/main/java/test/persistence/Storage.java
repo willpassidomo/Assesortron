@@ -190,6 +190,26 @@ public class Storage {
         }
     }
 
+    public static void deleteProgress(Context context, String progress) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.deleteProgress(progress);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void deleteTrade(Context context, String trade) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.deleteTrade(trade);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static Project getProjectById(Context context, String id) {
         try {
             setDataBaseStorage(context);
@@ -531,9 +551,11 @@ public class Storage {
        public static final String COMMA_SEP = " ,";
 
        public static final String CREATE_PROGRESSES_STRING_TABLE =
-               "CREATE TABLE " + TABLE_NAME_PROGRESSES + " (" +
-                       ProgressesTable._ID + " INTEGER PRIMARY KEY, " +
-                       COLUMN_PROGRESS_STRING + TEXT_TYPE +")";
+               Constants.createBridgeTableString(
+                       TABLE_NAME_PROGRESSES,
+                       Project.ProjectEntry.COLUMN_PROJECT_ID + TEXT_TYPE,
+                       COLUMN_PROGRESS_STRING + TEXT_TYPE
+               );
    }
 
     public static abstract class TradesTable implements BaseColumns {
@@ -544,9 +566,10 @@ public class Storage {
         public static final String COMMA_SEP = " ,";
 
         public static final String CREATE_TRADES_STRING_TABLE =
-                "CREATE TABLE " + TABLE_NAME_TRADES + " (" +
-                        TradesTable._ID + " INTEGER PRIMARY KEY, " +
-                        COLUMN_TRADE_STRING + TEXT_TYPE + ")";
+                Constants.createBridgeTableString(
+                        TABLE_NAME_TRADES,
+                        Project.ProjectEntry.COLUMN_PROJECT_ID + TEXT_TYPE,
+                        COLUMN_TRADE_STRING + TEXT_TYPE);
     }
 
 }

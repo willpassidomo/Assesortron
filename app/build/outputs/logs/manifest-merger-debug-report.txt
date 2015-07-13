@@ -115,7 +115,7 @@ ADDED from AndroidManifest.xml:56:9
 		ADDED from AndroidManifest.xml:59:13
 	android:name
 		ADDED from AndroidManifest.xml:57:13
-activity#test.assesortron3.SendProject
+activity#test.assesortron3.MakeDraw
 ADDED from AndroidManifest.xml:61:9
 	android:label
 		ADDED from AndroidManifest.xml:63:13
@@ -123,36 +123,38 @@ ADDED from AndroidManifest.xml:61:9
 		ADDED from AndroidManifest.xml:64:13
 	android:name
 		ADDED from AndroidManifest.xml:62:13
-activity#test.assesortron3.MakeDraw
+activity#test.assesortron3.VisitSite
 ADDED from AndroidManifest.xml:66:9
 	android:label
 		ADDED from AndroidManifest.xml:68:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:69:13
+		ADDED from AndroidManifest.xml:70:13
 	android:name
 		ADDED from AndroidManifest.xml:67:13
-activity#test.assesortron3.VisitSite
-ADDED from AndroidManifest.xml:71:9
+	android:launchMode
+		ADDED from AndroidManifest.xml:69:13
+activity#test.assesortron3.NewSiteVisit
+ADDED from AndroidManifest.xml:72:9
 	android:label
-		ADDED from AndroidManifest.xml:73:13
+		ADDED from AndroidManifest.xml:74:13
 	android:parentActivityName
 		ADDED from AndroidManifest.xml:75:13
 	android:name
-		ADDED from AndroidManifest.xml:72:13
-	android:launchMode
-		ADDED from AndroidManifest.xml:74:13
-activity#test.assesortron3.NewSiteVisit
-ADDED from AndroidManifest.xml:77:9
-	android:label
-		ADDED from AndroidManifest.xml:79:13
-	android:name
-		ADDED from AndroidManifest.xml:78:13
+		ADDED from AndroidManifest.xml:73:13
 service#test.Network.FullSyncService
-ADDED from AndroidManifest.xml:82:9
+ADDED from AndroidManifest.xml:78:9
 	android:exported
-		ADDED from AndroidManifest.xml:84:13
+		ADDED from AndroidManifest.xml:80:13
 	android:name
-		ADDED from AndroidManifest.xml:83:13
+		ADDED from AndroidManifest.xml:79:13
+activity#test.assesortron3.ProjectDashboardTwo
+ADDED from AndroidManifest.xml:83:9
+	android:label
+		ADDED from AndroidManifest.xml:85:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:86:13
+	android:name
+		ADDED from AndroidManifest.xml:84:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

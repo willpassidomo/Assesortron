@@ -1,7 +1,6 @@
 package test.assesortron3;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.util.Log;
@@ -10,14 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 import test.adapters.SiteWalkListAdapter;
 import test.objects.SiteVisit;
@@ -32,7 +28,7 @@ import test.persistence.Storage;
  * Activities containing this fragment MUST implement the {@link OnFragmentInteractionListener}
  * interface.
  */
-public class SiteVisitFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class SiteVisitHistoryFragment extends Fragment implements AbsListView.OnItemClickListener {
     String projectId;
     List<SiteVisit> siteVisits;
 
@@ -50,8 +46,8 @@ public class SiteVisitFragment extends Fragment implements AbsListView.OnItemCli
     private ListAdapter mAdapter;
 
     // TODO: Rename and change types of parameters
-    public static SiteVisitFragment newInstance(String projectId) {
-        SiteVisitFragment fragment = new SiteVisitFragment();
+    public static SiteVisitHistoryFragment newInstance(String projectId) {
+        SiteVisitHistoryFragment fragment = new SiteVisitHistoryFragment();
         fragment.setProjectId(projectId);
         return fragment;
     }
@@ -60,7 +56,7 @@ public class SiteVisitFragment extends Fragment implements AbsListView.OnItemCli
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public SiteVisitFragment() {
+    public SiteVisitHistoryFragment() {
     }
 
     @Override

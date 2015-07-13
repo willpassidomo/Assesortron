@@ -18,5 +18,6 @@
     <string name="title_activity_make_draw_request">MakeDrawRequest</string>
     <string name="title_activity_site_visit">SiteVisit</string>
     <string name="title_activity_new_site_visit">NewSiteVisit</string>
+    <string name="title_activity_project_dashboard_two">ProjectDashboardTwo</string>
 
 </resources>

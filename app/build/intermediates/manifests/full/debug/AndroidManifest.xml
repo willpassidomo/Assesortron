@@ -65,11 +65,6 @@
             android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.SendProject"
-            android:label="@string/title_activity_send_project"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
-        </activity>
-        <activity
             android:name="test.assesortron3.MakeDraw"
             android:label="@string/title_activity_make_draw"
             android:parentActivityName="test.assesortron3.VisitSite" >
@@ -82,13 +77,20 @@
         </activity>
         <activity
             android:name="test.assesortron3.NewSiteVisit"
-            android:label="@string/title_activity_new_site_visit" >
+            android:label="@string/title_activity_new_site_visit"
+            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
         </activity>
 
         <service
             android:name="test.Network.FullSyncService"
             android:exported="false" >
         </service>
+
+        <activity
+            android:name="test.assesortron3.ProjectDashboardTwo"
+            android:label="@string/title_activity_project_dashboard_two"
+            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

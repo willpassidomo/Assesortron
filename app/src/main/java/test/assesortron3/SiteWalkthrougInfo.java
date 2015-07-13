@@ -17,6 +17,7 @@ import java.util.List;
 
 import test.objects.Project;
 import test.objects.WalkThrough;
+import test.persistence.Storage;
 
 
 /**
@@ -113,23 +114,12 @@ public class SiteWalkthrougInfo extends Fragment implements test.assesortron3.Ta
         ArrayAdapter arrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item, floorList);
         floor.setAdapter(arrayAdapter);
 
-        tradeList = new LinkedList<String>();
-        tradeList.add("Demo");
-        tradeList.add("Framing");
-        tradeList.add("Plumbing- rough");
-        tradeList.add("Plumbing- finish");
-        tradeList.add("Electical");
+        tradeList = Storage.getTradeList(getActivity());
 
         ArrayAdapter arrayAdapter1 = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item, tradeList);
         trade.setAdapter(arrayAdapter1);
 
-        progressList = new LinkedList<String>();
-        progressList.add("yet to commence");
-        progressList.add("commenced");
-        progressList.add("25%");
-        progressList.add("In Progress");
-        progressList.add("75%");
-        progressList.add("Substantially Complete");
+        progressList = Storage.getProgressList(getActivity());
 
         ArrayAdapter arrayAdapter2 = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item, progressList);
         progress.setAdapter(arrayAdapter2);

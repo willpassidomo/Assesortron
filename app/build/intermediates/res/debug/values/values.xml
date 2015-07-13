@@ -45,6 +45,7 @@
     <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="dashboard_label_text">#FF000000</color>
+    <color name="delete_button_red">#B6FF0000</color>
     <!-- From: file:/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -276,6 +277,7 @@
     <string name="title_activity_make_draw_request">MakeDrawRequest</string>
     <string name="title_activity_new_site_visit">NewSiteVisit</string>
     <string name="title_activity_project_dashboard">ProjectDashboard</string>
+    <string name="title_activity_project_dashboard_two">ProjectDashboardTwo</string>
     <string name="title_activity_project_home_screen">ProjectHomeScreen</string>
     <string name="title_activity_send_project">SendProject</string>
     <string name="title_activity_send_site_walk">SendSiteWalk</string>
@@ -1376,4 +1378,14 @@
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Base.Widget.AppCompat.Spinner.DropDown.ActionBar"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
+    <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="button_delete" parent="Base.Widget.AppCompat.ActionButton">
+        <item name="android:color">@color/delete_button_red</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+
+    </style>
 </resources>

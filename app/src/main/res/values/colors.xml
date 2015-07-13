@@ -4,4 +4,5 @@
     <color name="project_dashboard_text_view_background">#ffffff</color>
     <color name="dashboard_label_text">#FF000000</color>
     <color name="screen_red_background">#ffffff</color>
+    <color name="delete_button_red">#B6FF0000</color>
 </resources>
