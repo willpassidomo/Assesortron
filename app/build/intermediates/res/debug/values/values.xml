@@ -184,6 +184,18 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/values/template-dimens.xml -->
+    <eat-comment/>
+    <dimen name="horizontal_page_margin">@dimen/margin_huge</dimen>
+    <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="page_margin">@dimen/margin_medium</dimen>
+    <dimen name="standard_touch_target_size">48dp</dimen>
+    <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/values/template-dimens.xml -->
+    <eat-comment/>
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+    <!-- From: file:/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>

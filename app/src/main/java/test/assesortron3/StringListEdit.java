@@ -11,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
@@ -37,8 +39,9 @@ public class StringListEdit extends Activity {
 
     private Context context;
     private Button addField;
-    private EditText newItem;
+    private AutoCompleteTextView newItem;
     private ListAdapter adapter;
+    ArrayAdapter<String> autoCompleteAdapter;
 
     List<String> strings;
 
@@ -53,21 +56,21 @@ public class StringListEdit extends Activity {
         switch (getIntent().getStringExtra(Constants.STRING_LIST_TYPE)) {
             case StringListEdit.TRADES:
                 strings = Storage.getTradeList(this);
-                Log.i("StringListEdit", strings.size() + " Trades retreived");
                 setTradeButtons();
-                getActionBar().setTitle(TRADE_LIST_TITLE);
+
                 break;
             case StringListEdit.PROGRESSES:
                 strings = Storage.getProgressList(this);
-                Log.i("StringListEdit", strings.size() + " Progresses retreived");
                 setProgressButtons();
-                getActionBar().setTitle(PROGRESSES_LIST_TITLE);
                 break;
             default:
                 Log.e("StringListEdit",
                         "Problem, STING_LIST_TYPE not recognized: "
                                 + getIntent().getStringExtra(Constants.STRING_LIST_TYPE));
         }
+
+        newItem.setAdapter(autoCompleteAdapter);
+        newItem.setThreshold(1);
 
         ListView listView = (ListView)findViewById(R.id.string_list_list);
         adapter = new ListAdapter();
@@ -95,7 +98,7 @@ public class StringListEdit extends Activity {
 
     private void setVariables() {
         addField = (Button)findViewById(R.id.string_list_add_button);
-        newItem = (EditText)findViewById(R.id.string_list_new_item);
+        newItem = (AutoCompleteTextView)findViewById(R.id.string_list_new_item);
     }
 
 
@@ -108,6 +111,11 @@ public class StringListEdit extends Activity {
                 Storage.storeTrades(context, l);
             }
         });
+        getActionBar().setTitle(TRADE_LIST_TITLE);
+
+        List tradePossibilities = Storage.getMasterTradeList();
+        autoCompleteAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, tradePossibilities);
+
     }
 
     private void setProgressButtons() {
@@ -119,6 +127,12 @@ public class StringListEdit extends Activity {
                 Storage.storeProgresses(context, l);
             }
         });
+        getActionBar().setTitle(PROGRESSES_LIST_TITLE);
+        //TODO
+        // decide if you want users to be able to change progresses
+        // and if you are going to provide stock suggestions
+
+        //List progressPossibilities = Storage.getMasterProgressList();
     }
 
     private String getNewItem() {

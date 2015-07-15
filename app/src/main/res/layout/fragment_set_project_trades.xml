@@ -11,18 +11,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="0" />
 
-    <ScrollView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/set_trades_list"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/scrollview222"
-        android:fillViewport="true"
-        android:layout_weight="1">
+        android:layout_weight="0"
+        android:choiceMode="multipleChoice"
+        android:scrollbarStyle="outsideOverlay" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/set_project_trades_list_container"></LinearLayout>
-    </ScrollView>
 </LinearLayout>

@@ -19,6 +19,8 @@ public class DrawRequestItem implements Comparable<DrawRequestItem>{
     public static final String NEW_DRAW_CONTINGENCY = "draw_from_contingency";
     public static final String BUYOUT = "buyout";
 
+    public static final String[] DRAW_REQUEST_ITEM_TYPES = {CHANGE_ORDER, RETAINAGE_RELEASE, STORED_MATERIALS, NEW_DRAW_CONTINGENCY,BUYOUT};
+
     private String id;
     private String type;
     private String subContractor;

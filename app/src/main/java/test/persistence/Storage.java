@@ -28,6 +28,16 @@ public class Storage {
     private static DataBaseStorage dataBaseStorage;
     private static User user = new User("USER_FIRST", "USER_LAST");
 
+    public static List<String> getMasterTradeList() {
+        List<String> l = new ArrayList<String>();
+        l.add("atrade");
+        l.add("atripe");
+        l.add("attitude");
+        l.add("at");
+        l.add("atribute");
+        l.add("ahoy");
+        return l;
+    }
 
     public static void storeProject(Context context, Project project) {
         try {

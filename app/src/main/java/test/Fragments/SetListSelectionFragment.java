@@ -9,14 +9,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import test.assesortron3.R;
 
@@ -24,10 +29,10 @@ import test.assesortron3.R;
  * Created by otf on 7/13/15.
  */
 public class SetListSelectionFragment extends Fragment {
+    StringSelectorAdapter adapter;
     List<String> stringList;
-    List<View> radioButtons = new ArrayList<>();
     Button editEntries;
-    LinearLayout selectionOptionsContainer;
+    ListView selectionList;
 
     public SetListSelectionFragment() {
         super();
@@ -54,7 +59,9 @@ public class SetListSelectionFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_set_project_trades, null);
         editEntries = (Button)view.findViewById(R.id.set_project_trades_edit_options);
-        selectionOptionsContainer = (LinearLayout)view.findViewById(R.id.set_project_trades_list_container);
+        selectionList = (ListView)view.findViewById(R.id.set_trades_list);
+        adapter = new StringSelectorAdapter(stringList);
+        selectionList.setAdapter(adapter);
         return view;
     }
 
@@ -62,30 +69,74 @@ public class SetListSelectionFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstance) {
         super.onViewCreated(view, savedInstance);
 
-        for (String s: stringList) {
-            Log.i("SetListSelectionFrag", "making: " + s);
-            selectionOptionsContainer.addView(getRadioButtonEntry(s));
-        }
+
     }
 
-    private View getRadioButtonEntry(String string) {
-        LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.list_string_selection, null);
-        TextView stringVal = (TextView)view.findViewById(R.id.list_string_stringval);
-        stringVal.setText(string);
-        radioButtons.add(view);
-        return view;
-    }
+
 
     public List<String> getSelectedItems() {
-        List<String> selected = new ArrayList<>();
-        for (View view: radioButtons) {
-            RadioButton radioButton = (RadioButton)view.findViewById(R.id.list_string_radio_button);
-            if (radioButton.isChecked()) {
-                TextView s = (TextView)view.findViewById(R.id.list_string_stringval);
-                selected.add(s.getText().toString());
-            }
+        return adapter.getCheckedStrings();
+    }
+
+
+
+    class StringSelectorAdapter extends BaseAdapter {
+
+        List<String> strings;
+        Map<Integer, View> views = new TreeMap<>();
+
+        public StringSelectorAdapter (List<String> strings) {
+            this.strings = strings;
         }
-        return selected;
+
+        @Override
+        public int getCount() {
+            return strings.size();
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return strings.get(i);
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return i;
+        }
+
+        @Override
+        public View getView(int i, View view, ViewGroup viewGroup) {
+            if (view == null) {
+                LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(R.layout.list_string_selection, null);
+            }
+
+            TextView stringVal = (TextView)view.findViewById(R.id.list_string_stringval);
+            final RadioButton button = (RadioButton)view.findViewById(R.id.list_string_radio_button);
+            LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.list_string_click_space);
+            linearLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    button.setChecked(!button.isChecked());
+                }
+            });
+            stringVal.setText(strings.get(i));
+
+            views.put(new Integer(i), view);
+            return view;
+        }
+
+        public List<String> getCheckedStrings() {
+            List<String> selected = new ArrayList<>();
+            for(int i = 0; i < strings.size(); i++) {
+                View view = views.get(new Integer(i));
+                final RadioButton button = (RadioButton)view.findViewById(R.id.list_string_radio_button);
+                if (button.isChecked()) {
+                    TextView stringVal = (TextView)view.findViewById(R.id.list_string_stringval);
+                    selected.add(stringVal.getText().toString());
+                }
+            }
+            return selected;
+        }
     }
 }

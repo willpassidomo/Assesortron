@@ -14,7 +14,7 @@
         android:id="@+id/string_list_list"
         android:layout_below="@+id/string_list_add_button" />
 
-    <EditText
+    <AutoCompleteTextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/string_list_new_item"
