@@ -1,0 +1,4 @@
+- build screens for managing trade, progresses, and FieldValues(sitewalk and project 
+- fix it so you can get to the questions for a sitewalk
+- implement a edittext which filters trades by typed characters...like autocomplete
+- add big multiple selection list of all trades into the new project screen so the person can select the trades they are going to use when they start a new project out of the user's trades

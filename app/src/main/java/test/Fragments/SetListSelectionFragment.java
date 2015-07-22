@@ -1,21 +1,16 @@
 package test.Fragments;
 
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,26 +18,60 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import test.assesortron3.R;
+import test.assesortron5.R;
 
 /**
  * Created by otf on 7/13/15.
  */
 public class SetListSelectionFragment extends Fragment {
+    SetListSelectionInterface onlyChildParent;
+    SetListSelectionVisitorInterface siblingsParent;
     StringSelectorAdapter adapter;
     List<String> stringList;
-    Button editEntries;
+    Button submit;
     ListView selectionList;
+    String id;
 
     public SetListSelectionFragment() {
         super();
     }
 
-    public static SetListSelectionFragment getInstance(List<String> stringList) {
+    /**
+     * see SetListSelectionInterface and SetListSelectionVisitorInterface docs for information
+     * on when to use each of the two constructors
+     * @param parent
+     * @param stringList
+     * @return
+     */
+    public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList) {
         SetListSelectionFragment sptf = new SetListSelectionFragment();
         sptf.setStringList(stringList);
+        sptf.setParent(parent);
         return sptf;
     }
+
+    /**
+     * see SetListSelectionInterface and SetListSelectionVisitorInterface docs for information
+     * on when to use each of the two constructors
+     * @param parent
+     * @param stringList
+     * @param id
+     * @return
+     */
+
+    public static SetListSelectionFragment getInstance(SetListSelectionVisitorInterface parent, List<String> stringList, String id) {
+        SetListSelectionFragment sptf = new SetListSelectionFragment();
+        sptf.setParent(parent);
+        sptf.setStringList(stringList);
+        sptf.setType(id);
+        return sptf;
+    }
+
+    private void setType(String id) { this.id = id;}
+    private void setParent(SetListSelectionInterface parent) {
+        this.onlyChildParent = parent;
+    }
+    private void setParent(SetListSelectionVisitorInterface parent) {this.siblingsParent = parent;}
 
     private void setStringList(List<String> stringList) {
         this.stringList = stringList;
@@ -57,11 +86,12 @@ public class SetListSelectionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup v, Bundle savedInstance) {
         super.onCreateView(inflater, v, savedInstance);
 
-        View view = inflater.inflate(R.layout.fragment_set_project_trades, null);
-        editEntries = (Button)view.findViewById(R.id.set_project_trades_edit_options);
-        selectionList = (ListView)view.findViewById(R.id.set_trades_list);
+        View view = inflater.inflate(R.layout.fragment_set_list_selection, null);
+        submit = (Button)view.findViewById(R.id.set_list_selection_submit);
+        selectionList = (ListView)view.findViewById(R.id.set_list_selection_list);
         adapter = new StringSelectorAdapter(stringList);
         selectionList.setAdapter(adapter);
+        submit.setOnClickListener(submitListener());
         return view;
     }
 
@@ -69,10 +99,7 @@ public class SetListSelectionFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstance) {
         super.onViewCreated(view, savedInstance);
 
-
     }
-
-
 
     public List<String> getSelectedItems() {
         return adapter.getCheckedStrings();
@@ -85,7 +112,7 @@ public class SetListSelectionFragment extends Fragment {
         List<String> strings;
         Map<Integer, View> views = new TreeMap<>();
 
-        public StringSelectorAdapter (List<String> strings) {
+        public StringSelectorAdapter(List<String> strings) {
             this.strings = strings;
         }
 
@@ -107,16 +134,17 @@ public class SetListSelectionFragment extends Fragment {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             if (view == null) {
-                LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 view = inflater.inflate(R.layout.list_string_selection, null);
             }
 
-            TextView stringVal = (TextView)view.findViewById(R.id.list_string_stringval);
-            final RadioButton button = (RadioButton)view.findViewById(R.id.list_string_radio_button);
-            LinearLayout linearLayout = (LinearLayout)view.findViewById(R.id.list_string_click_space);
+            TextView stringVal = (TextView) view.findViewById(R.id.list_string_stringval);
+            final RadioButton button = (RadioButton) view.findViewById(R.id.list_string_radio_button);
+            final LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.list_string_click_space);
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    linearLayout.setSelected(!linearLayout.isSelected());
                     button.setChecked(!button.isChecked());
                 }
             });
@@ -128,15 +156,55 @@ public class SetListSelectionFragment extends Fragment {
 
         public List<String> getCheckedStrings() {
             List<String> selected = new ArrayList<>();
-            for(int i = 0; i < strings.size(); i++) {
+            for (int i = 0; i < strings.size(); i++) {
                 View view = views.get(new Integer(i));
-                final RadioButton button = (RadioButton)view.findViewById(R.id.list_string_radio_button);
+                final RadioButton button = (RadioButton) view.findViewById(R.id.list_string_radio_button);
                 if (button.isChecked()) {
-                    TextView stringVal = (TextView)view.findViewById(R.id.list_string_stringval);
+                    TextView stringVal = (TextView) view.findViewById(R.id.list_string_stringval);
                     selected.add(stringVal.getText().toString());
                 }
             }
             return selected;
         }
+
+    }
+        private View.OnClickListener submitListener() {
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (onlyChildParent != null) {
+                        onlyChildParent.setList(adapter.getCheckedStrings());
+                    }
+                    if (siblingsParent != null) {
+                        done();
+                    }
+                }
+            };
+            return listener;
+        }
+
+    private void done() { siblingsParent.done(this);}
+
+    /**
+     *     Interface if should be used if parent activity only has ONE instance
+     *     of SetListSelectionFragment that it will be interacting with. Since parent
+     *     only has one instance, it will know what to do with the list sent to
+     *     SetListSelectionInterface and who it is from
+     *
+     */
+    public interface SetListSelectionInterface {
+        public void setList(List<String> strings);
+    }
+
+    /**
+     * SetListSelectionVisitorInterface is a take on the visitor pattern in the case
+     * that an activity may be interacting with multiple instances of SetListSelectionFragment
+     * modifying different lists. To implement this interface, the parent should call fragment.getId(),
+     * in order to identify which of it's SetListSelectionFragments is finished. to get the modified
+     * list, parent should call fragment,getSelectedItems();
+     */
+
+    public interface SetListSelectionVisitorInterface {
+        public void done(SetListSelectionFragment fragment);
     }
 }

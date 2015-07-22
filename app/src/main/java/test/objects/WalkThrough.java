@@ -28,7 +28,7 @@ public class WalkThrough {
         this.date = new Date();
     }
 
-    public WalkThrough(String nothing) {}
+    private WalkThrough(String nothing) {}
 
     public static WalkThrough getDBWalkThrough() {
         return new WalkThrough("");

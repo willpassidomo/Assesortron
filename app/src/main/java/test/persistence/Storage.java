@@ -160,6 +160,16 @@ public class Storage {
         }
     }
 
+    public static void deleteProject(Context context, String projectId) {
+        try {
+            setDataBaseStorage(context);
+            dataBaseStorage.deleteProject(projectId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static void deleteWalkThrough(Context context, String walkThroughId) {
         try {
         setDataBaseStorage(context);
@@ -411,22 +421,16 @@ public class Storage {
         }
     }
 
-    public static List<FieldValue> getSiteWalkQuestions(Context context) {
-        try {
-            setDataBaseStorage(context);
-            return dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
-        }
-        finally {
-            dataBaseStorage.close();
-        }
-    }
-
     public static List<FieldValue> getSiteWalkQuestions(Context context, String id) {
         try {
             setDataBaseStorage(context);
             List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
             if (fvs == null || fvs.size() == 0) {
                 fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
+                if (fvs == null || fvs.size() == 0) {
+                    Constants.storeInitialSiteWalkQuestions(context);
+                    getSiteWalkQuestions(context, id);
+                }
                 for (FieldValue fv: fvs) {
                     fv.setOwnerId(id);
                 }
@@ -528,8 +532,11 @@ public class Storage {
 
 
 
-    private static void setDataBaseStorage(Context context) {
-        dataBaseStorage = new DataBaseStorage(context);
+    private static synchronized DataBaseStorage setDataBaseStorage(Context context) {
+        if (dataBaseStorage == null) {
+            dataBaseStorage = new DataBaseStorage(context.getApplicationContext());
+        }
+        return dataBaseStorage;
     }
 
     public static void storeTestProject(Context context, Project project) {
@@ -539,7 +546,6 @@ public class Storage {
         project.setNumAGFloors(5);
         project.setInitialStartDate("2/10/15");
         project.setInitialCompletionDate("5/22/15");
-        project.setAddress("122 Broadway Manhattan,NY,NY 00324");
         project.setName("Broadway Joe's");
         project.setContractAmount(new BigDecimal(1200000));
         project.setDateCreated(new Date());

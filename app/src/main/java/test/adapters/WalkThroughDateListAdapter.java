@@ -17,8 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import test.assesortron3.History;
-import test.assesortron3.R;
+import test.assesortron5.History;
+import test.assesortron5.R;
 
 /**
  * Created by willpassidomo on 3/9/15.

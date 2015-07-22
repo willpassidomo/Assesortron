@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import test.assesortron3.R;
+import test.assesortron5.R;
 
 
 /**

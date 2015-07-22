@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import test.objects.Address;
 import test.objects.FieldValue;
 import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
@@ -25,8 +26,8 @@ import test.objects.WalkThrough;
  * Created by willpassidomo on 1/24/15.
  */
 public class DataBaseStorage extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "assesortronDB12.db";
-    private static int DATABASE_VERSION = 11;
+    private static String DATABASE_NAME = "assesortronDB13.db";
+    private static int DATABASE_VERSION = 12;
 
     public DataBaseStorage(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -52,6 +53,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(Project.ProjectTradesBridge.CREATE_PROJECT_TRADES_TABLE);
         sqLiteDatabase.execSQL(FieldValue.FieldValueTable.CREATE_FIELD_VALUE_TABLE);
         sqLiteDatabase.execSQL(FieldValue.StockFieldValueTable.CREATE_STOCK_FIELD_VALUE_TABLE);
+        sqLiteDatabase.execSQL(Address.AddressEntry.CREATE_ADDRESS_TABLE);
     }
 
     @Override
@@ -73,7 +75,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return true;
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -91,7 +93,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return true;
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -160,20 +162,19 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             if (project.getPictures() != null && !project.getPictures().isEmpty()) {
                 db.insertWithOnConflict(Project.ProjectImageBridge.TABLE_NAME_PROJECT_PICTURES, null, contentValues1, SQLiteDatabase.CONFLICT_REPLACE);
             }
-
-        Project sp = getProject(project.getId());
-        Log.i("Database 148", "project inserted\n" +
-                "\nrow id- " + rowId +
-                "\nID- " + project.getId() +
-                "\nfloors- " + project.getNumAGFloors() +
-                "\nbasement floors- " + project.getNumBasementFloors() +
-                "\nloan amount- " + project.getLoanAmount() +
-                "\n\ninfo stored..." +
-                "\nID- " + sp.getId() +
-                "\nfloors- " + sp.getNumAGFloors() +
-                "\nbasement floors- " + sp.getNumBasementFloors() +
-                "\nloan amount- " + sp.getLoanAmount());
+            insertAddress(project.getAddress());
             return true;
+    }
+
+    public void insertAddress(Address address) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = getContentValues(address);
+        db.insertWithOnConflict(
+                Address.AddressEntry.TABLE_NAME,
+                null,
+                contentValues,
+                SQLiteDatabase.CONFLICT_REPLACE
+        );
     }
 
     public void insertSiteWalk(String projectId, SiteVisit siteVisit) {
@@ -330,7 +331,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return progresses;
         }
         finally {
-            cursor.close();
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
         }
     }
 
@@ -707,11 +710,48 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
             cursor.moveToFirst();
             if(!cursor.isAfterLast()) {
-                return getCursorProject(cursor);
+                Project project = getCursorProject(cursor);
+                project.setAddress(getAddress(cursor.getString(2)));
+                return project;
             }
             return null;
         }
         finally {
+
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public Address getAddress(String addressId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            String[] columns = {Address.AddressEntry.ADDRESS_ID,
+                    Address.AddressEntry.CITY,
+                    Address.AddressEntry.STATE,
+                    Address.AddressEntry.STREET_NAME,
+                    Address.AddressEntry.STREET_NUMBER,
+                    Address.AddressEntry.ZIP_CODE};
+
+            cursor = db.query(
+                    Address.AddressEntry.TABLE_NAME,
+                    columns,
+                    Address.AddressEntry.ADDRESS_ID + " = ? ",
+                    new String[]{addressId},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if(!cursor.isAfterLast()) {
+                return getCursorAddress(cursor);
+            }
+            return null;
+        }
+        finally {
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -743,7 +783,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             siteVisit.setFieldValues(getFieldValuesByOwner(siteVisit.getId()));
             return siteVisit;
         } finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -773,7 +813,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return siteWalkIds;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -818,7 +858,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 //            return siteVisits;
 //        }
 //        finally {
-//            db.close();
+//
 //            if (cursor != null && !cursor.isClosed()) {
 //                cursor.close();
 //            }
@@ -859,7 +899,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return siteVisits;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -890,7 +930,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             }
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -925,7 +965,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return  fvs;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -962,7 +1002,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return  fvs;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -1021,7 +1061,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return null;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -1054,7 +1094,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return getCursorDrawRequest(cursor);
         }
         finally {
-            db.close();
+
         if (cursor != null && !cursor.isClosed()) {
             cursor.close();
         }
@@ -1089,13 +1129,14 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             cursor.moveToFirst();
             for (int i = 0; i < cursor.getCount(); i++) {
                 Project project = getCursorProject(cursor);
+                project.setAddress(getAddress(cursor.getString(2)));
                 projects.add(project);
                 cursor.moveToNext();
             }
             return projects;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -1129,7 +1170,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return uris;
         }
         finally {
-            db.close();
+
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -1155,7 +1196,103 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
+        }
+    }
+
+    public void deleteProject(String projectId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            List<String> siteVisits = getSiteWalkIds(projectId);
+            for (String siteVisitId: siteVisits) {
+                deleteSiteVisit(siteVisitId);
+            }
+            deleteAddress(projectId);
+            db.delete(
+                    Project.ProjectEntry.TABLE_NAME,
+                    Project.ProjectEntry.COLUMN_PROJECT_ID + "= ?",
+                    new String[]{projectId}
+            );
+        }
+        finally {
+
+        }
+    }
+
+    public void deleteAddress(String projectId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    Address.AddressEntry.TABLE_NAME,
+                    Project.ProjectEntry.COLUMN_PROJECT_ID + " = ? ",
+                    new String[]{projectId}
+            );
+        }
+        finally {
+
+        }
+    }
+
+    public void deleteSiteVisit(String siteVisitId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    SiteVisit.SiteWalkEntry.TABLE_NAME,
+                    SiteVisit.SiteWalkEntry.COLUMN_ID + " = ? ",
+                    new String[]{siteVisitId}
+            );
+            deleteSiteVisitWalkThroughs(siteVisitId);
+            deleteSiteVisitDrawRequestAndItems(siteVisitId);
+            deleteOwnersFieldValues(siteVisitId);
+        }
+        finally {
+
+        }
+    }
+
+    public void deleteOwnersFieldValues(String ownerId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    FieldValue.FieldValueTable.TABLE_NAME,
+                    FieldValue.FieldValueTable.COL_OWNER_ID + " = ? ",
+                    new String[]{ownerId}
+            );
+        }
+        finally {
+
+        }
+    }
+
+    public void deleteSiteVisitDrawRequestAndItems(String siteVisitId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            DrawRequest drawRequest = getSiteWalkDrawRequest(siteVisitId);
+            for (DrawRequestItem dr: drawRequest.getItemList()) {
+                deleteDrawRequestItem(dr.getId());
+            }
+            db.delete(
+                    DrawRequest.DrawRequestEntry.TABLE_NAME,
+                    SiteVisit.SiteWalkEntry.COLUMN_ID + " = ?",
+                    new String[]{siteVisitId}
+            );
+        }
+        finally {
+
+        }
+    }
+
+    public void deleteSiteVisitWalkThroughs(String siteVisitId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    WalkThrough.WalkThroughEntry.TABLE_NAME_WALK_THROUGHS,
+                    SiteVisit.SiteWalkEntry.COLUMN_ID + " = ?",
+                    new String[]{siteVisitId}
+            );
+        }
+        finally {
+
         }
     }
 
@@ -1179,7 +1316,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -1211,7 +1348,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -1225,7 +1362,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         );
         }
         finally {
-            db.close();
+
         }
         }
 
@@ -1239,7 +1376,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -1261,7 +1398,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
         }
     }
 
@@ -1280,7 +1417,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            db.close();
+
         }
 
     }
@@ -1302,7 +1439,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
         finally {
             Log.i("deleted:",a + "rows from FV, " + b + "rows from StockFV");
-            db.close();
+
         }
     }
 
@@ -1364,7 +1501,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ID, project.getId());
         contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_NAME, project.getName());
         if (project.getAddress() != null) {
-            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ADDRESS, project.getAddress());
+            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ADDRESS, project.getAddress().getId());
         }
         if (project.getUser() != null) {
             contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_USER_ID, project.getUser().getId());
@@ -1393,6 +1530,17 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         contentValues.put(Project.ProjectEntry.COLUMN_HAS_OUTDOOR_WORK, project.isHasOutdoorWork());
         contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_DATE_CREATED, project.getDateCreated().toString());
 
+        return contentValues;
+    }
+
+    public ContentValues getContentValues(Address address) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Address.AddressEntry.ADDRESS_ID, address.getId());
+        contentValues.put(Address.AddressEntry.CITY, address.getCity());
+        contentValues.put(Address.AddressEntry.STATE, address.getState());
+        contentValues.put(Address.AddressEntry.STREET_NAME, address.getStreeAddress());
+        contentValues.put(Address.AddressEntry.STREET_NUMBER, address.getStreetNumber());
+        contentValues.put(Address.AddressEntry.ZIP_CODE, address.getZip());
         return contentValues;
     }
 
@@ -1491,9 +1639,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             if (cursor.getString(1) != null) {
                 project.setName(cursor.getString(1));
             }
-            if (cursor.getString(2) != null) {
-                project.setAddress(cursor.getString(2));
-            }
+//            if (cursor.getString(2) != null) {
+//                project.setAddress(cursor.getString(2));
+//            }
             if (cursor.getString(3) != null) {
                 project.setUser(Storage.getUserById(cursor.getString(3)));
             }
@@ -1537,6 +1685,17 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             project.setSitePictures(getProjectSitePictures(project.getId()));
 
             return project;
+    }
+
+    private Address getCursorAddress(Cursor cursor) {
+        Address address = Address.getDBAddress(cursor.getString(0));
+        address.setCity(cursor.getString(1))
+                .setState(cursor.getString(2))
+                .setStreetAddress(cursor.getString(3))
+                .setStreetNumber(cursor.getString(4))
+                .setZip(cursor.getString(5));
+        return address;
+
     }
 
     private WalkThrough getCursorWalkThrough(Cursor cursor) {

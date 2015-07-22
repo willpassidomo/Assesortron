@@ -21,7 +21,7 @@ public class Project {
     private Date dateCreated;
     private User user;
     private String name;
-    private String address;
+    private Address address;
     private String initialStartDate;
     private String initialCompletionDate;
     private String actualStartDate;
@@ -46,6 +46,7 @@ public class Project {
 
     public Project() {
         this.id = UUID.randomUUID().toString();
+        this.dateCreated = new Date();
     }
 
     public static Project initializeDBProject() {
@@ -68,11 +69,11 @@ public class Project {
         this.name = name;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 

@@ -1,7 +1,6 @@
 package test.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.database.DataSetObserver;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +12,9 @@ import android.widget.ViewSwitcher;
 
 import java.util.List;
 
-import test.assesortron3.MakeDrawRequest;
-import test.assesortron3.MakeDrawRequestField;
-import test.assesortron3.R;
-import test.objects.DrawRequest;
+import test.assesortron5.MakeDrawRequest;
+import test.assesortron5.R;
 import test.objects.DrawRequestItem;
-import test.persistence.Constants;
 import test.persistence.Storage;
 
 /**

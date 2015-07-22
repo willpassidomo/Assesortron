@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Assessortron4</string>
+    <string name="app_name">Assessortron5</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_home_screen">HomeScreen</string>
@@ -19,5 +19,8 @@
     <string name="title_activity_site_visit">SiteVisit</string>
     <string name="title_activity_new_site_visit">NewSiteVisit</string>
     <string name="title_activity_project_dashboard_two">ProjectDashboardTwo</string>
-
+    <string name="title_activity_super_site_visit">Site Visit</string>
+    <string name="title_activity_super_project">Project</string>
+    <string name="drawer_open">Drawer Open!!</string>
+    <string name="drawer_close">Drawer Closed !!</string>s
 </resources>

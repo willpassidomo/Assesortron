@@ -14,8 +14,8 @@ import android.widget.ViewSwitcher;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-import test.assesortron3.R;
-import test.assesortron3.SiteWalkthrough;
+import test.assesortron5.R;
+import test.assesortron5.SiteWalkthrough;
 import test.persistence.Constants;
 import test.persistence.Storage;
 import test.objects.WalkThrough;

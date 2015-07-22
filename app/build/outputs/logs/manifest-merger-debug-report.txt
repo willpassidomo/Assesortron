@@ -27,10 +27,16 @@ ADDED from AndroidManifest.xml:8:5
 		ADDED from AndroidManifest.xml:8:22
 application
 ADDED from AndroidManifest.xml:10:5
-MERGED from com.android.support:appcompat-v7:21.0.3:16:5
-MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:appcompat-v7:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.google.android.gms:play-services:6.5.87:20:5
-MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.afollestad:material-dialogs:0.7.6.0:12:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:appcompat-v7:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
+MERGED from com.android.support:support-v4:22.2.0:22:5
 	android:label
 		ADDED from AndroidManifest.xml:13:9
 	android:allowBackup
@@ -39,7 +45,7 @@ MERGED from com.android.support:support-v4:21.0.3:16:5
 		ADDED from AndroidManifest.xml:12:9
 	android:theme
 		ADDED from AndroidManifest.xml:14:9
-activity#test.assesortron3.UserSelect
+activity#test.assesortron5.UserSelect
 ADDED from AndroidManifest.xml:15:9
 	android:label
 		ADDED from AndroidManifest.xml:17:13
@@ -55,7 +61,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:21:17
 	android:name
 		ADDED from AndroidManifest.xml:21:27
-activity#test.assesortron3.HomeScreen
+activity#test.assesortron5.HomeScreen
 ADDED from AndroidManifest.xml:24:9
 	android:label
 		ADDED from AndroidManifest.xml:26:13
@@ -65,7 +71,7 @@ ADDED from AndroidManifest.xml:24:9
 		ADDED from AndroidManifest.xml:25:13
 	android:launchMode
 		ADDED from AndroidManifest.xml:27:13
-activity#test.assesortron3.ProjectHomeScreen
+activity#test.assesortron5.ProjectHomeScreen
 ADDED from AndroidManifest.xml:30:9
 	android:label
 		ADDED from AndroidManifest.xml:32:13
@@ -75,7 +81,7 @@ ADDED from AndroidManifest.xml:30:9
 		ADDED from AndroidManifest.xml:31:13
 	android:launchMode
 		ADDED from AndroidManifest.xml:33:13
-activity#test.assesortron3.SiteWalkthrough
+activity#test.assesortron5.SiteWalkthrough
 ADDED from AndroidManifest.xml:36:9
 	android:label
 		ADDED from AndroidManifest.xml:38:13
@@ -83,7 +89,7 @@ ADDED from AndroidManifest.xml:36:9
 		ADDED from AndroidManifest.xml:39:13
 	android:name
 		ADDED from AndroidManifest.xml:37:13
-activity#test.assesortron3.MakeDrawG702
+activity#test.assesortron5.MakeDrawG702
 ADDED from AndroidManifest.xml:41:9
 	android:label
 		ADDED from AndroidManifest.xml:43:13
@@ -91,7 +97,7 @@ ADDED from AndroidManifest.xml:41:9
 		ADDED from AndroidManifest.xml:44:13
 	android:name
 		ADDED from AndroidManifest.xml:42:13
-activity#test.assesortron3.ProjectDashboard
+activity#test.assesortron5.ProjectDashboard
 ADDED from AndroidManifest.xml:46:9
 	android:label
 		ADDED from AndroidManifest.xml:48:13
@@ -99,7 +105,7 @@ ADDED from AndroidManifest.xml:46:9
 		ADDED from AndroidManifest.xml:49:13
 	android:name
 		ADDED from AndroidManifest.xml:47:13
-activity#test.assesortron3.History
+activity#test.assesortron5.History
 ADDED from AndroidManifest.xml:51:9
 	android:label
 		ADDED from AndroidManifest.xml:53:13
@@ -107,7 +113,7 @@ ADDED from AndroidManifest.xml:51:9
 		ADDED from AndroidManifest.xml:54:13
 	android:name
 		ADDED from AndroidManifest.xml:52:13
-activity#test.assesortron3.StringListEdit
+activity#test.UserFragments.StringListEdit
 ADDED from AndroidManifest.xml:56:9
 	android:label
 		ADDED from AndroidManifest.xml:58:13
@@ -115,7 +121,7 @@ ADDED from AndroidManifest.xml:56:9
 		ADDED from AndroidManifest.xml:59:13
 	android:name
 		ADDED from AndroidManifest.xml:57:13
-activity#test.assesortron3.MakeDraw
+activity#test.assesortron5.MakeDraw
 ADDED from AndroidManifest.xml:61:9
 	android:label
 		ADDED from AndroidManifest.xml:63:13
@@ -123,7 +129,7 @@ ADDED from AndroidManifest.xml:61:9
 		ADDED from AndroidManifest.xml:64:13
 	android:name
 		ADDED from AndroidManifest.xml:62:13
-activity#test.assesortron3.VisitSite
+activity#test.assesortron5.VisitSite
 ADDED from AndroidManifest.xml:66:9
 	android:label
 		ADDED from AndroidManifest.xml:68:13
@@ -133,7 +139,7 @@ ADDED from AndroidManifest.xml:66:9
 		ADDED from AndroidManifest.xml:67:13
 	android:launchMode
 		ADDED from AndroidManifest.xml:69:13
-activity#test.assesortron3.NewSiteVisit
+activity#test.ProjectFragments.NewSiteVisit
 ADDED from AndroidManifest.xml:72:9
 	android:label
 		ADDED from AndroidManifest.xml:74:13
@@ -147,20 +153,38 @@ ADDED from AndroidManifest.xml:78:9
 		ADDED from AndroidManifest.xml:80:13
 	android:name
 		ADDED from AndroidManifest.xml:79:13
-activity#test.assesortron3.ProjectDashboardTwo
+activity#test.superActivities.SuperProject
 ADDED from AndroidManifest.xml:83:9
 	android:label
 		ADDED from AndroidManifest.xml:85:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:86:13
 	android:name
 		ADDED from AndroidManifest.xml:84:13
+activity#test.superActivities.SuperSiteVisit
+ADDED from AndroidManifest.xml:87:9
+	android:label
+		ADDED from AndroidManifest.xml:89:13
+	android:name
+		ADDED from AndroidManifest.xml:88:13
+activity#test.superActivities.SuperUser
+ADDED from AndroidManifest.xml:91:9
+	android:label
+		ADDED from AndroidManifest.xml:93:13
+	android:name
+		ADDED from AndroidManifest.xml:92:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
-MERGED from com.android.support:appcompat-v7:21.0.3:15:5
-MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:appcompat-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.google.android.gms:play-services:6.5.87:18:5
-MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:recyclerview-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.afollestad:material-dialogs:0.7.6.0:8:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:appcompat-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
+MERGED from com.android.support:recyclerview-v7:22.2.0:20:5
+MERGED from com.android.support:support-v4:22.2.0:20:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0

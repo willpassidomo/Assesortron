@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="test.assesortron3"
+    package="test.assesortron4"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="test.assesortron3.UserSelect"
+            android:name="test.assesortron5.UserSelect"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,57 +28,57 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="test.assesortron3.HomeScreen"
+            android:name="test.assesortron5.HomeScreen"
             android:label="@string/title_activity_home_screen"
             android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron3.UserSelect" >
+            android:parentActivityName="test.assesortron5.UserSelect" >
         </activity>
         <activity
-            android:name="test.assesortron3.ProjectHomeScreen"
+            android:name="test.assesortron5.ProjectHomeScreen"
             android:label="@string/title_activity_project_home_screen"
             android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron3.HomeScreen" >
+            android:parentActivityName="test.assesortron5.HomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.SiteWalkthrough"
+            android:name="test.assesortron5.SiteWalkthrough"
             android:label="@string/title_activity_site_walkthrough"
-            android:parentActivityName="test.assesortron3.VisitSite" >
+            android:parentActivityName="test.assesortron5.VisitSite" >
         </activity>
         <activity
-            android:name="test.assesortron3.MakeDrawG702"
+            android:name="test.assesortron5.MakeDrawG702"
             android:label="@string/title_activity_make_draw"
-            android:parentActivityName="test.assesortron3.MakeDraw" >
+            android:parentActivityName="test.assesortron5.MakeDraw" >
         </activity>
         <activity
-            android:name="test.assesortron3.ProjectDashboard"
+            android:name="test.assesortron5.ProjectDashboard"
             android:label="@string/title_activity_project_dashboard"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.History"
+            android:name="test.assesortron5.History"
             android:label="@string/title_activity_history"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.StringListEdit"
+            android:name="test.UserFragments.StringListEdit"
             android:label="@string/title_activity_string_list_edit"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.MakeDraw"
+            android:name="test.assesortron5.MakeDraw"
             android:label="@string/title_activity_make_draw"
-            android:parentActivityName="test.assesortron3.VisitSite" >
+            android:parentActivityName="test.assesortron5.VisitSite" >
         </activity>
         <activity
-            android:name="test.assesortron3.VisitSite"
+            android:name="test.assesortron5.VisitSite"
             android:label="@string/title_activity_site_visit"
             android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron3.NewSiteVisit"
+            android:name="test.ProjectFragments.NewSiteVisit"
             android:label="@string/title_activity_new_site_visit"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
 
         <service
@@ -87,9 +87,16 @@
         </service>
 
         <activity
-            android:name="test.assesortron3.ProjectDashboardTwo"
-            android:label="@string/title_activity_project_dashboard_two"
-            android:parentActivityName="test.assesortron3.ProjectHomeScreen" >
+            android:name="test.superActivities.SuperProject"
+            android:label="@string/title_activity_super_project" >
+        </activity>
+        <activity
+            android:name="test.superActivities.SuperSiteVisit"
+            android:label="@string/title_activity_super_site_visit" >
+        </activity>
+        <activity
+            android:name="test.superActivities.SuperUser"
+            android:label="User" >
         </activity>
 
         <meta-data

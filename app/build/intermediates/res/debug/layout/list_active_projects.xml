@@ -2,29 +2,47 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingLeft="?android:listPreferredItemPaddingLeft"
+    android:paddingRight="?android:listPreferredItemPaddingRight"
+    android:gravity="center_vertical"
+    android:background="?android:selectableItemBackground"
+    >
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#ffe6e6e6">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+                style="?android:textAppearanceListItemSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="project name"
+                android:id="@+id/project_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="project name"
-            android:id="@+id/project_name"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
+            android:text="street add"
+            android:id="@+id/list_active_projects_street_add"
+            android:layout_weight="1"
+            android:layout_marginLeft="18dp" />
 
-        <ViewSwitcher
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/change_order_list_switcher"
-            android:layout_alignParentRight="true">
+            android:text="city,state, 12345"
+            android:id="@+id/list_active_projects_city_state"
+            android:layout_weight="1"
+            android:layout_marginLeft="18dp" />
 
-            <TextView
+    </LinearLayout>
+
+    <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -32,33 +50,8 @@
                 android:id="@+id/project_start_date"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+        android:layout_weight="0" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="right"
-                android:id="@+id/linearLayout">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="edit"
-                    android:id="@+id/active_projects_list_edit_button"
-                    android:background="#787bff51"
-                    android:layout_marginRight="5dp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="delete"
-                    android:id="@+id/active_projects_list_delete_button"
-                    android:background="#78ff3434" />
-            </LinearLayout>
-
-        </ViewSwitcher>
-
-    </RelativeLayout>
 
 </LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/list_active_projects.xml -->

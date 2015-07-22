@@ -5,8 +5,8 @@ import android.test.ActivityUnitTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
 
-import test.assesortron3.R;
-import test.assesortron3.SiteWalkthrough;
+import test.assesortron5.R;
+import test.assesortron5.SiteWalkthrough;
 import test.objects.WalkThrough;
 import test.persistence.Constants;
 

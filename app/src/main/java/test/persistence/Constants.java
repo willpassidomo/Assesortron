@@ -21,6 +21,7 @@ public class Constants {
     public static final String NEW = "new";
     public static final String EDIT = "edit";
     public static final String EMAIL_ADDRESS = "email_address";
+    public static final String USER_NAME = "user_name";
 
     public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
 
@@ -53,7 +54,7 @@ public class Constants {
         return createTable;
     }
 
-    public static void checkSiteWalkMinQuestions(Context context) {
+    public static void storeInitialSiteWalkQuestions(Context context) {
         List<FieldValue> fvs = new ArrayList<>();
         fvs.add(new FieldValue("Temperature", false, false));
         fvs.add(new FieldValue("Weather", false, false));
@@ -61,14 +62,7 @@ public class Constants {
         fvs.add(new FieldValue("Time", false, false));
         fvs.add(new FieldValue("Humidity", false, false));
 
-        List<FieldValue> fvsIn = Storage.getSiteWalkQuestions(context);
-        for (FieldValue fv: fvs) {
-            if(!fvsIn.contains(fv)) {
-                Log.i("fv does not contain- ", fv.getField());
-                fvsIn.add(fv);
-            }
-        }
-        Storage.storeSiteVisitQuestions(context, fvsIn);
+        Storage.storeSiteVisitQuestions(context, fvs);
     }
 
     public static List<String> getInitialProgresses() {
