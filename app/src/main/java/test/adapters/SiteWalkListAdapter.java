@@ -19,6 +19,7 @@ import test.assesortron5.VisitSite;
 import test.objects.SiteVisit;
 import test.persistence.Constants;
 import test.persistence.Storage;
+import test.superActivities.SuperSiteVisit;
 
 /**
  * Created by willpassidomo on 4/1/15.
@@ -117,10 +118,8 @@ public class SiteWalkListAdapter implements ListAdapter {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, VisitSite.class);
+                Intent intent = new Intent(context, SuperSiteVisit.class);
                 intent.putExtra(Constants.SITE_VISIT_ID, sv.getId());
-                intent.putExtra(Constants.NEW_OR_EDIT, Constants.EDIT);
-                intent.putExtra(Constants.PROJECT_ID, sv.getProjectId());
                 context.startActivity(intent);
             }
         };

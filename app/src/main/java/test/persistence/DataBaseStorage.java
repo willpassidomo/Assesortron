@@ -26,6 +26,7 @@ import test.objects.WalkThrough;
  * Created by willpassidomo on 1/24/15.
  */
 public class DataBaseStorage extends SQLiteOpenHelper {
+    private static DataBaseStorage dataBaseStorage;
     private static String DATABASE_NAME = "assesortronDB13.db";
     private static int DATABASE_VERSION = 12;
 
@@ -59,6 +60,13 @@ public class DataBaseStorage extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i2) {
         onCreate(sqLiteDatabase);
+    }
+
+    public static synchronized DataBaseStorage getDataBaseStorage(Context context) {
+        if (dataBaseStorage == null) {
+            dataBaseStorage = new DataBaseStorage(context);
+        }
+        return dataBaseStorage;
     }
 
     public boolean insertProgresses(List<String> progresses) {
@@ -1438,7 +1446,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             );
         }
         finally {
-            Log.i("deleted:",a + "rows from FV, " + b + "rows from StockFV");
+            Log.i("deleted:", a + "rows from FV, " + b + "rows from StockFV");
 
         }
     }

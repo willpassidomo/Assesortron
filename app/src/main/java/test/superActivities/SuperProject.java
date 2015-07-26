@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -35,6 +36,12 @@ public class SuperProject extends NavDrawerActivityPrototype implements SetListS
     final Context context = this;
 
     @Override
+    protected void onCreate(Bundle saved) {
+        super.onCreate(saved);
+        mDrawerLayout.openDrawer(mRecylerView);
+    }
+
+    @Override
     public RecyclerView.Adapter getRecyclerAdapter() {
         IconHeaderRecyclerAdapter adapter = new IconHeaderRecyclerAdapter(R.layout.header_site_walk_drawer, this);
         IconHeaderRecyclerAdapter.IconHeaderObject[] items = {
@@ -42,7 +49,7 @@ public class SuperProject extends NavDrawerActivityPrototype implements SetListS
                 adapter.newItem(this, "New Site Visit",R.drawable.ic_new_item, NewSiteVisit.newInstance(this, projectId)),
                 adapter.newItem(this, "Project Dashboard",R.drawable.ic_clipboard,new Fragment()),
                 adapter.newItem(this, "Project Info",R.drawable.ic_info, new Fragment()),
-                adapter.newItem(this, "Set Trades",R.drawable.ic_idk, SetListSelectionFragment.getInstance(this, Storage.getProjectTradeList(this, projectId))),
+                adapter.newItem(this, "Set Trades",R.drawable.ic_idk, SetListSelectionFragment.getInstance(this, Storage.getTradeList(this), Storage.getProjectTradeList(this, projectId))),
                 adapter.newItem(this, "Submit Project",R.drawable.ic_idk, new Fragment()),
                 adapter.newItem(this, "Sync", R.drawable.ic_idk,new Fragment()),
                 adapter.newItem(this, "DELETE", R.drawable.ic_back_arrow, deleteProject())
@@ -123,6 +130,7 @@ public class SuperProject extends NavDrawerActivityPrototype implements SetListS
 
     @Override
     public void setList(List<String> strings) {
-
+        Storage.storeTradeList(this, strings, projectId);
+        done();
     }
 }

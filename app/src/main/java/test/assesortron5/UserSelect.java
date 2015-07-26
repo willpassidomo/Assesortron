@@ -36,24 +36,6 @@ public class UserSelect extends Activity {
                 startActivity(intent);
             }
         });
-
-        Button testProject = (Button)findViewById(R.id.test_project);
-        testProject.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, SuperProject.class);
-                startActivity(intent);
-            }
-        });
-
-        Button test1 = (Button)findViewById(R.id.test_test_1);
-        test1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, SuperSiteVisit.class);
-                startActivity(intent);
-            }
-        });
     }
 
 
@@ -74,10 +56,5 @@ public class UserSelect extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void login(View view) {
-        Intent intent = new Intent(this, HomeScreen.class);
-        startActivity(intent);
     }
 }

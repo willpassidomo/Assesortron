@@ -27,6 +27,7 @@ public class SetListSelectionFragment extends Fragment {
     SetListSelectionInterface onlyChildParent;
     SetListSelectionVisitorInterface siblingsParent;
     StringSelectorAdapter adapter;
+    List<String> inList;
     List<String> stringList;
     Button submit;
     ListView selectionList;
@@ -43,9 +44,9 @@ public class SetListSelectionFragment extends Fragment {
      * @param stringList
      * @return
      */
-    public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList) {
+    public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList, List<String> inList) {
         SetListSelectionFragment sptf = new SetListSelectionFragment();
-        sptf.setStringList(stringList);
+        sptf.setStringList(stringList, inList);
         sptf.setParent(parent);
         return sptf;
     }
@@ -59,10 +60,10 @@ public class SetListSelectionFragment extends Fragment {
      * @return
      */
 
-    public static SetListSelectionFragment getInstance(SetListSelectionVisitorInterface parent, List<String> stringList, String id) {
+    public static SetListSelectionFragment getInstance(SetListSelectionVisitorInterface parent, List<String> stringList, List<String> inList, String id) {
         SetListSelectionFragment sptf = new SetListSelectionFragment();
         sptf.setParent(parent);
-        sptf.setStringList(stringList);
+        sptf.setStringList(stringList, inList);
         sptf.setType(id);
         return sptf;
     }
@@ -73,7 +74,8 @@ public class SetListSelectionFragment extends Fragment {
     }
     private void setParent(SetListSelectionVisitorInterface parent) {this.siblingsParent = parent;}
 
-    private void setStringList(List<String> stringList) {
+    private void setStringList(List<String> stringList, List<String> inList) {
+        this.inList = inList;
         this.stringList = stringList;
     }
 
@@ -89,7 +91,7 @@ public class SetListSelectionFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_set_list_selection, null);
         submit = (Button)view.findViewById(R.id.set_list_selection_submit);
         selectionList = (ListView)view.findViewById(R.id.set_list_selection_list);
-        adapter = new StringSelectorAdapter(stringList);
+        adapter = new StringSelectorAdapter(stringList, inList);
         selectionList.setAdapter(adapter);
         submit.setOnClickListener(submitListener());
         return view;
@@ -108,11 +110,12 @@ public class SetListSelectionFragment extends Fragment {
 
 
     class StringSelectorAdapter extends BaseAdapter {
-
+        List<String> inList;
         List<String> strings;
         Map<Integer, View> views = new TreeMap<>();
 
-        public StringSelectorAdapter(List<String> strings) {
+        public StringSelectorAdapter(List<String> strings, List<String> inList) {
+            this.inList = inList;
             this.strings = strings;
         }
 
@@ -148,6 +151,9 @@ public class SetListSelectionFragment extends Fragment {
                     button.setChecked(!button.isChecked());
                 }
             });
+            if (this.inList.contains(stringVal)) {
+                button.setChecked(true);
+            }
             stringVal.setText(strings.get(i));
 
             views.put(new Integer(i), view);

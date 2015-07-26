@@ -18,6 +18,7 @@ import java.util.List;
 
 import test.Network.FullSyncService;
 import test.ProjectFragments.NewSiteVisit;
+import test.SiteVisitFragments.SiteWalkthrough;
 import test.UserFragments.StringListEdit;
 import test.adapters.SiteWalkListAdapter;
 import test.objects.Project;

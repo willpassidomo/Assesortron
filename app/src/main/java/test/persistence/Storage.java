@@ -25,7 +25,6 @@ import test.objects.FieldValue;
  * Created by willpassidomo on 1/14/15.
  */
 public class Storage {
-    private static DataBaseStorage dataBaseStorage;
     private static User user = new User("USER_FIRST", "USER_LAST");
 
     public static List<String> getMasterTradeList() {
@@ -40,8 +39,8 @@ public class Storage {
     }
 
     public static void storeProject(Context context, Project project) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.insertProject(project);
         }
         finally {
@@ -50,8 +49,8 @@ public class Storage {
     }
 
     public static void storeProjectQuestions(Context context, String projectId, List<FieldValue> fvs) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
         }
         finally {
@@ -60,8 +59,8 @@ public class Storage {
     }
 
     public static void storeSiteVisit(Context context, String projectId, SiteVisit siteVisit) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertSiteWalk(projectId, siteVisit);
         }
         finally {
@@ -70,8 +69,8 @@ public class Storage {
     }
 
     public static void storeSiteVisitQuestions(Context context, List<FieldValue> fvs) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
         }
         finally {
@@ -80,8 +79,8 @@ public class Storage {
     }
 
     public static void storeFieldValues(Context context, List<FieldValue> fvs) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertFieldValues(fvs);
         }
         finally {
@@ -90,8 +89,8 @@ public class Storage {
     }
 
     public static void storeWalkThrough(Context context, String siteWalkId, WalkThrough walkThrough) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.insertWalkThrough(siteWalkId, walkThrough);
         }
         finally {
@@ -100,8 +99,8 @@ public class Storage {
     }
 
     public static void storeDrawRequest(Context context, String siteWalkId, DrawRequest drawRequest) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.insertDrawRequest(siteWalkId, drawRequest);
         }
         finally {
@@ -110,8 +109,8 @@ public class Storage {
     }
 
     public static void storeDrawRequestItem(Context context, String drawRequestId, DrawRequestItem drawRequestItem) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertDrawRequestItem(drawRequestId, drawRequestItem);
         }
         finally {
@@ -121,8 +120,8 @@ public class Storage {
 
 
     public static void storeTradeList(Context context, List<String> trades, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertProjectTrades(trades, projectId);
         }
         finally {
@@ -131,8 +130,8 @@ public class Storage {
     }
 
     public static void storeTrades(Context context, List<String> trades) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertTrades(trades);
         }
         finally {
@@ -141,8 +140,8 @@ public class Storage {
     }
 
     public static void storeProgresses(Context context, List<String> progresses) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.insertProgresses(progresses);
         }
         finally {
@@ -151,8 +150,8 @@ public class Storage {
     }
 
     public static void deleteProject(Context context, Project project) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.deleteProject(project);
         }
         finally {
@@ -161,8 +160,8 @@ public class Storage {
     }
 
     public static void deleteProject(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.deleteProject(projectId);
         }
         finally {
@@ -171,8 +170,8 @@ public class Storage {
     }
 
     public static void deleteWalkThrough(Context context, String walkThroughId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.deleteWalkThrough(walkThroughId);
         }
         finally {
@@ -181,8 +180,8 @@ public class Storage {
     }
 
     public static void deleteDrawRequestItem(Context context, String drawRequestId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.deleteDrawRequestItem(drawRequestId);
         }
         finally {
@@ -191,8 +190,8 @@ public class Storage {
     }
 
     public static void deleteDrawRequest(Context context, DrawRequest drawRequest) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         dataBaseStorage.deleteDrawRequest(drawRequest);
         }
         finally {
@@ -201,8 +200,8 @@ public class Storage {
     }
 
     public static void deleteFieldValue(Context context, String fieldValueId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.deleteFieldValue(fieldValueId);
         }
         finally {
@@ -211,8 +210,8 @@ public class Storage {
     }
 
     public static void deleteProgress(Context context, String progress) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.deleteProgress(progress);
         }
         finally {
@@ -221,8 +220,8 @@ public class Storage {
     }
 
     public static void deleteTrade(Context context, String trade) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             dataBaseStorage.deleteTrade(trade);
         }
         finally {
@@ -231,8 +230,8 @@ public class Storage {
     }
 
     public static Project getProjectById(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             Project project = dataBaseStorage.getProject(id);
             project.setDrawRequests(dataBaseStorage.getProjectDrawRequests(id));
             return project;
@@ -242,8 +241,8 @@ public class Storage {
     }
 
     public static SiteVisit getSiteWalkById(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getSiteWalk(id);
         }
         finally {
@@ -252,8 +251,8 @@ public class Storage {
     }
 
     public static DrawRequest getDrawRequestBySiteWalkId(Context context, String siteWalkId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getSiteWalkDrawRequest(siteWalkId);
         }
         finally {
@@ -268,13 +267,13 @@ public class Storage {
 
         //returns just active projects, not submited ones..if that is a hing
 
-        setDataBaseStorage(context);
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         return dataBaseStorage.getAllProjects();
     }
 
     public static List<SiteVisit> getActiveSiteWalks(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<String> siteWalkIds = dataBaseStorage.getSiteWalkIds(projectId);
             Log.i("total site walks found", "#" + siteWalkIds.size());
             return dataBaseStorage.getActiveSiteWalks(siteWalkIds);
@@ -285,8 +284,8 @@ public class Storage {
     }
 
     public static  List<SiteVisit> getSiteWalks(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<String> siteWalkIds = dataBaseStorage.getSiteWalkIds(projectId);
             return dataBaseStorage.getSiteWalks(siteWalkIds);
         }
@@ -296,8 +295,8 @@ public class Storage {
     }
 
     public static List<WalkThrough> getWalkThroughBySiteWalkId(Context context, String siteWalkId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<String> walkThroughIds = dataBaseStorage.getSiteWalktWalkThroughs(siteWalkId);
             return dataBaseStorage.getWalkThroughs(walkThroughIds);
         }
@@ -307,8 +306,8 @@ public class Storage {
     }
 
     public static List<WalkThrough> getWalkThroughs(Context context, List<String> walkThroughIds) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getWalkThroughs(walkThroughIds);
         }
         finally {
@@ -317,8 +316,8 @@ public class Storage {
     }
 
     public static Map<Date, ArrayList<String>> getSWalkThroughDates(Context context, String siteWalkId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<String> walkThroughIds = dataBaseStorage.getSiteWalktWalkThroughs(siteWalkId);
             Map<Date, String> dates = dataBaseStorage.getWalkThroughDates(walkThroughIds);
             Map<Date, ArrayList<String>> dateGroups = new HashMap<>();
@@ -344,8 +343,8 @@ public class Storage {
     }
 
     public static List<DrawRequest> getDrawRequestByProjectId(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         return dataBaseStorage.getProjectDrawRequests(projectId);
         }
         finally {
@@ -355,8 +354,8 @@ public class Storage {
 
 
     public static DrawRequestItem getChangeOrderById(Context context, String changeOrderId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         return dataBaseStorage.getChangeOrder(changeOrderId);
         }
         finally {
@@ -365,8 +364,8 @@ public class Storage {
     }
 
     public static DrawRequest getDrawRequestById(Context context, String drawRequestId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         return dataBaseStorage.getDrawRequest(drawRequestId);
         }
         finally {
@@ -375,8 +374,8 @@ public class Storage {
     }
 
     public static WalkThrough getWalkThroughById(Context context, String walkThroughId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-        setDataBaseStorage(context);
         return dataBaseStorage.getWalkThrough(walkThroughId);
         }
         finally {
@@ -385,8 +384,8 @@ public class Storage {
     }
 
     public static List<String> getProjectTradeList(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getProjectTrades(projectId);
         }
         finally {
@@ -395,8 +394,8 @@ public class Storage {
     }
 
     public static List<FieldValue> getProjectQuestions(Context context) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
         }
         finally {
@@ -405,8 +404,8 @@ public class Storage {
     }
 
     public static List<FieldValue> getProjectQuestions(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
             if (fvs == null || fvs.size() == 0) {
                 fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
@@ -422,8 +421,8 @@ public class Storage {
     }
 
     public static List<FieldValue> getSiteWalkQuestions(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
             if (fvs == null || fvs.size() == 0) {
                 fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
@@ -443,8 +442,8 @@ public class Storage {
     }
 
     public static List<FieldValue> getQuestionsByOwnerId(Context context, String ownerId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getFieldValuesByOwner(ownerId);
         }
         finally {
@@ -453,8 +452,8 @@ public class Storage {
     }
 
     public static FieldValue getQuestionById(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getFieldValue(id);
         }
         finally {
@@ -463,8 +462,8 @@ public class Storage {
     }
 
     public static List<String> getTradeList(Context context) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getTrades();
         }
         finally {
@@ -474,8 +473,8 @@ public class Storage {
 
 
     public static List<String> getProgressList(Context context) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getProgresses();
         }
         finally {
@@ -498,8 +497,8 @@ public class Storage {
     }
 
     public static String getRetainageRel(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            setDataBaseStorage(context);
             return dataBaseStorage.getRetainageRel(projectId);
         }
         finally {
@@ -532,12 +531,6 @@ public class Storage {
 
 
 
-    private static synchronized DataBaseStorage setDataBaseStorage(Context context) {
-        if (dataBaseStorage == null) {
-            dataBaseStorage = new DataBaseStorage(context.getApplicationContext());
-        }
-        return dataBaseStorage;
-    }
 
     public static void storeTestProject(Context context, Project project) {
         project.setId("test");
@@ -551,7 +544,7 @@ public class Storage {
         project.setDateCreated(new Date());
         project.setLoanAmount(new BigDecimal(1500000));
 
-        setDataBaseStorage(context);
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
 
         dataBaseStorage.insertProject(project);
     }

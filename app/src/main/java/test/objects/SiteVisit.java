@@ -82,7 +82,7 @@ public class SiteVisit {
     }
 
 
-    public void setWalkThroughs(ArrayList<WalkThrough> walkThroughs) {
+    public void setWalkThroughs(List<WalkThrough> walkThroughs) {
         this.walkThroughs = walkThroughs;
     }
 

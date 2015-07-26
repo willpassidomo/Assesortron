@@ -40,9 +40,9 @@
             android:parentActivityName="test.assesortron5.HomeScreen" >
         </activity>
         <activity
-            android:name="test.assesortron5.SiteWalkthrough"
+            android:name="test.SiteVisitFragments.SiteWalkthrough"
             android:label="@string/title_activity_site_walkthrough"
-            android:parentActivityName="test.assesortron5.VisitSite" >
+            android:parentActivityName="test.superActivities.SuperSiteVisit" >
         </activity>
         <activity
             android:name="test.assesortron5.MakeDrawG702"
@@ -60,24 +60,9 @@
             android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
-            android:name="test.UserFragments.StringListEdit"
-            android:label="@string/title_activity_string_list_edit"
-            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
-        </activity>
-        <activity
-            android:name="test.assesortron5.MakeDraw"
-            android:label="@string/title_activity_make_draw"
-            android:parentActivityName="test.assesortron5.VisitSite" >
-        </activity>
-        <activity
             android:name="test.assesortron5.VisitSite"
             android:label="@string/title_activity_site_visit"
             android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
-        </activity>
-        <activity
-            android:name="test.ProjectFragments.NewSiteVisit"
-            android:label="@string/title_activity_new_site_visit"
             android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
 
@@ -88,15 +73,18 @@
 
         <activity
             android:name="test.superActivities.SuperProject"
-            android:label="@string/title_activity_super_project" >
+            android:label="@string/title_activity_super_project"
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name="test.superActivities.SuperSiteVisit"
-            android:label="@string/title_activity_super_site_visit" >
+            android:label="@string/title_activity_super_site_visit"
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name="test.superActivities.SuperUser"
-            android:label="User" >
+            android:label="User"
+            android:launchMode="singleTop" >
         </activity>
 
         <meta-data

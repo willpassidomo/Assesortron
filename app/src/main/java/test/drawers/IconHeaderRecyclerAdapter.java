@@ -21,6 +21,7 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     public static final int TYPE_FRAGMENT = 1;
     public static final int TYPE_INTENT = 2;
     public static final int TYPE_LISTENER = 3;
+    public static final int TYPE_FRAGMENT_SUPPORT = 4;
 
     IconHeaderObject[] items;
     DrawerActivtyListener parent;
@@ -62,6 +63,8 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
                 case TYPE_LISTENER:
                     viewHolder.background.setOnClickListener(item.listener);
                     break;
+                case TYPE_FRAGMENT_SUPPORT:
+                    viewHolder.background.setOnClickListener(itemClickListener(item.fragmentSupported));
             }
         }
         if (viewHolder.VIEW_TYPE == HEADER) {
@@ -79,6 +82,10 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     }
 
     public IconHeaderObject newItem(Context context, String title, int drawable, Fragment fragment) {
+        return new IconHeaderObject(title, context.getResources().getDrawable(drawable), fragment);
+    }
+
+    public IconHeaderObject newItem(Context context, String title, int drawable, android.support.v4.app.Fragment fragment) {
         return new IconHeaderObject(title, context.getResources().getDrawable(drawable), fragment);
     }
 
@@ -104,6 +111,16 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     }
 
     private View.OnClickListener itemClickListener(final Fragment fragment) {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                parent.displayFragment(fragment);
+            }
+        };
+        return listener;
+    }
+
+    private View.OnClickListener itemClickListener(final android.support.v4.app.Fragment fragment) {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,6 +168,7 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
         Drawable drawable;
         String title;
         Fragment fragement;
+        android.support.v4.app.Fragment fragmentSupported;
         Intent intent;
         View.OnClickListener listener;
 
@@ -159,6 +177,13 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
             this.title = title;
             this.drawable = drawable;
             this.fragement = fragement;
+        }
+
+        public IconHeaderObject(String title, Drawable drawable, android.support.v4.app.Fragment fragment) {
+            type = TYPE_FRAGMENT_SUPPORT;
+            this.title = title;
+            this.drawable = drawable;
+            this.fragmentSupported = fragment;
         }
 
         public IconHeaderObject(String title, Drawable drawable, Intent intent) {

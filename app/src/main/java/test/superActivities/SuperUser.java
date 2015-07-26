@@ -2,6 +2,7 @@ package test.superActivities;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
 import test.Fragments.SetListSelectionFragment;
@@ -21,6 +22,12 @@ import test.persistence.Storage;
 public class SuperUser extends NavDrawerActivityPrototype implements NewProjectRequired.ProjectListener {
     String userName;
     String userId = "00000";
+
+    @Override
+    protected void onCreate(Bundle saved) {
+        super.onCreate(saved);
+        mDrawerLayout.openDrawer(mRecylerView);
+    }
 
     @Override
     public RecyclerView.Adapter getRecyclerAdapter() {

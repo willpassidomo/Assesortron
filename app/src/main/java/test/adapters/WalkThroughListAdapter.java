@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import test.assesortron5.R;
-import test.assesortron5.SiteWalkthrough;
+import test.SiteVisitFragments.SiteWalkthrough;
 import test.persistence.Constants;
 import test.persistence.Storage;
 import test.objects.WalkThrough;

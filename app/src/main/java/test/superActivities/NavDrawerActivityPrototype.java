@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -18,7 +19,7 @@ import android.view.View;
 import test.assesortron5.R;
 import test.drawers.DrawerActivtyListener;
 
-public abstract class NavDrawerActivityPrototype extends Activity implements DrawerActivtyListener, FragmentDrawerListener {
+public abstract class NavDrawerActivityPrototype extends FragmentActivity implements DrawerActivtyListener, FragmentDrawerListener {
 
     DrawerLayout mDrawerLayout;
     RecyclerView mRecylerView;
@@ -97,6 +98,14 @@ public abstract class NavDrawerActivityPrototype extends Activity implements Dra
     public void displayFragment(Fragment fragment) {
         Log.i("Displaying Fragmment", "");
         FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.super_site_visit_main, fragment);
+        ft.commit();
+        mDrawerLayout.closeDrawer(mRecylerView);
+    }
+
+    @Override
+    public void displayFragment(android.support.v4.app.Fragment fragment) {
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.super_site_visit_main, fragment);
         ft.commit();
         mDrawerLayout.closeDrawer(mRecylerView);

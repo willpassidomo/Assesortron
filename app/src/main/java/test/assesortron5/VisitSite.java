@@ -21,6 +21,7 @@ import android.widget.ViewSwitcher;
 
 import test.Network.FullSyncService;
 import test.ProjectFragments.NewSiteVisit;
+import test.SiteVisitFragments.SiteWalkthrough;
 import test.objects.SiteVisit;
 import test.persistence.Constants;
 import test.persistence.Storage;
@@ -187,10 +188,10 @@ public class VisitSite extends Activity {
         goDrawRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MakeDraw.class);
-                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
-                intent.putExtra(Constants.PROJECT_ID, projectId);
-                startActivity(intent);
+//                Intent intent = new Intent(context, MakeDraw.class);
+//                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+//                intent.putExtra(Constants.PROJECT_ID, projectId);
+//                startActivity(intent);
             }
         });
 

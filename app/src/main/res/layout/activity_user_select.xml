@@ -12,34 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="login"
-        android:id="@+id/button"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="false"
-        android:layout_centerInParent="true"
-        android:onClick="login" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test_user"
         android:id="@+id/test_test"
-        android:layout_above="@+id/test_project"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test_site_walk"
-        android:id="@+id/test_test_1"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test_project"
-        android:id="@+id/test_project"
-        android:layout_above="@+id/test_test_1"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 
