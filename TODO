@@ -1,4 +1,4 @@
 - build screens for managing trade, progresses, and FieldValues(sitewalk and project 
-- fix it so you can get to the questions for a sitewalk
-- implement a edittext which filters trades by typed characters...like autocomplete
-- add big multiple selection list of all trades into the new project screen so the person can select the trades they are going to use when they start a new project out of the user's trades
+- override the onResume methods of the fragments which list stuff, so that they make a call to the database and get the most up to date values. problem is, adding a sitewalk, then going to active sitewalks and its not there
+- fix ProjectTrades screen, not updating and storing properly, might be a problem with the database
+- make new project so that after the questions, it shows the project trades screen`

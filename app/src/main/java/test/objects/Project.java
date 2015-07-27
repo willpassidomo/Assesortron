@@ -410,10 +410,11 @@ public class Project {
         public static final String TABLE_NAME_PROJECT_TRADES = "projectTrades";
         public static final String COLUMN_PROJECT_TRADES_STRING = "projectTradesString";
         public static final String CREATE_PROJECT_TRADES_TABLE =
-                "CREATE TABLE " + TABLE_NAME_PROJECT_TRADES + " (" +
-                        ProjectTradesBridge._ID + "INTEGER PRIMARY KEY, " +
-                        ProjectEntry.COLUMN_PROJECT_ID + ProjectEntry.TEXT_TYPE + ProjectEntry.COMMA_SEP +
-                        COLUMN_PROJECT_TRADES_STRING + ProjectEntry.TEXT_TYPE + ")";
+                Constants.createBridgeTableString(
+                        TABLE_NAME_PROJECT_TRADES,
+                        ProjectEntry.COLUMN_PROJECT_ID + Constants.TEXT_TYPE,
+                        COLUMN_PROJECT_TRADES_STRING + Constants.TEXT_TYPE
+                );
     }
 
     public static abstract class ProjectSiteWalkBridge implements BaseColumns {

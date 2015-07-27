@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import test.Fragments.DrawRequestItemList;
 import test.assesortron5.R;
@@ -44,7 +43,7 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup vg, Bundle saved) {
         super.onCreateView(inflater, vg, saved);
-        View view = inflater.inflate(R.layout.fragment_draw_request_items_manager, null);
+        View view = inflater.inflate(R.layout.fragment_blank_manager, null);
         getDrawRequest();
         return view;
     }
@@ -74,7 +73,9 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
                 renderDrawRequestItems();
             }
         };
-        getDrawRequestItems.execute(siteWalkId);
+        if (drawRequest != null) {
+            getDrawRequestItems.execute(siteWalkId);
+        }
     }
 
     private void setDrawRequestItems(DrawRequest items) {
@@ -82,6 +83,8 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     }
 
     private void renderDrawRequestItems() {
+        rendered = true;
+        Log.i("DR Item manager", "Rendering Overview");
         getFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragment_draw_request_items_manager_main, DrawRequestItemOverview.newInstance(this, drawRequest))
@@ -91,7 +94,7 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     @Override
     public void editEntry(String drawRequestItemId) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.draw_request_item_manager_main, MakeDrawRequestItem.newInstance(this, drawRequestItemId));
+        ft.replace(R.id.fragment_draw_request_items_manager_main, MakeDrawRequestItem.newInstance(this, drawRequestItemId));
         ft.addToBackStack(null);
         ft.commit();
     }
@@ -108,7 +111,7 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     public void addItem(String type) {
         Log.i("Add Item", type);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.draw_request_item_manager_main, MakeDrawRequestItem.newInstance(this, type));
+        ft.replace(R.id.fragment_draw_request_items_manager_main, MakeDrawRequestItem.newInstance(this, type));
         ft.addToBackStack(null);
         ft.commit();
     }
@@ -117,8 +120,10 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     public void listType(String type) {
         Log.i("View Item List", type);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(R.id.draw_request_item_manager_main, DrawRequestItemList.newInstance(null, drawRequest.getItemList(type)));
+        ft.replace(R.id.fragment_draw_request_items_manager_main, DrawRequestItemList.newInstance(null, drawRequest.getItemList(type)));
         ft.addToBackStack(null);
         ft.commit();
     }
+
+
 }

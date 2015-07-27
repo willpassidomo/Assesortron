@@ -95,6 +95,15 @@ public abstract class NavDrawerActivityPrototype extends FragmentActivity implem
     }
 
     @Override
+    public void onBackPressed() {
+        if (mDrawerLayout.isDrawerOpen(mRecylerView)) {
+            super.onBackPressed();
+        } else {
+            mDrawerLayout.openDrawer(mRecylerView);
+        }
+    }
+
+    @Override
     public void displayFragment(Fragment fragment) {
         Log.i("Displaying Fragmment", "");
         FragmentTransaction ft = getFragmentManager().beginTransaction();

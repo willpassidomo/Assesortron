@@ -30,7 +30,7 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
 
     Button submit;
     SiteVisit siteWalk;
-    FragmentDrawerListener parentListener;
+    NewSiteVisitListener parentListener;
     LinearLayout questionView;
     List<FieldValue> questions;
     boolean save;
@@ -41,22 +41,31 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
         super.onCreateView(inflater, vg, savedInstanceState);
         View view = inflater.inflate(R.layout.activity_new_site_visit, null);
         questionView = (LinearLayout)view.findViewById(R.id.new_site_visit_fv_list);
-        submit = (Button)view.findViewById(R.id.new_site_submit);
-        submit.setOnClickListener(submitListener());
-        getQuestions();
+        if (questions != null) {
+            setQuestions(questions);
+        } else {
+            getQuestions();
+        }
         return view;
     }
 
     public NewSiteVisit() {}
 
-    public static NewSiteVisit newInstance(FragmentDrawerListener listener, String projectId) {
+    public static NewSiteVisit newInstance(NewSiteVisitListener listener, String projectId) {
         NewSiteVisit newSiteVisit = new NewSiteVisit();
         newSiteVisit.setParentListener(listener);
         newSiteVisit.setSiteVisit(projectId);
         return newSiteVisit;
     }
 
-    private void setParentListener(FragmentDrawerListener listener) {
+    public static NewSiteVisit newInstance(NewSiteVisitListener listener, List<FieldValue> fvs) {
+        NewSiteVisit newSiteVisit = new NewSiteVisit();
+        newSiteVisit.setParentListener(listener);
+        newSiteVisit.setFieldValueData(fvs);
+        return newSiteVisit;
+    }
+
+    private void setParentListener(NewSiteVisitListener listener) {
         this.parentListener = listener;
     }
 
@@ -116,36 +125,6 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
         ft.commit();
     }
 
-    private View.OnClickListener submitListener() {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                storeValues();
-                parentListener.done();
-            }
-        };
-        return listener;
-    }
-
-    private void storeValues() {
-        AsyncTask<SiteVisit, Void, Void> task = new AsyncTask<SiteVisit, Void, Void>() {
-            @Override
-            protected Void doInBackground(SiteVisit... siteVisits) {
-                Storage.storeSiteVisit(getActivity(), siteVisits[0].getProjectId(), siteVisits[0]);
-                return null;
-            }
-        };
-        AsyncTask<List<FieldValue>, Void, Void> tast1 = new AsyncTask<List<FieldValue>, Void, Void>() {
-            @Override
-            protected Void doInBackground(List<FieldValue>... lists) {
-                Storage.storeSiteVisitQuestions(getActivity(), lists[0]);
-                return null;
-            }
-        };
-        task.execute(siteWalk);
-        tast1.execute(questions);
-    }
-
     @Override
     public void setFieldValueData(List<FieldValue> fvs) {
         questions = fvs;
@@ -166,6 +145,16 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
 //                }
 //            }
 //        }
+    }
+
+    @Override
+    public void finishFieldValues() {
+        siteWalk.setFieldValues(questions);
+        parentListener.newSiteVisit(siteWalk);
+    }
+
+    public interface NewSiteVisitListener {
+        public void newSiteVisit(SiteVisit siteVisit);
     }
 }
 

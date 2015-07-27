@@ -107,10 +107,10 @@ public class NewProjectRequired extends Fragment {
                     new MaterialDialog.Builder(getActivity())
                             .title("More Information Needed")
                             .content("Projects must have " +
-                                    "\nName" +
-                                    "\nStreet Address" +
-                                    "\neither City & State OR Zip Code" +
-                                    "\neither Above Ground Floors or Below Ground Floors" +
+                                    "\n -Name" +
+                                    "\n -Street Address" +
+                                    "\n -either City & State OR Zip Code" +
+                                    "\n -either Above Ground Floors or Below Ground Floors" +
                                     "\n\nProject Picture is optional")
                             .positiveText("OK")
                             .show();
@@ -138,11 +138,11 @@ public class NewProjectRequired extends Fragment {
         }
     }
 
-    private void setError(View view) {
+    private void setError(final View view) {
         view.setBackgroundColor(Color.RED);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 view.setBackgroundColor(Color.TRANSPARENT);
                 Log.i("ONCLICKC", "Clicked");
             }
@@ -168,12 +168,19 @@ public class NewProjectRequired extends Fragment {
 
     private void clearFields() {
         name.setText("");
+        name.setBackgroundColor(Color.TRANSPARENT);
         streetAddress.setText("");
+        streetAddress.setBackgroundColor(Color.TRANSPARENT);
         city.setText("");
+        city.setBackgroundColor(Color.TRANSPARENT);
         state.setText("");
+        state.setBackgroundColor(Color.TRANSPARENT);
         zip.setText("");
+        zip.setBackgroundColor(Color.TRANSPARENT);
         floors.setText("");
+        floors.setBackgroundColor(Color.TRANSPARENT);
         basementFloors.setText("");
+        basementFloors.setBackgroundColor(Color.TRANSPARENT);
     }
 
     public interface ProjectListener {

@@ -36,7 +36,7 @@ public class SuperUser extends NavDrawerActivityPrototype implements NewProjectR
             adapter.newItem(this, "Active Projects" ,R.drawable.ic_list_items, ActiveProjects.newInstance(userId)),
             adapter.newItem(this, "New Project",R.drawable.ic_new_item, NewProjectRequired.newInstance(this)),
             adapter.newItem(this, "Inbox",R.drawable.ic_mail_message, new Intent(this, UserSelect.class)),
-            adapter.newItem(this, "Set Trades",R.drawable.ic_info, StringListEdit.newInstance(StringListEdit.TRADES)),
+            adapter.newItem(this, "Master Trades List",R.drawable.ic_info, StringListEdit.newInstance(StringListEdit.TRADES)),
             adapter.newItem(this, "Set Progresses",R.drawable.ic_info, StringListEdit.newInstance(StringListEdit.PROGRESSES)),
             adapter.newItem(this, "Logout",R.drawable.ic_back_arrow, new Intent(this, UserSelect.class))
         };

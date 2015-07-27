@@ -35,6 +35,7 @@ import test.objects.FieldValue;
 public class SoftQuestionsFragment extends Fragment {
     private FieldValue fvLead = new FieldValue("select field..", false);
     DataListener dl;
+    Button submit;
 
     List<FieldValue> in;
     List<FieldValue> out;
@@ -65,6 +66,13 @@ public class SoftQuestionsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedArgs) {
         View v = inflater.inflate(R.layout.fragment_soft_fields, null);
         softFieldContainer = new IndexLinearLayout((LinearLayout)v.findViewById(R.id.soft_fields_container));
+        submit = (Button) v.findViewById(R.id.soft_field_submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dl.finishFieldValues();
+            }
+        });
         return v;
     }
 
@@ -268,5 +276,7 @@ public class SoftQuestionsFragment extends Fragment {
 
     public interface DataListener {
         public void setFieldValueData(List<FieldValue> fvs);
+
+        public void finishFieldValues();
     }
 }

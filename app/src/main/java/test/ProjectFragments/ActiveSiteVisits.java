@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,6 +56,14 @@ public class ActiveSiteVisits extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        Log.i("ActivesiteVisits", "onResume");
+        siteVisits = null;
+        setListView();
+        super.onResume();
+    }
+
     private void setListView() {
         AsyncTask<String, Void, List<SiteVisit>> task = new AsyncTask<String, Void, List<SiteVisit>>() {
             @Override
@@ -75,4 +84,6 @@ public class ActiveSiteVisits extends Fragment {
             listView.setAdapter(adapter);
         }
     }
+
+
 }

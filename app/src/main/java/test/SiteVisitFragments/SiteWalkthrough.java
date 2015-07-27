@@ -24,6 +24,7 @@ import test.objects.SiteVisit;
 import test.objects.WalkThrough;
 import test.persistence.Constants;
 import test.persistence.Storage;
+import test.superActivities.SuperSiteVisit;
 
 /**
  * Created by willpassidomo on 2/3/15.
@@ -128,6 +129,13 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
 
     private void setPictureList() {
         //TODO
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, SuperSiteVisit.class);
+        intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
+        startActivity(intent);
     }
 
     @Override

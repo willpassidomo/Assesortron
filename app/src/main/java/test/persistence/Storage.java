@@ -119,9 +119,14 @@ public class Storage {
     }
 
 
-    public static void storeTradeList(Context context, List<String> trades, String projectId) {
+    public static void storeProjectTradeList(Context context, List<String> trades, String projectId) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
+            Log.i("FOR PROJECT ID", projectId);
+            Log.i("num trades- ", trades.size() + "");
+            for (String s : trades) {
+                Log.i("Inserting trade:", s);
+            }
             dataBaseStorage.insertProjectTrades(trades, projectId);
         }
         finally {

@@ -105,6 +105,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
+
     public boolean insertTrades(List<String> trades) {
         SQLiteDatabase db = this.getWritableDatabase();
 

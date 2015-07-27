@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:id="@+id/draw_request_item_manager_main">
+    android:id="@+id/linear_layout3232">
 
     <ListView
         android:layout_width="match_parent"
