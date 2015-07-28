@@ -144,7 +144,7 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
     }
 
     @Override
-    public void getPictures(List<Uri> uri) {
+    public void getPictures(List<String> uri) {
         walkThrough.setSitePictures(uri);
     }
 

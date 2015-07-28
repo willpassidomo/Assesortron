@@ -66,9 +66,23 @@ public class DrawRequestFragment extends Fragment {
         currentRequest = (EditText)view.findViewById(R.id.make_draw_current_request);
         recommendation = (EditText)view.findViewById(R.id.make_draw_current_recommendation);
         conditions = (EditText)view.findViewById(R.id.make_draw_conditions);
+
         submit = (Button)view.findViewById(R.id.make_draw_request_submit);
         submit.setOnClickListener(submitListener());
+        setValues();
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setValues();
+    }
+
+    private void setValues() {
+        currentRequest.setText(drawRequest.getCurrentRequest());
+        recommendation.setText(drawRequest.getCurrentRecmomendation());
+        conditions.setText(drawRequest.getConditions());
     }
 
     private View.OnClickListener submitListener() {

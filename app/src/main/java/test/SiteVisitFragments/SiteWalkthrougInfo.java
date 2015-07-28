@@ -32,7 +32,6 @@ import test.persistence.Storage;
  */
 public class SiteWalkthrougInfo extends Fragment implements TabFragment {
     WalkThrough walkThrough;
-    ImageButton imageButton;
     Project project;
     Spinner floor, trade, progress;
     List<String> floorList = new ArrayList<String>();
@@ -68,13 +67,6 @@ public class SiteWalkthrougInfo extends Fragment implements TabFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if (getView() != null) {
-            imageButton = (ImageButton) getView().findViewById(R.id.walk_through_image);
-            ViewGroup.LayoutParams imageButtonLayoutParams = imageButton.getLayoutParams();
-            Log.i("info image layout","w- " +imageButtonLayoutParams.width + " h- " + imageButtonLayoutParams.height);
-            //imageButtonLayoutParams.height = imageButtonLayoutParams.width;
-           // imageButton.setImageURI(picture);
-        }
             setVariables();
     }
 

@@ -21,7 +21,7 @@ public class WalkThrough {
     private String trade;
     private String progress;
     private String notes;
-    private List<Uri> pictures = new ArrayList<Uri>();
+    private List<String> pictures = new ArrayList<String>();
 
     public WalkThrough() {
         this.id = UUID.randomUUID().toString();
@@ -86,10 +86,6 @@ public class WalkThrough {
         this.progress = progress;
     }
 
-    public void addSitePicture(Uri pictureUri) {
-        this.pictures.add(pictureUri);
-    }
-
     public void removeSitePicture(Uri pictureUri) {
         this.pictures.remove(pictureUri);
     }
@@ -98,11 +94,11 @@ public class WalkThrough {
         this.pictures.remove(i);
     }
 
-    public List<Uri> getPictures() {
+    public List<String> getPictures() {
         return this.pictures;
     }
 
-    public Uri getPicture(int i) {
+    public String getPicture(int i) {
         return this.pictures.get(i);
     }
 
@@ -110,13 +106,12 @@ public class WalkThrough {
         this.notes = notes;
     }
 
-    public void setSitePictures(List<Uri> pictures) {
+    public void setSitePictures(List<String> pictures) {
         this.pictures = pictures;
     }
 
     public void addSitePicture(String stringUri) {
-        Uri uri = (Uri.parse(stringUri));
-        addSitePicture(uri);
+        addSitePicture(stringUri);
     }
 
     public WalkThroughDTO getDTO() {

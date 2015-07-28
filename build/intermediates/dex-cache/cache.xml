@@ -51,6 +51,13 @@
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.17.0-rc-ad836db52f0f685c2c72a5e6880b391c5d5bd0a2.jar" />
     </item>
     <item
+        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.2.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b868b833b0887aa48c4e581558eef4f1196f6a2">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-e539b44b94511b939742a15affc03efb86595e24.jar" />
+    </item>
+    <item
         jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"

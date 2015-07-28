@@ -13,6 +13,7 @@ import test.objects.FieldValue;
  * Created by willpassidomo on 3/21/15.
  */
 public class Constants {
+    public static final String USER_ID = "user_id";
     public static final String PROJECT_ID = "project_id";
     public static final String SITE_VISIT_ID = "site_visit_id";
     public static final String WALK_THROUGH_ID = "walk_through_id";
@@ -21,7 +22,7 @@ public class Constants {
     public static final String NEW = "new";
     public static final String EDIT = "edit";
     public static final String EMAIL_ADDRESS = "email_address";
-    public static final String USER_NAME = "user_name";
+
 
     public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
 
@@ -36,16 +37,21 @@ public class Constants {
     public static final String INTEGER_TYPE = " INTEGER";
     public static final String TEXT_TYPE = " TEXT";
     public static final String REAL_TYPE = " REAL";
+    public static final String BLOB = " BLOB";
     public static final String COMMA_SEP = " , ";
 
 
     public static String createTableString(String tableName, String Id, String...columnNames) {
-        String createTable = "CREATE TABLE " + tableName + " (" + Id + " PRIMARY KEY, ";
-        for (int i = 0; i < (columnNames.length - 1); i++) {
-            createTable += columnNames[i] + COMMA_SEP;
+        String createTable = "CREATE TABLE " + tableName + " (" + Id + " PRIMARY KEY";
+        if (columnNames.length > 0) {
+            createTable += ", ";
+            for (int i = 0; i < (columnNames.length - 1); i++) {
+                createTable += columnNames[i] + COMMA_SEP;
+            }
+            createTable += columnNames[columnNames.length - 1];
         }
-        createTable += columnNames[columnNames.length -1];
         createTable += ")";
+
         return createTable;
     }
 

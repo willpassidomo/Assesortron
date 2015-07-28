@@ -19,7 +19,7 @@ import test.persistence.Constants;
 public class Project {
     private String id;
     private Date dateCreated;
-    private User user;
+    private String userId;
     private String name;
     private Address address;
     private String initialStartDate;
@@ -185,12 +185,12 @@ public class Project {
         this.dateCreated= new Date(date);
     }
 
-    public User getUser() {
-        return user;
+    public String getUser() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String userId) {
+        this.userId = userId;
     }
 
     public double getSquareFeet() {
@@ -419,9 +419,8 @@ public class Project {
 
     public static abstract class ProjectSiteWalkBridge implements BaseColumns {
         public static final String TABLE_NAME = "projectSiteVisits";
-        public static final String CREATE_PROJECT_SITE_WALK_TABLE = Constants.createTableString(
+        public static final String CREATE_PROJECT_SITE_WALK_TABLE = Constants.createBridgeTableString(
                 TABLE_NAME,
-                ProjectSiteWalkBridge._ID + Constants.INTEGER_TYPE,
                 ProjectEntry.COLUMN_PROJECT_ID + Constants.TEXT_TYPE,
                 SiteVisit.SiteWalkEntry.COLUMN_ID + Constants.TEXT_TYPE
         );

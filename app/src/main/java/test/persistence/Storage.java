@@ -1,9 +1,12 @@
 package test.persistence;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.provider.BaseColumns;
 import android.util.Log;
 
+import java.io.ByteArrayOutputStream;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -154,6 +157,16 @@ public class Storage {
         }
     }
 
+    public static void storePicture(Context context, String pictureId, byte[] bytes) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.insertPicture(pictureId, bytes);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static void deleteProject(Context context, Project project) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
@@ -168,6 +181,16 @@ public class Storage {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
             dataBaseStorage.deleteProject(projectId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void deletePicture(Context context, String pictureId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.deletePicture(pictureId);
         }
         finally {
             dataBaseStorage.close();
@@ -281,7 +304,18 @@ public class Storage {
         try {
             List<String> siteWalkIds = dataBaseStorage.getSiteWalkIds(projectId);
             Log.i("total site walks found", "#" + siteWalkIds.size());
-            return dataBaseStorage.getActiveSiteWalks(siteWalkIds);
+            return dataBaseStorage.getSiteWalks(siteWalkIds, true);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static List<SiteVisit> getFinishedSiteWalks(Context context, String projectId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            List<String> siteWalkIds = dataBaseStorage.getSiteWalkIds(projectId);
+            return dataBaseStorage.getSiteWalks(siteWalkIds, false);
         }
         finally {
             dataBaseStorage.close();
@@ -469,7 +503,12 @@ public class Storage {
     public static List<String> getTradeList(Context context) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            return dataBaseStorage.getTrades();
+            List<String> trades = dataBaseStorage.getTrades();
+            if (trades.size() < 1) {
+                trades = Constants.getInitalTrades();
+                Storage.storeTrades(context, trades);
+            }
+            return trades;
         }
         finally {
             dataBaseStorage.close();
@@ -480,7 +519,12 @@ public class Storage {
     public static List<String> getProgressList(Context context) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            return dataBaseStorage.getProgresses();
+            List<String> progresses = dataBaseStorage.getProgresses();
+            if (progresses.size() < 1) {
+                progresses = Constants.getInitialProgresses();
+                Storage.storeProgresses(context, progresses);
+            }
+            return progresses;
         }
         finally {
             dataBaseStorage.close();
@@ -511,6 +555,17 @@ public class Storage {
         }
     }
 
+    public static Bitmap getPictureByOwnerId(Context context, String pictureId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            byte[] bytes = dataBaseStorage.getPictureByteArray(pictureId);
+            return BitmapFactory.decodeByteArray(bytes, 0, 0);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
 
 
 //    public static String getBalanceToComplete(Context context, String ProjectId) {
@@ -520,41 +575,81 @@ public class Storage {
 
 //    public static List<>
 
-    public static User getUser() {
-        return user;
-    }
-
-    public static void setUser(User newUser) {
-        user = newUser;
-    }
-
-    public static User getUserById(String id) {
-        //TODO
-
-        return user;
-    }
-
-
-
-
-    public static void storeTestProject(Context context, Project project) {
-        project.setId("test");
-        project.setSquareFeet(1250);
-        project.setNumBasementFloors(2);
-        project.setNumAGFloors(5);
-        project.setInitialStartDate("2/10/15");
-        project.setInitialCompletionDate("5/22/15");
-        project.setName("Broadway Joe's");
-        project.setContractAmount(new BigDecimal(1200000));
-        project.setDateCreated(new Date());
-        project.setLoanAmount(new BigDecimal(1500000));
-
+    public static List<String> getUserNames(Context context) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            return dataBaseStorage.getUserNames();
+        }
+        finally {
+            dataBaseStorage.close();
+        }    }
 
-        dataBaseStorage.insertProject(project);
+    public static boolean storeUser(Context context, User newUser, String password) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            return dataBaseStorage.insertUser(newUser, password);
+        }
+        finally {
+            dataBaseStorage.close();
+        }    }
+
+    public static User getUserById(Context context, String id) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            return dataBaseStorage.getUserById(id);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
     }
 
 
+    public static String login(Context context, String username, String password) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            return dataBaseStorage.checkLoginCredentials(username, password);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+
+    private static String loggedInId;
+
+    public static boolean isLoggedIn(Context context) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            loggedInId = dataBaseStorage.getLoggedIn();
+            return (loggedInId != null && !loggedInId.equals(""));
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static String getLoggedInId() {
+        return loggedInId;
+    }
+
+    public static void setLoggedInId(Context context, String userId) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.setLoggedin(userId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void removeLoggedInId(Context context) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.deleteLoggedInId();
+        } finally {
+            dataBaseStorage.close();
+        }
+    }
 
     public static abstract class ProgressesTable implements BaseColumns {
        public static final String TABLE_NAME_PROGRESSES = "progresses";
@@ -586,4 +681,15 @@ public class Storage {
                         COLUMN_TRADE_STRING + TEXT_TYPE);
     }
 
+    public static abstract class PictureTable implements BaseColumns {
+        public static final String TABLE_NAME = "pictures";
+        public static final String COLUMN_ID = "picId";
+        public static final String COLUMN_BYTES = "bytes";
+        public static final String CREATE_TABLE_PICTURES =
+                Constants.createTableString(
+                        TABLE_NAME,
+                        COLUMN_ID + Constants.TEXT_TYPE,
+                        COLUMN_BYTES + Constants.BLOB
+                );
+    }
 }

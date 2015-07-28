@@ -16,6 +16,14 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test login"
+        android:id="@+id/test_login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
 <!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/activity_user_select.xml -->

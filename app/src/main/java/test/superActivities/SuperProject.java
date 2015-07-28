@@ -13,6 +13,7 @@ import java.util.List;
 
 import test.Fragments.SetListSelectionFragment;
 import test.ProjectFragments.ActiveSiteVisits;
+import test.ProjectFragments.FinishedSiteVisits;
 import test.ProjectFragments.NewSiteVisit;
 import test.assesortron5.R;
 import test.drawers.IconHeaderRecyclerAdapter;
@@ -38,11 +39,12 @@ public class SuperProject extends NavDrawerActivityPrototype implements SetListS
     @Override
     public RecyclerView.Adapter getRecyclerAdapter() {
         IconHeaderRecyclerAdapter adapter = new IconHeaderRecyclerAdapter(R.layout.header_site_walk_drawer, this);
-        IconHeaderRecyclerAdapter.IconHeaderObject[] items = {
+        IconHeaderRecyclerAdapter.ListItem[] items = {
                 adapter.newItem(this, "Active Site Vists" ,R.drawable.ic_list_items, ActiveSiteVisits.newInstance(projectId)),
                 adapter.newItem(this, "New Site Visit",R.drawable.ic_new_item, NewSiteVisit.newInstance(this, projectId)),
                 adapter.newItem(this, "Project Dashboard",R.drawable.ic_clipboard,new Fragment()),
                 adapter.newItem(this, "Project Info",R.drawable.ic_info, new Fragment()),
+                adapter.newItem(this, "Finished Site Visits", R.drawable.ic_file_folder, FinishedSiteVisits.newInstance(projectId)),
                 adapter.newItem(this, "Set Trades",R.drawable.ic_idk, SetListSelectionFragment.getInstance(this, Storage.getTradeList(this), Storage.getProjectTradeList(this, projectId))),
                 adapter.newItem(this, "Submit Project",R.drawable.ic_idk, new Fragment()),
                 adapter.newItem(this, "Sync", R.drawable.ic_idk,new Fragment()),

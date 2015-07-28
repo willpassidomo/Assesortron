@@ -175,9 +175,8 @@ public class SiteVisit {
     public static abstract class SiteWalkDrawRequestBridge implements BaseColumns {
 
         public static final String TABLE_NAME = "siteWalkDrawRequestBridge";
-        public static final String CREATE_SITE_WALK_DRAW_REQUEST_BRIDGE_TABLE = Constants.createTableString(
+        public static final String CREATE_SITE_WALK_DRAW_REQUEST_BRIDGE_TABLE = Constants.createBridgeTableString(
                 TABLE_NAME,
-                SiteWalkDrawRequestBridge._ID + Constants.TEXT_TYPE,
                 SiteWalkEntry.COLUMN_ID + Constants.TEXT_TYPE,
                 DrawRequest.DrawRequestEntry.COLUMN_DRAW_REQUEST_ID + Constants.TEXT_TYPE);
     }
@@ -185,12 +184,10 @@ public class SiteVisit {
     public static abstract class SiteWalkWalkThroughBridge implements BaseColumns {
 
         public static final String TABLE_NAME = "SiteWalktWalkThroughs";
-        public static final String CREATE_PROJECT_WALKTHROUGH_TABLE = Constants.createTableString(
+        public static final String CREATE_PROJECT_WALKTHROUGH_TABLE = Constants.createBridgeTableString(
                 TABLE_NAME,
-                SiteWalkWalkThroughBridge._ID + Constants.INTEGER_TYPE,
                 SiteWalkEntry.COLUMN_ID + Constants.TEXT_TYPE,
                 WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID + Constants.TEXT_TYPE
         );
-
     }
 }

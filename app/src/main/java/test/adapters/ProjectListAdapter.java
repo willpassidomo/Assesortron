@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-import test.assesortron5.ProjectHomeScreen;
 import test.assesortron5.R;
 import test.objects.Project;
 import test.persistence.Constants;
@@ -23,6 +22,7 @@ import test.superActivities.SuperProject;
  * Created by willpassidomo on 1/19/15.
  */
 public class ProjectListAdapter implements ListAdapter {
+    private boolean EMPTY = false;
 
     private List<Project> projects;
     private Context context;
@@ -54,7 +54,13 @@ public class ProjectListAdapter implements ListAdapter {
 
     @Override
     public int getCount() {
-        return projects.size() ;
+
+        if (projects != null && projects.size() > 0) {
+            return projects.size();
+        } else {
+            EMPTY = true;
+            return 1;
+        }
     }
 
     @Override
@@ -77,34 +83,43 @@ public class ProjectListAdapter implements ListAdapter {
         if (view == null) {
             LayoutInflater infalInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = infalInflater.inflate(R.layout.list_active_projects, null);
-        }
-
-        final Project project = projects.get(i);
-
-        TextView name = (TextView) view.findViewById(R.id.project_name);
-        TextView date = (TextView) view.findViewById(R.id.project_start_date);
-        TextView streetAddress = (TextView) view.findViewById(R.id.list_active_projects_street_add);
-        TextView cityStateZip = (TextView) view.findViewById(R.id.list_active_projects_city_state);
-
-
-        name.setText(project.getName());
-        date.setText(new SimpleDateFormat("MM/dd/yyyy").format(project.getDateCreated()));
-        if (project.getAddress().getStreeAddress() != null && !project.getAddress().getStreeAddress().equals("")) {
-            streetAddress.setText(project.getAddress().getStreeAddress());
-        } else {
-            streetAddress.setText("--");
-        }
-        cityStateZip.setText(project.getAddress().getCityStateZip());
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, SuperProject.class);
-                intent.putExtra(Constants.PROJECT_ID, project.getId());
-                context.startActivity(intent);
+            if (EMPTY) {
+                view = infalInflater.inflate(R.layout.list_empty, null);
+            } else {
+                view = infalInflater.inflate(R.layout.list_active_projects, null);
             }
-        });
+        }
+
+        if (EMPTY) {
+            TextView message = (TextView)view.findViewById(R.id.list_empty_message);
+            message.setText("no active Projects");
+        } else {
+            final Project project = projects.get(i);
+
+            TextView name = (TextView) view.findViewById(R.id.project_name);
+            TextView date = (TextView) view.findViewById(R.id.project_start_date);
+            TextView streetAddress = (TextView) view.findViewById(R.id.list_active_projects_street_add);
+            TextView cityStateZip = (TextView) view.findViewById(R.id.list_active_projects_city_state);
+
+
+            name.setText(project.getName());
+            date.setText(new SimpleDateFormat("MM/dd/yyyy").format(project.getDateCreated()));
+            if (project.getAddress().getStreeAddress() != null && !project.getAddress().getStreeAddress().equals("")) {
+                streetAddress.setText(project.getAddress().getStreeAddress());
+            } else {
+                streetAddress.setText("--");
+            }
+            cityStateZip.setText(project.getAddress().getCityStateZip());
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, SuperProject.class);
+                    intent.putExtra(Constants.PROJECT_ID, project.getId());
+                    context.startActivity(intent);
+                }
+            });
+        }
         return view;
     }
 

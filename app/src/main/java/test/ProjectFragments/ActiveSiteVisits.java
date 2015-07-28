@@ -2,6 +2,7 @@ package test.ProjectFragments;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,7 +17,9 @@ import test.UserFragments.ActiveProjects;
 import test.adapters.SiteWalkListAdapter;
 import test.assesortron5.R;
 import test.objects.SiteVisit;
+import test.persistence.Constants;
 import test.persistence.Storage;
+import test.superActivities.SuperSiteVisit;
 
 /**
  * Created by otf on 7/20/15.
@@ -58,7 +61,6 @@ public class ActiveSiteVisits extends Fragment {
 
     @Override
     public void onResume() {
-        Log.i("ActivesiteVisits", "onResume");
         siteVisits = null;
         setListView();
         super.onResume();
@@ -80,7 +82,20 @@ public class ActiveSiteVisits extends Fragment {
         if (siteVisits == null) {
             task.execute(projectId);
         } else {
-            SiteWalkListAdapter adapter = new SiteWalkListAdapter(getActivity(), siteVisits);
+            SiteWalkListAdapter adapter = new SiteWalkListAdapter(getActivity(), siteVisits) {
+                @Override
+                public View.OnClickListener itemClickListener(final SiteVisit sv) {
+                    View.OnClickListener listener = new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), SuperSiteVisit.class);
+                            intent.putExtra(Constants.SITE_VISIT_ID, sv.getId());
+                            getActivity().startActivity(intent);
+                        }
+                    };
+                    return listener;
+                }
+            };
             listView.setAdapter(adapter);
         }
     }

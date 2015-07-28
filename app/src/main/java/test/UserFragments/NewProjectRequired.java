@@ -97,7 +97,7 @@ public class NewProjectRequired extends Fragment {
                     if (project == null) {
                         project = new Project();
                         setProject();
-                        Storage.storeProject(getActivity(), project);
+                        projectListener.submitProject(project);
                     } else {
                         setProject();
                         projectListener.submitProject(project);

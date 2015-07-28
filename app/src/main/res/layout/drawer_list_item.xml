@@ -2,28 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
     android:clickable="true"
     android:id="@+id/drawer_list_background"
-    android:focusableInTouchMode="false">
+    android:focusableInTouchMode="false"
+    android:longClickable="true">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/drawer_list_image"
-        android:src="@drawable/ic_launcher"
-        android:paddingLeft="16dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="56dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Large Text"
-        android:id="@+id/drawer_list_text"
-        android:layout_gravity="center_horizontal"
-        android:background="?android:attr/activatedBackgroundIndicator"
-        android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        android:paddingLeft="16dp"
-        android:paddingTop="4dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/drawer_list_image"
+            android:src="@drawable/ic_launcher"
+            android:paddingLeft="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Large Text"
+            android:id="@+id/drawer_list_text"
+            android:layout_gravity="center_horizontal"
+            android:background="?android:attr/activatedBackgroundIndicator"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+
 </LinearLayout>

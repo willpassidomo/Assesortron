@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,34 +20,21 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import test.Fragments.CameraPictureFragment;
 import test.adapters.PictureListAdapter;
 import test.assesortron5.R;
 import test.objects.WalkThrough;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link SiteWalkthroughPictures.OnPictureFragListener} interface
- * to handle interaction events.
- * Use the {@link SiteWalkthroughPictures#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
-public class SiteWalkthroughPictures extends Fragment implements TabFragment {
+
+public class SiteWalkthroughPictures extends Fragment implements TabFragment, CameraPictureFragment.CameraPictureFragmentCallback {
     WalkThrough walkThrough;
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
     private static final String TAB_NAME = "pictures";
 
-    private List<Uri> pictures = new ArrayList<Uri>();
+    private Button action;
+    private List<String> pictures = new ArrayList<String>();
     ListView pictureList;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnPictureFragListener mListener;
 
@@ -66,17 +54,11 @@ public class SiteWalkthroughPictures extends Fragment implements TabFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        super.onCreateView(inflater,container,savedInstanceState);
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_walkthrough_pictures, container, false);
 
-        Button action = (Button)view.findViewById(R.id.walk_through_camera);
-
-        action.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                captureImageAction();
-            }
-        });
+        action = (Button)view.findViewById(R.id.walk_through_camera);
 
         pictureList = (ListView) view.findViewById(R.id.walk_through_picture_list);
         setPictureList();
@@ -134,37 +116,23 @@ public class SiteWalkthroughPictures extends Fragment implements TabFragment {
         pictureList.setAdapter(pla);
     }
 
-    public void captureImageAction() {
-
-        //TODO
-
-        //this should be stored in the harddrive, not in with the pictures folder...
-
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        File imagesFolder = new File(Environment.getExternalStorageDirectory(), "Site Images");
-        imagesFolder.mkdirs(); // <----
-        int i = imagesFolder.listFiles().length;
-        File image = new File(imagesFolder, "project- image_"+i +".jpg");
-        Uri fileUri = Uri.fromFile(image);
-        intent.putExtra("Uri", fileUri);
-        // start the image capture Intent
-        startActivityForResult(intent, 0);
+    private void setListener() {
+        if (action != null) {
+            action.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startCamera();
+                }
+            });
+        }
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 0) {
-            if (resultCode == -1) {
-                // Image captured and saved to fileUri specified in the Intent
-                Toast.makeText(getActivity(), "Image saved to:\n" + data.getData(), Toast.LENGTH_LONG).show();
-
-                //TODO
-                //this needs to be changed to walkthroguh.addSitePicture....so far the walkthrough objects havent been made out of this screen
-                // so im just going to use this to test using the project object. the project picture methods would be used for a cove page shot or something, not totally neccessary
-                pictures.add(data.getData());
-                setPictureList();
-            }
-        }
+    private void startCamera() {
+        getActivity()
+                .getFragmentManager()
+                .beginTransaction()
+                .add(CameraPictureFragment.newInstance(this), "")
+                .commit();
     }
 
     @Override
@@ -181,6 +149,7 @@ public class SiteWalkthroughPictures extends Fragment implements TabFragment {
     public void setFields(Object...object) {
         if (object[0] instanceof WalkThrough) {
             walkThrough = (WalkThrough) object[0];
+            setListener();
             pictures = walkThrough.getPictures();
             if (getView() != null) {
                 setPictureList();
@@ -195,7 +164,12 @@ public class SiteWalkthroughPictures extends Fragment implements TabFragment {
         }
     }
 
+    @Override
+    public void returnImageId(String imageId) {
+        pictures.add(imageId);
+    }
+
     public interface OnPictureFragListener {
-        public void getPictures(List<Uri> uri);
+        public void getPictures(List<String> uri);
     }
 }

@@ -24,7 +24,7 @@ import test.superActivities.SuperSiteVisit;
 /**
  * Created by willpassidomo on 4/1/15.
  */
-public class SiteWalkListAdapter implements ListAdapter {
+public abstract class SiteWalkListAdapter implements ListAdapter {
 
     Context context;
     List<SiteVisit> siteVisits;
@@ -93,7 +93,7 @@ public class SiteWalkListAdapter implements ListAdapter {
 
         if (siteVisits == null || siteVisits.isEmpty()) {
             TextView message = (TextView)view.findViewById(R.id.list_empty_message);
-            message.setText("no current Site Visits");
+            message.setText("no active Site Visits");
         } else {
             TextView date = (TextView) view.findViewById(R.id.list_site_walk_date);
             TextView drawRequestItemCount = (TextView) view.findViewById(R.id.list_site_walks_dr_item_count);
@@ -114,17 +114,7 @@ public class SiteWalkListAdapter implements ListAdapter {
         return view;
     }
 
-    public View.OnClickListener itemClickListener(final SiteVisit sv) {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, SuperSiteVisit.class);
-                intent.putExtra(Constants.SITE_VISIT_ID, sv.getId());
-                context.startActivity(intent);
-            }
-        };
-        return listener;
-    }
+    abstract public View.OnClickListener itemClickListener(final SiteVisit sv);
 
     @Override
     public int getItemViewType(int position) {

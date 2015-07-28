@@ -36,7 +36,7 @@ public class SuperSiteVisit extends NavDrawerActivityPrototype implements DrawRe
     @Override
     public RecyclerView.Adapter getRecyclerAdapter() {
         IconHeaderRecyclerAdapter adapter = new IconHeaderRecyclerAdapter(R.layout.header_site_walk_drawer, this);
-        IconHeaderRecyclerAdapter.IconHeaderObject[] items = {
+        IconHeaderRecyclerAdapter.ListItem[] items = {
                 adapter.newItem(this, "Site Visit Dashboard", R.drawable.ic_idk, SiteVisitDashboard.newInstance(siteVisit)),
                 adapter.newItem(this, "Walk Through" ,R.drawable.ic_idk, newWalkthroughListener()),
                 adapter.newItem(this, "Draw Request",R.drawable.ic_idk, DrawRequestFragment.newInstance(this, siteVisit.getDrawRequest())),

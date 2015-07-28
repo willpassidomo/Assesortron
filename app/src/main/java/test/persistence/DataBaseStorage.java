@@ -20,6 +20,7 @@ import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
 import test.objects.Project;
 import test.objects.SiteVisit;
+import test.objects.User;
 import test.objects.WalkThrough;
 
 /**
@@ -55,6 +56,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(FieldValue.FieldValueTable.CREATE_FIELD_VALUE_TABLE);
         sqLiteDatabase.execSQL(FieldValue.StockFieldValueTable.CREATE_STOCK_FIELD_VALUE_TABLE);
         sqLiteDatabase.execSQL(Address.AddressEntry.CREATE_ADDRESS_TABLE);
+        sqLiteDatabase.execSQL(Storage.PictureTable.CREATE_TABLE_PICTURES);
+        sqLiteDatabase.execSQL(User.UserTable.CREATE_TABLE);
+        sqLiteDatabase.execSQL(User.UserLoggedInTable.CREATE_TABLE);
     }
 
     @Override
@@ -67,6 +71,89 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             dataBaseStorage = new DataBaseStorage(context);
         }
         return dataBaseStorage;
+    }
+
+    public String getLoggedIn() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    User.UserLoggedInTable.TABLE_NAME,
+                    new String[]{User.UserTable.COLUMN_ID},
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if (!cursor.isAfterLast()) {
+                return cursor.getString(0);
+            }
+            return "";
+        } finally {
+            if (cursor != null || !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public void deleteLoggedInId() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        try {
+            db.delete(
+                    User.UserLoggedInTable.TABLE_NAME,
+                    null,
+                    null
+            );
+        }
+        finally {
+            db.close();
+        }
+
+    }
+
+    public void setLoggedin(String userId) {
+        deleteLoggedInId();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        try {
+            ContentValues contentValue = new ContentValues();
+            contentValue.put(User.UserTable.COLUMN_ID, userId);
+            db.insert(
+                    User.UserLoggedInTable.TABLE_NAME,
+                    null,
+                    contentValue
+            );
+        }
+        finally {
+            db.close();
+        }
+
+    }
+
+    public boolean insertUser(User user, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(User.UserTable.COLUMN_ID, user.getId());
+        contentValues.put(User.UserTable.COLUMN_NAME, user.getUserName());
+        contentValues.put(User.UserTable.COLUMN_PASSWORD, password);
+        contentValues.put(User.UserTable.COLUMN_EMAIL, user.getEmail());
+        contentValues.put(User.UserTable.COLUMN_IMAGE_ID, user.getImageId());
+        contentValues.put(User.UserTable.COLUMN_DATECREATED, user.getDateCreated().toString());
+
+        long id = db.insertWithOnConflict(
+                User.UserTable.TABLE_NAME,
+                null,
+                contentValues,
+                SQLiteDatabase.CONFLICT_REPLACE
+        );
+        if (id == -1) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public boolean insertProgresses(List<String> progresses) {
@@ -195,6 +282,19 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         db.insertWithOnConflict(Project.ProjectSiteWalkBridge.TABLE_NAME, null, contentValues1, SQLiteDatabase.CONFLICT_REPLACE);
     }
 
+    public void insertPicture(String pictureId, byte[] bytes) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Storage.PictureTable.COLUMN_ID, pictureId);
+        contentValues.put(Storage.PictureTable.COLUMN_BYTES, bytes);
+
+        db.insert(
+                Storage.PictureTable.TABLE_NAME,
+                null,
+                contentValues
+        );
+    }
+
     public void insertStockFieldValues(int type, List<FieldValue> fvs) {
         SQLiteDatabase db = this.getWritableDatabase();
         for (FieldValue fv: fvs) {
@@ -214,6 +314,73 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     null,
                     contentValues,
                     SQLiteDatabase.CONFLICT_REPLACE);
+        }
+    }
+
+    public String checkLoginCredentials(String userName, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    User.UserTable.TABLE_NAME,
+                    new String[]{User.UserTable.COLUMN_PASSWORD, User.UserTable.COLUMN_ID},
+                    User.UserTable.COLUMN_NAME + " = ? ",
+                    new String[]{userName},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if (!cursor.isAfterLast()) {
+                if (password.equals(cursor.getString(0))) {
+                    return cursor.getString(1);
+                }
+            }
+            return null;
+        }
+        finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
+    public User getUserById(String userId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+
+            String[] columns = new String[]{
+                    User.UserTable.COLUMN_ID,
+                    User.UserTable.COLUMN_DATECREATED,
+                    User.UserTable.COLUMN_NAME,
+                    User.UserTable.COLUMN_EMAIL,
+                    User.UserTable.COLUMN_IMAGE_ID
+            };
+
+            cursor = db.query(
+                    User.UserTable.TABLE_NAME,
+                    columns,
+                    User.UserTable.COLUMN_ID + " = ? ",
+                    new String[]{userId},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if (!cursor.isAfterLast()) {
+                User user = User.getDBUser(cursor.getString(0), cursor.getString(1));
+                user.setUserName(cursor.getString(2));
+                user.setEmail(cursor.getString(3));
+                user.setImageId(cursor.getString(4));
+                return user;
+            }
+            return null;
+        }
+        finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
         }
     }
 
@@ -267,6 +434,34 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
         finally {
 //            cursor.close();
+        }
+    }
+
+    public List<String> getUserNames() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        List<String> userNames = new ArrayList<>();
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    User.UserTable.TABLE_NAME,
+                    new String[]{User.UserTable.COLUMN_NAME},
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            while (!cursor.isAfterLast()) {
+                userNames.add(cursor.getString(0));
+                cursor.moveToNext();
+            }
+            return userNames;
+        }
+        finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
         }
     }
 
@@ -874,7 +1069,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 //        }
 //    }
 
-    public List<SiteVisit> getActiveSiteWalks(List<String> siteWalkIds) {
+    public List<SiteVisit> getSiteWalks(List<String> siteWalkIds, boolean active) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = null;
         try {
@@ -892,7 +1087,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                         columns,
                         SiteVisit.SiteWalkEntry.COLUMN_IS_ACTIVE + " = ?" + " AND " +
                                 SiteVisit.SiteWalkEntry.COLUMN_ID+ " = ?",
-                        new String[]{"1",siteWalkId},
+                        new String[]{active ? "1" : "0",siteWalkId},
                         null,
                         null,
                         null
@@ -946,6 +1141,32 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
+    public byte[] getPictureByteArray(String pictureId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    Storage.PictureTable.TABLE_NAME,
+                    new String[]{Storage.PictureTable.COLUMN_BYTES},
+                    Storage.PictureTable.COLUMN_ID + " = ? ",
+                    new String[]{pictureId},
+                    null,
+                    null,
+                    null
+            );
+            cursor.moveToFirst();
+            if (!cursor.isAfterLast()) {
+                return cursor.getBlob(0);
+            }
+            return null;
+        }
+        finally {
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+        }
+    }
+
     public List<FieldValue> getStockFieldValues(int type) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = null;
@@ -974,7 +1195,6 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             return  fvs;
         }
         finally {
-
             if (cursor != null && !cursor.isClosed()) {
                 cursor.close();
             }
@@ -1242,6 +1462,15 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
+    public void deletePicture(String pictureId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(
+                Storage.PictureTable.TABLE_NAME,
+                Storage.PictureTable.COLUMN_ID + " = ? ",
+                new String[]{pictureId}
+        );
+    }
+
     public void deleteSiteVisit(String siteVisitId) {
         SQLiteDatabase db = this.getWritableDatabase();
         try {
@@ -1489,9 +1718,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
     public ContentValues getContentValuesExtra1(WalkThrough wt) {
         ContentValues picContentValues = new ContentValues();
-        for (Uri uri: wt.getPictures()) {
+        for (String id: wt.getPictures()) {
             picContentValues.put(WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID, wt.getId());
-            picContentValues.put(WalkThrough.WalkThroughPictureBridge.COLUMN_WALK_THROUGH_PICTURE_URI, uri.toString());
+            picContentValues.put(WalkThrough.WalkThroughPictureBridge.COLUMN_WALK_THROUGH_PICTURE_URI, id);
         }
         return picContentValues;
     }
@@ -1513,7 +1742,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_ADDRESS, project.getAddress().getId());
         }
         if (project.getUser() != null) {
-            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_USER_ID, project.getUser().getId());
+            contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_USER_ID, project.getUser());
         }
         if (project.getInitialStartDate() != null) {
             contentValues.put(Project.ProjectEntry.COLUMN_PROJECT_INITIAL_START, project.getInitialStartDate().toString());
@@ -1652,7 +1881,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 //                project.setAddress(cursor.getString(2));
 //            }
             if (cursor.getString(3) != null) {
-                project.setUser(Storage.getUserById(cursor.getString(3)));
+                project.setUser(cursor.getString(3));
             }
             if (cursor.getString(4) != null) {
                 project.setInitialStartDate(cursor.getString(4));
@@ -1778,4 +2007,6 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         fv.setRequired(cursor.getInt(3));
         return fv;
     }
+
+
 }

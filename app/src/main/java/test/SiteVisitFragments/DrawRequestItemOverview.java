@@ -55,11 +55,23 @@ public class DrawRequestItemOverview extends Fragment {
         super.onCreateView(inflater, vg, saved);
 
         View view = inflater.inflate(R.layout.fragment_draw_request_items_overview, null);
+
         listView = (ListView) view.findViewById(R.id.draw_request_manage_item_list);
+        setListView();
+
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setListView();
+    }
+
+    private void setListView() {
         listView.setAdapter(new DrawRequestItemManagerListAdapter(getActivity(),
                 DrawRequestItem.DRAW_REQUEST_ITEM_TYPES,
                 drawRequest.getDrawRequestItemLists()));
-        return view;
     }
 
     public class DrawRequestItemManagerListAdapter extends BaseAdapter {

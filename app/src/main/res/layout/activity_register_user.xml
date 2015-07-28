@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:id="@+id/linearLayout17">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/register_name"
+            android:hint="name"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/register_email"
+            android:hint="email"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_password"
+            android:hint="password"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_password_confirm"
+            android:hint="re-enter password"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_camera_button"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/ic_camera"
+            android:padding="40dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/register_submit"
+        android:layout_gravity="center_horizontal"
+        android:background="#00ffffff"
+        android:textSize="24dp"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:id="@+id/register_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#a5ff0904"
+        android:background="#00ffffff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+
+</RelativeLayout>

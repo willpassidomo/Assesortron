@@ -23,14 +23,20 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     public static final int TYPE_LISTENER = 3;
     public static final int TYPE_FRAGMENT_SUPPORT = 4;
 
-    IconHeaderObject[] items;
+    ListItem[] items;
     DrawerActivtyListener parent;
-    int headerView;
+    View headerView = null;
+    int headerId;
     int HEADER = 0;
     int ITEM = 1;
 
 
-    public IconHeaderRecyclerAdapter(int headerView, DrawerActivtyListener parent) {
+    public IconHeaderRecyclerAdapter(int headerId, DrawerActivtyListener parent) {
+        this.headerId = headerId;
+        this.parent = parent;
+    }
+
+    public IconHeaderRecyclerAdapter(View headerView, DrawerActivtyListener parent) {
         this.headerView = headerView;
         this.parent = parent;
     }
@@ -39,8 +45,10 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     public Holder onCreateViewHolder(ViewGroup parent, int i) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         if (i == HEADER) {
-            View view =inflater.inflate(headerView, parent, false);
-            return new Holder(view, i);
+            if (headerView == null) {
+                headerView = inflater.inflate(headerId, parent, false);
+            }
+            return new Holder(headerView, i);
         } else {
             View view = inflater.inflate(R.layout.drawer_list_item, parent, false);
             return new Holder(view, i);
@@ -50,7 +58,7 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
     @Override
     public void onBindViewHolder(Holder viewHolder, int i) {
         if (viewHolder.VIEW_TYPE == ITEM) {
-            IconHeaderObject item = items[i - 1];
+            ListItem item = items[i - 1];
             viewHolder.imageView.setImageDrawable(item.drawable);
             viewHolder.textView.setText(item.title);
             switch (item.type) {
@@ -81,23 +89,23 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
         }
     }
 
-    public IconHeaderObject newItem(Context context, String title, int drawable, Fragment fragment) {
-        return new IconHeaderObject(title, context.getResources().getDrawable(drawable), fragment);
+    public ListItem newItem(Context context, String title, int drawable, Fragment fragment) {
+        return new ListItem(title, context.getResources().getDrawable(drawable), fragment);
     }
 
-    public IconHeaderObject newItem(Context context, String title, int drawable, android.support.v4.app.Fragment fragment) {
-        return new IconHeaderObject(title, context.getResources().getDrawable(drawable), fragment);
+    public ListItem newItem(Context context, String title, int drawable, android.support.v4.app.Fragment fragment) {
+        return new ListItem(title, context.getResources().getDrawable(drawable), fragment);
     }
 
-    public IconHeaderObject newItem(Context context, String title, int drawable, Intent intent) {
-        return new IconHeaderObject(title, context.getResources().getDrawable(drawable), intent);
+    public ListItem newItem(Context context, String title, int drawable, Intent intent) {
+        return new ListItem(title, context.getResources().getDrawable(drawable), intent);
     }
 
-    public IconHeaderObject newItem(Context context, String title, int drawable, View.OnClickListener listener) {
-        return new IconHeaderObject(title, context.getResources().getDrawable(drawable), listener);
+    public ListItem newItem(Context context, String title, int drawable, View.OnClickListener listener) {
+        return new ListItem(title, context.getResources().getDrawable(drawable), listener);
     }
 
-    public void setItems(IconHeaderObject[] items) {
+    public void setItems(ListItem[] items) {
         this.items = items;
     }
 
@@ -163,7 +171,7 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
 
     }
 
-    public class IconHeaderObject {
+    public class ListItem {
         int type;
         Drawable drawable;
         String title;
@@ -172,28 +180,28 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
         Intent intent;
         View.OnClickListener listener;
 
-        public IconHeaderObject(String title, Drawable drawable, Fragment fragement) {
+        public ListItem(String title, Drawable drawable, Fragment fragement) {
             type = TYPE_FRAGMENT;
             this.title = title;
             this.drawable = drawable;
             this.fragement = fragement;
         }
 
-        public IconHeaderObject(String title, Drawable drawable, android.support.v4.app.Fragment fragment) {
+        public ListItem(String title, Drawable drawable, android.support.v4.app.Fragment fragment) {
             type = TYPE_FRAGMENT_SUPPORT;
             this.title = title;
             this.drawable = drawable;
             this.fragmentSupported = fragment;
         }
 
-        public IconHeaderObject(String title, Drawable drawable, Intent intent) {
+        public ListItem(String title, Drawable drawable, Intent intent) {
             type = TYPE_INTENT;
             this.title = title;
             this.drawable = drawable;
             this.intent = intent;
         }
 
-        public IconHeaderObject(String title, Drawable drawable, View.OnClickListener listener) {
+        public ListItem(String title, Drawable drawable, View.OnClickListener listener) {
             type = TYPE_LISTENER;
             this.title = title;
             this.drawable = drawable;

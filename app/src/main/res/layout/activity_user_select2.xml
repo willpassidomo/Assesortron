@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout16">
+
+        <AutoCompleteTextView
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/user_select_username"
+            android:layout_above="@+id/user_select_password"
+            android:layout_alignLeft="@+id/user_select_password"
+            android:layout_alignStart="@+id/user_select_password"
+            android:hint="user name"
+            android:textSize="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/user_select_password"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:hint="password"
+            android:textSize="24dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save login info?"
+            android:id="@+id/user_select_save_info_q"
+            android:layout_gravity="center_horizontal"
+            android:checked="false" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/user_select_login"
+        android:layout_below="@+id/linearLayout16"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="#00ffffff"
+        android:textSize="24dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User"
+        android:id="@+id/user_select_register"
+        android:background="#00ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="16dp" />
+
+</RelativeLayout>

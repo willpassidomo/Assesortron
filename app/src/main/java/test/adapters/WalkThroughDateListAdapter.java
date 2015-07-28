@@ -17,7 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import test.assesortron5.History;
 import test.assesortron5.R;
 
 /**
@@ -104,7 +103,7 @@ public class WalkThroughDateListAdapter implements ListAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((History) context).setWalkThroughList(dates.get(date));
+                //((History) context).setWalkThroughList(dates.get(date));
                 }
             }
         );

@@ -22,12 +22,6 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-                <ImageButton
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/walk_through_image"
-                    android:layout_weight="1" />
-
                 <Space
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"

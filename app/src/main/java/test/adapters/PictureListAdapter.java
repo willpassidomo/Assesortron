@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import test.assesortron5.R;
+import test.persistence.Storage;
 
 
 /**
@@ -20,9 +21,9 @@ import test.assesortron5.R;
  */
 public class PictureListAdapter implements ListAdapter {
     Context context;
-    List<Uri> pictures;
+    List<String> pictures;
 
-    public PictureListAdapter(Context context, List<Uri> pictures) {
+    public PictureListAdapter(Context context, List<String> pictures) {
         this.pictures = pictures;
         this.context = context;
     }
@@ -80,8 +81,7 @@ public class PictureListAdapter implements ListAdapter {
         ImageView imageView = (ImageView) view.findViewById(R.id.walkthrough_picture);
 
         date.setText(pictures.size()+"");
-        imageView.setImageURI(pictures.get(i));
-
+        imageView.setImageBitmap(Storage.getPictureByOwnerId(context, pictures.get(i)));
         return view;
     }
 

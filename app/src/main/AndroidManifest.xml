@@ -22,36 +22,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="test.assesortron5.HomeScreen"
-            android:label="@string/title_activity_home_screen"
-            android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron5.UserSelect" >
-        </activity>
-        <activity
-            android:name="test.assesortron5.ProjectHomeScreen"
-            android:label="@string/title_activity_project_home_screen"
-            android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron5.HomeScreen" >
-        </activity>
-        <activity
             android:name="test.SiteVisitFragments.SiteWalkthrough"
             android:label="@string/title_activity_site_walkthrough"
             android:parentActivityName="test.superActivities.SuperSiteVisit" >
-        </activity>
-        <activity
-            android:name="test.assesortron5.MakeDrawG702"
-            android:label="@string/title_activity_make_draw"
-            android:parentActivityName="test.assesortron5.MakeDraw" >
-        </activity>
-        <activity
-            android:name="test.assesortron5.ProjectDashboard"
-            android:label="@string/title_activity_project_dashboard"
-            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
-        </activity>
-        <activity
-            android:name="test.assesortron5.History"
-            android:label="@string/title_activity_history"
-            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
         </activity>
         <activity
             android:name="test.assesortron5.VisitSite"
@@ -83,6 +56,12 @@
             android:launchMode="singleTop"
             >
         </activity>
+        <activity
+            android:name="test.superActivities.Login.UserSelect"
+            android:label="Login"/>
+        <activity
+            android:name="test.superActivities.Login.Register"
+            android:label="Register"/>
     </application>
 
 </manifest>

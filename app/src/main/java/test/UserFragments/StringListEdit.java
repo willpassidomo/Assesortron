@@ -65,18 +65,10 @@ public class StringListEdit extends Fragment {
         switch (STRING_LIST_TYPE) {
             case StringListEdit.TRADES:
                 strings = Storage.getTradeList(getActivity());
-                if (strings.size() < 1) {
-                    strings = Constants.getInitalTrades();
-                    Storage.storeTrades(getActivity(), strings);
-                }
                 setTradeButtons();
                 break;
             case StringListEdit.PROGRESSES:
                 strings = Storage.getProgressList(getActivity());
-                if (strings.size() < 1) {
-                    strings = Constants.getInitialProgresses();
-                    Storage.storeProgresses(getActivity(), strings);
-                }
                 setProgressButtons();
                 break;
             default:

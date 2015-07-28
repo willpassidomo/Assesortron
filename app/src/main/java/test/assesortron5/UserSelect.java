@@ -22,10 +22,7 @@ public class UserSelect extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_select);
-//        if(userName == null || userName != null) {
-//            Intent intent = new Intent(this, HomeScreen.class);
-//            startActivity(intent);
-//        }
+
         final Context context = this;
 
     Button test = (Button)findViewById(R.id.test_test);
@@ -33,6 +30,15 @@ public class UserSelect extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, SuperUser.class);
+                startActivity(intent);
+            }
+        });
+
+        Button testNewLogin = (Button)findViewById(R.id.test_login);
+        testNewLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, test.superActivities.Login.UserSelect.class);
                 startActivity(intent);
             }
         });

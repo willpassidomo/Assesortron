@@ -112,15 +112,15 @@ public class Address {
     }
 
     public static abstract class AddressEntry implements BaseColumns {
-        public static String TABLE_NAME = "addresses";
-        public static String ADDRESS_ID = "addyId";
-        public static String CITY = "city";
-        public static String STATE = "state";
-        public static String STREET_NUMBER = "streetNumber";
-        public static String STREET_NAME = "streetName";
-        public static String ZIP_CODE = "zipCode";
+        public static final String TABLE_NAME = "addresses";
+        public static final String ADDRESS_ID = "addyId";
+        public static final String CITY = "city";
+        public static final String STATE = "state";
+        public static final String STREET_NUMBER = "streetNumber";
+        public static final String STREET_NAME = "streetName";
+        public static final String ZIP_CODE = "zipCode";
 
-        public static String CREATE_ADDRESS_TABLE =
+        public static final String CREATE_ADDRESS_TABLE =
                 Constants.createTableString(
                         TABLE_NAME,
                         ADDRESS_ID + Constants.TEXT_TYPE,
