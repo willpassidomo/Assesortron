@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:id="@+id/linear_layout3232">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/draw_request_manage_item_list"
+        android:layout_gravity="center_horizontal"
+        android:scrollbarStyle="outsideOverlay" />
+</LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/fragment_draw_request_items_overview.xml -->

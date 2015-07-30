@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.assesortron4"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="test.assesortron5.UserSelect"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="test.SiteVisitFragments.SiteWalkthrough"
+            android:label="@string/title_activity_site_walkthrough"
+            android:parentActivityName="test.superActivities.SuperSiteVisit" >
+        </activity>
+        <activity
+            android:name="test.assesortron5.VisitSite"
+            android:label="@string/title_activity_site_visit"
+            android:launchMode="singleTop"
+            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
+        </activity>
+
+        <service
+            android:name="test.Network.FullSyncService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="test.superActivities.SuperProject"
+            android:label="@string/title_activity_super_project"
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="test.superActivities.SuperSiteVisit"
+            android:label="@string/title_activity_super_site_visit"
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="test.superActivities.SuperUser"
+            android:label="User"
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="test.superActivities.Login.UserSelect"
+            android:label="Login" />
+        <activity
+            android:name="test.superActivities.Login.Register"
+            android:label="Register" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

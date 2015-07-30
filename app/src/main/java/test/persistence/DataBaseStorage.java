@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import test.drawers.DrawerActivtyListener;
 import test.objects.Address;
 import test.objects.FieldValue;
 import test.objects.DrawRequest;
@@ -800,7 +801,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_NOTE,
                     WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_DATE
             };
-            String selection = WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID + "= ?";
+            String selection = WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID + "= ? ";
             String[] selectionArgs;
             String order = WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_DATE + " ASC";
 
@@ -1429,7 +1430,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
-    public void deleteProject(String projectId) {
+    public void deleteProject(String projectId, String addressId) {
         SQLiteDatabase db = this.getWritableDatabase();
         try {
             List<String> siteVisits = getSiteWalkIds(projectId);
@@ -1448,13 +1449,13 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
-    public void deleteAddress(String projectId) {
+    public void deleteAddress(String addressId) {
         SQLiteDatabase db = this.getWritableDatabase();
         try {
             db.delete(
                     Address.AddressEntry.TABLE_NAME,
-                    Project.ProjectEntry.COLUMN_PROJECT_ID + " = ? ",
-                    new String[]{projectId}
+                    Address.AddressEntry.ADDRESS_ID + " = ? ",
+                    new String[]{addressId}
             );
         }
         finally {
@@ -1479,8 +1480,13 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     SiteVisit.SiteWalkEntry.COLUMN_ID + " = ? ",
                     new String[]{siteVisitId}
             );
-            deleteSiteVisitWalkThroughs(siteVisitId);
-            deleteSiteVisitDrawRequestAndItems(siteVisitId);
+            DrawRequest dr = getSiteWalkDrawRequest(siteVisitId);
+            deleteDrawRequest(dr);
+
+            List<String> walkThroughs = getSiteWalktWalkThroughs(siteVisitId);
+            for (String walkThroughId: walkThroughs) {
+                deleteWalkThrough(walkThroughId);
+            }
             deleteOwnersFieldValues(siteVisitId);
         }
         finally {

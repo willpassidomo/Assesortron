@@ -3,6 +3,9 @@
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingLeft="?android:listPreferredItemPaddingLeft"
+    android:paddingRight="?android:listPreferredItemPaddingRight"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,50 +15,94 @@
         android:background="@drawable/border"
         android:id="@+id/linearLayout">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/walk_through_floor"
-            android:layout_marginRight="10dp"
-            android:text="floor #"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/walk_through_contractor"
-            android:layout_marginRight="10dp"
-            android:text="contractor"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/walk_through_num_pics"
-            android:layout_marginRight="10dp"
-            android:text="# pics"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp" />
-
         <ViewSwitcher
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/walk_through_list_switcher" >
+            android:id="@+id/walk_through_list_switcher"
+            android:layout_weight="1">
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="date"
-                android:id="@+id/walk_through_list_date"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="right" />
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/walk_through_floor"
+                        android:layout_marginRight="10dp"
+                        android:text="floor #"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/walk_through_contractor"
+                        android:layout_marginRight="10dp"
+                        android:text="contractor"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="date"
+                        android:id="@+id/walk_through_list_date"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:id="@+id/list_walkthrough_image"
+                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/textView23"
+                    android:layout_toStartOf="@+id/textView23" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/walk_through_num_pics"
+                    android:text="0"
+                    android:textSize="48dp"
+                    android:textColor="#ff727272"
+                    android:layout_alignTop="@+id/textView23"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:id="@+id/textView23"
+                    android:textSize="48dp"
+                    android:textColor="#ff727272"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/walk_through_num_pics"
+                    android:layout_toStartOf="@+id/walk_through_num_pics"
+                    android:layout_marginTop="6dp" />
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:orientation="horizontal"

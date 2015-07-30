@@ -17,7 +17,7 @@ import test.assesortron5.R;
 /**
  * Created by otf on 7/15/15.
  */
-public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRecyclerAdapter.Holder> {
+public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRecyclerAdapter.Holder> {
     public static final int TYPE_FRAGMENT = 1;
     public static final int TYPE_INTENT = 2;
     public static final int TYPE_LISTENER = 3;
@@ -25,35 +25,28 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
 
     ListItem[] items;
     DrawerActivtyListener parent;
-    View headerView = null;
-    int headerId;
     int HEADER = 0;
     int ITEM = 1;
 
 
-    public IconHeaderRecyclerAdapter(int headerId, DrawerActivtyListener parent) {
-        this.headerId = headerId;
+    public IconHeaderRecyclerAdapter(DrawerActivtyListener parent) {
         this.parent = parent;
     }
 
-    public IconHeaderRecyclerAdapter(View headerView, DrawerActivtyListener parent) {
-        this.headerView = headerView;
-        this.parent = parent;
-    }
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int i) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         if (i == HEADER) {
-            if (headerView == null) {
-                headerView = inflater.inflate(headerId, parent, false);
-            }
+            View headerView = inflateHeader(inflater, parent);
             return new Holder(headerView, i);
         } else {
             View view = inflater.inflate(R.layout.drawer_list_item, parent, false);
             return new Holder(view, i);
         }
     }
+
+    abstract public View inflateHeader(LayoutInflater inflater, ViewGroup parent);
 
     @Override
     public void onBindViewHolder(Holder viewHolder, int i) {
@@ -64,9 +57,6 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
             switch (item.type) {
                 case TYPE_FRAGMENT:
                     viewHolder.background.setOnClickListener(itemClickListener(item.fragement));
-                    break;
-                case TYPE_INTENT:
-                    viewHolder.background.setOnClickListener(itemClickListener(item.intent));
                     break;
                 case TYPE_LISTENER:
                     viewHolder.background.setOnClickListener(item.listener);
@@ -133,16 +123,6 @@ public class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<IconHeaderRe
             @Override
             public void onClick(View view) {
                 parent.displayFragment(fragment);
-            }
-        };
-        return listener;
-    }
-
-    private View.OnClickListener itemClickListener(final Intent intent) {
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                parent.startIntent(intent);
             }
         };
         return listener;

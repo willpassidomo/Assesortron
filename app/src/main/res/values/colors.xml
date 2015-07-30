@@ -5,4 +5,9 @@
     <color name="dashboard_label_text">#FF000000</color>
     <color name="screen_red_background">#ffffff</color>
     <color name="delete_button_red">#B6FF0000</color>
+    <color name="accent">#fff52522</color>
+    <color name="primary_dark">#ff434343</color>
+    <color name="primary">#ff6f7194</color>
+    <color name="window_background">#ffadb0e7</color>
+    <color name="text">#ff434343</color>
 </resources>

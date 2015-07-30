@@ -5,7 +5,8 @@
     android:clickable="true"
     android:id="@+id/drawer_list_background"
     android:focusableInTouchMode="false"
-    android:longClickable="true">
+    android:longClickable="true"
+    android:layout_weight="1">
 
     <LinearLayout
         android:orientation="horizontal"

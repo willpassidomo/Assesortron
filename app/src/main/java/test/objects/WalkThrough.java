@@ -111,7 +111,7 @@ public class WalkThrough {
     }
 
     public void addSitePicture(String stringUri) {
-        addSitePicture(stringUri);
+        pictures.add(stringUri);
     }
 
     public WalkThroughDTO getDTO() {

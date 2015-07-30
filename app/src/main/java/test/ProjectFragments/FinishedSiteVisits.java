@@ -53,7 +53,7 @@ public class FinishedSiteVisits extends Fragment {
 
     private void setListView() {
         List<SiteVisit> siteVisits = Storage.getFinishedSiteWalks(getActivity(), projectId);
-        SiteWalkListAdapter siteWalkListAdapter = new SiteWalkListAdapter(getActivity(), siteVisits) {
+        SiteWalkListAdapter siteWalkListAdapter = new SiteWalkListAdapter(getActivity(), siteVisits, "no finished Site Visits") {
             @Override
             public View.OnClickListener itemClickListener(final SiteVisit sv) {
                 return new View.OnClickListener() {

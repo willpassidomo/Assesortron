@@ -28,8 +28,7 @@ import test.assesortron5.R;
  * Created by otf on 7/13/15.
  */
 public class SetListSelectionFragment extends Fragment {
-    SetListSelectionInterface onlyChildParent;
-    SetListSelectionVisitorInterface siblingsParent;
+    SetListSelectionInterface parent;
     StringSelectorAdapter adapter;
     List<String> inList;
     List<String> stringList;
@@ -48,35 +47,19 @@ public class SetListSelectionFragment extends Fragment {
      * @param stringList
      * @return
      */
-    public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList, List<String> inList) {
+    public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList, List<String> inList, String id) {
         SetListSelectionFragment sptf = new SetListSelectionFragment();
         sptf.setStringList(stringList, inList);
         sptf.setParent(parent);
-        return sptf;
-    }
-
-    /**
-     * see SetListSelectionInterface and SetListSelectionVisitorInterface docs for information
-     * on when to use each of the two constructors
-     * @param parent
-     * @param stringList
-     * @param id
-     * @return
-     */
-
-    public static SetListSelectionFragment getInstance(SetListSelectionVisitorInterface parent, List<String> stringList, List<String> inList, String id) {
-        SetListSelectionFragment sptf = new SetListSelectionFragment();
-        sptf.setParent(parent);
-        sptf.setStringList(stringList, inList);
         sptf.setType(id);
         return sptf;
     }
 
+
     private void setType(String id) { this.id = id;}
     private void setParent(SetListSelectionInterface parent) {
-        this.onlyChildParent = parent;
+        this.parent = parent;
     }
-    private void setParent(SetListSelectionVisitorInterface parent) {this.siblingsParent = parent;}
 
     private void setStringList(List<String> stringList, List<String> inList) {
         this.inList = inList;
@@ -118,7 +101,11 @@ public class SetListSelectionFragment extends Fragment {
         List<String> strings;
 
         public StringSelectorAdapter(List<String> strings, List<String> inList) {
-            this.inList = new TreeSet<>(inList);
+            if (inList != null) {
+                this.inList = new TreeSet<>(inList);
+            } else {
+                this.inList = new TreeSet<>();
+            }
             this.strings = strings;
         }
 
@@ -180,18 +167,11 @@ public class SetListSelectionFragment extends Fragment {
             View.OnClickListener listener = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (onlyChildParent != null) {
-                        onlyChildParent.setList(adapter.getCheckedStrings());
-                    }
-                    if (siblingsParent != null) {
-                        done();
-                    }
+                        parent.setList(id, adapter.getCheckedStrings());
                 }
             };
             return listener;
         }
-
-    private void done() { siblingsParent.done(this);}
 
     /**
      *     Interface if should be used if parent activity only has ONE instance
@@ -201,18 +181,7 @@ public class SetListSelectionFragment extends Fragment {
      *
      */
     public interface SetListSelectionInterface {
-        public void setList(List<String> strings);
+        public void setList(String id, List<String> strings);
     }
 
-    /**
-     * SetListSelectionVisitorInterface is a take on the visitor pattern in the case
-     * that an activity may be interacting with multiple instances of SetListSelectionFragment
-     * modifying different lists. To implement this interface, the parent should call fragment.getId(),
-     * in order to identify which of it's SetListSelectionFragments is finished. to get the modified
-     * list, parent should call fragment,getSelectedItems();
-     */
-
-    public interface SetListSelectionVisitorInterface {
-        public void done(SetListSelectionFragment fragment);
-    }
 }

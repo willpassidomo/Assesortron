@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -61,9 +62,9 @@ public class ActiveSiteVisits extends Fragment {
 
     @Override
     public void onResume() {
+        super.onResume();
         siteVisits = null;
         setListView();
-        super.onResume();
     }
 
     private void setListView() {
@@ -80,9 +81,13 @@ public class ActiveSiteVisits extends Fragment {
             }
         };
         if (siteVisits == null) {
-            task.execute(projectId);
+            if (projectId != null) {
+                task.execute(projectId);
+            } else {
+                Toast.makeText(getActivity(), "Project Id is blank", Toast.LENGTH_SHORT).show();
+            }
         } else {
-            SiteWalkListAdapter adapter = new SiteWalkListAdapter(getActivity(), siteVisits) {
+            SiteWalkListAdapter adapter = new SiteWalkListAdapter(getActivity(), siteVisits, "no active Site Visits") {
                 @Override
                 public View.OnClickListener itemClickListener(final SiteVisit sv) {
                     View.OnClickListener listener = new View.OnClickListener() {

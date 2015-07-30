@@ -32,12 +32,6 @@
             android:label="@string/title_activity_site_walkthrough"
             android:parentActivityName="test.superActivities.SuperSiteVisit" >
         </activity>
-        <activity
-            android:name="test.assesortron5.VisitSite"
-            android:label="@string/title_activity_site_visit"
-            android:launchMode="singleTop"
-            android:parentActivityName="test.assesortron5.ProjectHomeScreen" >
-        </activity>
 
         <service
             android:name="test.Network.FullSyncService"

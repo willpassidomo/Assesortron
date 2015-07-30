@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:background="?android:selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:text="Date"
+            android:id="@+id/list_site_walk_date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="#"
+            android:id="@+id/list_site_walk_progresses_count"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/list_site_walk_date"
+            android:layout_toRightOf="@+id/textView27"
+            android:layout_toEndOf="@+id/textView27" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="progresses- "
+            android:id="@+id/textView27"
+            android:layout_below="@+id/list_site_walk_date"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="#"
+            android:id="@+id/list_site_walks_dr_item_count"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignTop="@+id/textView28"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="draw req items- "
+            android:id="@+id/textView28"
+            android:layout_below="@+id/list_site_walk_date"
+            android:layout_toLeftOf="@+id/list_site_walks_dr_item_count"
+            android:layout_toStartOf="@+id/list_site_walks_dr_item_count" />
+
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/home/otf/code/AssesorTron/app/src/main/res/layout/list_site_walks_active.xml -->

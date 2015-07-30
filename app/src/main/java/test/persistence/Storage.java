@@ -28,7 +28,6 @@ import test.objects.FieldValue;
  * Created by willpassidomo on 1/14/15.
  */
 public class Storage {
-    private static User user = new User("USER_FIRST", "USER_LAST");
 
     public static List<String> getMasterTradeList() {
         List<String> l = new ArrayList<String>();
@@ -180,7 +179,8 @@ public class Storage {
     public static void deleteProject(Context context, String projectId) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            dataBaseStorage.deleteProject(projectId);
+            Project project = dataBaseStorage.getProject(projectId);
+            dataBaseStorage.deleteProject(project.getId(), project.getAddress().getId());
         }
         finally {
             dataBaseStorage.close();
@@ -532,7 +532,13 @@ public class Storage {
     }
 
     public static int getWalkThroughEntryCount(Context context, String siteWalkId) {
-        return getWalkThroughBySiteWalkId(context, siteWalkId).size();
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            return dataBaseStorage.getSiteWalktWalkThroughs(siteWalkId).size();
+        }
+        finally {
+            dataBaseStorage.close();
+        }
     }
 
     public static int getDrawRequestItemCount(Context context, String siteWalkId) {
@@ -559,7 +565,7 @@ public class Storage {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
             byte[] bytes = dataBaseStorage.getPictureByteArray(pictureId);
-            return BitmapFactory.decodeByteArray(bytes, 0, 0);
+            return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         }
         finally {
             dataBaseStorage.close();

@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-9a9193d7c9514cc81042e26d6771b9413f72e308.jar" />
+    </item>
+    <item
+        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-772021310e65ce64846ad87d70b23047c42981b5.jar" />
+    </item>
+    <item
         jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -23,11 +37,11 @@
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-590825479cb5bec2b6fd8a06ae8e94e3fadf4f57.jar" />
     </item>
     <item
-        jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.17.0-rc/f01974c9ec3e5570d8c75ecf7fce004e06757e03/google-api-client-1.17.0-rc.jar"
+        jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f01974c9ec3e5570d8c75ecf7fce004e06757e03">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/google-api-client-1.17.0-rc-08e8e37fb6bde40a3ef8e4f1bf7b29900b3d8b88.jar" />
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9-20a540a53a330d73278766ed155a12f38130f6e1.jar" />
     </item>
     <item
         jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.19.0/cdca49ad0977c040f603478aa2e16b2775c8fec6/google-http-client-1.19.0.jar"
@@ -37,11 +51,32 @@
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/google-http-client-1.19.0-212adb7bc0266022b0a1df0ac770a1fe67032555.jar" />
     </item>
     <item
+        jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.17.0-rc/f01974c9ec3e5570d8c75ecf7fce004e06757e03/google-api-client-1.17.0-rc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f01974c9ec3e5570d8c75ecf7fce004e06757e03">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/google-api-client-1.17.0-rc-08e8e37fb6bde40a3ef8e4f1bf7b29900b3d8b88.jar" />
+    </item>
+    <item
+        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-3c236ad9c9fe320888635b791fde0abdd8a3ef1b.jar" />
+    </item>
+    <item
         jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-03fc5f0ad99f56dd2098c432e219ece071280cdd.jar" />
+    </item>
+    <item
+        jar="/home/otf/code/AssesorTron/app/src/main/java/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9937fd6da415c48d2b727da716d9b010af73f192">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT-3e460a1707cdd3c8251959af4f7ff6b0c86d316a.jar" />
     </item>
     <item
         jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.17.0-rc/76bcfba455c5a053d532bbac2cf30a2b2c341cf3/google-oauth-client-1.17.0-rc.jar"
@@ -58,46 +93,18 @@
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-e539b44b94511b939742a15affc03efb86595e24.jar" />
     </item>
     <item
-        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-9a9193d7c9514cc81042e26d6771b9413f72e308.jar" />
-    </item>
-    <item
-        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-772021310e65ce64846ad87d70b23047c42981b5.jar" />
-    </item>
-    <item
-        jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9-20a540a53a330d73278766ed155a12f38130f6e1.jar" />
-    </item>
-    <item
-        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/libs/internal_impl-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-3c236ad9c9fe320888635b791fde0abdd8a3ef1b.jar" />
-    </item>
-    <item
-        jar="/home/otf/code/AssesorTron/app/src/main/java/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9937fd6da415c48d2b727da716d9b010af73f192">
-        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/assesortronTaskerAPI-v1-1.20.0-SNAPSHOT-3e460a1707cdd3c8251959af4f7ff6b0c86d316a.jar" />
-    </item>
-    <item
         jar="/home/otf/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.19.0/e3f11020c2c812112803d252d1392872d3f619c8/google-http-client-android-1.19.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="e3f11020c2c812112803d252d1392872d3f619c8">
         <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.19.0-5ebf675f074b1cabfead71be855f5abf500255b4.jar" />
+    </item>
+    <item
+        jar="/home/otf/code/AssesorTron/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/home/otf/code/AssesorTron/app/build/intermediates/pre-dexed/debug/classes-3141dde72463798ba9029c3785369268d77e14d5.jar" />
     </item>
 
 </items>

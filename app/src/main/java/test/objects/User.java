@@ -17,14 +17,12 @@ public class User {
     private String id;
     private String userName;
     private String email;
-    private String password;
     private Date dateCreated;
     private String imageId;
 
-    public User(String userName, String password) {
+    public User(String userName) {
         this.setId(UUID.randomUUID().toString());
         this.setUserName(userName);
-        this.password = password;
         this.setDateCreated(new Date());
     }
 
@@ -51,20 +49,6 @@ public class User {
         this.userName = userName;
     }
 
-    public void resetPassword() {password = "password";}
-
-    public boolean changePassword(String oldPassword, String newPassword) {
-        if (checkPassword(oldPassword)) {
-            password = newPassword;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean checkPassword(String password) {
-        return this.password == password ? true : false;
-    }
 
     public Date getDateCreated() {
         return dateCreated;
@@ -83,7 +67,11 @@ public class User {
     }
 
     public Bitmap getImage() {
-        return Storage.getPictureByOwnerId(null, getImageId());
+        if (imageId != null && !imageId.equals("")) {
+            return Storage.getPictureByOwnerId(null, getImageId());
+        } else {
+            return null;
+        }
     }
 
     public String getImageId() {

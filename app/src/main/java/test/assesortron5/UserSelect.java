@@ -42,6 +42,10 @@ public class UserSelect extends Activity {
                 startActivity(intent);
             }
         });
+
+        //TEMP
+        Intent intent = new Intent(context, test.superActivities.Login.UserSelect.class);
+        startActivity(intent);
     }
 
 

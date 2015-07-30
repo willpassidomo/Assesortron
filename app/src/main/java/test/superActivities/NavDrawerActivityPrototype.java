@@ -8,7 +8,8 @@ import android.content.res.Configuration;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -19,7 +20,7 @@ import android.view.View;
 import test.assesortron5.R;
 import test.drawers.DrawerActivtyListener;
 
-public abstract class NavDrawerActivityPrototype extends FragmentActivity implements DrawerActivtyListener, FragmentDrawerListener {
+public abstract class NavDrawerActivityPrototype extends AppCompatActivity implements DrawerActivtyListener, FragmentDrawerListener {
 
     DrawerLayout mDrawerLayout;
     RecyclerView mRecylerView;
@@ -28,7 +29,6 @@ public abstract class NavDrawerActivityPrototype extends FragmentActivity implem
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.super_activity_site_visit);
 
@@ -43,28 +43,18 @@ public abstract class NavDrawerActivityPrototype extends FragmentActivity implem
         mRecylerView.setLayoutManager(new LinearLayoutManager(this));
         mRecylerView.setAdapter(getRecyclerAdapter());
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         drawerToggle = new ActionBarDrawerToggle(
                 this,
                 mDrawerLayout,
-                R.drawable.ic_drawer,
                 R.string.drawer_open,
-                R.string.drawer_close){
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                getActionBar().setTitle(getDrawerClosedHeader());
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
+                R.string.drawer_close
+                );
 
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                getActionBar().setTitle(getDrawerOpenHeader());
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
         mDrawerLayout.setDrawerListener(drawerToggle);
+        drawerToggle.syncState();
 
 
     }
@@ -118,12 +108,6 @@ public abstract class NavDrawerActivityPrototype extends FragmentActivity implem
         ft.replace(R.id.super_site_visit_main, fragment);
         ft.commit();
         mDrawerLayout.closeDrawer(mRecylerView);
-    }
-
-    @Override
-    public void startIntent(Intent intent) {
-        Log.i("Startig Intent", intent.getAction());
-        startActivity(intent);
     }
 
     @Override

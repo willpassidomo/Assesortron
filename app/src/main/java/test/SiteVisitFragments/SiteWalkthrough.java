@@ -1,6 +1,6 @@
 package test.SiteVisitFragments;
 
-import android.app.ActionBar;
+import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -29,7 +30,7 @@ import test.superActivities.SuperSiteVisit;
 /**
  * Created by willpassidomo on 2/3/15.
  */
-public class SiteWalkthrough extends FragmentActivity implements SiteWalkthroughNote.OnNoteFragListener, SiteWalkthrougInfo.OnInfoFragListener, SiteWalkthroughPictures.OnPictureFragListener{
+public class SiteWalkthrough extends AppCompatActivity implements SiteWalkthroughNote.OnNoteFragListener, SiteWalkthrougInfo.OnInfoFragListener, SiteWalkthroughPictures.OnPictureFragListener{
     ActionBar actionBar;
     FragmentTransaction ft;
     Button action;
@@ -59,7 +60,7 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
             walkThrough = new WalkThrough();
         }
 
-        actionBar = getActionBar();
+        actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         tabFragments.add(new SiteWalkthrougInfo());
@@ -87,25 +88,20 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
         for (final TabFragment tabFragment: tabFragments) {
             actionBar.addTab(actionBar.newTab().setText(tabFragment.getTabName()).setTabListener(new ActionBar.TabListener() {
                 @Override
-                public void onTabSelected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
-//                    newFragTrans();
-                   tabFragment.setFields(walkThrough, project);
-//                    Fragment fragment = tabFragment.getFragment();
-//                    ft.replace(R.id.walk_through_fragment, fragment);
-//                    ft.addToBackStack(null);
-//                    ft.commit();
+                public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                    tabFragment.setFields(walkThrough, project);
                     viewPager.setCurrentItem(tab.getPosition(),true);
-
                 }
 
                 @Override
-                public void onTabUnselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+                public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
                     tabFragment.getValues();
                 }
 
                 @Override
-                public void onTabReselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+                public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
                     tabFragment.setFields(walkThrough, project);
+
                 }
             }));
         }
@@ -120,7 +116,7 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
                     public void onPageSelected(int position) {
                         // When swiping between pages, select the
                         // corresponding tab.
-                        getActionBar().setSelectedNavigationItem(position);
+                        getSupportActionBar().setSelectedNavigationItem(position);
                     }
                 });
         viewPager.setAdapter(swta);
@@ -130,6 +126,9 @@ public class SiteWalkthrough extends FragmentActivity implements SiteWalkthrough
     private void setPictureList() {
         //TODO
     }
+
+    //TODO
+    //this is breaking the back button...
 
     @Override
     public void onBackPressed() {

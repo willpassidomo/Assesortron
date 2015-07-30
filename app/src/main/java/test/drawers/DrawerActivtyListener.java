@@ -10,6 +10,5 @@ import android.view.View;
 public interface DrawerActivtyListener {
     public void displayFragment(Fragment fragment);
     public void displayFragment(android.support.v4.app.Fragment fragment);
-    public void startIntent(Intent intent);
 
 }

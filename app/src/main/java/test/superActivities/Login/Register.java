@@ -40,6 +40,7 @@ public class Register extends Activity implements CameraPictureFragment.CameraPi
         setContentView(R.layout.activity_register_user);
 
         setVariables();
+
     }
 
     private void setVariables() {
@@ -97,9 +98,9 @@ public class Register extends Activity implements CameraPictureFragment.CameraPi
 
     private User buildUser() {
         String lname = name.getText().toString();
-        String lemail = email.getText().toString();
-        User user = new User(lname, lemail);
+        User user = new User(lname);
         user.setImageId(imageId);
+        user.setEmail(email.getText().toString());
         return user;
 
     }

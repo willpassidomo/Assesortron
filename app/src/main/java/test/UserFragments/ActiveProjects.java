@@ -44,6 +44,12 @@ public class ActiveProjects extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        setProjects();
+    }
+
+    @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
     }

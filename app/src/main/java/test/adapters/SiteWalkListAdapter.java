@@ -28,8 +28,10 @@ public abstract class SiteWalkListAdapter implements ListAdapter {
 
     Context context;
     List<SiteVisit> siteVisits;
+    String emptyText;
 
-    public SiteWalkListAdapter(Context context, List<SiteVisit> siteVisits) {
+    public SiteWalkListAdapter(Context context, List<SiteVisit> siteVisits, String emptyText) {
+        this.emptyText = emptyText;
         this.context = context;
         this.siteVisits = siteVisits;
     }
@@ -93,7 +95,7 @@ public abstract class SiteWalkListAdapter implements ListAdapter {
 
         if (siteVisits == null || siteVisits.isEmpty()) {
             TextView message = (TextView)view.findViewById(R.id.list_empty_message);
-            message.setText("no active Site Visits");
+            message.setText(emptyText);
         } else {
             TextView date = (TextView) view.findViewById(R.id.list_site_walk_date);
             TextView drawRequestItemCount = (TextView) view.findViewById(R.id.list_site_walks_dr_item_count);
