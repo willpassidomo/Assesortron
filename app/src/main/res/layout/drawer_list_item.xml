@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:clickable="true"
     android:id="@+id/drawer_list_background"
+    android:background="@drawable/nav_drawer_button"
     android:focusableInTouchMode="false"
     android:longClickable="true"
     android:layout_weight="1">

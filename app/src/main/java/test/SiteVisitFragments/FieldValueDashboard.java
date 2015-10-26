@@ -18,18 +18,30 @@ import test.persistence.Storage;
  */
 public class FieldValueDashboard extends Fragment implements SiteVisitFieldValuesViewList.SiteVisitFieldValuesListListener, SoftQuestionsFragment.DataListener {
     private List<FieldValue> fieldValues;
+    String id;
     private int fragment;
 
     public FieldValueDashboard() {}
 
-    public static FieldValueDashboard newInstance(List<FieldValue> fieldValues) {
+    public static FieldValueDashboard newInstance(List<FieldValue> fieldValues, String id) {
         FieldValueDashboard fieldValueDashboard = new FieldValueDashboard();
         fieldValueDashboard.setFieldValues(fieldValues);
+        fieldValueDashboard.setId(id);
         return fieldValueDashboard;
     }
 
     private void setFieldValues(List<FieldValue> fieldValues) {
         this.fieldValues = fieldValues;
+    }
+
+    private void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstance) {
+        super.onCreate(savedInstance);
+        setRetainInstance(true);
     }
 
     @Override
@@ -52,12 +64,13 @@ public class FieldValueDashboard extends Fragment implements SiteVisitFieldValue
     public void editList(List<FieldValue> fvs) {
         getFragmentManager()
                 .beginTransaction()
-                .replace(fragment, SoftQuestionsFragment.newInstance(this, fieldValues))
+                .replace(fragment, SoftQuestionsFragment.newInstance(this, fieldValues, id))
                 .commit();
     }
 
     @Override
-    public void finishFieldValues() {
+    public void finishFieldValues(List<FieldValue> fvs) {
+        fieldValues = fvs;
         Storage.storeFieldValues(getActivity(), fieldValues);
         getFragmentManager()
                 .beginTransaction()

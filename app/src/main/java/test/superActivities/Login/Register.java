@@ -4,11 +4,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
@@ -33,6 +38,8 @@ public class Register extends Activity implements CameraPictureFragment.CameraPi
     ImageButton camera;
     TextView name, email, password, confirmpassword;
     String imageId;
+    ImageView imageView;
+    ViewSwitcher viewSwitcher;
 
     @Override
     public void onCreate(Bundle saved) {
@@ -61,6 +68,9 @@ public class Register extends Activity implements CameraPictureFragment.CameraPi
                 startCameraFrag();
             }
         });
+
+        imageView = (ImageView)findViewById(R.id.register_picture);
+        viewSwitcher = (ViewSwitcher)findViewById(R.id.register_view_switcher);
     }
 
     private boolean complete() {
@@ -166,5 +176,23 @@ public class Register extends Activity implements CameraPictureFragment.CameraPi
     @Override
     public void returnImageId(String imageId) {
         this.imageId = imageId;
+        viewSwitcher.showNext();
+        imageView.setImageBitmap(Storage.getPictureByOwnerId(this, imageId));
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu menu = new PopupMenu(context, imageView);
+                menu.inflate(R.menu.menu_edit_or_view);
+                menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        Log.i("Menu Item Id", menuItem.getItemId() + "");
+                        return true;
+                    }
+                });
+                menu.show();
+            }
+        });
+
     }
 }

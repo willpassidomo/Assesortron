@@ -52,7 +52,7 @@ public class WalkThroughRecyclerAdapter extends RecyclerView.Adapter<WalkThrough
         holder.floor.setText(walkThrough.getFloor());
         holder.subContractor.setText(walkThrough.getTrade());
         holder.numPictures.setText(walkThrough.getPictures().size() + "");
-        holder.date.setText(new SimpleDateFormat("MM/dd/yyyy").format(walkThrough.getDate()));
+        holder.progress.setText(walkThrough.getProgress());
 
         AsyncTask<String, Void, Bitmap> getImage = new AsyncTask<String, Void, Bitmap>() {
             @Override
@@ -71,7 +71,6 @@ public class WalkThroughRecyclerAdapter extends RecyclerView.Adapter<WalkThrough
         } else {
             holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_idk));
         }
-
     }
 
     @Override
@@ -88,7 +87,7 @@ public class WalkThroughRecyclerAdapter extends RecyclerView.Adapter<WalkThrough
         TextView floor;
         TextView subContractor;
         TextView numPictures;
-        TextView date;
+        TextView progress;
         ImageView imageView;
 
         public WalkThroughViewHolder(View view) {
@@ -97,7 +96,7 @@ public class WalkThroughRecyclerAdapter extends RecyclerView.Adapter<WalkThrough
             floor = (TextView) view.findViewById(R.id.walk_through_floor);
             subContractor = (TextView) view.findViewById(R.id.walk_through_contractor);
             numPictures = (TextView) view.findViewById(R.id.walk_through_num_pics);
-            date = (TextView) view.findViewById(R.id.walk_through_list_date);
+            progress = (TextView) view.findViewById(R.id.walk_through_list_progress);
             imageView = (ImageView) view.findViewById(R.id.list_walkthrough_image);
         }
     }

@@ -20,7 +20,7 @@ public class WalkThrough {
     private String floor;
     private String trade;
     private String progress;
-    private String notes;
+    private String notes = "";
     private List<String> pictures = new ArrayList<String>();
 
     public WalkThrough() {

@@ -215,15 +215,15 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
             ContentValues contentValues = getContentValues(wt);
             ContentValues contentValues1 = getContentValues(siteWalkId, wt);
-            ContentValues picContentValues = getContentValuesExtra1(wt);
-
-            Log.i("pic contents value", "ize = " + picContentValues.size());
+            ContentValues picContentValues;
 
             db.insertWithOnConflict(WalkThrough.WalkThroughEntry.TABLE_NAME_WALK_THROUGHS, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE);
             db.insertWithOnConflict(SiteVisit.SiteWalkWalkThroughBridge.TABLE_NAME, null, contentValues1, SQLiteDatabase.CONFLICT_REPLACE);
-            if (picContentValues.size() > 0) {
-                Log.i("inserting picturesss", "count = " + wt.getPictures().size());
-                db.insertWithOnConflict(WalkThrough.WalkThroughPictureBridge.TABLE_NAME_WALK_THROUGH_PICTURE_BRIDGE, null, picContentValues, SQLiteDatabase.CONFLICT_REPLACE);
+            if (wt.getPictures().size() > 0) {
+                for (String picId : wt.getPictures()) {
+                    picContentValues = getContentValuesExtra1(wt, picId);
+                    db.insertWithOnConflict(WalkThrough.WalkThroughPictureBridge.TABLE_NAME_WALK_THROUGH_PICTURE_BRIDGE, null, picContentValues, SQLiteDatabase.CONFLICT_REPLACE);
+                }
             }
             return true;
     }
@@ -832,7 +832,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         try {
             String table = WalkThrough.WalkThroughPictureBridge.TABLE_NAME_WALK_THROUGH_PICTURE_BRIDGE;
             String[] columns = {WalkThrough.WalkThroughPictureBridge.COLUMN_WALK_THROUGH_PICTURE_URI};
-            String selection = WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID + " = ?";
+            String selection = WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID + " = ? ";
             String[] selectionArgs = {walkThroughId};
 
             cursor = db.query(
@@ -1332,7 +1332,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
 }
 
-    public List<Project> getAllProjects() {
+    public List<Project> getAllProjects(String userId) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = null;
         try {
@@ -1347,8 +1347,8 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             cursor = db.query(
                     tableName,
                     columns,
-                    null,
-                    null,
+                    Project.ProjectEntry.COLUMN_PROJECT_USER_ID + " = ? ",
+                    new String[]{userId},
                     null,
                     null,
                     Project.ProjectEntry.COLUMN_PROJECT_DATE_CREATED + " DESC"
@@ -1373,13 +1373,13 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         }
     }
 
-    public List<Uri> getProjectSitePictures(String projectId) {
+    public List<String> getProjectSitePictures(String projectId) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = null;
         try {
             String table = Project.ProjectImageBridge.TABLE_NAME_PROJECT_PICTURES;
             String[] columns = {Project.ProjectImageBridge.COLUMN_PROJECT_IMAGE_ID};
-            String selection = Project.ProjectEntry.COLUMN_PROJECT_ID + " = ?";
+            String selection = Project.ProjectEntry.COLUMN_PROJECT_ID + " = ? ";
             String[] selectionArgs = {projectId};
 
             cursor = db.query(
@@ -1391,13 +1391,13 @@ public class DataBaseStorage extends SQLiteOpenHelper {
                     null,
                     null
             );
-            List<Uri> uris = new ArrayList<Uri>();
+            List<String> ids = new ArrayList<>();
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                uris.add(Uri.parse(cursor.getString(0)));
+                ids.add(cursor.getString(0));
                 cursor.moveToNext();
             }
-            return uris;
+            return ids;
         }
         finally {
 
@@ -1666,23 +1666,25 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
     }
 
+    public void deleteStockFieldValue(int type, String field) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(
+                FieldValue.StockFieldValueTable.TABLE_NAME,
+                FieldValue.StockFieldValueTable.COL_FIELD_VALUE_OWNER_TYPE + " = ? AND " + FieldValue.FieldValueTable.COL_FIELD + " = ? ",
+                new String[]{type + "", field}
+        );
+    }
+
     public void deleteFieldValue(String fieldValueId) {
         SQLiteDatabase db = this.getWritableDatabase();
-        int a = 0,b = 0;
         try {
-            a = db.delete(
+            db.delete(
                     FieldValue.FieldValueTable.TABLE_NAME,
-                    FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ?",
-                    new String[]{fieldValueId}
-            );
-            b = db.delete(
-                    FieldValue.StockFieldValueTable.TABLE_NAME,
                     FieldValue.FieldValueTable.COLUMN_FIELD_VALUE_ID + " = ?",
                     new String[]{fieldValueId}
             );
         }
         finally {
-            Log.i("deleted:", a + "rows from FV, " + b + "rows from StockFV");
 
         }
     }
@@ -1722,12 +1724,10 @@ public class DataBaseStorage extends SQLiteOpenHelper {
         return contentValues;
     }
 
-    public ContentValues getContentValuesExtra1(WalkThrough wt) {
+    public ContentValues getContentValuesExtra1(WalkThrough wt, String pictureId) {
         ContentValues picContentValues = new ContentValues();
-        for (String id: wt.getPictures()) {
             picContentValues.put(WalkThrough.WalkThroughEntry.COLUMN_WALK_THROUGH_ID, wt.getId());
-            picContentValues.put(WalkThrough.WalkThroughPictureBridge.COLUMN_WALK_THROUGH_PICTURE_URI, id);
-        }
+            picContentValues.put(WalkThrough.WalkThroughPictureBridge.COLUMN_WALK_THROUGH_PICTURE_URI, pictureId);
         return picContentValues;
     }
 
@@ -1790,9 +1790,9 @@ public class DataBaseStorage extends SQLiteOpenHelper {
 
     public ContentValues getContentValuesExtra1(Project project) {
         ContentValues contentValues1 = new ContentValues();
-        for (Uri uri: project.getPictures()) {
+        for (String id: project.getPictures()) {
             contentValues1.put(Project.ProjectEntry.COLUMN_PROJECT_ID, project.getId());
-            contentValues1.put(Project.ProjectImageBridge.COLUMN_PROJECT_IMAGE_ID, uri.toString());
+            contentValues1.put(Project.ProjectImageBridge.COLUMN_PROJECT_IMAGE_ID, id);
         }
         return contentValues1;
     }
@@ -1926,7 +1926,7 @@ public class DataBaseStorage extends SQLiteOpenHelper {
             if (cursor.getString(14) != null) {
                 project.setDateCreated(cursor.getString(14));
             }
-            project.setSitePictures(getProjectSitePictures(project.getId()));
+            project.setPictures(getProjectSitePictures(project.getId()));
 
             return project;
     }

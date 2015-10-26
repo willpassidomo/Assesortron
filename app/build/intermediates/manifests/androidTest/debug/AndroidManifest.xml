@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="test.assesortron4.test">
+    package="test.assesortron5.test">
 
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="test.assesortron4"
+                     android:targetPackage="test.assesortron5"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for test.assesortron4"/>
+                     android:label="Tests for test.assesortron5"/>
 </manifest>

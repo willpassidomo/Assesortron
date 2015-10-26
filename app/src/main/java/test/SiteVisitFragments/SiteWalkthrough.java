@@ -32,7 +32,6 @@ import test.superActivities.SuperSiteVisit;
  */
 public class SiteWalkthrough extends AppCompatActivity implements SiteWalkthroughNote.OnNoteFragListener, SiteWalkthrougInfo.OnInfoFragListener, SiteWalkthroughPictures.OnPictureFragListener{
     ActionBar actionBar;
-    FragmentTransaction ft;
     Button action;
 
     Project project;
@@ -143,15 +142,24 @@ public class SiteWalkthrough extends AppCompatActivity implements SiteWalkthroug
     }
 
     @Override
-    public void getPictures(List<String> uri) {
-        walkThrough.setSitePictures(uri);
+    public void getPictures(List<String> picIds) {
+        for (String picId: picIds)
+        if (!walkThrough.getPictures().contains(picId)) {
+            walkThrough.addSitePicture(picId);
+        }
     }
 
     @Override
-    public void getInfo(String floor, String trade, String progress) {
+    public void getInfo(String floor, String trade, String progress, List<String> pictures, String notes) {
         walkThrough.setFloor(floor);
         walkThrough.setTrade(trade);
         walkThrough.setProgress(progress);
+        for (String picId: pictures) {
+            if (!walkThrough.getPictures().contains(picId)) {
+                walkThrough.addSitePicture(picId);
+            }
+        }
+        walkThrough.setNote(walkThrough.getNotes() + "\n" + notes);
     }
 
     public void setSubmitButton() {
@@ -160,9 +168,7 @@ public class SiteWalkthrough extends AppCompatActivity implements SiteWalkthroug
             public void onClick(View view) {
                 tabFragments.get(actionBar.getSelectedTab().getPosition()).getValues();
                 Storage.storeWalkThrough(context, siteVisit.getId(), walkThrough);
-                Intent intent = new Intent(context, SiteWalkthrough.class);
-                intent.putExtra(Constants.SITE_VISIT_ID, siteVisit.getId());
-                startActivity(intent);
+                finish();
             }
         });
     }

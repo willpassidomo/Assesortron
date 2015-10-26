@@ -37,7 +37,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/register_password"
             android:hint="password"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:inputType="textPassword" />
 
         <EditText
             android:layout_width="match_parent"
@@ -45,15 +46,29 @@
             android:id="@+id/register_password_confirm"
             android:hint="re-enter password"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:inputType="textPassword" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
+        <ViewSwitcher
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/register_camera_button"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/ic_camera"
-            android:padding="40dp" />
+            android:id="@+id/register_view_switcher"
+            android:layout_gravity="center_horizontal" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_camera_button"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_camera"
+                android:padding="40dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/register_picture"/>
+        </ViewSwitcher>
 
     </LinearLayout>
 

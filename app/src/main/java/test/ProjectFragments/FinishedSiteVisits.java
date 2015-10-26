@@ -15,6 +15,7 @@ import java.util.List;
 import test.adapters.SiteWalkListAdapter;
 import test.assesortron5.R;
 import test.objects.SiteVisit;
+import test.persistence.Constants;
 import test.persistence.Storage;
 
 /**
@@ -28,17 +29,17 @@ public class FinishedSiteVisits extends Fragment {
 
     public static FinishedSiteVisits newInstance(String projectId) {
         FinishedSiteVisits finishedSiteVisits = new FinishedSiteVisits();
-        finishedSiteVisits.setProjectId(projectId);
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.PROJECT_ID, projectId);
+        finishedSiteVisits.setArguments(bundle);
         return finishedSiteVisits;
     }
 
-    private void setProjectId(String projectId) {
-        this.projectId = projectId;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup vg, Bundle saved) {
         View view = inflater.inflate(R.layout.fragment_list, null);
+        projectId = getArguments().getString(Constants.PROJECT_ID);
         listView = (ListView)view.findViewById(R.id.list_fragment_list);
 
         setListView();

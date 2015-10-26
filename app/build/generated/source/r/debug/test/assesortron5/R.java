@@ -2684,76 +2684,82 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020038;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020039;
         public static final int abc_textfield_search_material=0x7f02003a;
-        public static final int border=0x7f02003b;
-        public static final int common_full_open_on_phone=0x7f02003c;
-        public static final int common_ic_googleplayservices=0x7f02003d;
-        public static final int common_signin_btn_icon_dark=0x7f02003e;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f02003f;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020040;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020041;
-        public static final int common_signin_btn_icon_disabled_light=0x7f020042;
-        public static final int common_signin_btn_icon_focus_dark=0x7f020043;
-        public static final int common_signin_btn_icon_focus_light=0x7f020044;
-        public static final int common_signin_btn_icon_light=0x7f020045;
-        public static final int common_signin_btn_icon_normal_dark=0x7f020046;
-        public static final int common_signin_btn_icon_normal_light=0x7f020047;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f020048;
-        public static final int common_signin_btn_icon_pressed_light=0x7f020049;
-        public static final int common_signin_btn_text_dark=0x7f02004a;
-        public static final int common_signin_btn_text_disabled_dark=0x7f02004b;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f02004c;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f02004d;
-        public static final int common_signin_btn_text_disabled_light=0x7f02004e;
-        public static final int common_signin_btn_text_focus_dark=0x7f02004f;
-        public static final int common_signin_btn_text_focus_light=0x7f020050;
-        public static final int common_signin_btn_text_light=0x7f020051;
-        public static final int common_signin_btn_text_normal_dark=0x7f020052;
-        public static final int common_signin_btn_text_normal_light=0x7f020053;
-        public static final int common_signin_btn_text_pressed_dark=0x7f020054;
-        public static final int common_signin_btn_text_pressed_light=0x7f020055;
-        public static final int delete_button=0x7f020056;
-        public static final int fab_background=0x7f020057;
-        public static final int field_layout=0x7f020058;
-        public static final int ic_back_arrow=0x7f020059;
-        public static final int ic_camera=0x7f02005a;
-        public static final int ic_check_thick=0x7f02005b;
-        public static final int ic_check_thin=0x7f02005c;
-        public static final int ic_clipboard=0x7f02005d;
-        public static final int ic_dashboard=0x7f02005e;
-        public static final int ic_drawer=0x7f02005f;
-        public static final int ic_file_folder=0x7f020060;
-        public static final int ic_house=0x7f020061;
-        public static final int ic_idk=0x7f020062;
-        public static final int ic_info=0x7f020063;
-        public static final int ic_launcher=0x7f020064;
-        public static final int ic_list_items=0x7f020065;
-        public static final int ic_mail_message=0x7f020066;
-        public static final int ic_new_item=0x7f020067;
-        public static final int ic_plusone_medium_off_client=0x7f020068;
-        public static final int ic_plusone_small_off_client=0x7f020069;
-        public static final int ic_plusone_standard_off_client=0x7f02006a;
-        public static final int ic_plusone_tall_off_client=0x7f02006b;
-        public static final int ic_red_x=0x7f02006c;
-        public static final int ic_upload_to_cloud=0x7f02006d;
-        public static final int md_btn_selected=0x7f02006e;
-        public static final int md_btn_selected_dark=0x7f02006f;
-        public static final int md_btn_selector=0x7f020070;
-        public static final int md_btn_selector_dark=0x7f020071;
-        public static final int md_btn_selector_ripple=0x7f020072;
-        public static final int md_btn_selector_ripple_dark=0x7f020073;
-        public static final int md_btn_shape=0x7f020074;
-        public static final int md_item_selected=0x7f020075;
-        public static final int md_item_selected_dark=0x7f020076;
-        public static final int md_selector=0x7f020077;
-        public static final int md_selector_dark=0x7f020078;
-        public static final int md_transparent=0x7f020079;
-        public static final int notification_template_icon_bg=0x7f02007d;
-        public static final int powered_by_google_dark=0x7f02007a;
-        public static final int powered_by_google_light=0x7f02007b;
-        public static final int snackbar_background=0x7f02007c;
+        public static final int background_poly=0x7f02003b;
+        public static final int background_poly1=0x7f02003c;
+        public static final int background_poly2=0x7f02003d;
+        public static final int border=0x7f02003e;
+        public static final int common_full_open_on_phone=0x7f02003f;
+        public static final int common_ic_googleplayservices=0x7f020040;
+        public static final int common_signin_btn_icon_dark=0x7f020041;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f020042;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f020043;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f020044;
+        public static final int common_signin_btn_icon_disabled_light=0x7f020045;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020046;
+        public static final int common_signin_btn_icon_focus_light=0x7f020047;
+        public static final int common_signin_btn_icon_light=0x7f020048;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020049;
+        public static final int common_signin_btn_icon_normal_light=0x7f02004a;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f02004b;
+        public static final int common_signin_btn_icon_pressed_light=0x7f02004c;
+        public static final int common_signin_btn_text_dark=0x7f02004d;
+        public static final int common_signin_btn_text_disabled_dark=0x7f02004e;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f02004f;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020050;
+        public static final int common_signin_btn_text_disabled_light=0x7f020051;
+        public static final int common_signin_btn_text_focus_dark=0x7f020052;
+        public static final int common_signin_btn_text_focus_light=0x7f020053;
+        public static final int common_signin_btn_text_light=0x7f020054;
+        public static final int common_signin_btn_text_normal_dark=0x7f020055;
+        public static final int common_signin_btn_text_normal_light=0x7f020056;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020057;
+        public static final int common_signin_btn_text_pressed_light=0x7f020058;
+        public static final int delete_button=0x7f020059;
+        public static final int fab_background=0x7f02005a;
+        public static final int field_layout=0x7f02005b;
+        public static final int ic_back_arrow=0x7f02005c;
+        public static final int ic_camera=0x7f02005d;
+        public static final int ic_check_thick=0x7f02005e;
+        public static final int ic_check_thin=0x7f02005f;
+        public static final int ic_clipboard=0x7f020060;
+        public static final int ic_dashboard=0x7f020061;
+        public static final int ic_drawer=0x7f020062;
+        public static final int ic_file_folder=0x7f020063;
+        public static final int ic_house=0x7f020064;
+        public static final int ic_idk=0x7f020065;
+        public static final int ic_info=0x7f020066;
+        public static final int ic_launcher=0x7f020067;
+        public static final int ic_list_items=0x7f020068;
+        public static final int ic_mail_message=0x7f020069;
+        public static final int ic_microphone=0x7f02006a;
+        public static final int ic_new_item=0x7f02006b;
+        public static final int ic_plusone_medium_off_client=0x7f02006c;
+        public static final int ic_plusone_small_off_client=0x7f02006d;
+        public static final int ic_plusone_standard_off_client=0x7f02006e;
+        public static final int ic_plusone_tall_off_client=0x7f02006f;
+        public static final int ic_red_x=0x7f020070;
+        public static final int ic_send_email=0x7f020071;
+        public static final int ic_upload_to_cloud=0x7f020072;
+        public static final int md_btn_selected=0x7f020073;
+        public static final int md_btn_selected_dark=0x7f020074;
+        public static final int md_btn_selector=0x7f020075;
+        public static final int md_btn_selector_dark=0x7f020076;
+        public static final int md_btn_selector_ripple=0x7f020077;
+        public static final int md_btn_selector_ripple_dark=0x7f020078;
+        public static final int md_btn_shape=0x7f020079;
+        public static final int md_item_selected=0x7f02007a;
+        public static final int md_item_selected_dark=0x7f02007b;
+        public static final int md_selector=0x7f02007c;
+        public static final int md_selector_dark=0x7f02007d;
+        public static final int md_transparent=0x7f02007e;
+        public static final int nav_drawer_button=0x7f02007f;
+        public static final int notification_template_icon_bg=0x7f020083;
+        public static final int powered_by_google_dark=0x7f020080;
+        public static final int powered_by_google_light=0x7f020081;
+        public static final int snackbar_background=0x7f020082;
     }
     public static final class id {
-        public static final int action0=0x7f0a0194;
+        public static final int action0=0x7f0a01a1;
         public static final int action_bar=0x7f0a0089;
         public static final int action_bar_activity_content=0x7f0a0000;
         public static final int action_bar_container=0x7f0a0088;
@@ -2762,14 +2768,19 @@ containing a value of this type.
         public static final int action_bar_subtitle=0x7f0a006d;
         public static final int action_bar_title=0x7f0a006c;
         public static final int action_context_bar=0x7f0a008a;
-        public static final int action_divider=0x7f0a0198;
+        public static final int action_delete=0x7f0a01bc;
+        public static final int action_divider=0x7f0a01a5;
+        public static final int action_email=0x7f0a01bd;
+        public static final int action_logout=0x7f0a01be;
         public static final int action_menu_divider=0x7f0a0002;
         public static final int action_menu_presenter=0x7f0a0003;
         public static final int action_mode_bar=0x7f0a0086;
         public static final int action_mode_bar_stub=0x7f0a0085;
         public static final int action_mode_close_button=0x7f0a006e;
-        public static final int action_settings=0x7f0a01ac;
-        public static final int active_projects=0x7f0a009b;
+        public static final int action_settings=0x7f0a01bb;
+        public static final int active_projects=0x7f0a0098;
+        public static final int active_projects_new_project=0x7f0a009a;
+        public static final int active_projects_project_list=0x7f0a0099;
         public static final int activity_chooser_view_content=0x7f0a006f;
         public static final int adjust_height=0x7f0a002c;
         public static final int adjust_width=0x7f0a002d;
@@ -2779,104 +2790,108 @@ containing a value of this type.
         public static final int book_now=0x7f0a0048;
         public static final int bottom=0x7f0a001e;
         public static final int button3=0x7f0a006b;
-        public static final int buttonDefaultNegative=0x7f0a0190;
-        public static final int buttonDefaultNeutral=0x7f0a018f;
-        public static final int buttonDefaultPositive=0x7f0a0191;
+        public static final int buttonDefaultNegative=0x7f0a019d;
+        public static final int buttonDefaultNeutral=0x7f0a019c;
+        public static final int buttonDefaultPositive=0x7f0a019e;
         public static final int buttonPanel=0x7f0a007f;
         public static final int buyButton=0x7f0a0045;
         public static final int buy_now=0x7f0a0049;
         public static final int buy_with_google=0x7f0a004a;
-        public static final int cancel_action=0x7f0a0195;
+        public static final int cancel_action=0x7f0a01a2;
         public static final int center=0x7f0a000b;
         public static final int center_horizontal=0x7f0a001f;
         public static final int center_vertical=0x7f0a0020;
-        public static final int change_order_action_button=0x7f0a0128;
-        public static final int change_order_amount=0x7f0a0123;
-        public static final int change_order_description=0x7f0a0127;
-        public static final int change_order_list_amount=0x7f0a0152;
-        public static final int change_order_list_date=0x7f0a0155;
-        public static final int change_order_list_delete_button=0x7f0a0157;
-        public static final int change_order_list_edit_button=0x7f0a0156;
-        public static final int change_order_list_subcontractor=0x7f0a0153;
-        public static final int change_order_list_switcher=0x7f0a0154;
-        public static final int change_order_subcontractor=0x7f0a011f;
-        public static final int check_box_executed=0x7f0a0124;
+        public static final int change_order_action_button=0x7f0a012d;
+        public static final int change_order_amount=0x7f0a0128;
+        public static final int change_order_description=0x7f0a012c;
+        public static final int change_order_list_amount=0x7f0a015f;
+        public static final int change_order_list_date=0x7f0a0162;
+        public static final int change_order_list_delete_button=0x7f0a0164;
+        public static final int change_order_list_edit_button=0x7f0a0163;
+        public static final int change_order_list_subcontractor=0x7f0a0160;
+        public static final int change_order_list_switcher=0x7f0a0161;
+        public static final int change_order_subcontractor=0x7f0a0124;
+        public static final int check_box_executed=0x7f0a0129;
         public static final int checkbox=0x7f0a0081;
-        public static final int chronometer=0x7f0a019b;
+        public static final int chronometer=0x7f0a01a8;
         public static final int classic=0x7f0a004c;
         public static final int clip_horizontal=0x7f0a0021;
         public static final int clip_vertical=0x7f0a0022;
         public static final int collapseActionView=0x7f0a0032;
-        public static final int content=0x7f0a0188;
-        public static final int contentListView=0x7f0a018d;
-        public static final int contentListViewFrame=0x7f0a018c;
+        public static final int content=0x7f0a0195;
+        public static final int contentListView=0x7f0a019a;
+        public static final int contentListViewFrame=0x7f0a0199;
         public static final int contentPanel=0x7f0a007a;
-        public static final int contentScrollView=0x7f0a0187;
-        public static final int control=0x7f0a018e;
+        public static final int contentScrollView=0x7f0a0194;
+        public static final int control=0x7f0a019b;
         public static final int custom=0x7f0a007e;
         public static final int customPanel=0x7f0a007d;
-        public static final int customViewFrame=0x7f0a018a;
-        public static final int dashboard_layout=0x7f0a00a5;
-        public static final int date_picture_taken=0x7f0a0185;
+        public static final int customViewFrame=0x7f0a0197;
+        public static final int dashboard_layout=0x7f0a00a7;
+        public static final int date_picture_taken=0x7f0a0192;
         public static final int decor_content_parent=0x7f0a0087;
         public static final int default_activity_button=0x7f0a0072;
         public static final int dep_make_draw_current_request=0x7f0a0054;
         public static final int dialog=0x7f0a0036;
         public static final int disableHome=0x7f0a0011;
         public static final int donate_with_google=0x7f0a004b;
-        public static final int draw_request_current_request=0x7f0a00a0;
-        public static final int draw_request_g702=0x7f0a009f;
-        public static final int draw_request_item_list=0x7f0a010f;
-        public static final int draw_request_item_list_amount=0x7f0a0167;
-        public static final int draw_request_item_list_subcontractor=0x7f0a0164;
-        public static final int draw_request_list_amount=0x7f0a0158;
-        public static final int draw_request_list_date=0x7f0a015a;
-        public static final int draw_request_list_delete_button=0x7f0a015c;
-        public static final int draw_request_list_edit_button=0x7f0a015b;
-        public static final int draw_request_list_switcher=0x7f0a0159;
-        public static final int draw_request_manage_item_list=0x7f0a0111;
-        public static final int drawer_list_background=0x7f0a010b;
-        public static final int drawer_list_image=0x7f0a010c;
-        public static final int drawer_list_text=0x7f0a010d;
+        public static final int draw_request_current_request=0x7f0a00a2;
+        public static final int draw_request_g702=0x7f0a00a1;
+        public static final int draw_request_item_list=0x7f0a0113;
+        public static final int draw_request_item_list_amount=0x7f0a0174;
+        public static final int draw_request_item_list_subcontractor=0x7f0a0171;
+        public static final int draw_request_list_amount=0x7f0a0165;
+        public static final int draw_request_list_date=0x7f0a0167;
+        public static final int draw_request_list_delete_button=0x7f0a0169;
+        public static final int draw_request_list_edit_button=0x7f0a0168;
+        public static final int draw_request_list_switcher=0x7f0a0166;
+        public static final int draw_request_manage_item_list=0x7f0a0115;
+        public static final int drawer_list_background=0x7f0a010f;
+        public static final int drawer_list_image=0x7f0a0110;
+        public static final int drawer_list_text=0x7f0a0111;
         public static final int dropdown=0x7f0a0037;
-        public static final int edit_button=0x7f0a00db;
-        public static final int edit_change_order_amount=0x7f0a0122;
-        public static final int edit_change_order_description=0x7f0a0126;
-        public static final int edit_change_order_subcontractor=0x7f0a011e;
-        public static final int edit_inital_completion=0x7f0a00c1;
-        public static final int edit_p_actual_completion=0x7f0a00c4;
-        public static final int edit_p_actual_start=0x7f0a00be;
-        public static final int edit_p_address=0x7f0a00ad;
-        public static final int edit_p_basement_floors=0x7f0a00d2;
-        public static final int edit_p_contact_amount=0x7f0a00b3;
-        public static final int edit_p_initial_start=0x7f0a00bb;
-        public static final int edit_p_loan_amount=0x7f0a00b0;
-        public static final int edit_p_name=0x7f0a00a8;
-        public static final int edit_p_num_floors=0x7f0a00ce;
-        public static final int edit_p_retainage_rel=0x7f0a00b8;
-        public static final int edit_p_sq_ft=0x7f0a00da;
+        public static final int edit_button=0x7f0a00dd;
+        public static final int edit_change_order_amount=0x7f0a0127;
+        public static final int edit_change_order_description=0x7f0a012b;
+        public static final int edit_change_order_subcontractor=0x7f0a0123;
+        public static final int edit_inital_completion=0x7f0a00c3;
+        public static final int edit_p_actual_completion=0x7f0a00c6;
+        public static final int edit_p_actual_start=0x7f0a00c0;
+        public static final int edit_p_address=0x7f0a00af;
+        public static final int edit_p_basement_floors=0x7f0a00d4;
+        public static final int edit_p_contact_amount=0x7f0a00b5;
+        public static final int edit_p_initial_start=0x7f0a00bd;
+        public static final int edit_p_loan_amount=0x7f0a00b2;
+        public static final int edit_p_name=0x7f0a00aa;
+        public static final int edit_p_num_floors=0x7f0a00d0;
+        public static final int edit_p_retainage_rel=0x7f0a00ba;
+        public static final int edit_p_sq_ft=0x7f0a00dc;
         public static final int edit_query=0x7f0a008b;
-        public static final int email_field=0x7f0a00f3;
+        public static final int email_field=0x7f0a00f7;
         public static final int end=0x7f0a000c;
-        public static final int end_padder=0x7f0a01a0;
+        public static final int end_padder=0x7f0a01ad;
         public static final int enterAlways=0x7f0a0018;
         public static final int enterAlwaysCollapsed=0x7f0a0019;
-        public static final int existing_subcontractors=0x7f0a0120;
+        public static final int existing_subcontractors=0x7f0a0125;
         public static final int exitUntilCollapsed=0x7f0a001a;
         public static final int expand_activities_button=0x7f0a0070;
         public static final int expanded_menu=0x7f0a0080;
-        public static final int field_value_list_field=0x7f0a016b;
-        public static final int field_value_list_value=0x7f0a016c;
+        public static final int field_value_list_field=0x7f0a0178;
+        public static final int field_value_list_value=0x7f0a0179;
         public static final int fill=0x7f0a0023;
         public static final int fill_horizontal=0x7f0a0024;
         public static final int fill_vertical=0x7f0a0025;
         public static final int fixed=0x7f0a0038;
-        public static final int fragment_draw_request_items_manager_main=0x7f0a010e;
+        public static final int fragment_draw_request_items_manager_main=0x7f0a0112;
+        public static final int frameLayout=0x7f0a014c;
         public static final int grayscale=0x7f0a004d;
-        public static final int has_site_work=0x7f0a00d5;
-        public static final int header_user_email=0x7f0a014a;
-        public static final int header_user_image=0x7f0a014b;
-        public static final int header_user_name=0x7f0a0149;
+        public static final int has_site_work=0x7f0a00d7;
+        public static final int header_projec_image=0x7f0a0152;
+        public static final int header_project_address=0x7f0a0154;
+        public static final int header_project_drawer_name=0x7f0a0153;
+        public static final int header_user_email=0x7f0a0157;
+        public static final int header_user_image=0x7f0a0158;
+        public static final int header_user_name=0x7f0a0156;
         public static final int holo_dark=0x7f0a0040;
         public static final int holo_light=0x7f0a0041;
         public static final int home=0x7f0a0004;
@@ -2884,154 +2899,160 @@ containing a value of this type.
         public static final int hybrid=0x7f0a002e;
         public static final int icon=0x7f0a0074;
         public static final int ifRoom=0x7f0a0033;
+        public static final int iidid=0x7f0a0151;
         public static final int image=0x7f0a0071;
-        public static final int info=0x7f0a019f;
+        public static final int info=0x7f0a01ac;
         public static final int item_touch_helper_previous_elevation=0x7f0a0005;
-        public static final int label=0x7f0a0192;
+        public static final int label=0x7f0a019f;
         public static final int label_project_name=0x7f0a0051;
         public static final int left=0x7f0a0026;
-        public static final int line1=0x7f0a0199;
-        public static final int line3=0x7f0a019d;
+        public static final int line1=0x7f0a01a6;
+        public static final int line3=0x7f0a01aa;
         public static final int linearLayout=0x7f0a0053;
-        public static final int linearLayout10=0x7f0a00d6;
-        public static final int linearLayout11=0x7f0a00a9;
-        public static final int linearLayout12=0x7f0a00d3;
-        public static final int linearLayout13=0x7f0a00b4;
-        public static final int linearLayout14=0x7f0a00f2;
-        public static final int linearLayout15=0x7f0a00de;
-        public static final int linearLayout16=0x7f0a0103;
-        public static final int linearLayout17=0x7f0a00ea;
+        public static final int linearLayout10=0x7f0a00d8;
+        public static final int linearLayout11=0x7f0a00ab;
+        public static final int linearLayout12=0x7f0a00d5;
+        public static final int linearLayout13=0x7f0a00b6;
+        public static final int linearLayout14=0x7f0a00f6;
+        public static final int linearLayout15=0x7f0a00e0;
+        public static final int linearLayout16=0x7f0a0107;
+        public static final int linearLayout17=0x7f0a00ec;
+        public static final int linearLayout18=0x7f0a0148;
         public static final int linearLayout2=0x7f0a005b;
         public static final int linearLayout3=0x7f0a0061;
         public static final int linearLayout4=0x7f0a005e;
         public static final int linearLayout5=0x7f0a0055;
         public static final int linearLayout6=0x7f0a0058;
-        public static final int linearLayout7=0x7f0a00c5;
+        public static final int linearLayout7=0x7f0a00c7;
         public static final int linearLayout8=0x7f0a004f;
-        public static final int linearLayout9=0x7f0a00ca;
-        public static final int linear_layout3232=0x7f0a0110;
-        public static final int linlayout=0x7f0a0176;
+        public static final int linearLayout9=0x7f0a00cc;
+        public static final int linear_layout3232=0x7f0a0114;
+        public static final int linlayout=0x7f0a0183;
         public static final int listMode=0x7f0a000e;
-        public static final int list_active_projects_city_state=0x7f0a0150;
-        public static final int list_active_projects_street_add=0x7f0a014f;
-        public static final int list_change_order=0x7f0a009a;
-        public static final int list_draw_item_display_add=0x7f0a0163;
-        public static final int list_draw_item_display_count=0x7f0a0160;
-        public static final int list_draw_item_display_total=0x7f0a0162;
-        public static final int list_draw_item_display_type=0x7f0a015e;
-        public static final int list_draw_items_view_list=0x7f0a015d;
-        public static final int list_draw_request=0x7f0a0099;
-        public static final int list_draw_request_delete_button=0x7f0a0169;
-        public static final int list_draw_request_edit_button=0x7f0a0168;
-        public static final int list_draw_request_switcher=0x7f0a0165;
-        public static final int list_empty_message=0x7f0a016a;
-        public static final int list_fragment_list=0x7f0a0112;
-        public static final int list_fragment_recycler=0x7f0a0137;
+        public static final int list_active_projects_city_state=0x7f0a015d;
+        public static final int list_active_projects_street_add=0x7f0a015c;
+        public static final int list_change_order=0x7f0a009d;
+        public static final int list_draw_item_display_add=0x7f0a0170;
+        public static final int list_draw_item_display_count=0x7f0a016d;
+        public static final int list_draw_item_display_total=0x7f0a016f;
+        public static final int list_draw_item_display_type=0x7f0a016b;
+        public static final int list_draw_items_view_list=0x7f0a016a;
+        public static final int list_draw_request=0x7f0a009c;
+        public static final int list_draw_request_delete_button=0x7f0a0176;
+        public static final int list_draw_request_edit_button=0x7f0a0175;
+        public static final int list_draw_request_switcher=0x7f0a0172;
+        public static final int list_empty_message=0x7f0a0177;
+        public static final int list_fragment_list=0x7f0a0116;
+        public static final int list_fragment_recycler=0x7f0a013d;
         public static final int list_item=0x7f0a0073;
-        public static final int list_site_walk_date=0x7f0a016d;
-        public static final int list_site_walk_progresses_count=0x7f0a016e;
-        public static final int list_site_walks_dr_item_count=0x7f0a0170;
-        public static final int list_string_click_space=0x7f0a0172;
-        public static final int list_string_radio_button=0x7f0a0174;
-        public static final int list_string_string=0x7f0a0177;
-        public static final int list_string_stringval=0x7f0a0173;
-        public static final int list_walk_through=0x7f0a0098;
-        public static final int list_walkthrough_image=0x7f0a0180;
-        public static final int llllll=0x7f0a0129;
+        public static final int list_site_walk_date=0x7f0a017a;
+        public static final int list_site_walk_progresses_count=0x7f0a017b;
+        public static final int list_site_walks_dr_item_count=0x7f0a017d;
+        public static final int list_string_click_space=0x7f0a017f;
+        public static final int list_string_radio_button=0x7f0a0181;
+        public static final int list_string_string=0x7f0a0184;
+        public static final int list_string_stringval=0x7f0a0180;
+        public static final int list_walk_through=0x7f0a009b;
+        public static final int list_walkthrough_image=0x7f0a018d;
+        public static final int llllll=0x7f0a012e;
         public static final int make_draw=0x7f0a0069;
         public static final int make_draw_balance_to_complete=0x7f0a0065;
-        public static final int make_draw_conditions=0x7f0a011a;
+        public static final int make_draw_conditions=0x7f0a011f;
         public static final int make_draw_contingency_balance=0x7f0a0063;
         public static final int make_draw_contingency_draw=0x7f0a0060;
-        public static final int make_draw_current_recommendation=0x7f0a0118;
-        public static final int make_draw_current_request=0x7f0a0115;
-        public static final int make_draw_fragment=0x7f0a00a2;
+        public static final int make_draw_current_recommendation=0x7f0a011d;
+        public static final int make_draw_current_request=0x7f0a011a;
+        public static final int make_draw_fragment=0x7f0a00a4;
         public static final int make_draw_max_request=0x7f0a0057;
         public static final int make_draw_min_request=0x7f0a005a;
-        public static final int make_draw_request_submit=0x7f0a011b;
+        public static final int make_draw_request_submit=0x7f0a0120;
         public static final int make_draw_retainage_rel=0x7f0a005d;
-        public static final int make_draw_viewSwitcher=0x7f0a009e;
+        public static final int make_draw_viewSwitcher=0x7f0a00a0;
         public static final int match_parent=0x7f0a0047;
-        public static final int media_actions=0x7f0a0197;
+        public static final int media_actions=0x7f0a01a4;
+        public static final int menu_edit=0x7f0a01b9;
+        public static final int menu_view=0x7f0a01ba;
         public static final int middle=0x7f0a002b;
-        public static final int minMax=0x7f0a018b;
+        public static final int minMax=0x7f0a0198;
         public static final int mini=0x7f0a0029;
         public static final int monochrome=0x7f0a004e;
         public static final int multiply=0x7f0a003b;
         public static final int never=0x7f0a0034;
-        public static final int new_project=0x7f0a009d;
-        public static final int new_site_visit_fv_list=0x7f0a00a3;
+        public static final int new_project=0x7f0a009f;
+        public static final int new_site_visit_fv_list=0x7f0a00a5;
         public static final int none=0x7f0a0013;
         public static final int normal=0x7f0a000f;
-        public static final int overflow_set_progresses=0x7f0a01ae;
-        public static final int overflow_set_trades=0x7f0a01ad;
         public static final int parallax=0x7f0a001c;
         public static final int parentPanel=0x7f0a0076;
         public static final int pin=0x7f0a001d;
         public static final int production=0x7f0a0042;
         public static final int progress_circular=0x7f0a0006;
         public static final int progress_horizontal=0x7f0a0007;
-        public static final int project__enter_city=0x7f0a012d;
-        public static final int project_actual_completion=0x7f0a00c3;
-        public static final int project_actual_contract_amount=0x7f0a00c7;
-        public static final int project_actual_start=0x7f0a00bd;
-        public static final int project_address=0x7f0a00ac;
-        public static final int project_basement_floors=0x7f0a00d1;
+        public static final int project__enter_city=0x7f0a0133;
+        public static final int project_actual_completion=0x7f0a00c5;
+        public static final int project_actual_contract_amount=0x7f0a00c9;
+        public static final int project_actual_start=0x7f0a00bf;
+        public static final int project_address=0x7f0a00ae;
+        public static final int project_basement_floors=0x7f0a00d3;
         public static final int project_dashboard=0x7f0a0067;
-        public static final int project_dashboard_cancel=0x7f0a00df;
-        public static final int project_dashboard_fragment_container=0x7f0a00dd;
-        public static final int project_dashboard_fragment_title=0x7f0a00dc;
-        public static final int project_dashboard_header=0x7f0a00a4;
-        public static final int project_dashboard_submit=0x7f0a00e0;
-        public static final int project_date=0x7f0a00c9;
-        public static final int project_enter_above_floors=0x7f0a0130;
-        public static final int project_enter_below_floors=0x7f0a0131;
-        public static final int project_enter_project_name=0x7f0a012b;
-        public static final int project_enter_site_picture=0x7f0a0135;
-        public static final int project_enter_state=0x7f0a012e;
-        public static final int project_enter_street_address=0x7f0a012c;
-        public static final int project_enter_submit=0x7f0a0136;
-        public static final int project_enter_take_picture=0x7f0a0134;
-        public static final int project_enter_view_switcher=0x7f0a0132;
-        public static final int project_enter_zip=0x7f0a012f;
-        public static final int project_est_contract_amount=0x7f0a00b2;
+        public static final int project_dashboard_cancel=0x7f0a00e1;
+        public static final int project_dashboard_fragment_container=0x7f0a00df;
+        public static final int project_dashboard_fragment_title=0x7f0a00de;
+        public static final int project_dashboard_header=0x7f0a00a6;
+        public static final int project_dashboard_submit=0x7f0a00e2;
+        public static final int project_date=0x7f0a00cb;
+        public static final int project_enter_above_floors=0x7f0a0136;
+        public static final int project_enter_below_floors=0x7f0a0137;
+        public static final int project_enter_find_current_address=0x7f0a0131;
+        public static final int project_enter_project_name=0x7f0a0130;
+        public static final int project_enter_site_picture=0x7f0a013b;
+        public static final int project_enter_state=0x7f0a0134;
+        public static final int project_enter_street_address=0x7f0a0132;
+        public static final int project_enter_submit=0x7f0a013c;
+        public static final int project_enter_take_picture=0x7f0a013a;
+        public static final int project_enter_view_switcher=0x7f0a0138;
+        public static final int project_enter_zip=0x7f0a0135;
+        public static final int project_est_contract_amount=0x7f0a00b4;
         public static final int project_history=0x7f0a006a;
-        public static final int project_home_action=0x7f0a00e9;
-        public static final int project_home_container=0x7f0a00e3;
-        public static final int project_home_current_site_visits=0x7f0a00e7;
-        public static final int project_home_new_site_visit=0x7f0a00e5;
-        public static final int project_home_project_history=0x7f0a00e8;
-        public static final int project_home_project_name=0x7f0a00e2;
-        public static final int project_home_view_dashboard=0x7f0a00e4;
-        public static final int project_initial_completion=0x7f0a00c0;
-        public static final int project_initial_start=0x7f0a00ba;
-        public static final int project_list=0x7f0a009c;
-        public static final int project_loan_amount=0x7f0a00af;
-        public static final int project_name=0x7f0a00a7;
-        public static final int project_num_floors=0x7f0a00cd;
-        public static final int project_retainage_rel=0x7f0a00b7;
-        public static final int project_sq_ft=0x7f0a00d9;
-        public static final int project_start_date=0x7f0a0151;
+        public static final int project_home_action=0x7f0a00eb;
+        public static final int project_home_container=0x7f0a00e5;
+        public static final int project_home_current_site_visits=0x7f0a00e9;
+        public static final int project_home_new_site_visit=0x7f0a00e7;
+        public static final int project_home_project_history=0x7f0a00ea;
+        public static final int project_home_project_name=0x7f0a00e4;
+        public static final int project_home_view_dashboard=0x7f0a00e6;
+        public static final int project_initial_completion=0x7f0a00c2;
+        public static final int project_initial_start=0x7f0a00bc;
+        public static final int project_list=0x7f0a009e;
+        public static final int project_loan_amount=0x7f0a00b1;
+        public static final int project_name=0x7f0a00a9;
+        public static final int project_num_floors=0x7f0a00cf;
+        public static final int project_retainage_rel=0x7f0a00b9;
+        public static final int project_sq_ft=0x7f0a00db;
+        public static final int project_start_date=0x7f0a015e;
         public static final int radio=0x7f0a0083;
-        public static final int register_camera_button=0x7f0a00ef;
-        public static final int register_cancel=0x7f0a00f1;
-        public static final int register_email=0x7f0a00ec;
-        public static final int register_name=0x7f0a00eb;
-        public static final int register_password=0x7f0a00ed;
-        public static final int register_password_confirm=0x7f0a00ee;
-        public static final int register_submit=0x7f0a00f0;
-        public static final int relative_layout=0x7f0a0133;
-        public static final int response_field=0x7f0a00f6;
+        public static final int register_camera_button=0x7f0a00f2;
+        public static final int register_cancel=0x7f0a00f5;
+        public static final int register_email=0x7f0a00ee;
+        public static final int register_name=0x7f0a00ed;
+        public static final int register_password=0x7f0a00ef;
+        public static final int register_password_confirm=0x7f0a00f0;
+        public static final int register_picture=0x7f0a00f3;
+        public static final int register_submit=0x7f0a00f4;
+        public static final int register_view_switcher=0x7f0a00f1;
+        public static final int relative_layout=0x7f0a0139;
+        public static final int response_field=0x7f0a00fa;
         public static final int right=0x7f0a0027;
-        public static final int root=0x7f0a0189;
+        public static final int root=0x7f0a0196;
         public static final int sandbox=0x7f0a0043;
         public static final int satellite=0x7f0a002f;
         public static final int screen=0x7f0a003c;
         public static final int scroll=0x7f0a001b;
         public static final int scrollView=0x7f0a007b;
-        public static final int scrollView2=0x7f0a00a1;
-        public static final int scrollView3=0x7f0a012a;
-        public static final int scrollView4=0x7f0a011c;
+        public static final int scrollView2=0x7f0a00a3;
+        public static final int scrollView3=0x7f0a012f;
+        public static final int scrollView4=0x7f0a0121;
+        public static final int scrollView5=0x7f0a0117;
         public static final int scrollable=0x7f0a0039;
         public static final int search_badge=0x7f0a008d;
         public static final int search_bar=0x7f0a008c;
@@ -3045,143 +3066,144 @@ containing a value of this type.
         public static final int search_voice_btn=0x7f0a0096;
         public static final int select_dialog_listview=0x7f0a0097;
         public static final int selectionDetails=0x7f0a0046;
-        public static final int send_project=0x7f0a00f4;
-        public static final int set_list_selection_list=0x7f0a0138;
-        public static final int set_list_selection_submit=0x7f0a0139;
+        public static final int send_project=0x7f0a00f8;
+        public static final int set_list_selection_list=0x7f0a013e;
+        public static final int set_list_selection_submit=0x7f0a013f;
         public static final int shortcut=0x7f0a0082;
         public static final int showCustom=0x7f0a0014;
         public static final int showHome=0x7f0a0015;
         public static final int showTitle=0x7f0a0016;
-        public static final int site_visit_back_but=0x7f0a00fc;
-        public static final int site_visit_continue=0x7f0a00f8;
-        public static final int site_visit_dashboard=0x7f0a00fd;
-        public static final int site_visit_draw_request=0x7f0a0100;
-        public static final int site_visit_email=0x7f0a00fa;
-        public static final int site_visit_finish=0x7f0a00fb;
-        public static final int site_visit_progress=0x7f0a00fe;
-        public static final int site_visit_progress_history=0x7f0a00ff;
-        public static final int site_visit_question_list_edit=0x7f0a013b;
-        public static final int site_visit_question_view_list=0x7f0a013a;
-        public static final int site_visit_sync=0x7f0a00f9;
-        public static final int site_visit_view_switcher=0x7f0a00f7;
+        public static final int site_visit_back_but=0x7f0a0100;
+        public static final int site_visit_continue=0x7f0a00fc;
+        public static final int site_visit_dashboard=0x7f0a0101;
+        public static final int site_visit_draw_request=0x7f0a0104;
+        public static final int site_visit_email=0x7f0a00fe;
+        public static final int site_visit_finish=0x7f0a00ff;
+        public static final int site_visit_progress=0x7f0a0102;
+        public static final int site_visit_progress_history=0x7f0a0103;
+        public static final int site_visit_question_list_edit=0x7f0a0141;
+        public static final int site_visit_question_view_list=0x7f0a0140;
+        public static final int site_visit_sync=0x7f0a00fd;
+        public static final int site_visit_view_switcher=0x7f0a00fb;
         public static final int site_walkthrough=0x7f0a0068;
-        public static final int snackbar_action=0x7f0a014e;
-        public static final int snackbar_text=0x7f0a014d;
-        public static final int soft_field_submit=0x7f0a013d;
-        public static final int soft_fields_container=0x7f0a013c;
-        public static final int soft_q_add_q=0x7f0a01a2;
-        public static final int soft_q_field=0x7f0a01a5;
-        public static final int soft_q_no_remove_f=0x7f0a01a7;
-        public static final int soft_q_remove_f=0x7f0a01a8;
-        public static final int soft_q_selector=0x7f0a01a3;
-        public static final int soft_q_switch_remove=0x7f0a01a4;
-        public static final int soft_q_value=0x7f0a01a6;
-        public static final int soft_q_view_switcher=0x7f0a01a1;
-        public static final int spinner_floor=0x7f0a0142;
-        public static final int spinner_progress=0x7f0a0144;
-        public static final int spinner_trade=0x7f0a0143;
+        public static final int snackbar_action=0x7f0a015b;
+        public static final int snackbar_text=0x7f0a015a;
+        public static final int soft_field_submit=0x7f0a0143;
+        public static final int soft_fields_container=0x7f0a0142;
+        public static final int soft_q_add_q=0x7f0a01af;
+        public static final int soft_q_field=0x7f0a01b2;
+        public static final int soft_q_no_remove_f=0x7f0a01b4;
+        public static final int soft_q_remove_f=0x7f0a01b5;
+        public static final int soft_q_selector=0x7f0a01b0;
+        public static final int soft_q_switch_remove=0x7f0a01b1;
+        public static final int soft_q_value=0x7f0a01b3;
+        public static final int soft_q_view_switcher=0x7f0a01ae;
+        public static final int spinner_floor=0x7f0a0149;
+        public static final int spinner_progress=0x7f0a014b;
+        public static final int spinner_trade=0x7f0a014a;
         public static final int split_action_bar=0x7f0a0008;
         public static final int src_atop=0x7f0a003d;
         public static final int src_in=0x7f0a003e;
         public static final int src_over=0x7f0a003f;
         public static final int start=0x7f0a000d;
-        public static final int status_bar_latest_event_content=0x7f0a0196;
+        public static final int status_bar_latest_event_content=0x7f0a01a3;
         public static final int strict_sandbox=0x7f0a0044;
-        public static final int string_list_add_button=0x7f0a013f;
-        public static final int string_list_d_layout=0x7f0a0178;
-        public static final int string_list_delete_button=0x7f0a0179;
-        public static final int string_list_list=0x7f0a013e;
-        public static final int string_list_new_item=0x7f0a0140;
-        public static final int string_list_view_switcher=0x7f0a0175;
+        public static final int string_list_add_button=0x7f0a0145;
+        public static final int string_list_d_layout=0x7f0a0185;
+        public static final int string_list_delete_button=0x7f0a0186;
+        public static final int string_list_list=0x7f0a0144;
+        public static final int string_list_new_item=0x7f0a0146;
+        public static final int string_list_view_switcher=0x7f0a0182;
         public static final int submit=0x7f0a0066;
         public static final int submit_area=0x7f0a0094;
-        public static final int super_site_visit_drawer=0x7f0a01ab;
-        public static final int super_site_visit_drawer_layout=0x7f0a01a9;
-        public static final int super_site_visit_main=0x7f0a01aa;
-        public static final int swicher_project_name=0x7f0a00a6;
-        public static final int switcher_actual_comp_date=0x7f0a00c2;
-        public static final int switcher_actual_start_date=0x7f0a00bc;
-        public static final int switcher_address=0x7f0a00ab;
-        public static final int switcher_change_order_amount=0x7f0a0121;
-        public static final int switcher_change_order_description=0x7f0a0125;
-        public static final int switcher_change_order_subcontractor=0x7f0a011d;
-        public static final int switcher_contract_amount=0x7f0a00b1;
-        public static final int switcher_init_comp_date=0x7f0a00bf;
-        public static final int switcher_init_start_date=0x7f0a00b9;
-        public static final int switcher_loan_amount=0x7f0a00ae;
-        public static final int switcher_num_basement_floors=0x7f0a00d0;
-        public static final int switcher_num_floors=0x7f0a00cc;
-        public static final int switcher_retainage_rel=0x7f0a00b6;
-        public static final int switcher_sq_ft=0x7f0a00d8;
+        public static final int super_site_visit_drawer=0x7f0a01b8;
+        public static final int super_site_visit_drawer_layout=0x7f0a01b6;
+        public static final int super_site_visit_main=0x7f0a01b7;
+        public static final int swicher_project_name=0x7f0a00a8;
+        public static final int switcher_actual_comp_date=0x7f0a00c4;
+        public static final int switcher_actual_start_date=0x7f0a00be;
+        public static final int switcher_address=0x7f0a00ad;
+        public static final int switcher_change_order_amount=0x7f0a0126;
+        public static final int switcher_change_order_description=0x7f0a012a;
+        public static final int switcher_change_order_subcontractor=0x7f0a0122;
+        public static final int switcher_contract_amount=0x7f0a00b3;
+        public static final int switcher_init_comp_date=0x7f0a00c1;
+        public static final int switcher_init_start_date=0x7f0a00bb;
+        public static final int switcher_loan_amount=0x7f0a00b0;
+        public static final int switcher_num_basement_floors=0x7f0a00d2;
+        public static final int switcher_num_floors=0x7f0a00ce;
+        public static final int switcher_retainage_rel=0x7f0a00b8;
+        public static final int switcher_sq_ft=0x7f0a00da;
         public static final int tabMode=0x7f0a0010;
         public static final int terrain=0x7f0a0030;
-        public static final int test_login=0x7f0a0102;
-        public static final int test_test=0x7f0a0101;
-        public static final int text=0x7f0a019e;
-        public static final int text2=0x7f0a019c;
+        public static final int test_login=0x7f0a0106;
+        public static final int test_test=0x7f0a0105;
+        public static final int text=0x7f0a01ab;
+        public static final int text2=0x7f0a01a9;
         public static final int textSpacerNoButtons=0x7f0a007c;
         public static final int textView=0x7f0a0052;
-        public static final int textView10=0x7f0a00b5;
-        public static final int textView11=0x7f0a00c8;
-        public static final int textView12=0x7f0a00cb;
-        public static final int textView13=0x7f0a00d7;
-        public static final int textView14=0x7f0a00aa;
-        public static final int textView15=0x7f0a00d4;
+        public static final int textView10=0x7f0a00b7;
+        public static final int textView11=0x7f0a00ca;
+        public static final int textView12=0x7f0a00cd;
+        public static final int textView13=0x7f0a00d9;
+        public static final int textView14=0x7f0a00ac;
+        public static final int textView15=0x7f0a00d6;
         public static final int textView16=0x7f0a0050;
-        public static final int textView17=0x7f0a00cf;
-        public static final int textView18=0x7f0a00f5;
-        public static final int textView19=0x7f0a0114;
+        public static final int textView17=0x7f0a00d1;
+        public static final int textView18=0x7f0a00f9;
+        public static final int textView19=0x7f0a0119;
         public static final int textView2=0x7f0a0056;
-        public static final int textView20=0x7f0a00e1;
-        public static final int textView21=0x7f0a00e6;
-        public static final int textView22=0x7f0a0166;
-        public static final int textView23=0x7f0a0181;
-        public static final int textView24=0x7f0a0116;
-        public static final int textView25=0x7f0a0117;
-        public static final int textView26=0x7f0a0119;
-        public static final int textView27=0x7f0a016f;
-        public static final int textView28=0x7f0a0171;
+        public static final int textView20=0x7f0a00e3;
+        public static final int textView21=0x7f0a00e8;
+        public static final int textView22=0x7f0a0173;
+        public static final int textView23=0x7f0a018e;
+        public static final int textView24=0x7f0a011b;
+        public static final int textView25=0x7f0a011c;
+        public static final int textView26=0x7f0a011e;
+        public static final int textView27=0x7f0a017c;
+        public static final int textView28=0x7f0a017e;
         public static final int textView3=0x7f0a0059;
-        public static final int textView30=0x7f0a0147;
-        public static final int textView32=0x7f0a0148;
-        public static final int textView34=0x7f0a0161;
-        public static final int textView36=0x7f0a014c;
-        public static final int textView3922=0x7f0a015f;
+        public static final int textView32=0x7f0a0155;
+        public static final int textView34=0x7f0a016e;
+        public static final int textView36=0x7f0a0159;
+        public static final int textView3922=0x7f0a016c;
         public static final int textView4=0x7f0a005c;
         public static final int textView5=0x7f0a0062;
         public static final int textView6=0x7f0a005f;
         public static final int textView7=0x7f0a0064;
-        public static final int textView8=0x7f0a0113;
-        public static final int textView9=0x7f0a00c6;
-        public static final int time=0x7f0a019a;
+        public static final int textView8=0x7f0a0118;
+        public static final int textView9=0x7f0a00c8;
+        public static final int time=0x7f0a01a7;
         public static final int title=0x7f0a0075;
-        public static final int titleFrame=0x7f0a0193;
+        public static final int titleFrame=0x7f0a01a0;
         public static final int title_template=0x7f0a0078;
         public static final int top=0x7f0a0028;
         public static final int topPanel=0x7f0a0077;
         public static final int up=0x7f0a0009;
         public static final int useLogo=0x7f0a0017;
-        public static final int user_select_login=0x7f0a0107;
-        public static final int user_select_password=0x7f0a0105;
-        public static final int user_select_register=0x7f0a0108;
-        public static final int user_select_save_info_q=0x7f0a0106;
-        public static final int user_select_username=0x7f0a0104;
+        public static final int user_select_login=0x7f0a010b;
+        public static final int user_select_password=0x7f0a0109;
+        public static final int user_select_register=0x7f0a010c;
+        public static final int user_select_save_info_q=0x7f0a010a;
+        public static final int user_select_username=0x7f0a0108;
         public static final int view_offset_helper=0x7f0a000a;
-        public static final int walk_through_action_button=0x7f0a010a;
-        public static final int walk_through_camera=0x7f0a0145;
-        public static final int walk_through_contractor=0x7f0a017e;
-        public static final int walk_through_date_list_date=0x7f0a017a;
-        public static final int walk_through_floor=0x7f0a017d;
-        public static final int walk_through_fragment=0x7f0a0109;
-        public static final int walk_through_ldate_list_entries=0x7f0a017b;
-        public static final int walk_through_list_date=0x7f0a017f;
-        public static final int walk_through_list_delete_button=0x7f0a0184;
-        public static final int walk_through_list_edit_button=0x7f0a0183;
-        public static final int walk_through_list_switcher=0x7f0a017c;
-        public static final int walk_through_note=0x7f0a0141;
-        public static final int walk_through_num_pics=0x7f0a0182;
-        public static final int walk_through_picture_list=0x7f0a0146;
-        public static final int walkthrough_picture=0x7f0a0186;
+        public static final int walk_through_action_button=0x7f0a010e;
+        public static final int walk_through_camera=0x7f0a014f;
+        public static final int walk_through_contractor=0x7f0a018b;
+        public static final int walk_through_date_list_date=0x7f0a0187;
+        public static final int walk_through_floor=0x7f0a018a;
+        public static final int walk_through_fragment=0x7f0a010d;
+        public static final int walk_through_ldate_list_entries=0x7f0a0188;
+        public static final int walk_through_list_delete_button=0x7f0a0191;
+        public static final int walk_through_list_edit_button=0x7f0a0190;
+        public static final int walk_through_list_progress=0x7f0a018c;
+        public static final int walk_through_list_switcher=0x7f0a0189;
+        public static final int walk_through_note=0x7f0a0147;
+        public static final int walk_through_num_pics=0x7f0a018f;
+        public static final int walk_through_picture_list=0x7f0a0150;
+        public static final int walkthrough_info_camera=0x7f0a014d;
+        public static final int walkthrough_info_microphone=0x7f0a014e;
+        public static final int walkthrough_picture=0x7f0a0193;
         public static final int withText=0x7f0a0035;
         public static final int wrap_content=0x7f0a003a;
     }
@@ -3222,111 +3244,102 @@ containing a value of this type.
         public static final int abc_search_view=0x7f040018;
         public static final int abc_select_dialog_material=0x7f040019;
         public static final int abc_simple_dropdown_hint=0x7f04001a;
-        public static final int activity_history=0x7f04001b;
-        public static final int activity_home_screen=0x7f04001c;
-        public static final int activity_make_draw=0x7f04001d;
-        public static final int activity_new_site_visit=0x7f04001e;
-        public static final int activity_project_dashboard=0x7f04001f;
-        public static final int activity_project_dashboard_two=0x7f040020;
-        public static final int activity_project_home_screen2=0x7f040021;
-        public static final int activity_register_user=0x7f040022;
-        public static final int activity_send_project=0x7f040023;
-        public static final int activity_site_visit=0x7f040024;
-        public static final int activity_user_select=0x7f040025;
-        public static final int activity_user_select2=0x7f040026;
-        public static final int activity_walkthrough=0x7f040027;
-        public static final int design_navigation_item=0x7f040028;
-        public static final int design_navigation_item_header=0x7f040029;
-        public static final int design_navigation_item_separator=0x7f04002a;
-        public static final int design_navigation_item_subheader=0x7f04002b;
-        public static final int design_navigation_menu=0x7f04002c;
-        public static final int drawer_list_item=0x7f04002d;
-        public static final int fragment_blank=0x7f04002e;
-        public static final int fragment_blank_manager=0x7f04002f;
-        public static final int fragment_draw_request_item_list=0x7f040030;
-        public static final int fragment_draw_request_items_overview=0x7f040031;
-        public static final int fragment_list=0x7f040032;
-        public static final int fragment_make_draw_request=0x7f040033;
-        public static final int fragment_new_draw_request_item=0x7f040034;
-        public static final int fragment_project_required=0x7f040035;
-        public static final int fragment_recycler_list=0x7f040036;
-        public static final int fragment_set_list_selection=0x7f040037;
-        public static final int fragment_site_visit_questions_view=0x7f040038;
-        public static final int fragment_soft_fields=0x7f040039;
-        public static final int fragment_string_list_edit=0x7f04003a;
-        public static final int fragment_walk_through_note=0x7f04003b;
-        public static final int fragment_walkthrough_info=0x7f04003c;
-        public static final int fragment_walkthrough_pictures=0x7f04003d;
-        public static final int header_project_drawer=0x7f04003e;
-        public static final int header_site_walk_drawer=0x7f04003f;
-        public static final int header_user=0x7f040040;
-        public static final int header_user_drawer=0x7f040041;
-        public static final int layout_snackbar=0x7f040042;
-        public static final int layout_snackbar_include=0x7f040043;
-        public static final int list_active_projects=0x7f040044;
-        public static final int list_change_orders=0x7f040045;
-        public static final int list_draw_request=0x7f040046;
-        public static final int list_draw_request_item_categories=0x7f040047;
-        public static final int list_draw_request_item_list=0x7f040048;
-        public static final int list_empty=0x7f040049;
-        public static final int list_field_value=0x7f04004a;
-        public static final int list_site_walks_active=0x7f04004b;
-        public static final int list_string_selection=0x7f04004c;
-        public static final int list_values_strg=0x7f04004d;
-        public static final int list_walk_through_dates=0x7f04004e;
-        public static final int list_walk_throughs=0x7f04004f;
-        public static final int list_walkthrough_pictures=0x7f040050;
-        public static final int md_dialog_basic=0x7f040051;
-        public static final int md_dialog_custom=0x7f040052;
-        public static final int md_dialog_input=0x7f040053;
-        public static final int md_dialog_list=0x7f040054;
-        public static final int md_dialog_progress=0x7f040055;
-        public static final int md_dialog_progress_indeterminate=0x7f040056;
-        public static final int md_dialog_progress_indeterminate_horizontal=0x7f040057;
-        public static final int md_listitem=0x7f040058;
-        public static final int md_listitem_multichoice=0x7f040059;
-        public static final int md_listitem_singlechoice=0x7f04005a;
-        public static final int md_simplelist_item=0x7f04005b;
-        public static final int md_stub_actionbuttons=0x7f04005c;
-        public static final int md_stub_inputpref=0x7f04005d;
-        public static final int md_stub_progress=0x7f04005e;
-        public static final int md_stub_progress_indeterminate=0x7f04005f;
-        public static final int md_stub_progress_indeterminate_horizontal=0x7f040060;
-        public static final int md_stub_titleframe=0x7f040061;
-        public static final int notification_media_action=0x7f040062;
-        public static final int notification_media_cancel_action=0x7f040063;
-        public static final int notification_template_big_media=0x7f040064;
-        public static final int notification_template_big_media_narrow=0x7f040065;
-        public static final int notification_template_lines=0x7f040066;
-        public static final int notification_template_media=0x7f040067;
-        public static final int notification_template_part_chronometer=0x7f040068;
-        public static final int notification_template_part_time=0x7f040069;
-        public static final int select_dialog_item_material=0x7f04006a;
-        public static final int select_dialog_multichoice_material=0x7f04006b;
-        public static final int select_dialog_singlechoice_material=0x7f04006c;
-        public static final int soft_q_control_block=0x7f04006d;
-        public static final int soft_q_field_val=0x7f04006e;
-        public static final int super_activity_site_visit=0x7f04006f;
-        public static final int support_simple_spinner_dropdown_item=0x7f040070;
+        public static final int activity_active_projects=0x7f04001b;
+        public static final int activity_blank=0x7f04001c;
+        public static final int activity_history=0x7f04001d;
+        public static final int activity_home_screen=0x7f04001e;
+        public static final int activity_make_draw=0x7f04001f;
+        public static final int activity_new_site_visit=0x7f040020;
+        public static final int activity_project_dashboard=0x7f040021;
+        public static final int activity_project_dashboard_two=0x7f040022;
+        public static final int activity_project_home_screen2=0x7f040023;
+        public static final int activity_register_user=0x7f040024;
+        public static final int activity_send_project=0x7f040025;
+        public static final int activity_site_visit=0x7f040026;
+        public static final int activity_user_select=0x7f040027;
+        public static final int activity_user_select2=0x7f040028;
+        public static final int activity_walkthrough=0x7f040029;
+        public static final int design_navigation_item=0x7f04002a;
+        public static final int design_navigation_item_header=0x7f04002b;
+        public static final int design_navigation_item_separator=0x7f04002c;
+        public static final int design_navigation_item_subheader=0x7f04002d;
+        public static final int design_navigation_menu=0x7f04002e;
+        public static final int drawer_list_item=0x7f04002f;
+        public static final int fragment_blank=0x7f040030;
+        public static final int fragment_blank_manager=0x7f040031;
+        public static final int fragment_draw_request_item_list=0x7f040032;
+        public static final int fragment_draw_request_items_overview=0x7f040033;
+        public static final int fragment_list=0x7f040034;
+        public static final int fragment_make_draw_request=0x7f040035;
+        public static final int fragment_new_draw_request_item=0x7f040036;
+        public static final int fragment_project_required=0x7f040037;
+        public static final int fragment_recycler_list=0x7f040038;
+        public static final int fragment_set_list_selection=0x7f040039;
+        public static final int fragment_site_visit_questions_view=0x7f04003a;
+        public static final int fragment_soft_fields=0x7f04003b;
+        public static final int fragment_string_list_edit=0x7f04003c;
+        public static final int fragment_walk_through_note=0x7f04003d;
+        public static final int fragment_walkthrough_info=0x7f04003e;
+        public static final int fragment_walkthrough_pictures=0x7f04003f;
+        public static final int header_project_drawer=0x7f040040;
+        public static final int header_site_walk_drawer=0x7f040041;
+        public static final int header_user=0x7f040042;
+        public static final int header_user_drawer=0x7f040043;
+        public static final int layout_snackbar=0x7f040044;
+        public static final int layout_snackbar_include=0x7f040045;
+        public static final int list_active_projects=0x7f040046;
+        public static final int list_change_orders=0x7f040047;
+        public static final int list_draw_request=0x7f040048;
+        public static final int list_draw_request_item_categories=0x7f040049;
+        public static final int list_draw_request_item_list=0x7f04004a;
+        public static final int list_empty=0x7f04004b;
+        public static final int list_field_value=0x7f04004c;
+        public static final int list_site_walks_active=0x7f04004d;
+        public static final int list_string_selection=0x7f04004e;
+        public static final int list_values_strg=0x7f04004f;
+        public static final int list_walk_through_dates=0x7f040050;
+        public static final int list_walk_throughs=0x7f040051;
+        public static final int list_walkthrough_pictures=0x7f040052;
+        public static final int md_dialog_basic=0x7f040053;
+        public static final int md_dialog_custom=0x7f040054;
+        public static final int md_dialog_input=0x7f040055;
+        public static final int md_dialog_list=0x7f040056;
+        public static final int md_dialog_progress=0x7f040057;
+        public static final int md_dialog_progress_indeterminate=0x7f040058;
+        public static final int md_dialog_progress_indeterminate_horizontal=0x7f040059;
+        public static final int md_listitem=0x7f04005a;
+        public static final int md_listitem_multichoice=0x7f04005b;
+        public static final int md_listitem_singlechoice=0x7f04005c;
+        public static final int md_simplelist_item=0x7f04005d;
+        public static final int md_stub_actionbuttons=0x7f04005e;
+        public static final int md_stub_inputpref=0x7f04005f;
+        public static final int md_stub_progress=0x7f040060;
+        public static final int md_stub_progress_indeterminate=0x7f040061;
+        public static final int md_stub_progress_indeterminate_horizontal=0x7f040062;
+        public static final int md_stub_titleframe=0x7f040063;
+        public static final int notification_media_action=0x7f040064;
+        public static final int notification_media_cancel_action=0x7f040065;
+        public static final int notification_template_big_media=0x7f040066;
+        public static final int notification_template_big_media_narrow=0x7f040067;
+        public static final int notification_template_lines=0x7f040068;
+        public static final int notification_template_media=0x7f040069;
+        public static final int notification_template_part_chronometer=0x7f04006a;
+        public static final int notification_template_part_time=0x7f04006b;
+        public static final int select_dialog_item_material=0x7f04006c;
+        public static final int select_dialog_multichoice_material=0x7f04006d;
+        public static final int select_dialog_singlechoice_material=0x7f04006e;
+        public static final int soft_q_control_block=0x7f04006f;
+        public static final int soft_q_field_val=0x7f040070;
+        public static final int super_activity_site_visit=0x7f040071;
+        public static final int support_simple_spinner_dropdown_item=0x7f040072;
     }
     public static final class menu {
-        public static final int history=0x7f0e0000;
-        public static final int home_screen=0x7f0e0001;
-        public static final int make_change_order=0x7f0e0002;
-        public static final int make_draw=0x7f0e0003;
-        public static final int menu_make_draw=0x7f0e0004;
-        public static final int menu_make_draw_request=0x7f0e0005;
-        public static final int menu_new_site_visit=0x7f0e0006;
-        public static final int menu_project_dashboard_two=0x7f0e0007;
-        public static final int menu_send_project=0x7f0e0008;
-        public static final int menu_send_site_walk=0x7f0e0009;
-        public static final int menu_site_visit=0x7f0e000a;
-        public static final int menu_super_site_visit=0x7f0e000b;
-        public static final int project_dashboard=0x7f0e000c;
-        public static final int project_home_screen=0x7f0e000d;
-        public static final int site_walkthrough=0x7f0e000e;
-        public static final int string_list_edit=0x7f0e000f;
-        public static final int user_select=0x7f0e0010;
+        public static final int menu_edit_or_view=0x7f0e0000;
+        public static final int menu_site_visit=0x7f0e0001;
+        public static final int menu_super_project=0x7f0e0002;
+        public static final int menu_super_site_visit=0x7f0e0003;
+        public static final int menu_super_user=0x7f0e0004;
+        public static final int user_select=0x7f0e0005;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -3741,33 +3754,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background test.assesortron4:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit test.assesortron4:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked test.assesortron4:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd test.assesortron4:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft test.assesortron4:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight test.assesortron4:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart test.assesortron4:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout test.assesortron4:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions test.assesortron4:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider test.assesortron4:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation test.assesortron4:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height test.assesortron4:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll test.assesortron4:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator test.assesortron4:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout test.assesortron4:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon test.assesortron4:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle test.assesortron4:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding test.assesortron4:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo test.assesortron4:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode test.assesortron4:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme test.assesortron4:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding test.assesortron4:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle test.assesortron4:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle test.assesortron4:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle test.assesortron4:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title test.assesortron4:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle test.assesortron4:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background test.assesortron5:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit test.assesortron5:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked test.assesortron5:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd test.assesortron5:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft test.assesortron5:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight test.assesortron5:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart test.assesortron5:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout test.assesortron5:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions test.assesortron5:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider test.assesortron5:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation test.assesortron5:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height test.assesortron5:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll test.assesortron5:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator test.assesortron5:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout test.assesortron5:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon test.assesortron5:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle test.assesortron5:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding test.assesortron5:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo test.assesortron5:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode test.assesortron5:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme test.assesortron5:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding test.assesortron5:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle test.assesortron5:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle test.assesortron5:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle test.assesortron5:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title test.assesortron5:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle test.assesortron5:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -3807,17 +3820,17 @@ containing a value of this type.
             0x7f010034, 0x7f010035, 0x7f0100e7
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#background}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:background
+          @attr name test.assesortron5:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3825,11 +3838,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:backgroundSplit
+          @attr name test.assesortron5:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3837,11 +3850,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:backgroundStacked
+          @attr name test.assesortron5:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3853,11 +3866,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetEnd
+          @attr name test.assesortron5:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3869,11 +3882,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetLeft
+          @attr name test.assesortron5:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3885,11 +3898,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetRight
+          @attr name test.assesortron5:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3901,21 +3914,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetStart
+          @attr name test.assesortron5:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:customNavigationLayout
+          @attr name test.assesortron5:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3933,21 +3946,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:displayOptions
+          @attr name test.assesortron5:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#divider}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:divider
+          @attr name test.assesortron5:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#elevation}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3959,11 +3972,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:elevation
+          @attr name test.assesortron5:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#height}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3975,11 +3988,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:height
+          @attr name test.assesortron5:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -3989,51 +4002,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:hideOnContentScroll
+          @attr name test.assesortron5:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:homeAsUpIndicator
+          @attr name test.assesortron5:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:homeLayout
+          @attr name test.assesortron5:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#icon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:icon
+          @attr name test.assesortron5:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:indeterminateProgressStyle
+          @attr name test.assesortron5:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -4045,21 +4058,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:itemPadding
+          @attr name test.assesortron5:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#logo}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:logo
+          @attr name test.assesortron5:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -4073,21 +4086,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:navigationMode
+          @attr name test.assesortron5:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:popupTheme
+          @attr name test.assesortron5:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -4099,21 +4112,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:progressBarPadding
+          @attr name test.assesortron5:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:progressBarStyle
+          @attr name test.assesortron5:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -4123,21 +4136,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:subtitle
+          @attr name test.assesortron5:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:subtitleTextStyle
+          @attr name test.assesortron5:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#title}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -4147,17 +4160,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:title
+          @attr name test.assesortron5:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:titleTextStyle
+          @attr name test.assesortron5:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -4209,12 +4222,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background test.assesortron4:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit test.assesortron4:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout test.assesortron4:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height test.assesortron4:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle test.assesortron4:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle test.assesortron4:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background test.assesortron5:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit test.assesortron5:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout test.assesortron5:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height test.assesortron5:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle test.assesortron5:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle test.assesortron5:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -4228,17 +4241,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010028, 0x7f010036
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#background}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:background
+          @attr name test.assesortron5:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -4246,21 +4259,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:backgroundSplit
+          @attr name test.assesortron5:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:closeItemLayout
+          @attr name test.assesortron5:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#height}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -4272,27 +4285,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:height
+          @attr name test.assesortron5:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:subtitleTextStyle
+          @attr name test.assesortron5:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:titleTextStyle
+          @attr name test.assesortron5:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -4301,8 +4314,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable test.assesortron4:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount test.assesortron4:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable test.assesortron5:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount test.assesortron5:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -4311,17 +4324,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010037, 0x7f010038
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:expandActivityOverflowButtonDrawable
+          @attr name test.assesortron5:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -4331,7 +4344,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:initialActivityCount
+          @attr name test.assesortron5:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AdsAttrs.
@@ -4340,9 +4353,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize test.assesortron4:adSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes test.assesortron4:adSizes}</code></td><td></td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId test.assesortron4:adUnitId}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSize test.assesortron5:adSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adSizes test.assesortron5:adSizes}</code></td><td></td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId test.assesortron5:adUnitId}</code></td><td></td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -4352,7 +4365,7 @@ containing a value of this type.
             0x7f010039, 0x7f01003a, 0x7f01003b
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#adSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#adSize}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -4362,11 +4375,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:adSize
+          @attr name test.assesortron5:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#adSizes}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#adSizes}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -4376,11 +4389,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:adSizes
+          @attr name test.assesortron5:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#adUnitId}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#adUnitId}
           attribute's value can be found in the {@link #AdsAttrs} array.
 
 
@@ -4390,7 +4403,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:adUnitId
+          @attr name test.assesortron5:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a AlertDialog.
@@ -4400,11 +4413,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout test.assesortron4:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout test.assesortron4:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout test.assesortron4:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout test.assesortron4:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout test.assesortron4:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout test.assesortron5:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout test.assesortron5:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout test.assesortron5:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout test.assesortron5:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout test.assesortron5:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -4424,53 +4437,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonPanelSideLayout
+          @attr name test.assesortron5:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:listItemLayout
+          @attr name test.assesortron5:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:listLayout
+          @attr name test.assesortron5:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:multiChoiceItemLayout
+          @attr name test.assesortron5:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:singleChoiceItemLayout
+          @attr name test.assesortron5:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppBarLayout.
@@ -4480,7 +4493,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_elevation test.assesortron4:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_elevation test.assesortron5:elevation}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_android_background
            @see #AppBarLayout_elevation
@@ -4495,7 +4508,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppBarLayout_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#elevation}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#elevation}
           attribute's value can be found in the {@link #AppBarLayout} array.
 
 
@@ -4507,7 +4520,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:elevation
+          @attr name test.assesortron5:elevation
         */
         public static final int AppBarLayout_elevation = 1;
         /** Attributes that can be used with a AppBarLayout_LayoutParams.
@@ -4516,8 +4529,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollFlags test.assesortron4:layout_scrollFlags}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollInterpolator test.assesortron4:layout_scrollInterpolator}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollFlags test.assesortron5:layout_scrollFlags}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppBarLayout_LayoutParams_layout_scrollInterpolator test.assesortron5:layout_scrollInterpolator}</code></td><td></td></tr>
            </table>
            @see #AppBarLayout_LayoutParams_layout_scrollFlags
            @see #AppBarLayout_LayoutParams_layout_scrollInterpolator
@@ -4526,7 +4539,7 @@ containing a value of this type.
             0x7f010041, 0x7f010042
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_scrollFlags}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_scrollFlags}
           attribute's value can be found in the {@link #AppBarLayout_LayoutParams} array.
 
 
@@ -4541,17 +4554,17 @@ containing a value of this type.
 <tr><td><code>enterAlways</code></td><td>0x4</td><td></td></tr>
 <tr><td><code>enterAlwaysCollapsed</code></td><td>0x8</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:layout_scrollFlags
+          @attr name test.assesortron5:layout_scrollFlags
         */
         public static final int AppBarLayout_LayoutParams_layout_scrollFlags = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_scrollInterpolator}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_scrollInterpolator}
           attribute's value can be found in the {@link #AppBarLayout_LayoutParams} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:layout_scrollInterpolator
+          @attr name test.assesortron5:layout_scrollInterpolator
         */
         public static final int AppBarLayout_LayoutParams_layout_scrollInterpolator = 1;
         /** Attributes that can be used with a AppCompatTextView.
@@ -4561,7 +4574,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps test.assesortron4:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps test.assesortron5:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -4576,14 +4589,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name test.assesortron4:textAllCaps
+          @attr name test.assesortron5:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a CircleImageView.
@@ -4592,8 +4605,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleImageView_border_color test.assesortron4:border_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageView_border_width test.assesortron4:border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_color test.assesortron5:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_width test.assesortron5:border_width}</code></td><td></td></tr>
            </table>
            @see #CircleImageView_border_color
            @see #CircleImageView_border_width
@@ -4602,7 +4615,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010044, 0x7f010045
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#border_color}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#border_color}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -4613,11 +4626,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:border_color
+          @attr name test.assesortron5:border_color
         */
         public static final int CircleImageView_border_color = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#border_width}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#border_width}
           attribute's value can be found in the {@link #CircleImageView} array.
 
 
@@ -4629,7 +4642,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:border_width
+          @attr name test.assesortron5:border_width
         */
         public static final int CircleImageView_border_width = 0;
         /** Attributes that can be used with a CollapsingAppBarLayout_LayoutParams.
@@ -4638,8 +4651,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseMode test.assesortron4:layout_collapseMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier test.assesortron4:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseMode test.assesortron5:layout_collapseMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier test.assesortron5:layout_collapseParallaxMultiplier}</code></td><td></td></tr>
            </table>
            @see #CollapsingAppBarLayout_LayoutParams_layout_collapseMode
            @see #CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier
@@ -4648,7 +4661,7 @@ containing a value of this type.
             0x7f010046, 0x7f010047
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_collapseMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_collapseMode}
           attribute's value can be found in the {@link #CollapsingAppBarLayout_LayoutParams} array.
 
 
@@ -4662,11 +4675,11 @@ containing a value of this type.
 <tr><td><code>pin</code></td><td>1</td><td></td></tr>
 <tr><td><code>parallax</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:layout_collapseMode
+          @attr name test.assesortron5:layout_collapseMode
         */
         public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseMode = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_collapseParallaxMultiplier}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_collapseParallaxMultiplier}
           attribute's value can be found in the {@link #CollapsingAppBarLayout_LayoutParams} array.
 
 
@@ -4676,7 +4689,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:layout_collapseParallaxMultiplier
+          @attr name test.assesortron5:layout_collapseParallaxMultiplier
         */
         public static final int CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = 1;
         /** Attributes that can be used with a CollapsingToolbarLayout.
@@ -4685,16 +4698,16 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance test.assesortron4:collapsedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim test.assesortron4:contentScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin test.assesortron4:expandedTitleMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom test.assesortron4:expandedTitleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd test.assesortron4:expandedTitleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart test.assesortron4:expandedTitleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop test.assesortron4:expandedTitleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance test.assesortron4:expandedTitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim test.assesortron4:statusBarScrim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId test.assesortron4:toolbarId}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_collapsedTitleTextAppearance test.assesortron5:collapsedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_contentScrim test.assesortron5:contentScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMargin test.assesortron5:expandedTitleMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginBottom test.assesortron5:expandedTitleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginEnd test.assesortron5:expandedTitleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginStart test.assesortron5:expandedTitleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleMarginTop test.assesortron5:expandedTitleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_expandedTitleTextAppearance test.assesortron5:expandedTitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_statusBarScrim test.assesortron5:statusBarScrim}</code></td><td></td></tr>
+           <tr><td><code>{@link #CollapsingToolbarLayout_toolbarId test.assesortron5:toolbarId}</code></td><td></td></tr>
            </table>
            @see #CollapsingToolbarLayout_collapsedTitleTextAppearance
            @see #CollapsingToolbarLayout_contentScrim
@@ -4713,17 +4726,17 @@ containing a value of this type.
             0x7f010050, 0x7f010051
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#collapsedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#collapsedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:collapsedTitleTextAppearance
+          @attr name test.assesortron5:collapsedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_collapsedTitleTextAppearance = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentScrim}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4734,11 +4747,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentScrim
+          @attr name test.assesortron5:contentScrim
         */
         public static final int CollapsingToolbarLayout_contentScrim = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleMargin}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleMargin}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4750,11 +4763,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:expandedTitleMargin
+          @attr name test.assesortron5:expandedTitleMargin
         */
         public static final int CollapsingToolbarLayout_expandedTitleMargin = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleMarginBottom}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleMarginBottom}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4766,11 +4779,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:expandedTitleMarginBottom
+          @attr name test.assesortron5:expandedTitleMarginBottom
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginBottom = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleMarginEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleMarginEnd}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4782,11 +4795,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:expandedTitleMarginEnd
+          @attr name test.assesortron5:expandedTitleMarginEnd
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleMarginStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleMarginStart}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4798,11 +4811,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:expandedTitleMarginStart
+          @attr name test.assesortron5:expandedTitleMarginStart
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginStart = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleMarginTop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleMarginTop}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4814,21 +4827,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:expandedTitleMarginTop
+          @attr name test.assesortron5:expandedTitleMarginTop
         */
         public static final int CollapsingToolbarLayout_expandedTitleMarginTop = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#expandedTitleTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#expandedTitleTextAppearance}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:expandedTitleTextAppearance
+          @attr name test.assesortron5:expandedTitleTextAppearance
         */
         public static final int CollapsingToolbarLayout_expandedTitleTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#statusBarScrim}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#statusBarScrim}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
@@ -4839,17 +4852,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:statusBarScrim
+          @attr name test.assesortron5:statusBarScrim
         */
         public static final int CollapsingToolbarLayout_statusBarScrim = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#toolbarId}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#toolbarId}
           attribute's value can be found in the {@link #CollapsingToolbarLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:toolbarId
+          @attr name test.assesortron5:toolbarId
         */
         public static final int CollapsingToolbarLayout_toolbarId = 9;
         /** Attributes that can be used with a CoordinatorLayout.
@@ -4858,8 +4871,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CoordinatorLayout_keylines test.assesortron4:keylines}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground test.assesortron4:statusBarBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_keylines test.assesortron5:keylines}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_statusBarBackground test.assesortron5:statusBarBackground}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_keylines
            @see #CoordinatorLayout_statusBarBackground
@@ -4868,23 +4881,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010052, 0x7f010053
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#keylines}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#keylines}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:keylines
+          @attr name test.assesortron5:keylines
         */
         public static final int CoordinatorLayout_keylines = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#statusBarBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#statusBarBackground}
           attribute's value can be found in the {@link #CoordinatorLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:statusBarBackground
+          @attr name test.assesortron5:statusBarBackground
         */
         public static final int CoordinatorLayout_statusBarBackground = 1;
         /** Attributes that can be used with a CoordinatorLayout_LayoutParams.
@@ -4894,10 +4907,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CoordinatorLayout_LayoutParams_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchor test.assesortron4:layout_anchor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchorGravity test.assesortron4:layout_anchorGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_behavior test.assesortron4:layout_behavior}</code></td><td></td></tr>
-           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_keyline test.assesortron4:layout_keyline}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchor test.assesortron5:layout_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_anchorGravity test.assesortron5:layout_anchorGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_behavior test.assesortron5:layout_behavior}</code></td><td></td></tr>
+           <tr><td><code>{@link #CoordinatorLayout_LayoutParams_layout_keyline test.assesortron5:layout_keyline}</code></td><td></td></tr>
            </table>
            @see #CoordinatorLayout_LayoutParams_android_layout_gravity
            @see #CoordinatorLayout_LayoutParams_layout_anchor
@@ -4916,17 +4929,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CoordinatorLayout_LayoutParams_android_layout_gravity = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_anchor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_anchor}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:layout_anchor
+          @attr name test.assesortron5:layout_anchor
         */
         public static final int CoordinatorLayout_LayoutParams_layout_anchor = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_anchorGravity}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_anchorGravity}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4951,11 +4964,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>start</code></td><td>0x00800003</td><td></td></tr>
 <tr><td><code>end</code></td><td>0x00800005</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:layout_anchorGravity
+          @attr name test.assesortron5:layout_anchorGravity
         */
         public static final int CoordinatorLayout_LayoutParams_layout_anchorGravity = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_behavior}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_behavior}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4965,11 +4978,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:layout_behavior
+          @attr name test.assesortron5:layout_behavior
         */
         public static final int CoordinatorLayout_LayoutParams_layout_behavior = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout_keyline}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout_keyline}
           attribute's value can be found in the {@link #CoordinatorLayout_LayoutParams} array.
 
 
@@ -4979,7 +4992,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:layout_keyline
+          @attr name test.assesortron5:layout_keyline
         */
         public static final int CoordinatorLayout_LayoutParams_layout_keyline = 3;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -4988,14 +5001,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barSize test.assesortron4:barSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color test.assesortron4:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize test.assesortron4:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars test.assesortron4:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize test.assesortron4:middleBarArrowSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars test.assesortron4:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness test.assesortron4:thickness}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize test.assesortron4:topBottomBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barSize test.assesortron5:barSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color test.assesortron5:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize test.assesortron5:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars test.assesortron5:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize test.assesortron5:middleBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars test.assesortron5:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness test.assesortron5:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize test.assesortron5:topBottomBarArrowSize}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_barSize
            @see #DrawerArrowToggle_color
@@ -5011,7 +5024,7 @@ containing a value of this type.
             0x7f01005c, 0x7f01005d, 0x7f01005e, 0x7f01005f
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#barSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#barSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5023,11 +5036,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:barSize
+          @attr name test.assesortron5:barSize
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#color}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5038,11 +5051,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:color
+          @attr name test.assesortron5:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5054,11 +5067,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:drawableSize
+          @attr name test.assesortron5:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5070,11 +5083,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:gapBetweenBars
+          @attr name test.assesortron5:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#middleBarArrowSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#middleBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5086,11 +5099,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:middleBarArrowSize
+          @attr name test.assesortron5:middleBarArrowSize
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5100,11 +5113,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:spinBars
+          @attr name test.assesortron5:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#thickness}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5116,11 +5129,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:thickness
+          @attr name test.assesortron5:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#topBottomBarArrowSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#topBottomBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -5132,7 +5145,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:topBottomBarArrowSize
+          @attr name test.assesortron5:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
         /** Attributes that can be used with a FloatingActionButton.
@@ -5142,13 +5155,13 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #FloatingActionButton_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTint test.assesortron4:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode test.assesortron4:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_borderWidth test.assesortron4:borderWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_elevation test.assesortron4:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_fabSize test.assesortron4:fabSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ test.assesortron4:pressedTranslationZ}</code></td><td></td></tr>
-           <tr><td><code>{@link #FloatingActionButton_rippleColor test.assesortron4:rippleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTint test.assesortron5:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_backgroundTintMode test.assesortron5:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_borderWidth test.assesortron5:borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_elevation test.assesortron5:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_fabSize test.assesortron5:fabSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_pressedTranslationZ test.assesortron5:pressedTranslationZ}</code></td><td></td></tr>
+           <tr><td><code>{@link #FloatingActionButton_rippleColor test.assesortron5:rippleColor}</code></td><td></td></tr>
            </table>
            @see #FloatingActionButton_android_background
            @see #FloatingActionButton_backgroundTint
@@ -5170,7 +5183,7 @@ containing a value of this type.
         */
         public static final int FloatingActionButton_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundTint}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5181,11 +5194,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:backgroundTint
+          @attr name test.assesortron5:backgroundTint
         */
         public static final int FloatingActionButton_backgroundTint = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5201,11 +5214,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:backgroundTintMode
+          @attr name test.assesortron5:backgroundTintMode
         */
         public static final int FloatingActionButton_backgroundTintMode = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#borderWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#borderWidth}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5217,11 +5230,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:borderWidth
+          @attr name test.assesortron5:borderWidth
         */
         public static final int FloatingActionButton_borderWidth = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#elevation}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#elevation}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5233,11 +5246,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:elevation
+          @attr name test.assesortron5:elevation
         */
         public static final int FloatingActionButton_elevation = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#fabSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#fabSize}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5250,11 +5263,11 @@ containing a value of this type.
 <tr><td><code>normal</code></td><td>0</td><td></td></tr>
 <tr><td><code>mini</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:fabSize
+          @attr name test.assesortron5:fabSize
         */
         public static final int FloatingActionButton_fabSize = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#pressedTranslationZ}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#pressedTranslationZ}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5266,11 +5279,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:pressedTranslationZ
+          @attr name test.assesortron5:pressedTranslationZ
         */
         public static final int FloatingActionButton_pressedTranslationZ = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#rippleColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#rippleColor}
           attribute's value can be found in the {@link #FloatingActionButton} array.
 
 
@@ -5281,7 +5294,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:rippleColor
+          @attr name test.assesortron5:rippleColor
         */
         public static final int FloatingActionButton_rippleColor = 2;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -5295,10 +5308,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider test.assesortron4:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding test.assesortron4:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild test.assesortron4:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers test.assesortron4:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider test.assesortron5:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding test.assesortron5:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild test.assesortron5:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers test.assesortron5:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -5346,17 +5359,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#divider}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:divider
+          @attr name test.assesortron5:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -5368,11 +5381,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:dividerPadding
+          @attr name test.assesortron5:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -5382,11 +5395,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:measureWithLargestChild
+          @attr name test.assesortron5:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -5401,7 +5414,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:showDividers
+          @attr name test.assesortron5:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -5480,9 +5493,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LoadingImageView_circleCrop test.assesortron4:circleCrop}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatio test.assesortron4:imageAspectRatio}</code></td><td></td></tr>
-           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust test.assesortron4:imageAspectRatioAdjust}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop test.assesortron5:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio test.assesortron5:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust test.assesortron5:imageAspectRatioAdjust}</code></td><td></td></tr>
            </table>
            @see #LoadingImageView_circleCrop
            @see #LoadingImageView_imageAspectRatio
@@ -5492,7 +5505,7 @@ containing a value of this type.
             0x7f010067, 0x7f010068, 0x7f010069
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#circleCrop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#circleCrop}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -5502,11 +5515,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:circleCrop
+          @attr name test.assesortron5:circleCrop
         */
         public static final int LoadingImageView_circleCrop = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#imageAspectRatio}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#imageAspectRatio}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -5516,11 +5529,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:imageAspectRatio
+          @attr name test.assesortron5:imageAspectRatio
         */
         public static final int LoadingImageView_imageAspectRatio = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#imageAspectRatioAdjust}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#imageAspectRatioAdjust}
           attribute's value can be found in the {@link #LoadingImageView} array.
 
 
@@ -5534,7 +5547,7 @@ containing a value of this type.
 <tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
 <tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:imageAspectRatioAdjust
+          @attr name test.assesortron5:imageAspectRatioAdjust
         */
         public static final int LoadingImageView_imageAspectRatioAdjust = 0;
         /** Attributes that can be used with a MDRootLayout.
@@ -5543,7 +5556,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MDRootLayout_md_reduce_padding_no_title_no_buttons test.assesortron4:md_reduce_padding_no_title_no_buttons}</code></td><td></td></tr>
+           <tr><td><code>{@link #MDRootLayout_md_reduce_padding_no_title_no_buttons test.assesortron5:md_reduce_padding_no_title_no_buttons}</code></td><td></td></tr>
            </table>
            @see #MDRootLayout_md_reduce_padding_no_title_no_buttons
          */
@@ -5551,7 +5564,7 @@ containing a value of this type.
             0x7f01006a
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#md_reduce_padding_no_title_no_buttons}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#md_reduce_padding_no_title_no_buttons}
           attribute's value can be found in the {@link #MDRootLayout} array.
 
 
@@ -5561,7 +5574,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:md_reduce_padding_no_title_no_buttons
+          @attr name test.assesortron5:md_reduce_padding_no_title_no_buttons
         */
         public static final int MDRootLayout_md_reduce_padding_no_title_no_buttons = 0;
         /** Attributes that can be used with a MapAttrs.
@@ -5570,22 +5583,22 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing test.assesortron4:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat test.assesortron4:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng test.assesortron4:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt test.assesortron4:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom test.assesortron4:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_liteMode test.assesortron4:liteMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType test.assesortron4:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass test.assesortron4:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiMapToolbar test.assesortron4:uiMapToolbar}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures test.assesortron4:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures test.assesortron4:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures test.assesortron4:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls test.assesortron4:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures test.assesortron4:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle test.assesortron4:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop test.assesortron4:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing test.assesortron5:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat test.assesortron5:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng test.assesortron5:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt test.assesortron5:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom test.assesortron5:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_liteMode test.assesortron5:liteMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType test.assesortron5:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass test.assesortron5:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiMapToolbar test.assesortron5:uiMapToolbar}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures test.assesortron5:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures test.assesortron5:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures test.assesortron5:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls test.assesortron5:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures test.assesortron5:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle test.assesortron5:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop test.assesortron5:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -5611,7 +5624,7 @@ containing a value of this type.
             0x7f010077, 0x7f010078, 0x7f010079, 0x7f01007a
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5621,11 +5634,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:cameraBearing
+          @attr name test.assesortron5:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5635,11 +5648,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:cameraTargetLat
+          @attr name test.assesortron5:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5649,11 +5662,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:cameraTargetLng
+          @attr name test.assesortron5:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5663,11 +5676,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:cameraTilt
+          @attr name test.assesortron5:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5677,11 +5690,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:cameraZoom
+          @attr name test.assesortron5:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#liteMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#liteMode}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5691,11 +5704,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:liteMode
+          @attr name test.assesortron5:liteMode
         */
         public static final int MapAttrs_liteMode = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#mapType}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5711,11 +5724,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:mapType
+          @attr name test.assesortron5:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5725,11 +5738,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiCompass
+          @attr name test.assesortron5:uiCompass
         */
         public static final int MapAttrs_uiCompass = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiMapToolbar}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiMapToolbar}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5739,11 +5752,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiMapToolbar
+          @attr name test.assesortron5:uiMapToolbar
         */
         public static final int MapAttrs_uiMapToolbar = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5753,11 +5766,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiRotateGestures
+          @attr name test.assesortron5:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5767,11 +5780,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiScrollGestures
+          @attr name test.assesortron5:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5781,11 +5794,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiTiltGestures
+          @attr name test.assesortron5:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5795,11 +5808,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiZoomControls
+          @attr name test.assesortron5:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5809,11 +5822,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:uiZoomGestures
+          @attr name test.assesortron5:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 12;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5823,11 +5836,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:useViewLifecycle
+          @attr name test.assesortron5:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -5837,7 +5850,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:zOrderOnTop
+          @attr name test.assesortron5:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 14;
         /** Attributes that can be used with a MenuGroup.
@@ -5906,9 +5919,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout test.assesortron4:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass test.assesortron4:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass test.assesortron4:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout test.assesortron5:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass test.assesortron5:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass test.assesortron5:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -5922,7 +5935,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction test.assesortron4:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction test.assesortron5:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -5950,17 +5963,17 @@ containing a value of this type.
             0x7f01007e
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionLayout
+          @attr name test.assesortron5:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -5970,11 +5983,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:actionProviderClass
+          @attr name test.assesortron5:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -5984,7 +5997,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:actionViewClass
+          @attr name test.assesortron5:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -6066,7 +6079,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -6082,7 +6095,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:showAsAction
+          @attr name test.assesortron5:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -6098,7 +6111,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing test.assesortron4:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing test.assesortron5:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -6156,7 +6169,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -6166,7 +6179,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:preserveIconSpacing
+          @attr name test.assesortron5:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a NavigationView.
@@ -6178,12 +6191,12 @@ containing a value of this type.
            <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
            <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_elevation test.assesortron4:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_headerLayout test.assesortron4:headerLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemBackground test.assesortron4:itemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemIconTint test.assesortron4:itemIconTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_itemTextColor test.assesortron4:itemTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #NavigationView_menu test.assesortron4:menu}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_elevation test.assesortron5:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_headerLayout test.assesortron5:headerLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemBackground test.assesortron5:itemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemIconTint test.assesortron5:itemIconTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_itemTextColor test.assesortron5:itemTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #NavigationView_menu test.assesortron5:menu}</code></td><td></td></tr>
            </table>
            @see #NavigationView_android_background
            @see #NavigationView_android_fitsSystemWindows
@@ -6219,7 +6232,7 @@ containing a value of this type.
         */
         public static final int NavigationView_android_maxWidth = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#elevation}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#elevation}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -6231,31 +6244,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:elevation
+          @attr name test.assesortron5:elevation
         */
         public static final int NavigationView_elevation = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#headerLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#headerLayout}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:headerLayout
+          @attr name test.assesortron5:headerLayout
         */
         public static final int NavigationView_headerLayout = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#itemBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#itemBackground}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:itemBackground
+          @attr name test.assesortron5:itemBackground
         */
         public static final int NavigationView_itemBackground = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#itemIconTint}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#itemIconTint}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -6266,11 +6279,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:itemIconTint
+          @attr name test.assesortron5:itemIconTint
         */
         public static final int NavigationView_itemIconTint = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#itemTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#itemTextColor}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
@@ -6281,17 +6294,17 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:itemTextColor
+          @attr name test.assesortron5:itemTextColor
         */
         public static final int NavigationView_itemTextColor = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#menu}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#menu}
           attribute's value can be found in the {@link #NavigationView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:menu
+          @attr name test.assesortron5:menu
         */
         public static final int NavigationView_menu = 4;
         /** Attributes that can be used with a PopupWindow.
@@ -6301,7 +6314,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor test.assesortron4:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor test.assesortron5:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -6316,7 +6329,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -6326,7 +6339,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:overlapAnchor
+          @attr name test.assesortron5:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -6335,7 +6348,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor test.assesortron4:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor test.assesortron5:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -6343,7 +6356,7 @@ containing a value of this type.
             0x7f010086
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -6353,7 +6366,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:state_above_anchor
+          @attr name test.assesortron5:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a RecyclerView.
@@ -6363,10 +6376,10 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_layoutManager test.assesortron4:layoutManager}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_reverseLayout test.assesortron4:reverseLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_spanCount test.assesortron4:spanCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_stackFromEnd test.assesortron4:stackFromEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager test.assesortron5:layoutManager}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout test.assesortron5:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount test.assesortron5:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd test.assesortron5:stackFromEnd}</code></td><td></td></tr>
            </table>
            @see #RecyclerView_android_orientation
            @see #RecyclerView_layoutManager
@@ -6385,7 +6398,7 @@ containing a value of this type.
         */
         public static final int RecyclerView_android_orientation = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layoutManager}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layoutManager}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -6395,11 +6408,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:layoutManager
+          @attr name test.assesortron5:layoutManager
         */
         public static final int RecyclerView_layoutManager = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#reverseLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#reverseLayout}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -6409,11 +6422,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:reverseLayout
+          @attr name test.assesortron5:reverseLayout
         */
         public static final int RecyclerView_reverseLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#spanCount}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#spanCount}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -6423,11 +6436,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:spanCount
+          @attr name test.assesortron5:spanCount
         */
         public static final int RecyclerView_spanCount = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#stackFromEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#stackFromEnd}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -6437,7 +6450,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:stackFromEnd
+          @attr name test.assesortron5:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 4;
         /** Attributes that can be used with a ScrimInsetsFrameLayout.
@@ -6446,7 +6459,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground test.assesortron4:insetForeground}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrimInsetsFrameLayout_insetForeground test.assesortron5:insetForeground}</code></td><td></td></tr>
            </table>
            @see #ScrimInsetsFrameLayout_insetForeground
          */
@@ -6454,7 +6467,7 @@ containing a value of this type.
             0x7f01008b
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#insetForeground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#insetForeground}
           attribute's value can be found in the {@link #ScrimInsetsFrameLayout} array.
 
 
@@ -6462,7 +6475,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:insetForeground
+          @attr name test.assesortron5:insetForeground
         */
         public static final int ScrimInsetsFrameLayout_insetForeground = 0;
         /** Attributes that can be used with a ScrollingViewBehavior_Params.
@@ -6471,7 +6484,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ScrollingViewBehavior_Params_behavior_overlapTop test.assesortron4:behavior_overlapTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #ScrollingViewBehavior_Params_behavior_overlapTop test.assesortron5:behavior_overlapTop}</code></td><td></td></tr>
            </table>
            @see #ScrollingViewBehavior_Params_behavior_overlapTop
          */
@@ -6479,7 +6492,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01008c
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#behavior_overlapTop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#behavior_overlapTop}
           attribute's value can be found in the {@link #ScrollingViewBehavior_Params} array.
 
 
@@ -6491,7 +6504,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:behavior_overlapTop
+          @attr name test.assesortron5:behavior_overlapTop
         */
         public static final int ScrollingViewBehavior_Params_behavior_overlapTop = 0;
         /** Attributes that can be used with a SearchView.
@@ -6504,19 +6517,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon test.assesortron4:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon test.assesortron4:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint test.assesortron4:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon test.assesortron4:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault test.assesortron4:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout test.assesortron4:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground test.assesortron4:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint test.assesortron4:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon test.assesortron4:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon test.assesortron4:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground test.assesortron4:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout test.assesortron4:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon test.assesortron4:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon test.assesortron5:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon test.assesortron5:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint test.assesortron5:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon test.assesortron5:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault test.assesortron5:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout test.assesortron5:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground test.assesortron5:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint test.assesortron5:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon test.assesortron5:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon test.assesortron5:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground test.assesortron5:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout test.assesortron5:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon test.assesortron5:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -6568,27 +6581,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:closeIcon
+          @attr name test.assesortron5:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:commitIcon
+          @attr name test.assesortron5:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -6598,21 +6611,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:defaultQueryHint
+          @attr name test.assesortron5:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:goIcon
+          @attr name test.assesortron5:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -6622,31 +6635,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:iconifiedByDefault
+          @attr name test.assesortron5:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#layout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:layout
+          @attr name test.assesortron5:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:queryBackground
+          @attr name test.assesortron5:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -6656,57 +6669,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:queryHint
+          @attr name test.assesortron5:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:searchHintIcon
+          @attr name test.assesortron5:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:searchIcon
+          @attr name test.assesortron5:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:submitBackground
+          @attr name test.assesortron5:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:suggestionRowLayout
+          @attr name test.assesortron5:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:voiceIcon
+          @attr name test.assesortron5:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a SnackbarLayout.
@@ -6716,8 +6729,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_elevation test.assesortron4:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth test.assesortron4:maxActionInlineWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_elevation test.assesortron5:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth test.assesortron5:maxActionInlineWidth}</code></td><td></td></tr>
            </table>
            @see #SnackbarLayout_android_maxWidth
            @see #SnackbarLayout_elevation
@@ -6733,7 +6746,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SnackbarLayout_android_maxWidth = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#elevation}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#elevation}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -6745,11 +6758,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:elevation
+          @attr name test.assesortron5:elevation
         */
         public static final int SnackbarLayout_elevation = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maxActionInlineWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maxActionInlineWidth}
           attribute's value can be found in the {@link #SnackbarLayout} array.
 
 
@@ -6761,7 +6774,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:maxActionInlineWidth
+          @attr name test.assesortron5:maxActionInlineWidth
         */
         public static final int SnackbarLayout_maxActionInlineWidth = 2;
         /** Attributes that can be used with a Spinner.
@@ -6777,10 +6790,10 @@ containing a value of this type.
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled test.assesortron4:disableChildrenWhenDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView test.assesortron4:popupPromptView}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_prompt test.assesortron4:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode test.assesortron4:spinnerMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled test.assesortron5:disableChildrenWhenDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupPromptView test.assesortron5:popupPromptView}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_prompt test.assesortron5:prompt}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode test.assesortron5:spinnerMode}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_background
            @see #Spinner_android_dropDownHorizontalOffset
@@ -6842,7 +6855,7 @@ containing a value of this type.
         */
         public static final int Spinner_android_popupBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -6852,31 +6865,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:disableChildrenWhenDisabled
+          @attr name test.assesortron5:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:popupPromptView
+          @attr name test.assesortron5:popupPromptView
         */
         public static final int Spinner_popupPromptView = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#prompt}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:prompt
+          @attr name test.assesortron5:prompt
         */
         public static final int Spinner_prompt = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -6889,7 +6902,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>dialog</code></td><td>0</td><td></td></tr>
 <tr><td><code>dropdown</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:spinnerMode
+          @attr name test.assesortron5:spinnerMode
         */
         public static final int Spinner_spinnerMode = 8;
         /** Attributes that can be used with a SwitchCompat.
@@ -6901,13 +6914,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText test.assesortron4:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack test.assesortron4:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth test.assesortron4:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding test.assesortron4:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance test.assesortron4:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding test.assesortron4:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track test.assesortron4:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText test.assesortron5:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack test.assesortron5:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth test.assesortron5:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding test.assesortron5:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance test.assesortron5:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding test.assesortron5:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track test.assesortron5:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -6944,7 +6957,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#showText}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -6954,11 +6967,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:showText
+          @attr name test.assesortron5:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -6968,11 +6981,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:splitTrack
+          @attr name test.assesortron5:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -6984,11 +6997,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:switchMinWidth
+          @attr name test.assesortron5:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -7000,21 +7013,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:switchPadding
+          @attr name test.assesortron5:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:switchTextAppearance
+          @attr name test.assesortron5:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -7026,17 +7039,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:thumbTextPadding
+          @attr name test.assesortron5:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#track}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:track
+          @attr name test.assesortron5:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TabLayout.
@@ -7045,22 +7058,22 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #TabLayout_tabBackground test.assesortron4:tabBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabContentStart test.assesortron4:tabContentStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabGravity test.assesortron4:tabGravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorColor test.assesortron4:tabIndicatorColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabIndicatorHeight test.assesortron4:tabIndicatorHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMaxWidth test.assesortron4:tabMaxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMinWidth test.assesortron4:tabMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabMode test.assesortron4:tabMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPadding test.assesortron4:tabPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingBottom test.assesortron4:tabPaddingBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingEnd test.assesortron4:tabPaddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingStart test.assesortron4:tabPaddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabPaddingTop test.assesortron4:tabPaddingTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabSelectedTextColor test.assesortron4:tabSelectedTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextAppearance test.assesortron4:tabTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TabLayout_tabTextColor test.assesortron4:tabTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabBackground test.assesortron5:tabBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabContentStart test.assesortron5:tabContentStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabGravity test.assesortron5:tabGravity}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorColor test.assesortron5:tabIndicatorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabIndicatorHeight test.assesortron5:tabIndicatorHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMaxWidth test.assesortron5:tabMaxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMinWidth test.assesortron5:tabMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabMode test.assesortron5:tabMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPadding test.assesortron5:tabPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingBottom test.assesortron5:tabPaddingBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingEnd test.assesortron5:tabPaddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingStart test.assesortron5:tabPaddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabPaddingTop test.assesortron5:tabPaddingTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabSelectedTextColor test.assesortron5:tabSelectedTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextAppearance test.assesortron5:tabTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TabLayout_tabTextColor test.assesortron5:tabTextColor}</code></td><td></td></tr>
            </table>
            @see #TabLayout_tabBackground
            @see #TabLayout_tabContentStart
@@ -7086,17 +7099,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100b2, 0x7f0100b3, 0x7f0100b4, 0x7f0100b5
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabBackground}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:tabBackground
+          @attr name test.assesortron5:tabBackground
         */
         public static final int TabLayout_tabBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabContentStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabContentStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7108,11 +7121,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabContentStart
+          @attr name test.assesortron5:tabContentStart
         */
         public static final int TabLayout_tabContentStart = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabGravity}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabGravity}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7125,11 +7138,11 @@ containing a value of this type.
 <tr><td><code>fill</code></td><td>0</td><td></td></tr>
 <tr><td><code>center</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:tabGravity
+          @attr name test.assesortron5:tabGravity
         */
         public static final int TabLayout_tabGravity = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabIndicatorColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabIndicatorColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7140,11 +7153,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabIndicatorColor
+          @attr name test.assesortron5:tabIndicatorColor
         */
         public static final int TabLayout_tabIndicatorColor = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabIndicatorHeight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabIndicatorHeight}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7156,11 +7169,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabIndicatorHeight
+          @attr name test.assesortron5:tabIndicatorHeight
         */
         public static final int TabLayout_tabIndicatorHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabMaxWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabMaxWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7172,11 +7185,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabMaxWidth
+          @attr name test.assesortron5:tabMaxWidth
         */
         public static final int TabLayout_tabMaxWidth = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabMinWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabMinWidth}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7188,11 +7201,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabMinWidth
+          @attr name test.assesortron5:tabMinWidth
         */
         public static final int TabLayout_tabMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabMode}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7205,11 +7218,11 @@ containing a value of this type.
 <tr><td><code>scrollable</code></td><td>0</td><td></td></tr>
 <tr><td><code>fixed</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:tabMode
+          @attr name test.assesortron5:tabMode
         */
         public static final int TabLayout_tabMode = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabPadding}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7221,11 +7234,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabPadding
+          @attr name test.assesortron5:tabPadding
         */
         public static final int TabLayout_tabPadding = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabPaddingBottom}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabPaddingBottom}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7237,11 +7250,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabPaddingBottom
+          @attr name test.assesortron5:tabPaddingBottom
         */
         public static final int TabLayout_tabPaddingBottom = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabPaddingEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabPaddingEnd}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7253,11 +7266,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabPaddingEnd
+          @attr name test.assesortron5:tabPaddingEnd
         */
         public static final int TabLayout_tabPaddingEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabPaddingStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabPaddingStart}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7269,11 +7282,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabPaddingStart
+          @attr name test.assesortron5:tabPaddingStart
         */
         public static final int TabLayout_tabPaddingStart = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabPaddingTop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabPaddingTop}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7285,11 +7298,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabPaddingTop
+          @attr name test.assesortron5:tabPaddingTop
         */
         public static final int TabLayout_tabPaddingTop = 12;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabSelectedTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabSelectedTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7300,21 +7313,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabSelectedTextColor
+          @attr name test.assesortron5:tabSelectedTextColor
         */
         public static final int TabLayout_tabSelectedTextColor = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabTextAppearance}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:tabTextAppearance
+          @attr name test.assesortron5:tabTextAppearance
         */
         public static final int TabLayout_tabTextAppearance = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#tabTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#tabTextColor}
           attribute's value can be found in the {@link #TabLayout} array.
 
 
@@ -7325,7 +7338,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:tabTextColor
+          @attr name test.assesortron5:tabTextColor
         */
         public static final int TabLayout_tabTextColor = 9;
         /** Attributes that can be used with a TextAppearance.
@@ -7338,7 +7351,7 @@ containing a value of this type.
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps test.assesortron4:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps test.assesortron5:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_textColor
            @see #TextAppearance_android_textSize
@@ -7375,14 +7388,14 @@ containing a value of this type.
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name test.assesortron4:textAllCaps
+          @attr name test.assesortron5:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 4;
         /** Attributes that can be used with a TextInputLayout.
@@ -7392,9 +7405,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #TextInputLayout_android_hint android:hint}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorEnabled test.assesortron4:errorEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_errorTextAppearance test.assesortron4:errorTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextInputLayout_hintTextAppearance test.assesortron4:hintTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorEnabled test.assesortron5:errorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_errorTextAppearance test.assesortron5:errorTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextInputLayout_hintTextAppearance test.assesortron5:hintTextAppearance}</code></td><td></td></tr>
            </table>
            @see #TextInputLayout_android_hint
            @see #TextInputLayout_errorEnabled
@@ -7411,7 +7424,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextInputLayout_android_hint = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#errorEnabled}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#errorEnabled}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
@@ -7421,27 +7434,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:errorEnabled
+          @attr name test.assesortron5:errorEnabled
         */
         public static final int TextInputLayout_errorEnabled = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#errorTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#errorTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:errorTextAppearance
+          @attr name test.assesortron5:errorTextAppearance
         */
         public static final int TextInputLayout_errorTextAppearance = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#hintTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#hintTextAppearance}
           attribute's value can be found in the {@link #TextInputLayout} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:hintTextAppearance
+          @attr name test.assesortron5:hintTextAppearance
         */
         public static final int TextInputLayout_hintTextAppearance = 1;
         /** Attributes that can be used with a Theme.
@@ -7450,113 +7463,113 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider test.assesortron4:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground test.assesortron4:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme test.assesortron4:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize test.assesortron4:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle test.assesortron4:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle test.assesortron4:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle test.assesortron4:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle test.assesortron4:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle test.assesortron4:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme test.assesortron4:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme test.assesortron4:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle test.assesortron4:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle test.assesortron4:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance test.assesortron4:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor test.assesortron4:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground test.assesortron4:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle test.assesortron4:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable test.assesortron4:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable test.assesortron4:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable test.assesortron4:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable test.assesortron4:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable test.assesortron4:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle test.assesortron4:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable test.assesortron4:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable test.assesortron4:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground test.assesortron4:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle test.assesortron4:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable test.assesortron4:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle test.assesortron4:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle test.assesortron4:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle test.assesortron4:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle test.assesortron4:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons test.assesortron4:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle test.assesortron4:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme test.assesortron4:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider test.assesortron5:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground test.assesortron5:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme test.assesortron5:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize test.assesortron5:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle test.assesortron5:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle test.assesortron5:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle test.assesortron5:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle test.assesortron5:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle test.assesortron5:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme test.assesortron5:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme test.assesortron5:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle test.assesortron5:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle test.assesortron5:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance test.assesortron5:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor test.assesortron5:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground test.assesortron5:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle test.assesortron5:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable test.assesortron5:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable test.assesortron5:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable test.assesortron5:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable test.assesortron5:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable test.assesortron5:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle test.assesortron5:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable test.assesortron5:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable test.assesortron5:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground test.assesortron5:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle test.assesortron5:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable test.assesortron5:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle test.assesortron5:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle test.assesortron5:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle test.assesortron5:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle test.assesortron5:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons test.assesortron5:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle test.assesortron5:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme test.assesortron5:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle test.assesortron4:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle test.assesortron4:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle test.assesortron4:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle test.assesortron4:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle test.assesortron4:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle test.assesortron4:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle test.assesortron4:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle test.assesortron4:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall test.assesortron4:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle test.assesortron4:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle test.assesortron4:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent test.assesortron4:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal test.assesortron4:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated test.assesortron4:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight test.assesortron4:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal test.assesortron4:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary test.assesortron4:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark test.assesortron4:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal test.assesortron4:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding test.assesortron4:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme test.assesortron4:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal test.assesortron4:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical test.assesortron4:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle test.assesortron4:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight test.assesortron4:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground test.assesortron4:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor test.assesortron4:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle test.assesortron4:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator test.assesortron4:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator test.assesortron4:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog test.assesortron4:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle test.assesortron4:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight test.assesortron4:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge test.assesortron4:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall test.assesortron4:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft test.assesortron4:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight test.assesortron4:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground test.assesortron4:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme test.assesortron4:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth test.assesortron4:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle test.assesortron4:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle test.assesortron4:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle test.assesortron4:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle test.assesortron4:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle test.assesortron4:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground test.assesortron4:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless test.assesortron4:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle test.assesortron4:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle test.assesortron4:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle test.assesortron4:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu test.assesortron4:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem test.assesortron4:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall test.assesortron4:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle test.assesortron4:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle test.assesortron4:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu test.assesortron4:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem test.assesortron4:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl test.assesortron4:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle test.assesortron4:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle test.assesortron4:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar test.assesortron4:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay test.assesortron4:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay test.assesortron4:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor test.assesortron4:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor test.assesortron4:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor test.assesortron4:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor test.assesortron4:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor test.assesortron4:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor test.assesortron4:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle test.assesortron4:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle test.assesortron5:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle test.assesortron5:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle test.assesortron5:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle test.assesortron5:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle test.assesortron5:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle test.assesortron5:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle test.assesortron5:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle test.assesortron5:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall test.assesortron5:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle test.assesortron5:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle test.assesortron5:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent test.assesortron5:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal test.assesortron5:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated test.assesortron5:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight test.assesortron5:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal test.assesortron5:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary test.assesortron5:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark test.assesortron5:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal test.assesortron5:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding test.assesortron5:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme test.assesortron5:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal test.assesortron5:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical test.assesortron5:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle test.assesortron5:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight test.assesortron5:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground test.assesortron5:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor test.assesortron5:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle test.assesortron5:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator test.assesortron5:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator test.assesortron5:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog test.assesortron5:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle test.assesortron5:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight test.assesortron5:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge test.assesortron5:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall test.assesortron5:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft test.assesortron5:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight test.assesortron5:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground test.assesortron5:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme test.assesortron5:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth test.assesortron5:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle test.assesortron5:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle test.assesortron5:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle test.assesortron5:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle test.assesortron5:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle test.assesortron5:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground test.assesortron5:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless test.assesortron5:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle test.assesortron5:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle test.assesortron5:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle test.assesortron5:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu test.assesortron5:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem test.assesortron5:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall test.assesortron5:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle test.assesortron5:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle test.assesortron5:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu test.assesortron5:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem test.assesortron5:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl test.assesortron5:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle test.assesortron5:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle test.assesortron5:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar test.assesortron5:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay test.assesortron5:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay test.assesortron5:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor test.assesortron5:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor test.assesortron5:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor test.assesortron5:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor test.assesortron5:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMajor test.assesortron5:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMinor test.assesortron5:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle test.assesortron5:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -7696,37 +7709,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01011f, 0x7f010120, 0x7f010121
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarDivider
+          @attr name test.assesortron5:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarItemBackground
+          @attr name test.assesortron5:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarPopupTheme
+          @attr name test.assesortron5:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -7746,111 +7759,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:actionBarSize
+          @attr name test.assesortron5:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarSplitStyle
+          @attr name test.assesortron5:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarStyle
+          @attr name test.assesortron5:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarTabBarStyle
+          @attr name test.assesortron5:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarTabStyle
+          @attr name test.assesortron5:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarTabTextStyle
+          @attr name test.assesortron5:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarTheme
+          @attr name test.assesortron5:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionBarWidgetTheme
+          @attr name test.assesortron5:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionButtonStyle
+          @attr name test.assesortron5:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionDropDownStyle
+          @attr name test.assesortron5:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionMenuTextAppearance
+          @attr name test.assesortron5:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -7858,181 +7871,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:actionMenuTextColor
+          @attr name test.assesortron5:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeBackground
+          @attr name test.assesortron5:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeCloseButtonStyle
+          @attr name test.assesortron5:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeCloseDrawable
+          @attr name test.assesortron5:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeCopyDrawable
+          @attr name test.assesortron5:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeCutDrawable
+          @attr name test.assesortron5:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeFindDrawable
+          @attr name test.assesortron5:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModePasteDrawable
+          @attr name test.assesortron5:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModePopupWindowStyle
+          @attr name test.assesortron5:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeSelectAllDrawable
+          @attr name test.assesortron5:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeShareDrawable
+          @attr name test.assesortron5:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeSplitBackground
+          @attr name test.assesortron5:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeStyle
+          @attr name test.assesortron5:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionModeWebSearchDrawable
+          @attr name test.assesortron5:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionOverflowButtonStyle
+          @attr name test.assesortron5:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:actionOverflowMenuStyle
+          @attr name test.assesortron5:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:activityChooserViewStyle
+          @attr name test.assesortron5:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:alertDialogButtonGroupStyle
+          @attr name test.assesortron5:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 90;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8042,27 +8055,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:alertDialogCenterButtons
+          @attr name test.assesortron5:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 91;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:alertDialogStyle
+          @attr name test.assesortron5:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 89;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:alertDialogTheme
+          @attr name test.assesortron5:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 92;
         /**
@@ -8078,117 +8091,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:autoCompleteTextViewStyle
+          @attr name test.assesortron5:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:borderlessButtonStyle
+          @attr name test.assesortron5:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonBarButtonStyle
+          @attr name test.assesortron5:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonBarNegativeButtonStyle
+          @attr name test.assesortron5:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 95;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonBarNeutralButtonStyle
+          @attr name test.assesortron5:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonBarPositiveButtonStyle
+          @attr name test.assesortron5:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 94;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonBarStyle
+          @attr name test.assesortron5:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonStyle
+          @attr name test.assesortron5:buttonStyle
         */
         public static final int Theme_buttonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:buttonStyleSmall
+          @attr name test.assesortron5:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 99;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:checkboxStyle
+          @attr name test.assesortron5:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:checkedTextViewStyle
+          @attr name test.assesortron5:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 101;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8199,11 +8212,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorAccent
+          @attr name test.assesortron5:colorAccent
         */
         public static final int Theme_colorAccent = 83;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8214,11 +8227,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorButtonNormal
+          @attr name test.assesortron5:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 87;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8229,11 +8242,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorControlActivated
+          @attr name test.assesortron5:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 85;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8244,11 +8257,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorControlHighlight
+          @attr name test.assesortron5:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 86;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8259,11 +8272,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorControlNormal
+          @attr name test.assesortron5:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 84;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8274,11 +8287,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorPrimary
+          @attr name test.assesortron5:colorPrimary
         */
         public static final int Theme_colorPrimary = 81;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8289,11 +8302,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorPrimaryDark
+          @attr name test.assesortron5:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 82;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8304,11 +8317,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:colorSwitchThumbNormal
+          @attr name test.assesortron5:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8320,51 +8333,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:dialogPreferredPadding
+          @attr name test.assesortron5:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:dialogTheme
+          @attr name test.assesortron5:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:dividerHorizontal
+          @attr name test.assesortron5:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:dividerVertical
+          @attr name test.assesortron5:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:dropDownListViewStyle
+          @attr name test.assesortron5:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 73;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8376,21 +8389,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:dropdownListPreferredItemHeight
+          @attr name test.assesortron5:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:editTextBackground
+          @attr name test.assesortron5:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8398,61 +8411,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:editTextColor
+          @attr name test.assesortron5:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:editTextStyle
+          @attr name test.assesortron5:editTextStyle
         */
         public static final int Theme_editTextStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:homeAsUpIndicator
+          @attr name test.assesortron5:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:listChoiceBackgroundIndicator
+          @attr name test.assesortron5:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 80;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:listDividerAlertDialog
+          @attr name test.assesortron5:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:listPopupWindowStyle
+          @attr name test.assesortron5:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8464,11 +8477,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:listPreferredItemHeight
+          @attr name test.assesortron5:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 68;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8480,11 +8493,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:listPreferredItemHeightLarge
+          @attr name test.assesortron5:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 70;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8496,11 +8509,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:listPreferredItemHeightSmall
+          @attr name test.assesortron5:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 69;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8512,11 +8525,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:listPreferredItemPaddingLeft
+          @attr name test.assesortron5:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 71;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8528,31 +8541,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:listPreferredItemPaddingRight
+          @attr name test.assesortron5:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 72;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:panelBackground
+          @attr name test.assesortron5:panelBackground
         */
         public static final int Theme_panelBackground = 77;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:panelMenuListTheme
+          @attr name test.assesortron5:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 79;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8564,171 +8577,171 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:panelMenuListWidth
+          @attr name test.assesortron5:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 78;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:popupMenuStyle
+          @attr name test.assesortron5:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:popupWindowStyle
+          @attr name test.assesortron5:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:radioButtonStyle
+          @attr name test.assesortron5:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:ratingBarStyle
+          @attr name test.assesortron5:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:searchViewStyle
+          @attr name test.assesortron5:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 67;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:selectableItemBackground
+          @attr name test.assesortron5:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:selectableItemBackgroundBorderless
+          @attr name test.assesortron5:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:spinnerDropDownItemStyle
+          @attr name test.assesortron5:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:spinnerStyle
+          @attr name test.assesortron5:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:switchStyle
+          @attr name test.assesortron5:switchStyle
         */
         public static final int Theme_switchStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceLargePopupMenu
+          @attr name test.assesortron5:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceListItem
+          @attr name test.assesortron5:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 75;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceListItemSmall
+          @attr name test.assesortron5:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 76;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceSearchResultSubtitle
+          @attr name test.assesortron5:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 65;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceSearchResultTitle
+          @attr name test.assesortron5:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 64;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:textAppearanceSmallPopupMenu
+          @attr name test.assesortron5:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8736,11 +8749,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:textColorAlertDialogListItem
+          @attr name test.assesortron5:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 93;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8748,31 +8761,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:textColorSearchUrl
+          @attr name test.assesortron5:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 66;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:toolbarNavigationButtonStyle
+          @attr name test.assesortron5:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:toolbarStyle
+          @attr name test.assesortron5:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8782,11 +8795,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowActionBar
+          @attr name test.assesortron5:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8796,11 +8809,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowActionBarOverlay
+          @attr name test.assesortron5:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8810,11 +8823,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowActionModeOverlay
+          @attr name test.assesortron5:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8829,11 +8842,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowFixedHeightMajor
+          @attr name test.assesortron5:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8848,11 +8861,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowFixedHeightMinor
+          @attr name test.assesortron5:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8867,11 +8880,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowFixedWidthMajor
+          @attr name test.assesortron5:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8886,11 +8899,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowFixedWidthMinor
+          @attr name test.assesortron5:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8905,11 +8918,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowMinWidthMajor
+          @attr name test.assesortron5:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8924,11 +8937,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowMinWidthMinor
+          @attr name test.assesortron5:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -8938,7 +8951,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:windowNoTitle
+          @attr name test.assesortron5:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -8949,25 +8962,25 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription test.assesortron4:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon test.assesortron4:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd test.assesortron4:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft test.assesortron4:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight test.assesortron4:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart test.assesortron4:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight test.assesortron4:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription test.assesortron4:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon test.assesortron4:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme test.assesortron4:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle test.assesortron4:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance test.assesortron4:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title test.assesortron4:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom test.assesortron4:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd test.assesortron4:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart test.assesortron4:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop test.assesortron4:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins test.assesortron4:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance test.assesortron4:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription test.assesortron5:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon test.assesortron5:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd test.assesortron5:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft test.assesortron5:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight test.assesortron5:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart test.assesortron5:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight test.assesortron5:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription test.assesortron5:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon test.assesortron5:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme test.assesortron5:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle test.assesortron5:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance test.assesortron5:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title test.assesortron5:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom test.assesortron5:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd test.assesortron5:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart test.assesortron5:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop test.assesortron5:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins test.assesortron5:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance test.assesortron5:titleTextAppearance}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -9012,7 +9025,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9022,21 +9035,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:collapseContentDescription
+          @attr name test.assesortron5:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 18;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:collapseIcon
+          @attr name test.assesortron5:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 17;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9048,11 +9061,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetEnd
+          @attr name test.assesortron5:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9064,11 +9077,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetLeft
+          @attr name test.assesortron5:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9080,11 +9093,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetRight
+          @attr name test.assesortron5:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9096,11 +9109,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:contentInsetStart
+          @attr name test.assesortron5:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9112,11 +9125,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:maxButtonHeight
+          @attr name test.assesortron5:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9126,31 +9139,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:navigationContentDescription
+          @attr name test.assesortron5:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 20;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:navigationIcon
+          @attr name test.assesortron5:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 19;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:popupTheme
+          @attr name test.assesortron5:popupTheme
         */
         public static final int Toolbar_popupTheme = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9160,21 +9173,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:subtitle
+          @attr name test.assesortron5:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:subtitleTextAppearance
+          @attr name test.assesortron5:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#title}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9184,11 +9197,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:title
+          @attr name test.assesortron5:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9200,11 +9213,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:titleMarginBottom
+          @attr name test.assesortron5:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9216,11 +9229,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:titleMarginEnd
+          @attr name test.assesortron5:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9232,11 +9245,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:titleMarginStart
+          @attr name test.assesortron5:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9248,11 +9261,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:titleMarginTop
+          @attr name test.assesortron5:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -9264,17 +9277,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:titleMargins
+          @attr name test.assesortron5:titleMargins
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:titleTextAppearance
+          @attr name test.assesortron5:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 9;
         /** Attributes that can be used with a View.
@@ -9285,11 +9298,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTint test.assesortron4:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTintMode test.assesortron4:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd test.assesortron4:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart test.assesortron4:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme test.assesortron4:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTint test.assesortron5:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTintMode test.assesortron5:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd test.assesortron5:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart test.assesortron5:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme test.assesortron5:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -9316,7 +9329,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundTint}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -9327,11 +9340,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:backgroundTint
+          @attr name test.assesortron5:backgroundTint
         */
         public static final int View_backgroundTint = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -9347,11 +9360,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:backgroundTintMode
+          @attr name test.assesortron5:backgroundTintMode
         */
         public static final int View_backgroundTintMode = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -9363,11 +9376,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:paddingEnd
+          @attr name test.assesortron5:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -9379,17 +9392,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:paddingStart
+          @attr name test.assesortron5:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#theme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:theme
+          @attr name test.assesortron5:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewStubCompat.
@@ -9433,10 +9446,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_appTheme test.assesortron4:appTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment test.assesortron4:environment}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode test.assesortron4:fragmentMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle test.assesortron4:fragmentStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_appTheme test.assesortron5:appTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment test.assesortron5:environment}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode test.assesortron5:fragmentMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle test.assesortron5:fragmentStyle}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentOptions_appTheme
            @see #WalletFragmentOptions_environment
@@ -9447,7 +9460,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010133, 0x7f010134, 0x7f010135, 0x7f010136
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#appTheme}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#appTheme}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -9460,11 +9473,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>holo_dark</code></td><td>0</td><td></td></tr>
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:appTheme
+          @attr name test.assesortron5:appTheme
         */
         public static final int WalletFragmentOptions_appTheme = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#environment}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#environment}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -9478,11 +9491,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>sandbox</code></td><td>0</td><td></td></tr>
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:environment
+          @attr name test.assesortron5:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#fragmentMode}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#fragmentMode}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
@@ -9495,17 +9508,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>buyButton</code></td><td>1</td><td></td></tr>
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:fragmentMode
+          @attr name test.assesortron5:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#fragmentStyle}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#fragmentStyle}
           attribute's value can be found in the {@link #WalletFragmentOptions} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:fragmentStyle
+          @attr name test.assesortron5:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /** Attributes that can be used with a WalletFragmentStyle.
@@ -9514,17 +9527,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance test.assesortron4:buyButtonAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight test.assesortron4:buyButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText test.assesortron4:buyButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth test.assesortron4:buyButtonWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground test.assesortron4:maskedWalletDetailsBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground test.assesortron4:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance test.assesortron4:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance test.assesortron4:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType test.assesortron4:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor test.assesortron4:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance test.assesortron4:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance test.assesortron5:buyButtonAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight test.assesortron5:buyButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText test.assesortron5:buyButtonText}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth test.assesortron5:buyButtonWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground test.assesortron5:maskedWalletDetailsBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground test.assesortron5:maskedWalletDetailsButtonBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance test.assesortron5:maskedWalletDetailsButtonTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance test.assesortron5:maskedWalletDetailsHeaderTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType test.assesortron5:maskedWalletDetailsLogoImageType}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor test.assesortron5:maskedWalletDetailsLogoTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance test.assesortron5:maskedWalletDetailsTextAppearance}</code></td><td></td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -9544,7 +9557,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01013f, 0x7f010140, 0x7f010141
         };
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buyButtonAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buyButtonAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9558,11 +9571,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>grayscale</code></td><td>2</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:buyButtonAppearance
+          @attr name test.assesortron5:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buyButtonHeight}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buyButtonHeight}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9583,11 +9596,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:buyButtonHeight
+          @attr name test.assesortron5:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buyButtonText}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buyButtonText}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9602,11 +9615,11 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 <tr><td><code>donate_with_google</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:buyButtonText
+          @attr name test.assesortron5:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#buyButtonWidth}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#buyButtonWidth}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9627,11 +9640,11 @@ containing a value of this type.
 <tr><td><code>match_parent</code></td><td>-1</td><td></td></tr>
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:buyButtonWidth
+          @attr name test.assesortron5:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9639,11 +9652,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:maskedWalletDetailsBackground
+          @attr name test.assesortron5:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsButtonBackground}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsButtonBackground}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9651,31 +9664,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name test.assesortron4:maskedWalletDetailsButtonBackground
+          @attr name test.assesortron5:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsButtonTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsButtonTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:maskedWalletDetailsButtonTextAppearance
+          @attr name test.assesortron5:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsHeaderTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsHeaderTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:maskedWalletDetailsHeaderTextAppearance
+          @attr name test.assesortron5:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsLogoImageType}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsLogoImageType}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9688,11 +9701,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>classic</code></td><td>1</td><td></td></tr>
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name test.assesortron4:maskedWalletDetailsLogoImageType
+          @attr name test.assesortron5:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsLogoTextColor}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsLogoTextColor}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
@@ -9703,17 +9716,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name test.assesortron4:maskedWalletDetailsLogoTextColor
+          @attr name test.assesortron5:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
-          <p>This symbol is the offset where the {@link test.assesortron4.R.attr#maskedWalletDetailsTextAppearance}
+          <p>This symbol is the offset where the {@link test.assesortron5.R.attr#maskedWalletDetailsTextAppearance}
           attribute's value can be found in the {@link #WalletFragmentStyle} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name test.assesortron4:maskedWalletDetailsTextAppearance
+          @attr name test.assesortron5:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

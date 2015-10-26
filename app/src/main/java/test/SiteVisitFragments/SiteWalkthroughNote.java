@@ -25,8 +25,6 @@ import test.objects.WalkThrough;
 public class SiteWalkthroughNote extends Fragment implements TabFragment {
     private String TAB_NAME = "notes";
 
-    private String oldNote;
-    private TextView projectName;
     private EditText note;
     private WalkThrough walkThrough;
 
@@ -50,23 +48,21 @@ public class SiteWalkthroughNote extends Fragment implements TabFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_walk_through_note, container, false);
+        View view = inflater.inflate(R.layout.fragment_walk_through_note, container, false);
+        note = (EditText) view.findViewById(R.id.walk_through_note);
+        if (walkThrough != null) {
+            note.setText(walkThrough.getNotes());
+        }
+        return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInst) {
         super.onActivityCreated(savedInst);
 
-        note = (EditText) getView().findViewById(R.id.walk_through_note);
-        if (walkThrough != null) {
-            note.setText(walkThrough.getNotes());
-        }
-
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void getValues() {
         if (parentListener != null) {
             parentListener.onNoteEntered(note.getText().toString());

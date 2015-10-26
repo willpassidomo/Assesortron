@@ -226,7 +226,7 @@ public class VisitSite extends Activity {
     }
 
     private void setRecievers() {
-        IntentFilter filter = new IntentFilter(Constants.BROADCAST_SYNC_SERVICE_RESPONSE);
+        IntentFilter filter = new IntentFilter(FullSyncService.BROADCAST_SYNC_SERVICE_RESPONSE);
         filter.addCategory(Intent.CATEGORY_DEFAULT);
         if (receiver == null) {
             receiver = new SyncBroadcastReciever();

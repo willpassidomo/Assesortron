@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<Ico
     public static final int TYPE_INTENT = 2;
     public static final int TYPE_LISTENER = 3;
     public static final int TYPE_FRAGMENT_SUPPORT = 4;
+    private View CURRENT_CLICKED;
 
     ListItem[] items;
     DrawerActivtyListener parent;
@@ -33,6 +35,25 @@ public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<Ico
         this.parent = parent;
     }
 
+    public void displayFirst() {
+        for (ListItem item: items) {
+            if (item.type == TYPE_FRAGMENT) {
+                parent.displayFragment(item.fragement, item.title);
+                parent.setTitle(item.title);
+                break;
+            }
+        }
+    }
+
+    public void display(String name) {
+        for (ListItem item: items) {
+            if (item.title.equals(name)) {
+                parent.displayFragment(item.fragement, item.title);
+                parent.setTitle(item.title);
+                break;
+            }
+        }
+    }
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int i) {
@@ -56,13 +77,17 @@ public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<Ico
             viewHolder.textView.setText(item.title);
             switch (item.type) {
                 case TYPE_FRAGMENT:
-                    viewHolder.background.setOnClickListener(itemClickListener(item.fragement));
+                    LinearLayout self = viewHolder.background;
+                    viewHolder.background.setOnClickListener(itemClickListener(self, item.fragement, item.title));
                     break;
                 case TYPE_LISTENER:
-                    viewHolder.background.setOnClickListener(item.listener);
+                    LinearLayout self1 = viewHolder.background;
+                    viewHolder.background.setOnClickListener(itemClickListener(self1, item.listener));
                     break;
                 case TYPE_FRAGMENT_SUPPORT:
-                    viewHolder.background.setOnClickListener(itemClickListener(item.fragmentSupported));
+                    LinearLayout self2 = viewHolder.background;
+                    viewHolder.background.setOnClickListener(itemClickListener(self2, item.fragmentSupported, item.title));
+                    break;
             }
         }
         if (viewHolder.VIEW_TYPE == HEADER) {
@@ -108,24 +133,49 @@ public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<Ico
         return i == 0;
     }
 
-    private View.OnClickListener itemClickListener(final Fragment fragment) {
+    private View.OnClickListener itemClickListener(final LinearLayout background, final Fragment fragment, final String title) {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                parent.displayFragment(fragment);
+                view.setSelected(true);
+                setClicked(view);
+                parent.displayFragment(fragment, title);
+                parent.setTitle(title);
             }
         };
         return listener;
     }
 
-    private View.OnClickListener itemClickListener(final android.support.v4.app.Fragment fragment) {
+    private View.OnClickListener itemClickListener(final LinearLayout background, final android.support.v4.app.Fragment fragment, final String title) {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                parent.displayFragment(fragment);
+                view.setSelected(true);
+                setClicked(view);
+                parent.displayFragment(fragment, title);
+                parent.setTitle(title);
             }
         };
         return listener;
+    }
+
+    private View.OnClickListener itemClickListener(final LinearLayout background, final View.OnClickListener listener) {
+        View.OnClickListener wrapperListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setSelected(true);
+                setClicked(view);
+                listener.onClick(view);
+            }
+        };
+        return wrapperListener;
+    }
+
+    private void setClicked(View background) {
+        if (CURRENT_CLICKED != null) {
+            CURRENT_CLICKED.setSelected(false);
+        }
+        CURRENT_CLICKED = background;
     }
 
     class Holder extends RecyclerView.ViewHolder {
@@ -142,13 +192,11 @@ public abstract class IconHeaderRecyclerAdapter extends RecyclerView.Adapter<Ico
             } else {
                 VIEW_TYPE = ITEM;
                 this.view = view;
-                this.background = (LinearLayout)view.findViewById(R.id.drawer_list_background);
+                this.background = (LinearLayout) view.findViewById(R.id.drawer_list_background);
                 this.textView = (TextView) view.findViewById(R.id.drawer_list_text);
                 this.imageView = (ImageView) view.findViewById(R.id.drawer_list_image);
             }
         }
-
-
     }
 
     public class ListItem {

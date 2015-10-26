@@ -23,13 +23,15 @@ import test.superActivities.SuperProject;
  */
 public class ProjectListAdapter implements ListAdapter {
     private boolean EMPTY = false;
+    private String userId;
 
     private List<Project> projects;
     private Context context;
 
-    public ProjectListAdapter(Context context, List<Project> projects) {
+    public ProjectListAdapter(Context context, List<Project> projects, String userId) {
         this.context = context;
         this.projects = projects;
+        this.userId = userId;
     }
 
     @Override
@@ -116,6 +118,7 @@ public class ProjectListAdapter implements ListAdapter {
                 public void onClick(View view) {
                     Intent intent = new Intent(context, SuperProject.class);
                     intent.putExtra(Constants.PROJECT_ID, project.getId());
+                    intent.putExtra(Constants.USER_ID, userId);
                     context.startActivity(intent);
                 }
             });

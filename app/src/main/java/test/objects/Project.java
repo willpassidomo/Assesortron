@@ -34,23 +34,25 @@ public class Project {
     private double squareFeet;
     private boolean hasOutdoorWork;
 
-    private List<Uri> pictures = new ArrayList<Uri>();
+    private List<String> pictures = new ArrayList<String>();
 
     private List<DrawRequestItem> changeOrders;// = new ArrayList<ChangeOrder>();
     private List<DrawRequest> drawRequests;// = new ArrayList<DrawRequest>();
     private List<WalkThrough> walkThroughs;// = new ArrayList<WalkThrough>();
+    private List<FieldValue> fieldValues;
 
-    public Project(String string) {
+    private Project() {
 
     }
 
-    public Project() {
+    public Project(String userId) {
+        this.userId = userId;
         this.id = UUID.randomUUID().toString();
         this.dateCreated = new Date();
     }
 
     public static Project initializeDBProject() {
-        return new Project("");
+        return new Project();
     }
 
     public String getId() {
@@ -270,7 +272,7 @@ public class Project {
         return changeOrders.remove(i);
     }
 
-    public void addSitePicture(Uri pictureUri) {
+    public void addSitePicture(String pictureUri) {
         this.pictures.add(pictureUri);
     }
 
@@ -282,19 +284,15 @@ public class Project {
         this.pictures.remove(i);
     }
 
-    public List<Uri> getPictures() {
+    public List<String> getPictures() {
         return this.pictures;
     }
 
-    public Uri getPicture(int i) {
+    public String getPicture(int i) {
         return this.pictures.get(i);
     }
 
-    public void setSitePictures(List<Uri> sitePictures) {
-        this.setPictures(new ArrayList<Uri>(sitePictures));
-    }
-
-    public void setPictures(List<Uri> pictures) {
+    public void setPictures(List<String> pictures) {
         this.pictures = pictures;
     }
 
@@ -322,6 +320,14 @@ public class Project {
         if (retainageRel != null && retainageRel.isEmpty()) {
             this.retainageRel = Double.parseDouble(retainageRel);
         }
+    }
+
+    public List<FieldValue> getFieldValues() {
+        return fieldValues;
+    }
+
+    public void setFieldValues(List<FieldValue> fieldValues) {
+        this.fieldValues = fieldValues;
     }
 
 

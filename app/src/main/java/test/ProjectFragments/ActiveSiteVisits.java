@@ -32,28 +32,19 @@ public class ActiveSiteVisits extends Fragment {
 
     public ActiveSiteVisits() {}
 
-    public static ActiveSiteVisits newInstance(List<SiteVisit> siteVisits) {
+    public static ActiveSiteVisits newInstance(String projectId, String userId) {
         ActiveSiteVisits activeSiteVisits = new ActiveSiteVisits();
-        activeSiteVisits.setSiteVisitList(siteVisits);
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.PROJECT_ID, projectId);
+        bundle.putString(Constants.USER_ID, userId);
+        activeSiteVisits.setArguments(bundle);
         return activeSiteVisits;
     }
 
-    public static ActiveSiteVisits newInstance(String projectId) {
-        ActiveSiteVisits activeSiteVisits = new ActiveSiteVisits();
-        activeSiteVisits.setProjectId(projectId);
-        return activeSiteVisits;
-    }
-
-    private void setSiteVisitList(List<SiteVisit> siteVisits) {
-        this.siteVisits = siteVisits;
-    }
-
-    private void setProjectId(String projectId) {
-        this.projectId = projectId;
-    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup vg, Bundle saved) {
         super.onCreateView(inflater, vg, saved);
+        projectId = getArguments().getString(Constants.PROJECT_ID);
         View view = inflater.inflate(R.layout.fragment_list, null);
         listView = (ListView)view.findViewById(R.id.list_fragment_list);
         setListView();
@@ -95,6 +86,7 @@ public class ActiveSiteVisits extends Fragment {
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(), SuperSiteVisit.class);
                             intent.putExtra(Constants.SITE_VISIT_ID, sv.getId());
+                            intent.putExtra(Constants.USER_ID, getArguments().getString(Constants.USER_ID));
                             getActivity().startActivity(intent);
                         }
                     };

@@ -13,6 +13,8 @@ import test.Fragments.DrawRequestItemList;
 import test.assesortron5.R;
 import test.objects.DrawRequest;
 import test.objects.DrawRequestItem;
+import test.objects.WalkThrough;
+import test.persistence.Constants;
 import test.persistence.Storage;
 
 /**
@@ -29,7 +31,9 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
 
     public static DrawRequestItemsManagerFragment newInstance(String siteWalkId) {
         DrawRequestItemsManagerFragment drif = new DrawRequestItemsManagerFragment();
-        drif.setSiteWalkId(siteWalkId);
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.SITE_VISIT_ID, siteWalkId);
+        drif.setArguments(bundle);
         return drif;
     }
 
@@ -38,6 +42,14 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
         drif.setSiteWalkId(sitetWalkId);
         drif.setDrawRequestItems(dr);
         return drif;
+    }
+
+    @Override
+    public void onCreate(Bundle saved) {
+        super.onCreate(saved);
+        setRetainInstance(true);
+        siteWalkId = getArguments().getString(Constants.SITE_VISIT_ID);
+
     }
 
     @Override
@@ -73,7 +85,7 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
                 renderDrawRequestItems();
             }
         };
-        if (drawRequest != null) {
+        if (drawRequest == null) {
             getDrawRequestItems.execute(siteWalkId);
         }
     }
@@ -83,12 +95,11 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     }
 
     private void renderDrawRequestItems() {
-        rendered = true;
-        Log.i("DR Item manager", "Rendering Overview");
-        getFragmentManager()
-                .beginTransaction()
-                .add(R.id.fragment_draw_request_items_manager_main, DrawRequestItemOverview.newInstance(this, drawRequest))
-                .commit();
+            Log.i("DR Item manager", "Rendering Overview");
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_draw_request_items_manager_main, DrawRequestItemOverview.newInstance(this, drawRequest))
+                    .commit();
     }
 
     @Override
@@ -102,6 +113,7 @@ public class DrawRequestItemsManagerFragment extends Fragment implements DrawReq
     @Override
     public void submitDrawRequestItem(DrawRequestItem drawRequestItem) {
         //TODO
+
         drawRequest.addDrawRequestItem(drawRequestItem);
         Storage.storeDrawRequestItem(getActivity(), drawRequest.getId(), drawRequestItem);
         getActivity().onBackPressed();

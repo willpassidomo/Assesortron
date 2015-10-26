@@ -21,6 +21,7 @@ import test.persistence.Storage;
  * helper methods.
  */
 public class FullSyncService extends IntentService {
+    public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
     public static final String OUT_BOUND_MESSAGE = "outbound_message";
     public static final String ERROR_MESSAGE = "ERROR: no response recieved";
 
@@ -33,6 +34,12 @@ public class FullSyncService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        Log.i("FullSyncService", "intent Received\n" +
+                "email = " + intent.getStringExtra(Constants.EMAIL_ADDRESS) + "\n" +
+                        "id = " + intent.getStringExtra(Constants.SITE_VISIT_ID) + "\n" +
+                "type = " + intent.getStringExtra(Constants.ID_TYPE));
+
+
         context = this;
         if (intent.getStringExtra(Constants.EMAIL_ADDRESS) != null) {
             switch (intent.getStringExtra(Constants.ID_TYPE)) {
@@ -54,8 +61,6 @@ public class FullSyncService extends IntentService {
                 case Constants.TYPE_SITEVISIT:
                     syncSiteVisit(intent.getStringExtra(Constants.SITE_VISIT_ID));
                     break;
-                default:
-                    syncAll();
             }
         }
     }
@@ -67,7 +72,9 @@ public class FullSyncService extends IntentService {
     private void emailSiteVisit(String siteVisitId, final String emailAddress) {
         final SiteVisit siteVisit = Storage.getSiteWalkById(this, siteVisitId);
         StringWrapper string = null;
+        Log.i("FullSyncService", "starting email siteVisit");
         try {
+            sendBroadCast("Making network connection...");
             string = AppConstants
                     .getAssServiceHandle()
                     .taskerAPI()
@@ -76,11 +83,12 @@ public class FullSyncService extends IntentService {
             Log.i("FullSyncService","Network connection successful");
         }
         catch (IOException e) {
+            Log.i("FullSyncService","Network connection UNsuccessful");
             e.printStackTrace();
         }
         finally {
             Intent broadcastIntent = new Intent();
-            broadcastIntent.setAction(Constants.BROADCAST_SYNC_SERVICE_RESPONSE)
+            broadcastIntent.setAction(BROADCAST_SYNC_SERVICE_RESPONSE)
                     .addCategory(Intent.CATEGORY_DEFAULT)
                     .putExtra(OUT_BOUND_MESSAGE, string != null ? string.getString() : ERROR_MESSAGE);
             sendBroadcast(broadcastIntent);
@@ -105,7 +113,7 @@ public class FullSyncService extends IntentService {
         }
         finally {
             Intent broadcastIntent = new Intent();
-            broadcastIntent.setAction(Constants.BROADCAST_SYNC_SERVICE_RESPONSE)
+            broadcastIntent.setAction(BROADCAST_SYNC_SERVICE_RESPONSE)
                     .addCategory(Intent.CATEGORY_DEFAULT)
                     .putExtra(OUT_BOUND_MESSAGE, string != null ? string.getString() : ERROR_MESSAGE);
             sendBroadcast(broadcastIntent);
@@ -113,8 +121,12 @@ public class FullSyncService extends IntentService {
         }
     }
 
-    private void syncAll() {
-
+    private void sendBroadCast(String broadcast) {
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.setAction(BROADCAST_SYNC_SERVICE_RESPONSE)
+                .addCategory(Intent.CATEGORY_DEFAULT)
+                .putExtra(OUT_BOUND_MESSAGE, broadcast);
+        sendBroadcast(broadcastIntent);
     }
 
 }

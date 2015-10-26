@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/background_floating_material_dark">
+    android:layout_height="178dp"
+    android:background="@color/background_floating_material_dark"
+    android:id="@+id/iidid">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/header_projec_image"></ImageView>
+
+    <RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Project Drawer"
-        android:id="@+id/textView30"
+        android:text="project name"
+        android:id="@+id/header_project_drawer_name"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
         android:autoText="false"
         android:textColor="#ffffffff"
-        android:textSize="36dp" />
-</LinearLayout>
+        android:textSize="24dp"
+        android:layout_above="@+id/header_project_address"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="address"
+        android:id="@+id/header_project_address"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/header_project_drawer_name"
+        android:layout_alignStart="@+id/header_project_drawer_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#ffffffff" />
+
+</RelativeLayout>
+
+</FrameLayout>

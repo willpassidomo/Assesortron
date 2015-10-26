@@ -35,6 +35,11 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
     List<FieldValue> questions;
     boolean save;
 
+    @Override
+    public void onCreate(Bundle saved) {
+        super.onCreate(saved);
+        setRetainInstance(true);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup vg, Bundle savedInstanceState) {
@@ -115,13 +120,8 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
 
     private void setQuestions(List<FieldValue> fieldValues) {
         questions = fieldValues;
-        for (FieldValue fv: questions) {
-            if (fv.getOwnerId() == null || fv.getOwnerId().equals("")) {
-                fv.setOwnerId(siteWalk.getId());
-            }
-        }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.add(R.id.new_site_visit_fv_list, SoftQuestionsFragment.newInstance(this, questions));
+        ft.add(R.id.new_site_visit_fv_list, SoftQuestionsFragment.newInstance(this, questions, siteWalk.getId()));
         ft.commit();
     }
 
@@ -148,7 +148,7 @@ public class NewSiteVisit extends Fragment implements SoftQuestionsFragment.Data
     }
 
     @Override
-    public void finishFieldValues() {
+    public void finishFieldValues(List<FieldValue> fvs) {
         siteWalk.setFieldValues(questions);
         parentListener.newSiteVisit(siteWalk);
     }

@@ -38,11 +38,13 @@ public enum State {
 
     /** The set of states addressed by abbreviations. */
     private static final Map<String, State> STATES_BY_ABBR = new HashMap<String, State>();
+    private static final Map<String, String> ABBR_BY_STATE = new HashMap<>();
 
     /* static initializer */
     static {
         for (State state : values()) {
             STATES_BY_ABBR.put(state.getAbbreviation(), state);
+            ABBR_BY_STATE.put(state.name, state.getAbbreviation());
         }
     }
 
@@ -59,14 +61,14 @@ public enum State {
         this.abbreviation = abbreviation;
     }
 
-    /**
-     * Returns the state's abbreviation.
-     *
-     * @return the state's abbreviation.
-     */
-    public String getAbbreviation() {
-        return abbreviation;
+    public String getAbbreviation() {return this.abbreviation;};
+
+
+    public static String getAbbreviation(String state) {
+        return ABBR_BY_STATE.get(state);
     }
+
+
 
     public static State valueOfAbbreviation(String abbr) {
         State state = STATES_BY_ABBR.get(abbr);

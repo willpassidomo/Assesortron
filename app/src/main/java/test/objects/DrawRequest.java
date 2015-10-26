@@ -157,9 +157,9 @@ public class DrawRequest {
     public DrawRequestDTO getDTO() {
         DrawRequestDTO dto = new DrawRequestDTO();
         dto.setConditions(conditions);
-        dto.setCurrentRecommendationString(currentRecommendation.toString());
-        dto.setCurrentRequestString(currentRequest.toString());
-        dto.setDateString(date.toString());
+        dto.setCurrentRecommendationString(currentRecommendation != null ? currentRecommendation.toString(): "-");
+        dto.setCurrentRequestString(currentRequest != null ? currentRequest.toString() : "-");
+        dto.setDateString(date != null ? date.toString() : "-");
         List<DrawRequestItemDTO> driDto = new ArrayList<>();
         for (DrawRequestItem dr: getItemList()) {
             driDto.add(dr.getDTO());

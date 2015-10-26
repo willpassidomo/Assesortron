@@ -28,6 +28,14 @@
                 android:textSize="24dp"
                 android:hint="Project Name" />
 
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="find current address"
+                android:id="@+id/project_enter_find_current_address"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/md_btn_shape" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,7 +116,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/project_enter_view_switcher"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -124,12 +133,20 @@
                             android:background="@drawable/ic_camera" />
                     </RelativeLayout>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/project_enter_site_picture"
-                        android:longClickable="false" />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/project_enter_site_picture"
+                            android:longClickable="false"
+                            android:layout_gravity="center" />
+                    </FrameLayout>
+
                 </ViewSwitcher>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

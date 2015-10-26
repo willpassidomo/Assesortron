@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 import java.util.UUID;
 
 import test.persistence.Constants;
+import test.persistence.State;
 
 /**
  * Created by otf on 7/18/15.
@@ -36,6 +37,44 @@ public class Address {
 
     public static Address getDBAddress(String id) {
         return new Address(id);
+    }
+
+    public static Address fromAndroidAddress(android.location.Address androidAddress) {
+        Address address = new Address();
+        if (androidAddress.getThoroughfare() != null) {
+            address.setStreetAddress(androidAddress.getSubThoroughfare() + " " + androidAddress.getThoroughfare());
+        }
+        String stateFull = androidAddress.getAdminArea();
+        if (stateFull != null) {
+            String stateAbb = State.getAbbreviation(stateFull);
+            if (stateAbb != null) {
+                address.setState(stateAbb);
+            } else {
+                address.setState(stateFull);
+            }
+        }
+        if (androidAddress.getPostalCode() != null) {
+            address.setZip(androidAddress.getPostalCode());
+        }
+        if (androidAddress.getLocality() != null) {
+            address.setCity(androidAddress.getLocality());
+        }
+        return address;
+    }
+
+    public String getAddressString(android.location.Address address) {
+        String addressString = "";
+        if (address.getSubThoroughfare() != null) {
+            addressString += address.getSubThoroughfare() + " " + address.getThoroughfare();
+        }
+        addressString += "\n";
+        if (address.getLocality() != null) {
+            addressString += address.getLocality() + ", ";
+        }
+
+        if (address.getAdminArea() != null) {
+            addressString += State.getAbbreviation(address.getAdminArea());
+        }
     }
 
     public String getStreetNumber() {
@@ -107,6 +146,10 @@ public class Address {
         return addy;
     }
 
+    public String getFullAddress() {
+        return getStreeAddress() + "\n" + getCityStateZip();
+    }
+
     public String getId() {
         return this.id;
     }
@@ -129,5 +172,10 @@ public class Address {
                         STREET_NUMBER + Constants.TEXT_TYPE,
                         STREET_NAME + Constants.TEXT_TYPE,
                         ZIP_CODE + Constants.TEXT_TYPE);
+    }
+
+    @Override
+    public String toString() {
+        return getCityStateZip();
     }
 }

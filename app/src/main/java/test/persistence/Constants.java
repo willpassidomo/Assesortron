@@ -23,9 +23,6 @@ public class Constants {
     public static final String EDIT = "edit";
     public static final String EMAIL_ADDRESS = "email_address";
 
-
-    public static final String BROADCAST_SYNC_SERVICE_RESPONSE = "sync_service_response";
-
     public static final String ID_TYPE = "type";
     public static final String TYPE_SITEVISIT = "type_site_visit";
     public static final String TYPE_PROJECT = "type_project";
@@ -69,6 +66,18 @@ public class Constants {
         fvs.add(new FieldValue("Humidity", false, false));
 
         Storage.storeSiteVisitQuestions(context, fvs);
+    }
+
+    public static void storeInitialProjectQuestions(Context context) {
+        List<FieldValue> fvs = new ArrayList<>();
+        fvs.add(new FieldValue("Contact Name", true, false));
+        fvs.add(new FieldValue("Contact Phone #", true, false));
+        fvs.add(new FieldValue("Project Estimated Start Date", true, false));
+        fvs.add(new FieldValue("Project Actual Start Date", false, false));
+        fvs.add(new FieldValue("Project Estimated End Date", true, false));
+        fvs.add(new FieldValue("Estiamted Budget", true, false));
+        fvs.add(new FieldValue("Coordinates", false, false));
+        Storage.storeProjectQuestions(context, fvs);
     }
 
     public static List<String> getInitialProgresses() {

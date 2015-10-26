@@ -1,8 +1,10 @@
 package test.Fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -34,21 +36,36 @@ public class CameraPictureFragment extends Fragment {
     @Override
     public void onCreate(Bundle saved) {
         super.onCreate(saved);
-        Log.i("Camera Button", "start");
+        setRetainInstance(true);
+      //  Log.i("Camera Button", "start");
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, CAMERA_REQUEST);
     }
 
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST) {
-            Bitmap photo = (Bitmap) data.getExtras().get("data");
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            photo.compress(Bitmap.CompressFormat.PNG, 100, stream);
-            byte[] bytes = stream.toByteArray();
-            String pictureId = UUID.randomUUID().toString();
-            Storage.storePicture(getActivity(), pictureId, bytes);
-            parentListener.returnImageId(pictureId);
+            if (resultCode == Activity.RESULT_OK) {
+                AsyncTask<Bitmap, Void, String> storePictureAndSendId = new AsyncTask<Bitmap, Void, String>() {
+                    @Override
+                    protected String doInBackground(Bitmap... bitmaps) {
+                        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                        bitmaps[0].compress(Bitmap.CompressFormat.PNG, 100, stream);
+                        byte[] bytes = stream.toByteArray();
+                        String pictureId = UUID.randomUUID().toString();
+                        Storage.storePicture(getActivity(), pictureId, bytes);
+                        return pictureId;
+                    }
+
+                    @Override
+                    public void onPostExecute(String picId) {
+                        parentListener.returnImageId(picId);
+                    }
+
+                };
+                storePictureAndSendId.execute((Bitmap) data.getExtras().get("data"));
+            }
         }
     }
 

@@ -1,5 +1,6 @@
 package test.Fragments;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -23,11 +24,14 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 import test.assesortron5.R;
+import test.persistence.Constants;
 
 /**
  * Created by otf on 7/13/15.
  */
 public class SetListSelectionFragment extends Fragment {
+    private static final String IN_LIST = "in_list";
+    private static final String STRINGS_LIST = "string_list";
     SetListSelectionInterface parent;
     StringSelectorAdapter adapter;
     List<String> inList;
@@ -40,35 +44,37 @@ public class SetListSelectionFragment extends Fragment {
         super();
     }
 
-    /**
-     * see SetListSelectionInterface and SetListSelectionVisitorInterface docs for information
-     * on when to use each of the two constructors
-     * @param parent
-     * @param stringList
-     * @return
-     */
     public static SetListSelectionFragment getInstance(SetListSelectionInterface parent, List<String> stringList, List<String> inList, String id) {
         SetListSelectionFragment sptf = new SetListSelectionFragment();
-        sptf.setStringList(stringList, inList);
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList(STRINGS_LIST, new ArrayList<>(stringList));
+        bundle.putStringArrayList(IN_LIST, inList != null ? new ArrayList<>(inList) : new ArrayList<String>());
+        bundle.putString(Constants.ID_TYPE, id);
+        sptf.setArguments(bundle);
         sptf.setParent(parent);
-        sptf.setType(id);
         return sptf;
     }
 
 
-    private void setType(String id) { this.id = id;}
     private void setParent(SetListSelectionInterface parent) {
         this.parent = parent;
     }
 
-    private void setStringList(List<String> stringList, List<String> inList) {
-        this.inList = inList;
-        this.stringList = stringList;
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if (activity instanceof SetListSelectionInterface && parent == null) {
+            parent = (SetListSelectionInterface)activity;
+        }
     }
 
     @Override
     public void onCreate(Bundle savedInstance) {
         super.onCreate(savedInstance);
+        stringList = getArguments().getStringArrayList(STRINGS_LIST);
+        inList = getArguments().getStringArrayList(IN_LIST);
+        id = getArguments().getString(Constants.ID_TYPE);
+        setRetainInstance(true);
     }
 
     @Override

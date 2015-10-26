@@ -46,9 +46,12 @@ public class SoftQuestionsFragment extends Fragment {
         super();
     }
 
-    public static SoftQuestionsFragment newInstance(DataListener dl, List<FieldValue> fieldValues) {
+    public static SoftQuestionsFragment newInstance(DataListener dl, List<FieldValue> fieldValues, String ownerId) {
         SoftQuestionsFragment sqf = new SoftQuestionsFragment();
         sqf.setDataListener(dl);
+        for (FieldValue fv: fieldValues) {
+            fv.setOwnerId(ownerId);
+        }
         sqf.assignFieldValues(fieldValues);
         return sqf;
     }
@@ -70,7 +73,7 @@ public class SoftQuestionsFragment extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dl.finishFieldValues();
+                dl.finishFieldValues(allList());
             }
         });
         return v;
@@ -277,6 +280,6 @@ public class SoftQuestionsFragment extends Fragment {
     public interface DataListener {
         public void setFieldValueData(List<FieldValue> fvs);
 
-        public void finishFieldValues();
+        public void finishFieldValues(List<FieldValue> fvs);
     }
 }

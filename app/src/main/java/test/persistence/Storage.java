@@ -50,14 +50,20 @@ public class Storage {
         }
     }
 
-    public static void storeProjectQuestions(Context context, String projectId, List<FieldValue> fvs) {
+    public static void storeProjectQuestions(Context context, List<FieldValue> fvs) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
+            dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_PROJECT, fvs);
         }
         finally {
             dataBaseStorage.close();
         }
+    }
+
+    public static void storeProjectQuestions(Context context, FieldValue fv) {
+        List l = new ArrayList<>();
+        l.add(fv);
+        storeProjectQuestions(context, l);
     }
 
     public static void storeSiteVisit(Context context, String projectId, SiteVisit siteVisit) {
@@ -73,6 +79,18 @@ public class Storage {
     public static void storeSiteVisitQuestions(Context context, List<FieldValue> fvs) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
+            dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void storeSiteVisitQuestion(Context context, FieldValue fv) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            List<FieldValue> fvs = new ArrayList<>();
+            fvs.add(fv);
             dataBaseStorage.insertStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT, fvs);
         }
         finally {
@@ -237,6 +255,26 @@ public class Storage {
         }
     }
 
+    public static void deleteProjectQuestion(Context context, String question) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.deleteStockFieldValue(Constants.FIELD_VALUE_PROJECT, question);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
+    public static void deleteSiteWalkQuestion(Context context, String question) {
+        DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
+        try {
+            dataBaseStorage.deleteStockFieldValue(Constants.FIELD_VALUE_SITE_VISIT, question);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
+    }
+
     public static void deleteProgress(Context context, String progress) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
@@ -288,15 +326,19 @@ public class Storage {
         }
     }
 
-    public static List<Project> getActiveProjects(Context context) {
+    public static List<Project> getActiveProjects(Context context, String userId) {
         //TODO
         //make a network call if you dont have the projects yet, return the projects from active memory
         //if the program does
 
         //returns just active projects, not submited ones..if that is a hing
-
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
-        return dataBaseStorage.getAllProjects();
+        try {
+            return dataBaseStorage.getAllProjects(userId);
+        }
+        finally {
+            dataBaseStorage.close();
+        }
     }
 
     public static List<SiteVisit> getActiveSiteWalks(Context context, String projectId) {
@@ -432,25 +474,31 @@ public class Storage {
         }
     }
 
-    public static List<FieldValue> getProjectQuestions(Context context) {
+    public static List<FieldValue> getProjectQuestions(Context context, String id) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            return dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
+            List<FieldValue> fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
+            if (fvs == null || fvs.size() == 0) {
+                Constants.storeInitialProjectQuestions(context);
+                getProjectQuestions(context, id);
+            }
+            for (FieldValue fv: fvs) {
+                fv.setOwnerId(id);
+            }
+            return fvs;
         }
         finally {
             dataBaseStorage.close();
         }
     }
 
-    public static List<FieldValue> getProjectQuestions(Context context, String id) {
+    public static List<FieldValue> getProjectQuestions(Context context) {
         DataBaseStorage dataBaseStorage = DataBaseStorage.getDataBaseStorage(context);
         try {
-            List<FieldValue> fvs = getQuestionsByOwnerId(context, id);
+            List<FieldValue> fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
             if (fvs == null || fvs.size() == 0) {
-                fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_PROJECT);
-                for(FieldValue fv: fvs) {
-                    fv.setOwnerId(id);
-                }
+                Constants.storeInitialProjectQuestions(context);
+                return getProjectQuestions(context);
             }
             return fvs;
         }
@@ -467,7 +515,7 @@ public class Storage {
                 fvs = dataBaseStorage.getStockFieldValues(Constants.FIELD_VALUE_SITE_VISIT);
                 if (fvs == null || fvs.size() == 0) {
                     Constants.storeInitialSiteWalkQuestions(context);
-                    getSiteWalkQuestions(context, id);
+                    return getSiteWalkQuestions(context, id);
                 }
                 for (FieldValue fv: fvs) {
                     fv.setOwnerId(id);

@@ -19,12 +19,18 @@ import android.view.View;
 
 import test.assesortron5.R;
 import test.drawers.DrawerActivtyListener;
+import test.drawers.IconHeaderRecyclerAdapter;
+import test.persistence.Constants;
 
 public abstract class NavDrawerActivityPrototype extends AppCompatActivity implements DrawerActivtyListener, FragmentDrawerListener {
 
     DrawerLayout mDrawerLayout;
     RecyclerView mRecylerView;
     ActionBarDrawerToggle drawerToggle;
+    public static String IS_FRAG_DISPLAYED = "is_frag_displayed";
+    public static String FRAG_DISPLAYED_NAME = "frag_displayed_name";
+    boolean FRAGMENT_DISPLAYED = false;
+    String FRAGMENT_DISPLAYED_NAME = null;
 
 
     @Override
@@ -56,13 +62,28 @@ public abstract class NavDrawerActivityPrototype extends AppCompatActivity imple
         mDrawerLayout.setDrawerListener(drawerToggle);
         drawerToggle.syncState();
 
+        boolean fragDisplayed = false;
+        String fragDisplayedName = null;
+        if (savedInstanceState != null) {
+            fragDisplayed = savedInstanceState.getBoolean(IS_FRAG_DISPLAYED);
+            fragDisplayedName = savedInstanceState.getString(FRAG_DISPLAYED_NAME);
+        }
+        if (mRecylerView.getAdapter() instanceof IconHeaderRecyclerAdapter && !fragDisplayed) {
+            IconHeaderRecyclerAdapter adapter = (IconHeaderRecyclerAdapter) mRecylerView.getAdapter();
+            adapter.displayFirst();
+            done();
+        } else if (fragDisplayed && fragDisplayedName != null) {
+            Log.i("Restart", "displaying : " + fragDisplayedName);
+            IconHeaderRecyclerAdapter adapter = (IconHeaderRecyclerAdapter) mRecylerView.getAdapter();
+            adapter.display(fragDisplayedName);
+        }
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_super_site_visit, menu);
+        //getMenuInflater().inflate(R.menu.menu_super_site_visit, menu);
         return true;
     }
 
@@ -80,8 +101,14 @@ public abstract class NavDrawerActivityPrototype extends AppCompatActivity imple
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        bundle.putBoolean(IS_FRAG_DISPLAYED, FRAGMENT_DISPLAYED);
+        bundle.putString(FRAG_DISPLAYED_NAME, FRAGMENT_DISPLAYED_NAME);
     }
 
     @Override
@@ -94,20 +121,28 @@ public abstract class NavDrawerActivityPrototype extends AppCompatActivity imple
     }
 
     @Override
-    public void displayFragment(Fragment fragment) {
-        Log.i("Displaying Fragmment", "");
+    public void displayFragment(Fragment fragment, String title) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.super_site_visit_main, fragment);
         ft.commit();
         mDrawerLayout.closeDrawer(mRecylerView);
+        FRAGMENT_DISPLAYED = true;
+    }
+
+    public void displayFragment(Fragment fragment) {
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.super_site_visit_main, fragment)
+                .commit();
     }
 
     @Override
-    public void displayFragment(android.support.v4.app.Fragment fragment) {
+    public void displayFragment(android.support.v4.app.Fragment fragment, String title) {
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.super_site_visit_main, fragment);
+        ft.replace(R.id.super_site_visit_main, fragment, title);
         ft.commit();
         mDrawerLayout.closeDrawer(mRecylerView);
+        FRAGMENT_DISPLAYED = true;
     }
 
     @Override
@@ -131,6 +166,13 @@ public abstract class NavDrawerActivityPrototype extends AppCompatActivity imple
     @Override
     public void done() {
         mDrawerLayout.openDrawer(mRecylerView);
+        getSupportActionBar().setTitle(getDrawerClosedHeader());
+    }
+
+    @Override
+    public void setTitle(String title) {
+        getSupportActionBar().setTitle(title);
+        FRAGMENT_DISPLAYED_NAME = title;
     }
 
 }

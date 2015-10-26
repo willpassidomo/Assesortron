@@ -167,6 +167,7 @@ public class SiteWalkthroughPictures extends Fragment implements TabFragment, Ca
     @Override
     public void returnImageId(String imageId) {
         pictures.add(imageId);
+        setPictureList();
     }
 
     public interface OnPictureFragListener {
